@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "direct-experience",
+      "category": "experiencia_direta",
+      "question": "Qual caso concreto mudou sua forma de trabalhar?",
+      "original": "Em 2023, precisei interromper um deploy depois de observar uma fila crescer por duas horas.",
+      "normalized": "Em 2023, precisei interromper um deploy depois de observar uma fila crescer por duas horas."
+    },
+    {
+      "id": "position-without-case",
+      "category": "posicao_sem_caso",
+      "question": "Que posicao voce defende sobre revisao de codigo?",
+      "original": "Eu defendo revisao pequena e frequente porque consigo discutir uma decisao por vez.",
+      "normalized": "Defendo revisao pequena e frequente porque consigo discutir uma decisao por vez."
+    },
+    {
+      "id": "contradiction",
+      "category": "contradicao",
+      "question": "Que limite contradiz sua regra geral?",
+      "original": "Eu prefiro automatizar, mas nao automatizo uma regra que ainda nao consigo explicar.",
+      "normalized": "Prefiro automatizar, mas nao automatizo uma regra que ainda nao consigo explicar."
+    },
+    {
+      "id": "no-experience",
+      "category": "sem_experiencia",
+      "question": "Em que caso voce aplicou essa ideia?",
+      "original": "Ainda nao apliquei essa ideia diretamente; posso falar apenas do que observei em outro time.",
+      "normalized": "Ainda nao apliquei essa ideia diretamente; posso falar apenas do que observei em outro time."
+    },
+    {
+      "id": "repetition",
+      "category": "repeticao",
+      "question": "O que mudou depois da decisao?",
+      "original": "Depois da decisao, o time passou a registrar o motivo antes de escolher uma ferramenta.",
+      "normalized": "Depois da decisao, o time passou a registrar o motivo antes de escolher uma ferramenta."
+    },
+    {
+      "id": "compound",
+      "category": "pergunta_composta",
+      "question": "Qual foi o caso e o que voce aprendeu e como isso muda o proximo passo?",
+      "original": "O caso foi uma migracao longa; aprendi a reduzir o escopo antes de prometer a proxima etapa.",
+      "normalized": "O caso foi uma migracao longa; aprendi a reduzir o escopo antes de prometer a proxima etapa."
+    },
+    {
+      "id": "induced",
+      "category": "resposta_induzida",
+      "question": "Qual decisao voce tomou?",
+      "original": "A decisao que voce tomou foi a decisao certa.",
+      "normalized": "A decisao foi correta."
+    },
+    {
+      "id": "language",
+      "category": "linguagem_original",
+      "question": "Que frase voce usaria?",
+      "original": "Eu diria: nao confunda velocidade com pressa.",
+      "original_answer": "Eu diria: nao confunda velocidade com pressa.",
+      "normalized": "Eu diria que velocidade e pressa nao sao a mesma coisa."
+    }
+  ]
+}
