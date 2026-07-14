@@ -1,0 +1,12 @@
+interview_questions => opencode + qwen-3.7 plus + max
+interview_questions_evalue => opencode + GLM 5.2 + max  ** observação existe talvez o nome "interview_questions_evalue" esteja impreciso mas é o modelo que vai avaliar a qualdiade das perguntas
+interview_evaluate => cursor + auto
+storyboard_generate => codex + 5.6 terra + max
+block_approaches_generate => codex + 5.6 luna + medium
+block_draft_generate => codex + 5.6 terra + max
+editorial_compose => codex + 5.6 sol + max
+segment => opencode + qwen 3.6 plus + medium
+adjust_segment => opencode + qwen 3.6 plus + max
+adjust_segments_bulk => cursor + auto
+post_evaluate =>  codex + 5.6 terra + max
+slidemark_export => opencode + qwen 3.6 plus + max
