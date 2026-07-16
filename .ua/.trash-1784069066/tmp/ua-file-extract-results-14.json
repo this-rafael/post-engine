@@ -1,0 +1,998 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": ".ua/.understandignore",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 72,
+      "metrics": {}
+    },
+    {
+      "path": ".ua/intermediate/scan-result.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 2341,
+      "nonEmptyLines": 2341,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "description",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "languages",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "frameworks",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "files",
+          "level": 1,
+          "line": 23
+        },
+        {
+          "heading": "totalFiles",
+          "level": 1,
+          "line": 1699
+        },
+        {
+          "heading": "filteredByIgnore",
+          "level": 1,
+          "line": 1700
+        },
+        {
+          "heading": "estimatedComplexity",
+          "level": 1,
+          "line": 1701
+        },
+        {
+          "heading": "importMap",
+          "level": 1,
+          "line": 1702
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "docs/archive/plano-de-inteligencia",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 12,
+      "metrics": {}
+    },
+    {
+      "path": "frontend/e2e/composition.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/e2e/drafts.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 5,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/e2e/pipeline-regression.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/e2e/storyboard.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 8,
+      "nonEmptyLines": 7,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 26,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/styles.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 362,
+      "nonEmptyLines": 332,
+      "metrics": {}
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 23,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "prompts/router/.gitkeep",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {}
+    },
+    {
+      "path": "pyproject.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 30,
+      "nonEmptyLines": 26,
+      "sections": [
+        {
+          "heading": "build-system",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "project",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "project.optional-dependencies",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "tool.setuptools.packages.find",
+          "level": 4,
+          "line": 21
+        },
+        {
+          "heading": "tool.pytest.ini_options",
+          "level": 3,
+          "line": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 238,
+      "nonEmptyLines": 162,
+      "sections": [
+        {
+          "heading": "Post Engine",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "Post Engine",
+          "level": 1,
+          "line": 23
+        },
+        {
+          "heading": "Por que existe",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "A máquina",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "Gateway de autoria",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "Ofício de engenharia",
+          "level": 3,
+          "line": 73
+        },
+        {
+          "heading": "Formatos e exportação",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "Quick start",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "Mapa do repositório",
+          "level": 3,
+          "line": 109
+        },
+        {
+          "heading": "Filosofia",
+          "level": 3,
+          "line": 119
+        },
+        {
+          "heading": "Why it exists",
+          "level": 2,
+          "line": 130
+        },
+        {
+          "heading": "The machine",
+          "level": 2,
+          "line": 144
+        },
+        {
+          "heading": "Authorship gateway",
+          "level": 2,
+          "line": 165
+        },
+        {
+          "heading": "Engineering craft",
+          "level": 2,
+          "line": 179
+        },
+        {
+          "heading": "Formats & export",
+          "level": 2,
+          "line": 190
+        },
+        {
+          "heading": "Quick start",
+          "level": 2,
+          "line": 203
+        },
+        {
+          "heading": "Repository map",
+          "level": 2,
+          "line": 223
+        },
+        {
+          "heading": "Philosophy",
+          "level": 2,
+          "line": 235
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 18
+      }
+    },
+    {
+      "path": "scripts/gui.fish",
+      "language": "fish",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 9,
+      "metrics": {}
+    },
+    {
+      "path": "scripts/reorganize_specs.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 75,
+      "nonEmptyLines": 57,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 20,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "rewrite_checklist",
+          "startLine": 43,
+          "endLine": 56,
+          "params": [
+            "moved"
+          ]
+        },
+        {
+          "name": "rewrite_global",
+          "startLine": 59,
+          "endLine": 71,
+          "params": [
+            "moved"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "rewrite_checklist",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "rewrite_global",
+          "line": 59,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "sorted",
+          "lineNumber": 22
+        },
+        {
+          "caller": "main",
+          "callee": "SPECS.glob",
+          "lineNumber": 22
+        },
+        {
+          "caller": "main",
+          "callee": "SPEC_FILE_RE.match",
+          "lineNumber": 23
+        },
+        {
+          "caller": "main",
+          "callee": "m.group",
+          "lineNumber": 26
+        },
+        {
+          "caller": "main",
+          "callee": "target_dir.mkdir",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "shutil.move",
+          "lineNumber": 30
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 30
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 30
+        },
+        {
+          "caller": "main",
+          "callee": "moved.append",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "target.relative_to",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "rewrite_checklist",
+          "lineNumber": 33
+        },
+        {
+          "caller": "main",
+          "callee": "rewrite_global",
+          "lineNumber": 34
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 38
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 39
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 40
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 40
+        },
+        {
+          "caller": "rewrite_checklist",
+          "callee": "path.exists",
+          "lineNumber": 45
+        },
+        {
+          "caller": "rewrite_checklist",
+          "callee": "path.read_text",
+          "lineNumber": 47
+        },
+        {
+          "caller": "repl",
+          "callee": "match.group",
+          "lineNumber": 50
+        },
+        {
+          "caller": "rewrite_checklist",
+          "callee": "SPEC_LINK_RE.sub",
+          "lineNumber": 53
+        },
+        {
+          "caller": "rewrite_checklist",
+          "callee": "path.write_text",
+          "lineNumber": 55
+        },
+        {
+          "caller": "rewrite_checklist",
+          "callee": "print",
+          "lineNumber": 56
+        },
+        {
+          "caller": "rewrite_global",
+          "callee": "path.exists",
+          "lineNumber": 61
+        },
+        {
+          "caller": "rewrite_global",
+          "callee": "path.read_text",
+          "lineNumber": 63
+        },
+        {
+          "caller": "repl",
+          "callee": "match.group",
+          "lineNumber": 66
+        },
+        {
+          "caller": "rewrite_global",
+          "callee": "SPEC_HEADING_RE.sub",
+          "lineNumber": 68
+        },
+        {
+          "caller": "rewrite_global",
+          "callee": "path.write_text",
+          "lineNumber": 70
+        },
+        {
+          "caller": "rewrite_global",
+          "callee": "print",
+          "lineNumber": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/run_interview_quality_eval.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 23,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 13
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 14
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 19
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 20
+        },
+        {
+          "caller": "main",
+          "callee": "Path(args.corpus).read_text",
+          "lineNumber": 20
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 20
+        },
+        {
+          "caller": "main",
+          "callee": "payload.get",
+          "lineNumber": 21
+        },
+        {
+          "caller": "main",
+          "callee": "isinstance",
+          "lineNumber": 21
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 22
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 22
+        },
+        {
+          "caller": "main",
+          "callee": "evaluate_corpus",
+          "lineNumber": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "specs/archive/spec-001/spec_001.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-001 — Modelos de domínio e contratos Python",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-002/spec_002.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-002 — Inicialização do estado da entrevista",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-003/spec_003.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-003 — Scoring autoral",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-004/spec_004.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-004 — Gateway equilibrado",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-005/spec_005.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-005 — Gateway desequilibrado",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-006/spec_006.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-006 — Classificação do tipo de autoria",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-007/spec_007.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-007 — Restrições de geração",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-008/spec_008.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-008 — Avaliação consolidada do gateway",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-009/spec_009.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-009 — Identificação de lacunas autorais",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    }
+  ]
+}

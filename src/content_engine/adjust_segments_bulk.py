@@ -7,9 +7,8 @@ from typing import Any
 
 from .agent_wrapper import AgentWrapper
 from .llm_json_parser import extract_json_object_from_llm_output
-from .prompt_loader import load_prompt
+from .prompt_registry.resolver import resolve_prompt
 from .schemas import AgentResult, SandboxPolicy, SegmentoPost, ToolName
-from .template_renderer import render_template
 
 
 @dataclass(frozen=True)
@@ -104,8 +103,9 @@ class SegmentBulkAdjuster:
             "briefingAutoral": json.dumps(briefing or {}, ensure_ascii=False),
             "interviewContext": json.dumps(interview_context or {}, ensure_ascii=False),
         }
-        template: str = load_prompt("generator.adjust_segments_bulk")
-        prompt: str = render_template(template, contexto)
+        prompt = resolve_prompt(
+            "adjust_segments_bulk", contexto, provider=self.tool, model=self.model
+        ).resolved_content
 
         result: AgentResult = self.agent.run(
             self.tool,

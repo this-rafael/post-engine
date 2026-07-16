@@ -6,7 +6,7 @@ from typing import Any
 
 from .agent_wrapper import AgentWrapper
 from .llm_json_parser import extract_json_object_from_llm_output
-from .prompt_loader import load_prompt, prompt_exists
+from .prompt_registry.resolver import resolve_prompt
 from .schemas import (
     AgentResult,
     AvaliacaoSlideMark,
@@ -17,7 +17,6 @@ from .schemas import (
     TipoDePost,
     ToolName,
 )
-from .template_renderer import render_template
 
 
 _SCORE_KEYS: tuple[str, ...] = (
@@ -152,18 +151,16 @@ class PostEvaluator:
         tipo_de_post: TipoDePost = "post",
         interview_context: dict[str, Any] | None = None,
     ) -> AvaliacaoSlideMark:
-        prompt_key = "generator.evaluate_post"
-        especifico = f"generator.evaluate_post_{tipo_de_post}"
-        if prompt_exists(especifico):
-            prompt_key = especifico
-        template: str = load_prompt(prompt_key)
         contexto: dict[str, object] = {
             "tema": tema,
             "conteudoGerado": conteudo,
             "briefingAutoral": json.dumps(briefing or {}, ensure_ascii=False, indent=2),
             "interviewContext": json.dumps(interview_context or {}, ensure_ascii=False, indent=2),
+            "content_type": tipo_de_post,
         }
-        prompt: str = render_template(template, contexto)
+        prompt = resolve_prompt(
+            "post_evaluate", contexto, provider=self.tool, model=self.model
+        ).resolved_content
 
         result: AgentResult = self.agent.run(
             self.tool,

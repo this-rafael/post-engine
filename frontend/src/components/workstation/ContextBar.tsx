@@ -27,16 +27,31 @@ export function ContextBar({
   appearance,
   onToggleAppearance,
   onOpenDev,
+  onOpenObservatory,
+  onOpenRail,
 }: {
   appearance: "dark" | "light";
   onToggleAppearance: () => void;
   onOpenDev: () => void;
+  onOpenObservatory: () => void;
+  onOpenRail?: () => void;
 }) {
   const { session, stage, saveSession, reload, busy } = usePE();
 
   return (
-    <header className="shrink-0 border-b border-hairline px-5 py-2.5">
-      <div className="flex items-center gap-5">
+    <header className="shrink-0 border-b border-hairline px-3 py-2.5 sm:px-5">
+      <div className="flex min-w-0 items-center gap-2 sm:gap-5">
+        {onOpenRail && (
+          <IconButton
+            onClick={onOpenRail}
+            title="Etapas do pipeline"
+            aria-label="Abrir menu de etapas"
+          >
+            <span className="font-mono text-[14px]" aria-hidden>
+              ≡
+            </span>
+          </IconButton>
+        )}
         <SessionContext
           session={session}
           stage={stage}
@@ -46,6 +61,13 @@ export function ContextBar({
           <ToolbarDivider />
           <ThemeToggle appearance={appearance} onToggle={onToggleAppearance} />
           <ResetButton />
+          <IconButton
+            onClick={onOpenObservatory}
+            title="Prompt Pipeline Observatory"
+            aria-label="Abrir Prompt Pipeline Observatory"
+          >
+            <span className="font-mono text-[13px]">◈</span>
+          </IconButton>
           <IconButton
             onClick={onOpenDev}
             title="Inspector (⌘K)"
@@ -59,7 +81,7 @@ export function ContextBar({
             onClick={() => reload()}
             disabled={busy}
             icon={<ReloadIcon />}
-            className="!px-2.5 !text-[11px]"
+            className="!px-2.5 !text-[11px] max-sm:hidden"
           >
             <span className="hidden lg:inline">Recalcular</span>
           </PeButton>

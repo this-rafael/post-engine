@@ -6,9 +6,8 @@ from typing import Any
 
 from .agent_wrapper import AgentWrapper
 from .llm_json_parser import extract_json_object_from_llm_output
-from .prompt_loader import load_prompt
+from .prompt_registry.resolver import resolve_prompt
 from .schemas import AgentResult, SandboxPolicy, SegmentoPost, ToolName
-from .template_renderer import render_template
 
 
 class SegmentAdjuster:
@@ -50,7 +49,6 @@ class SegmentAdjuster:
         if not isinstance(segmento.texto, str) or not segmento.texto:
             raise ValueError("segmento precisa de 'texto' nao vazio")
 
-        template: str = load_prompt("generator.adjust_segment")
         segmento_json: str = json.dumps(
             {
                 "id": segmento.id,
@@ -72,7 +70,9 @@ class SegmentAdjuster:
             "interviewContext": json.dumps(interview_context or {}, ensure_ascii=False),
             "eixoAlvo": eixo_alvo or "nao informado",
         }
-        prompt: str = render_template(template, contexto)
+        prompt = resolve_prompt(
+            "adjust_segment", contexto, provider=self.tool, model=self.model
+        ).resolved_content
 
         result: AgentResult = self.agent.run(
             self.tool,

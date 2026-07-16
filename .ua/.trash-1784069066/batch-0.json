@@ -1,0 +1,2853 @@
+{
+  "batchIndex": 0,
+  "nodes": [
+    {
+      "id": "file:frontend/src/components/workstation/AmbientField.tsx",
+      "type": "file",
+      "name": "AmbientField.tsx",
+      "path": "frontend/src/components/workstation/AmbientField.tsx",
+      "description": "Componente de campo visual ambiente que acompanha o cursor do mouse com gradientes CSS animados via requestAnimationFrame",
+      "tags": [
+        "typescript",
+        "react"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/AmbientField.tsx::AmbientField",
+      "type": "function",
+      "name": "AmbientField",
+      "path": "frontend/src/components/workstation/AmbientField.tsx",
+      "description": "Função/componente 'AmbientField' em AmbientField.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/AmbientField.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "type": "file",
+      "name": "ContextBar.tsx",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Barra de contexto superior com informações da sessão, alternância de tema, botão de reset e painel expansível de metadados",
+      "tags": [
+        "typescript",
+        "react"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::ContextBar",
+      "type": "function",
+      "name": "ContextBar",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'ContextBar' em ContextBar.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::SessionContext",
+      "type": "function",
+      "name": "SessionContext",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'SessionContext' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::StageBadge",
+      "type": "function",
+      "name": "StageBadge",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'StageBadge' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::ToolbarDivider",
+      "type": "function",
+      "name": "ToolbarDivider",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'ToolbarDivider' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::IconButton",
+      "type": "function",
+      "name": "IconButton",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'IconButton' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::ThemeToggle",
+      "type": "function",
+      "name": "ThemeToggle",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'ThemeToggle' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::ResetButton",
+      "type": "function",
+      "name": "ResetButton",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'ResetButton' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::compactPersona",
+      "type": "function",
+      "name": "compactPersona",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'compactPersona' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::ChevronIcon",
+      "type": "function",
+      "name": "ChevronIcon",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'ChevronIcon' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::ReloadIcon",
+      "type": "function",
+      "name": "ReloadIcon",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'ReloadIcon' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::ResetIcon",
+      "type": "function",
+      "name": "ResetIcon",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'ResetIcon' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ContextBar.tsx::InspectorIcon",
+      "type": "function",
+      "name": "InspectorIcon",
+      "path": "frontend/src/components/workstation/ContextBar.tsx",
+      "description": "Função/componente 'InspectorIcon' em ContextBar.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ContextBar.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/DevDrawer.tsx",
+      "type": "file",
+      "name": "DevDrawer.tsx",
+      "path": "frontend/src/components/workstation/DevDrawer.tsx",
+      "description": "Gaveta lateral de desenvolvedor para inspeção de estado, operações, eventos, payload e restauração de sessão",
+      "tags": [
+        "typescript",
+        "react"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/DevDrawer.tsx::DevDrawer",
+      "type": "function",
+      "name": "DevDrawer",
+      "path": "frontend/src/components/workstation/DevDrawer.tsx",
+      "description": "Função/componente 'DevDrawer' em DevDrawer.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/DevDrawer.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/DevDrawer.tsx::Json",
+      "type": "function",
+      "name": "Json",
+      "path": "frontend/src/components/workstation/DevDrawer.tsx",
+      "description": "Função/componente 'Json' em DevDrawer.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/DevDrawer.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/FormattedText.tsx",
+      "type": "file",
+      "name": "FormattedText.tsx",
+      "path": "frontend/src/components/workstation/FormattedText.tsx",
+      "description": "Componente simples que renderiza texto formatado preservando quebras de linha com whitespace-pre-wrap",
+      "tags": [
+        "typescript",
+        "react"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/FormattedText.tsx::FormattedText",
+      "type": "function",
+      "name": "FormattedText",
+      "path": "frontend/src/components/workstation/FormattedText.tsx",
+      "description": "Função/componente 'FormattedText' em FormattedText.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/FormattedText.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "type": "file",
+      "name": "GamePopup.tsx",
+      "path": "frontend/src/components/workstation/GamePopup.tsx",
+      "description": "Popup com mini-jogo Tetris como Easter egg, com configurações de ativação e estatísticas de uso",
+      "tags": [
+        "typescript",
+        "react"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/GamePopup.tsx::GamePopup",
+      "type": "function",
+      "name": "GamePopup",
+      "path": "frontend/src/components/workstation/GamePopup.tsx",
+      "description": "Função/componente 'GamePopup' em GamePopup.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/GamePopup.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/GamePopup.tsx::TetrisCanvas",
+      "type": "function",
+      "name": "TetrisCanvas",
+      "path": "frontend/src/components/workstation/GamePopup.tsx",
+      "description": "Função/componente 'TetrisCanvas' em GamePopup.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/GamePopup.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/GamePopup.tsx::Stat",
+      "type": "function",
+      "name": "Stat",
+      "path": "frontend/src/components/workstation/GamePopup.tsx",
+      "description": "Função/componente 'Stat' em GamePopup.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/GamePopup.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/GamePopup.tsx::GameSettings",
+      "type": "function",
+      "name": "GameSettings",
+      "path": "frontend/src/components/workstation/GamePopup.tsx",
+      "description": "Função/componente 'GameSettings' em GamePopup.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/GamePopup.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/ModalShell.tsx",
+      "type": "file",
+      "name": "ModalShell.tsx",
+      "path": "frontend/src/components/workstation/ModalShell.tsx",
+      "description": "Shell reutilizável para modais com backdrop, suporte a Escape e componentes de cabeçalho e rodapé",
+      "tags": [
+        "typescript",
+        "react"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ModalShell.tsx::ModalShell",
+      "type": "function",
+      "name": "ModalShell",
+      "path": "frontend/src/components/workstation/ModalShell.tsx",
+      "description": "Função/componente 'ModalShell' em ModalShell.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ModalShell.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ModalShell.tsx::ModalHeader",
+      "type": "function",
+      "name": "ModalHeader",
+      "path": "frontend/src/components/workstation/ModalShell.tsx",
+      "description": "Função/componente 'ModalHeader' em ModalShell.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ModalShell.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ModalShell.tsx::ModalFooter",
+      "type": "function",
+      "name": "ModalFooter",
+      "path": "frontend/src/components/workstation/ModalShell.tsx",
+      "description": "Função/componente 'ModalFooter' em ModalShell.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ModalShell.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/PipelineRail.tsx",
+      "type": "file",
+      "name": "PipelineRail.tsx",
+      "path": "frontend/src/components/workstation/PipelineRail.tsx",
+      "description": "Barra de navegação visual do pipeline editorial mostrando estágios como trilho interativo com indicação de progresso",
+      "tags": [
+        "typescript",
+        "react"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/PipelineRail.tsx::PipelineRail",
+      "type": "function",
+      "name": "PipelineRail",
+      "path": "frontend/src/components/workstation/PipelineRail.tsx",
+      "description": "Função/componente 'PipelineRail' em PipelineRail.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/PipelineRail.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "type": "file",
+      "name": "ReadjustAllModal.tsx",
+      "path": "frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "description": "Modal para reajuste em lote de segmentos fracos da avaliação, com edição individual de pedidos e ações de regeneração",
+      "tags": [
+        "typescript",
+        "react"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ReadjustAllModal.tsx::ReadjustAllModal",
+      "type": "function",
+      "name": "ReadjustAllModal",
+      "path": "frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "description": "Função/componente 'ReadjustAllModal' em ReadjustAllModal.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ReadjustAllModal.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ReadjustAllModal.tsx::WeakSegmentRow",
+      "type": "function",
+      "name": "WeakSegmentRow",
+      "path": "frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "description": "Função/componente 'WeakSegmentRow' em ReadjustAllModal.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ReadjustAllModal.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/Workstation.tsx",
+      "type": "file",
+      "name": "Workstation.tsx",
+      "path": "frontend/src/components/workstation/Workstation.tsx",
+      "description": "Componente raiz da estação de trabalho que orquestra todos os estágios, tema claro/escuro e painéis auxiliares",
+      "tags": [
+        "typescript",
+        "react",
+        "orquestrador"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/Workstation.tsx::Workstation",
+      "type": "function",
+      "name": "Workstation",
+      "path": "frontend/src/components/workstation/Workstation.tsx",
+      "description": "Função/componente 'Workstation' em Workstation.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/Workstation.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/Workstation.tsx::Shell",
+      "type": "function",
+      "name": "Shell",
+      "path": "frontend/src/components/workstation/Workstation.tsx",
+      "description": "Função/componente 'Shell' em Workstation.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/Workstation.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/Workstation.tsx::StageView",
+      "type": "function",
+      "name": "StageView",
+      "path": "frontend/src/components/workstation/Workstation.tsx",
+      "description": "Função/componente 'StageView' em Workstation.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/Workstation.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "type": "file",
+      "name": "QuestionStage.tsx",
+      "path": "frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "description": "Componente de apresentação individual de pergunta da entrevista com navegação animada entre questões",
+      "tags": [
+        "typescript",
+        "react",
+        "entrevista"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/QuestionStage.tsx::QuestionStage",
+      "type": "function",
+      "name": "QuestionStage",
+      "path": "frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "description": "Função/componente 'QuestionStage' em QuestionStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/interview/QuestionStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "type": "file",
+      "name": "AgentsStage.tsx",
+      "path": "frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "description": "Estágio de configuração de agentes/operadores com seleção de provedor, modelo e parâmetros de geração",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::AgentsStage",
+      "type": "function",
+      "name": "AgentsStage",
+      "path": "frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "description": "Função/componente 'AgentsStage' em AgentsStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/AgentsStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::ProviderStatus",
+      "type": "function",
+      "name": "ProviderStatus",
+      "path": "frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "description": "Função/componente 'ProviderStatus' em AgentsStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/AgentsStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::ModelSelector",
+      "type": "function",
+      "name": "ModelSelector",
+      "path": "frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "description": "Função/componente 'ModelSelector' em AgentsStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/AgentsStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::AgentField",
+      "type": "function",
+      "name": "AgentField",
+      "path": "frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "description": "Função/componente 'AgentField' em AgentsStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/AgentsStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::Selector",
+      "type": "function",
+      "name": "Selector",
+      "path": "frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "description": "Função/componente 'Selector' em AgentsStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/AgentsStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "type": "file",
+      "name": "BriefingStage.tsx",
+      "path": "frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "description": "Estágio de briefing autoral que exibe cartões de orientação para o usuário antes de prosseguir",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/BriefingStage.tsx::BriefingStage",
+      "type": "function",
+      "name": "BriefingStage",
+      "path": "frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "description": "Função/componente 'BriefingStage' em BriefingStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/BriefingStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "type": "file",
+      "name": "CompositionStage.tsx",
+      "path": "frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "description": "Estágio de composição editorial que aciona a geração do texto editorial consolidado",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/CompositionStage.tsx::CompositionStage",
+      "type": "function",
+      "name": "CompositionStage",
+      "path": "frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "description": "Função/componente 'CompositionStage' em CompositionStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/CompositionStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "type": "file",
+      "name": "DraftsStage.tsx",
+      "path": "frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "description": "Estágio de seleção de rascunhos por bloco do storyboard, com geração de alternativas e leitor embarcado",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/DraftsStage.tsx::DraftsStage",
+      "type": "function",
+      "name": "DraftsStage",
+      "path": "frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "description": "Função/componente 'DraftsStage' em DraftsStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/DraftsStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/DraftsStage.tsx::buildChosenDrafts",
+      "type": "function",
+      "name": "buildChosenDrafts",
+      "path": "frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "description": "Função/componente 'buildChosenDrafts' em DraftsStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/DraftsStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/EntryStage.tsx",
+      "type": "file",
+      "name": "EntryStage.tsx",
+      "path": "frontend/src/components/workstation/stages/EntryStage.tsx",
+      "description": "Estágio inicial de entrada com seleção de plataforma, tipo de conteúdo e persona da sessão",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/EntryStage.tsx::EntryStage",
+      "type": "function",
+      "name": "EntryStage",
+      "path": "frontend/src/components/workstation/stages/EntryStage.tsx",
+      "description": "Função/componente 'EntryStage' em EntryStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/EntryStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/EntryStage.tsx::SelectField",
+      "type": "function",
+      "name": "SelectField",
+      "path": "frontend/src/components/workstation/stages/EntryStage.tsx",
+      "description": "Função/componente 'SelectField' em EntryStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/EntryStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "type": "file",
+      "name": "EvaluationStage.tsx",
+      "path": "frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "description": "Estágio de avaliação de conteúdo com cartões de pontuação por segmento e acesso ao modal de reajuste",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/EvaluationStage.tsx::EvaluationStage",
+      "type": "function",
+      "name": "EvaluationStage",
+      "path": "frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "description": "Função/componente 'EvaluationStage' em EvaluationStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/EvaluationStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/EvaluationStage.tsx::EvalCard",
+      "type": "function",
+      "name": "EvalCard",
+      "path": "frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "description": "Função/componente 'EvalCard' em EvaluationStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/EvaluationStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/EvaluationStage.tsx::scoreColor",
+      "type": "function",
+      "name": "scoreColor",
+      "path": "frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "description": "Função/componente 'scoreColor' em EvaluationStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/EvaluationStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "type": "file",
+      "name": "ExecutionStage.tsx",
+      "path": "frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "description": "Estágio de execução LLM que dispara a geração e exibe eventos em tempo real com indicador visual de atividade",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/ExecutionStage.tsx::ExecutionStage",
+      "type": "function",
+      "name": "ExecutionStage",
+      "path": "frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "description": "Função/componente 'ExecutionStage' em ExecutionStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/ExecutionStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/ExecutionStage.tsx::Reactor",
+      "type": "function",
+      "name": "Reactor",
+      "path": "frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "description": "Função/componente 'Reactor' em ExecutionStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/ExecutionStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/ExportStage.tsx",
+      "type": "file",
+      "name": "ExportStage.tsx",
+      "path": "frontend/src/components/workstation/stages/ExportStage.tsx",
+      "description": "Estágio final de exportação com cartões de artefatos gerados, cópia para clipboard e metadados do output",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/ExportStage.tsx::ExportStage",
+      "type": "function",
+      "name": "ExportStage",
+      "path": "frontend/src/components/workstation/stages/ExportStage.tsx",
+      "description": "Função/componente 'ExportStage' em ExportStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/ExportStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/ExportStage.tsx::ArtifactCard",
+      "type": "function",
+      "name": "ArtifactCard",
+      "path": "frontend/src/components/workstation/stages/ExportStage.tsx",
+      "description": "Função/componente 'ArtifactCard' em ExportStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/ExportStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/ExportStage.tsx::Row",
+      "type": "function",
+      "name": "Row",
+      "path": "frontend/src/components/workstation/stages/ExportStage.tsx",
+      "description": "Função/componente 'Row' em ExportStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/ExportStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/PromptStage.tsx",
+      "type": "file",
+      "name": "PromptStage.tsx",
+      "path": "frontend/src/components/workstation/stages/PromptStage.tsx",
+      "description": "Estágio de renderização do prompt que exibe o prompt final com simulação de digitação e fontes por operação",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/PromptStage.tsx::PromptStage",
+      "type": "function",
+      "name": "PromptStage",
+      "path": "frontend/src/components/workstation/stages/PromptStage.tsx",
+      "description": "Função/componente 'PromptStage' em PromptStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/PromptStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "type": "file",
+      "name": "SegmentationStage.tsx",
+      "path": "frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "description": "Estágio de segmentação do conteúdo com linhas editáveis, pedidos de ajuste e sugestões de imagem",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/SegmentationStage.tsx::SegmentationStage",
+      "type": "function",
+      "name": "SegmentationStage",
+      "path": "frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "description": "Função/componente 'SegmentationStage' em SegmentationStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/SegmentationStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/SegmentationStage.tsx::SegmentRow",
+      "type": "function",
+      "name": "SegmentRow",
+      "path": "frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "description": "Função/componente 'SegmentRow' em SegmentationStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/SegmentationStage.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/SegmentationStage.tsx::ImageSuggestionPanel",
+      "type": "function",
+      "name": "ImageSuggestionPanel",
+      "path": "frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "description": "Função/componente 'ImageSuggestionPanel' em SegmentationStage.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/stages/SegmentationStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "type": "file",
+      "name": "StoryboardStage.tsx",
+      "path": "frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "description": "Estágio de storyboard com edição de blocos, reordenação, adição/remoção e salvamento local",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/StoryboardStage.tsx::StoryboardStage",
+      "type": "function",
+      "name": "StoryboardStage",
+      "path": "frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "description": "Função/componente 'StoryboardStage' em StoryboardStage.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/StoryboardStage.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "file",
+      "name": "common.tsx",
+      "path": "frontend/src/components/workstation/stages/common.tsx",
+      "description": "Componentes compartilhados de cabeçalho e área de scroll para todos os estágios do pipeline",
+      "tags": [
+        "typescript",
+        "react",
+        "estagio-pipeline"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/common.tsx::StageHeader",
+      "type": "function",
+      "name": "StageHeader",
+      "path": "frontend/src/components/workstation/stages/common.tsx",
+      "description": "Função/componente 'StageHeader' em common.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/common.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/common.tsx::StageScroll",
+      "type": "function",
+      "name": "StageScroll",
+      "path": "frontend/src/components/workstation/stages/common.tsx",
+      "description": "Função/componente 'StageScroll' em common.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/stages/common.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "file",
+      "name": "ui.tsx",
+      "path": "frontend/src/components/workstation/ui.tsx",
+      "description": "Biblioteca de componentes de UI reutilizáveis: botões, campos, números animados, revelações e indicadores",
+      "tags": [
+        "typescript",
+        "react",
+        "componentes-ui"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ui.tsx::AnimatedNumber",
+      "type": "function",
+      "name": "AnimatedNumber",
+      "path": "frontend/src/components/workstation/ui.tsx",
+      "description": "Função/componente 'AnimatedNumber' em ui.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ui.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ui.tsx::PeButton",
+      "type": "function",
+      "name": "PeButton",
+      "path": "frontend/src/components/workstation/ui.tsx",
+      "description": "Função/componente 'PeButton' em ui.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ui.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ui.tsx::Reveal",
+      "type": "function",
+      "name": "Reveal",
+      "path": "frontend/src/components/workstation/ui.tsx",
+      "description": "Função/componente 'Reveal' em ui.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ui.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ui.tsx::Eyebrow",
+      "type": "function",
+      "name": "Eyebrow",
+      "path": "frontend/src/components/workstation/ui.tsx",
+      "description": "Função/componente 'Eyebrow' em ui.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ui.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ui.tsx::Field",
+      "type": "function",
+      "name": "Field",
+      "path": "frontend/src/components/workstation/ui.tsx",
+      "description": "Função/componente 'Field' em ui.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ui.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ui.tsx::ActivityGlyph",
+      "type": "function",
+      "name": "ActivityGlyph",
+      "path": "frontend/src/components/workstation/ui.tsx",
+      "description": "Função/componente 'ActivityGlyph' em ui.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ui.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ui.tsx::ErrorAccordion",
+      "type": "function",
+      "name": "ErrorAccordion",
+      "path": "frontend/src/components/workstation/ui.tsx",
+      "description": "Função/componente 'ErrorAccordion' em ui.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/components/workstation/ui.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/ui.tsx::LoadingDots",
+      "type": "function",
+      "name": "LoadingDots",
+      "path": "frontend/src/components/workstation/ui.tsx",
+      "description": "Função/componente 'LoadingDots' em ui.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/components/workstation/ui.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/lib/mappers/editorial.ts",
+      "type": "file",
+      "name": "editorial.ts",
+      "path": "frontend/src/lib/mappers/editorial.ts",
+      "description": "Mapeadores de estado editorial: fluxo, status, blocos de storyboard e desbloqueio progressivo",
+      "tags": [
+        "typescript",
+        "react",
+        "biblioteca",
+        "mapeamento"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/editorial.ts::editorialFlowFromState",
+      "type": "function",
+      "name": "editorialFlowFromState",
+      "path": "frontend/src/lib/mappers/editorial.ts",
+      "description": "Função/componente 'editorialFlowFromState' em editorial.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/mappers/editorial.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/editorial.ts::editorialStatusFromDerived",
+      "type": "function",
+      "name": "editorialStatusFromDerived",
+      "path": "frontend/src/lib/mappers/editorial.ts",
+      "description": "Função/componente 'editorialStatusFromDerived' em editorial.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/mappers/editorial.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/editorial.ts::storyboardBlocks",
+      "type": "function",
+      "name": "storyboardBlocks",
+      "path": "frontend/src/lib/mappers/editorial.ts",
+      "description": "Função/componente 'storyboardBlocks' em editorial.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/mappers/editorial.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/editorial.ts::isBlockUnlocked",
+      "type": "function",
+      "name": "isBlockUnlocked",
+      "path": "frontend/src/lib/mappers/editorial.ts",
+      "description": "Função/componente 'isBlockUnlocked' em editorial.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/mappers/editorial.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/editorial.ts::frontierBlockId",
+      "type": "function",
+      "name": "frontierBlockId",
+      "path": "frontend/src/lib/mappers/editorial.ts",
+      "description": "Função/componente 'frontierBlockId' em editorial.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/mappers/editorial.ts"
+      }
+    },
+    {
+      "id": "file:frontend/src/lib/mappers/operations.ts",
+      "type": "file",
+      "name": "operations.ts",
+      "path": "frontend/src/lib/mappers/operations.ts",
+      "description": "Constantes de mapeamento entre nomes de operações da UI e do backend, rótulos e ordenação",
+      "tags": [
+        "typescript",
+        "react",
+        "biblioteca",
+        "mapeamento"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "file:frontend/src/lib/mappers/phase.ts",
+      "type": "file",
+      "name": "phase.ts",
+      "path": "frontend/src/lib/mappers/phase.ts",
+      "description": "Mapeamento bidirecional entre fases do backend e estágios da UI do pipeline editorial",
+      "tags": [
+        "typescript",
+        "react",
+        "biblioteca",
+        "mapeamento"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/phase.ts::stageFromPhase",
+      "type": "function",
+      "name": "stageFromPhase",
+      "path": "frontend/src/lib/mappers/phase.ts",
+      "description": "Função/componente 'stageFromPhase' em phase.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/mappers/phase.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/phase.ts::phaseFromStage",
+      "type": "function",
+      "name": "phaseFromStage",
+      "path": "frontend/src/lib/mappers/phase.ts",
+      "description": "Função/componente 'phaseFromStage' em phase.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/mappers/phase.ts"
+      }
+    },
+    {
+      "id": "file:frontend/src/lib/pe-api.ts",
+      "type": "file",
+      "name": "pe-api.ts",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Camada de API HTTP para comunicação com o backend: sessão, configuração LLM, ações e mapeamentos de resposta",
+      "tags": [
+        "typescript",
+        "react",
+        "biblioteca",
+        "api-http"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::fetchSession",
+      "type": "function",
+      "name": "fetchSession",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'fetchSession' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::patchSession",
+      "type": "function",
+      "name": "patchSession",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'patchSession' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::runAction",
+      "type": "function",
+      "name": "runAction",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'runAction' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::restoreSession",
+      "type": "function",
+      "name": "restoreSession",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'restoreSession' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::fetchLlmConfig",
+      "type": "function",
+      "name": "fetchLlmConfig",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'fetchLlmConfig' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::saveLlmConfig",
+      "type": "function",
+      "name": "saveLlmConfig",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'saveLlmConfig' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::opsFromConfig",
+      "type": "function",
+      "name": "opsFromConfig",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'opsFromConfig' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::llmConfigPayloadFromOps",
+      "type": "function",
+      "name": "llmConfigPayloadFromOps",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'llmConfigPayloadFromOps' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::eventsFromState",
+      "type": "function",
+      "name": "eventsFromState",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'eventsFromState' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::tipoLabel",
+      "type": "function",
+      "name": "tipoLabel",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'tipoLabel' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-api.ts::providersFromStatus",
+      "type": "function",
+      "name": "providersFromStatus",
+      "path": "frontend/src/lib/pe-api.ts",
+      "description": "Função/componente 'providersFromStatus' em pe-api.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-api.ts"
+      }
+    },
+    {
+      "id": "file:frontend/src/lib/pe-store.tsx",
+      "type": "file",
+      "name": "pe-store.tsx",
+      "path": "frontend/src/lib/pe-store.tsx",
+      "description": "Provider central de estado global (React Context) que gerera todo o fluxo do motor de publicação com ações, navegação e persistência",
+      "tags": [
+        "typescript",
+        "react",
+        "biblioteca",
+        "estado-global"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-store.tsx::PostEngineProvider",
+      "type": "function",
+      "name": "PostEngineProvider",
+      "path": "frontend/src/lib/pe-store.tsx",
+      "description": "Função/componente 'PostEngineProvider' em pe-store.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-store.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-store.tsx::usePE",
+      "type": "function",
+      "name": "usePE",
+      "path": "frontend/src/lib/pe-store.tsx",
+      "description": "Função/componente 'usePE' em pe-store.tsx",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/pe-store.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-store.tsx::isStageId",
+      "type": "function",
+      "name": "isStageId",
+      "path": "frontend/src/lib/pe-store.tsx",
+      "description": "Função/componente 'isStageId' em pe-store.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/lib/pe-store.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-store.tsx::computeReachable",
+      "type": "function",
+      "name": "computeReachable",
+      "path": "frontend/src/lib/pe-store.tsx",
+      "description": "Função/componente 'computeReachable' em pe-store.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/lib/pe-store.tsx"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/pe-store.tsx::draftFromState",
+      "type": "function",
+      "name": "draftFromState",
+      "path": "frontend/src/lib/pe-store.tsx",
+      "description": "Função/componente 'draftFromState' em pe-store.tsx",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "frontend/src/lib/pe-store.tsx"
+      }
+    },
+    {
+      "id": "file:frontend/src/lib/pe-types.ts",
+      "type": "file",
+      "name": "pe-types.ts",
+      "path": "frontend/src/lib/pe-types.ts",
+      "description": "Definições de tipos TypeScript para todo o sistema: sessão, estado, operações, fases, estágios e derivados",
+      "tags": [
+        "typescript",
+        "react",
+        "biblioteca",
+        "tipos"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "file:frontend/src/lib/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "path": "frontend/src/lib/utils.ts",
+      "description": "Utilitário para composição de classes CSS combinando tailwind-merge e clsx",
+      "tags": [
+        "typescript",
+        "react",
+        "biblioteca"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/utils.ts::cn",
+      "type": "function",
+      "name": "cn",
+      "path": "frontend/src/lib/utils.ts",
+      "description": "Função/componente 'cn' em utils.ts",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "frontend/src/lib/utils.ts"
+      }
+    },
+    {
+      "id": "file:frontend/src/main.tsx",
+      "type": "file",
+      "name": "main.tsx",
+      "path": "frontend/src/main.tsx",
+      "description": "Ponto de entrada da aplicação que monta o componente Workstation no DOM",
+      "tags": [
+        "typescript",
+        "react"
+      ],
+      "metadata": {
+        "language": "typescript"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:frontend/src/components/workstation/AmbientField.tsx",
+      "target": "function:frontend/src/components/workstation/AmbientField.tsx::AmbientField",
+      "type": "contains",
+      "description": "AmbientField.tsx contém AmbientField"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/AmbientField.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "AmbientField.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::ContextBar",
+      "type": "contains",
+      "description": "ContextBar.tsx contém ContextBar"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::SessionContext",
+      "type": "contains",
+      "description": "ContextBar.tsx contém SessionContext"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::StageBadge",
+      "type": "contains",
+      "description": "ContextBar.tsx contém StageBadge"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::ToolbarDivider",
+      "type": "contains",
+      "description": "ContextBar.tsx contém ToolbarDivider"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::IconButton",
+      "type": "contains",
+      "description": "ContextBar.tsx contém IconButton"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::ThemeToggle",
+      "type": "contains",
+      "description": "ContextBar.tsx contém ThemeToggle"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::ResetButton",
+      "type": "contains",
+      "description": "ContextBar.tsx contém ResetButton"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::compactPersona",
+      "type": "contains",
+      "description": "ContextBar.tsx contém compactPersona"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::ChevronIcon",
+      "type": "contains",
+      "description": "ContextBar.tsx contém ChevronIcon"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::ReloadIcon",
+      "type": "contains",
+      "description": "ContextBar.tsx contém ReloadIcon"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::ResetIcon",
+      "type": "contains",
+      "description": "ContextBar.tsx contém ResetIcon"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "function:frontend/src/components/workstation/ContextBar.tsx::InspectorIcon",
+      "type": "contains",
+      "description": "ContextBar.tsx contém InspectorIcon"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "ContextBar.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "ContextBar.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "ContextBar.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/DevDrawer.tsx",
+      "target": "function:frontend/src/components/workstation/DevDrawer.tsx::DevDrawer",
+      "type": "contains",
+      "description": "DevDrawer.tsx contém DevDrawer"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/DevDrawer.tsx",
+      "target": "function:frontend/src/components/workstation/DevDrawer.tsx::Json",
+      "type": "contains",
+      "description": "DevDrawer.tsx contém Json"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/DevDrawer.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "DevDrawer.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/DevDrawer.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "DevDrawer.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/DevDrawer.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "DevDrawer.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/FormattedText.tsx",
+      "target": "function:frontend/src/components/workstation/FormattedText.tsx::FormattedText",
+      "type": "contains",
+      "description": "FormattedText.tsx contém FormattedText"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "target": "function:frontend/src/components/workstation/GamePopup.tsx::GamePopup",
+      "type": "contains",
+      "description": "GamePopup.tsx contém GamePopup"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "target": "function:frontend/src/components/workstation/GamePopup.tsx::TetrisCanvas",
+      "type": "contains",
+      "description": "GamePopup.tsx contém TetrisCanvas"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "target": "function:frontend/src/components/workstation/GamePopup.tsx::Stat",
+      "type": "contains",
+      "description": "GamePopup.tsx contém Stat"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "target": "function:frontend/src/components/workstation/GamePopup.tsx::GameSettings",
+      "type": "contains",
+      "description": "GamePopup.tsx contém GameSettings"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "target": "file:frontend/src/components/workstation/ModalShell.tsx",
+      "type": "imports",
+      "description": "GamePopup.tsx importa de ModalShell.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "GamePopup.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "GamePopup.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "GamePopup.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ModalShell.tsx",
+      "target": "function:frontend/src/components/workstation/ModalShell.tsx::ModalShell",
+      "type": "contains",
+      "description": "ModalShell.tsx contém ModalShell"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ModalShell.tsx",
+      "target": "function:frontend/src/components/workstation/ModalShell.tsx::ModalHeader",
+      "type": "contains",
+      "description": "ModalShell.tsx contém ModalHeader"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ModalShell.tsx",
+      "target": "function:frontend/src/components/workstation/ModalShell.tsx::ModalFooter",
+      "type": "contains",
+      "description": "ModalShell.tsx contém ModalFooter"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ModalShell.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "ModalShell.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/PipelineRail.tsx",
+      "target": "function:frontend/src/components/workstation/PipelineRail.tsx::PipelineRail",
+      "type": "contains",
+      "description": "PipelineRail.tsx contém PipelineRail"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/PipelineRail.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "PipelineRail.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/PipelineRail.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "PipelineRail.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/PipelineRail.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "PipelineRail.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "target": "function:frontend/src/components/workstation/ReadjustAllModal.tsx::ReadjustAllModal",
+      "type": "contains",
+      "description": "ReadjustAllModal.tsx contém ReadjustAllModal"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "target": "function:frontend/src/components/workstation/ReadjustAllModal.tsx::WeakSegmentRow",
+      "type": "contains",
+      "description": "ReadjustAllModal.tsx contém WeakSegmentRow"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "target": "file:frontend/src/components/workstation/FormattedText.tsx",
+      "type": "imports",
+      "description": "ReadjustAllModal.tsx importa de FormattedText.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "target": "file:frontend/src/components/workstation/ModalShell.tsx",
+      "type": "imports",
+      "description": "ReadjustAllModal.tsx importa de ModalShell.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "ReadjustAllModal.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "ReadjustAllModal.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "ReadjustAllModal.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "ReadjustAllModal.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "function:frontend/src/components/workstation/Workstation.tsx::Workstation",
+      "type": "contains",
+      "description": "Workstation.tsx contém Workstation"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "function:frontend/src/components/workstation/Workstation.tsx::Shell",
+      "type": "contains",
+      "description": "Workstation.tsx contém Shell"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "function:frontend/src/components/workstation/Workstation.tsx::StageView",
+      "type": "contains",
+      "description": "Workstation.tsx contém StageView"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/AmbientField.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de AmbientField.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/ContextBar.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de ContextBar.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/DevDrawer.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de DevDrawer.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/GamePopup.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de GamePopup.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/PipelineRail.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de PipelineRail.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de AgentsStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de BriefingStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de CompositionStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de DraftsStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/EntryStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de EntryStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de EvaluationStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/ExportStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de ExportStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de InterviewStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de SegmentationStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de StoryboardStage.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/Workstation.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "Workstation.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "target": "function:frontend/src/components/workstation/interview/QuestionStage.tsx::QuestionStage",
+      "type": "contains",
+      "description": "QuestionStage.tsx contém QuestionStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/motion.ts",
+      "type": "imports",
+      "description": "QuestionStage.tsx importa de motion.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "QuestionStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "QuestionStage.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "QuestionStage.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::AgentsStage",
+      "type": "contains",
+      "description": "AgentsStage.tsx contém AgentsStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::ProviderStatus",
+      "type": "contains",
+      "description": "AgentsStage.tsx contém ProviderStatus"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::ModelSelector",
+      "type": "contains",
+      "description": "AgentsStage.tsx contém ModelSelector"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::AgentField",
+      "type": "contains",
+      "description": "AgentsStage.tsx contém AgentField"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/AgentsStage.tsx::Selector",
+      "type": "contains",
+      "description": "AgentsStage.tsx contém Selector"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "AgentsStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "AgentsStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "AgentsStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "AgentsStage.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "AgentsStage.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/BriefingStage.tsx::BriefingStage",
+      "type": "contains",
+      "description": "BriefingStage.tsx contém BriefingStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "target": "file:frontend/src/components/workstation/FormattedText.tsx",
+      "type": "imports",
+      "description": "BriefingStage.tsx importa de FormattedText.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "BriefingStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "BriefingStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "BriefingStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/CompositionStage.tsx::CompositionStage",
+      "type": "contains",
+      "description": "CompositionStage.tsx contém CompositionStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "target": "file:frontend/src/components/workstation/FormattedText.tsx",
+      "type": "imports",
+      "description": "CompositionStage.tsx importa de FormattedText.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "CompositionStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "CompositionStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "CompositionStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/DraftsStage.tsx::DraftsStage",
+      "type": "contains",
+      "description": "DraftsStage.tsx contém DraftsStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/DraftsStage.tsx::buildChosenDrafts",
+      "type": "contains",
+      "description": "DraftsStage.tsx contém buildChosenDrafts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "target": "file:frontend/src/components/workstation/FormattedText.tsx",
+      "type": "imports",
+      "description": "DraftsStage.tsx importa de FormattedText.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "DraftsStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "DraftsStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "target": "file:frontend/src/lib/mappers/editorial.ts",
+      "type": "imports",
+      "description": "DraftsStage.tsx importa de editorial.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "DraftsStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "DraftsStage.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EntryStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/EntryStage.tsx::EntryStage",
+      "type": "contains",
+      "description": "EntryStage.tsx contém EntryStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EntryStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/EntryStage.tsx::SelectField",
+      "type": "contains",
+      "description": "EntryStage.tsx contém SelectField"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EntryStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "EntryStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EntryStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "EntryStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EntryStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "EntryStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/EvaluationStage.tsx::EvaluationStage",
+      "type": "contains",
+      "description": "EvaluationStage.tsx contém EvaluationStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/EvaluationStage.tsx::EvalCard",
+      "type": "contains",
+      "description": "EvaluationStage.tsx contém EvalCard"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/EvaluationStage.tsx::scoreColor",
+      "type": "contains",
+      "description": "EvaluationStage.tsx contém scoreColor"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "file:frontend/src/components/workstation/FormattedText.tsx",
+      "type": "imports",
+      "description": "EvaluationStage.tsx importa de FormattedText.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "file:frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "type": "imports",
+      "description": "EvaluationStage.tsx importa de ReadjustAllModal.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "EvaluationStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "EvaluationStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "EvaluationStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "EvaluationStage.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "EvaluationStage.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/ExecutionStage.tsx::ExecutionStage",
+      "type": "contains",
+      "description": "ExecutionStage.tsx contém ExecutionStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/ExecutionStage.tsx::Reactor",
+      "type": "contains",
+      "description": "ExecutionStage.tsx contém Reactor"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "ExecutionStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "ExecutionStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "ExecutionStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExecutionStage.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "ExecutionStage.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExportStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/ExportStage.tsx::ExportStage",
+      "type": "contains",
+      "description": "ExportStage.tsx contém ExportStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExportStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/ExportStage.tsx::ArtifactCard",
+      "type": "contains",
+      "description": "ExportStage.tsx contém ArtifactCard"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExportStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/ExportStage.tsx::Row",
+      "type": "contains",
+      "description": "ExportStage.tsx contém Row"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExportStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "ExportStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExportStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "ExportStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/ExportStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "ExportStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/PromptStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/PromptStage.tsx::PromptStage",
+      "type": "contains",
+      "description": "PromptStage.tsx contém PromptStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/PromptStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "PromptStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/PromptStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "PromptStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/PromptStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "PromptStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/PromptStage.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "PromptStage.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/SegmentationStage.tsx::SegmentationStage",
+      "type": "contains",
+      "description": "SegmentationStage.tsx contém SegmentationStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/SegmentationStage.tsx::SegmentRow",
+      "type": "contains",
+      "description": "SegmentationStage.tsx contém SegmentRow"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/SegmentationStage.tsx::ImageSuggestionPanel",
+      "type": "contains",
+      "description": "SegmentationStage.tsx contém ImageSuggestionPanel"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "target": "file:frontend/src/components/workstation/FormattedText.tsx",
+      "type": "imports",
+      "description": "SegmentationStage.tsx importa de FormattedText.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "SegmentationStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "SegmentationStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "SegmentationStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "SegmentationStage.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/StoryboardStage.tsx::StoryboardStage",
+      "type": "contains",
+      "description": "StoryboardStage.tsx contém StoryboardStage"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "imports",
+      "description": "StoryboardStage.tsx importa de common.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "StoryboardStage.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "imports",
+      "description": "StoryboardStage.tsx importa de pe-store.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "StoryboardStage.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/common.tsx",
+      "target": "function:frontend/src/components/workstation/stages/common.tsx::StageHeader",
+      "type": "contains",
+      "description": "common.tsx contém StageHeader"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/common.tsx",
+      "target": "function:frontend/src/components/workstation/stages/common.tsx::StageScroll",
+      "type": "contains",
+      "description": "common.tsx contém StageScroll"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/common.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "imports",
+      "description": "common.tsx importa de ui.tsx"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ui.tsx",
+      "target": "function:frontend/src/components/workstation/ui.tsx::AnimatedNumber",
+      "type": "contains",
+      "description": "ui.tsx contém AnimatedNumber"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ui.tsx",
+      "target": "function:frontend/src/components/workstation/ui.tsx::PeButton",
+      "type": "contains",
+      "description": "ui.tsx contém PeButton"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ui.tsx",
+      "target": "function:frontend/src/components/workstation/ui.tsx::Reveal",
+      "type": "contains",
+      "description": "ui.tsx contém Reveal"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ui.tsx",
+      "target": "function:frontend/src/components/workstation/ui.tsx::Eyebrow",
+      "type": "contains",
+      "description": "ui.tsx contém Eyebrow"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ui.tsx",
+      "target": "function:frontend/src/components/workstation/ui.tsx::Field",
+      "type": "contains",
+      "description": "ui.tsx contém Field"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ui.tsx",
+      "target": "function:frontend/src/components/workstation/ui.tsx::ActivityGlyph",
+      "type": "contains",
+      "description": "ui.tsx contém ActivityGlyph"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ui.tsx",
+      "target": "function:frontend/src/components/workstation/ui.tsx::ErrorAccordion",
+      "type": "contains",
+      "description": "ui.tsx contém ErrorAccordion"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ui.tsx",
+      "target": "function:frontend/src/components/workstation/ui.tsx::LoadingDots",
+      "type": "contains",
+      "description": "ui.tsx contém LoadingDots"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/ui.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "imports",
+      "description": "ui.tsx importa de utils.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/editorial.ts",
+      "target": "function:frontend/src/lib/mappers/editorial.ts::editorialFlowFromState",
+      "type": "contains",
+      "description": "editorial.ts contém editorialFlowFromState"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/editorial.ts",
+      "target": "function:frontend/src/lib/mappers/editorial.ts::editorialStatusFromDerived",
+      "type": "contains",
+      "description": "editorial.ts contém editorialStatusFromDerived"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/editorial.ts",
+      "target": "function:frontend/src/lib/mappers/editorial.ts::storyboardBlocks",
+      "type": "contains",
+      "description": "editorial.ts contém storyboardBlocks"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/editorial.ts",
+      "target": "function:frontend/src/lib/mappers/editorial.ts::isBlockUnlocked",
+      "type": "contains",
+      "description": "editorial.ts contém isBlockUnlocked"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/editorial.ts",
+      "target": "function:frontend/src/lib/mappers/editorial.ts::frontierBlockId",
+      "type": "contains",
+      "description": "editorial.ts contém frontierBlockId"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/editorial.ts",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "editorial.ts importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/phase.ts",
+      "target": "function:frontend/src/lib/mappers/phase.ts::stageFromPhase",
+      "type": "contains",
+      "description": "phase.ts contém stageFromPhase"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/phase.ts",
+      "target": "function:frontend/src/lib/mappers/phase.ts::phaseFromStage",
+      "type": "contains",
+      "description": "phase.ts contém phaseFromStage"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/phase.ts",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "phase.ts importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::fetchSession",
+      "type": "contains",
+      "description": "pe-api.ts contém fetchSession"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::patchSession",
+      "type": "contains",
+      "description": "pe-api.ts contém patchSession"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::runAction",
+      "type": "contains",
+      "description": "pe-api.ts contém runAction"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::restoreSession",
+      "type": "contains",
+      "description": "pe-api.ts contém restoreSession"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::fetchLlmConfig",
+      "type": "contains",
+      "description": "pe-api.ts contém fetchLlmConfig"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::saveLlmConfig",
+      "type": "contains",
+      "description": "pe-api.ts contém saveLlmConfig"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::opsFromConfig",
+      "type": "contains",
+      "description": "pe-api.ts contém opsFromConfig"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::llmConfigPayloadFromOps",
+      "type": "contains",
+      "description": "pe-api.ts contém llmConfigPayloadFromOps"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::eventsFromState",
+      "type": "contains",
+      "description": "pe-api.ts contém eventsFromState"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::tipoLabel",
+      "type": "contains",
+      "description": "pe-api.ts contém tipoLabel"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "function:frontend/src/lib/pe-api.ts::providersFromStatus",
+      "type": "contains",
+      "description": "pe-api.ts contém providersFromStatus"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "file:frontend/src/lib/mappers/operations.ts",
+      "type": "imports",
+      "description": "pe-api.ts importa de operations.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-api.ts",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "pe-api.ts importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "function:frontend/src/lib/pe-store.tsx::PostEngineProvider",
+      "type": "contains",
+      "description": "pe-store.tsx contém PostEngineProvider"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "function:frontend/src/lib/pe-store.tsx::usePE",
+      "type": "contains",
+      "description": "pe-store.tsx contém usePE"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "function:frontend/src/lib/pe-store.tsx::isStageId",
+      "type": "contains",
+      "description": "pe-store.tsx contém isStageId"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "function:frontend/src/lib/pe-store.tsx::computeReachable",
+      "type": "contains",
+      "description": "pe-store.tsx contém computeReachable"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "function:frontend/src/lib/pe-store.tsx::draftFromState",
+      "type": "contains",
+      "description": "pe-store.tsx contém draftFromState"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "file:frontend/src/lib/mappers/editorial.ts",
+      "type": "imports",
+      "description": "pe-store.tsx importa de editorial.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "file:frontend/src/lib/mappers/interview.ts",
+      "type": "imports",
+      "description": "pe-store.tsx importa de interview.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "file:frontend/src/lib/mappers/phase.ts",
+      "type": "imports",
+      "description": "pe-store.tsx importa de phase.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "file:frontend/src/lib/pe-api.ts",
+      "type": "imports",
+      "description": "pe-store.tsx importa de pe-api.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/pe-store.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "imports",
+      "description": "pe-store.tsx importa de pe-types.ts"
+    },
+    {
+      "source": "file:frontend/src/lib/utils.ts",
+      "target": "function:frontend/src/lib/utils.ts::cn",
+      "type": "contains",
+      "description": "utils.ts contém cn"
+    },
+    {
+      "source": "file:frontend/src/main.tsx",
+      "target": "file:frontend/src/components/workstation/Workstation.tsx",
+      "type": "imports",
+      "description": "main.tsx importa de Workstation.tsx"
+    },
+    {
+      "source": "file:frontend/src/main.tsx",
+      "target": "file:frontend/src/styles.css",
+      "type": "imports",
+      "description": "main.tsx importa de styles.css"
+    }
+  ]
+}

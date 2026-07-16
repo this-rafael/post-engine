@@ -1,0 +1,811 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "specs/spec-061/plan.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 337,
+      "nonEmptyLines": 272,
+      "sections": [
+        {
+          "heading": "Implementation Plan: Post Engine V4 — Entrevista",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Technical Context",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Instructions Check",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "Fluxo V4 por rodada",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Architecture Decisions",
+          "level": 2,
+          "line": 99
+        },
+        {
+          "heading": "Data Model Summary",
+          "level": 2,
+          "line": 114
+        },
+        {
+          "heading": "API Surface Summary",
+          "level": 2,
+          "line": 134
+        },
+        {
+          "heading": "Testing Strategy",
+          "level": 2,
+          "line": 145
+        },
+        {
+          "heading": "Acceptance Test Stubs",
+          "level": 2,
+          "line": 155
+        },
+        {
+          "heading": "Error Handling Strategy",
+          "level": 2,
+          "line": 180
+        },
+        {
+          "heading": "Integration Points",
+          "level": 2,
+          "line": 190
+        },
+        {
+          "heading": "Risk Mitigation",
+          "level": 2,
+          "line": 200
+        },
+        {
+          "heading": "Requirement Coverage Map",
+          "level": 2,
+          "line": 212
+        },
+        {
+          "heading": "Cobertura por Épico (spec §13)",
+          "level": 3,
+          "line": 237
+        },
+        {
+          "heading": "Project Structure",
+          "level": 2,
+          "line": 253
+        },
+        {
+          "heading": "Source Code",
+          "level": 3,
+          "line": 255
+        },
+        {
+          "heading": "Brownfield Notes",
+          "level": 3,
+          "line": 315
+        },
+        {
+          "heading": "Implementation Hints",
+          "level": 2,
+          "line": 325
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    },
+    {
+      "path": "specs/spec-061/research.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 665,
+      "nonEmptyLines": 519,
+      "sections": [
+        {
+          "heading": "Research — Post Engine V4 (spec-061)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "0. Trajetória do produto (contexto histórico)",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "1. Inventário funcional (spec §3.1)",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "1.1 Início da entrevista",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "1.2 Geração de perguntas",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "1.3 Seleção de perguntas",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "1.4 Validação das perguntas",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "1.5 Armazenamento das respostas",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "1.6 Avaliação das respostas",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "1.7 Extração de evidências",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "1.8 Atualização do estado autoral",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "1.9 Gateway",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "1.10 Encerramento",
+          "level": 3,
+          "line": 139
+        },
+        {
+          "heading": "1.11 Briefing",
+          "level": 3,
+          "line": 150
+        },
+        {
+          "heading": "1.12 Geração",
+          "level": 3,
+          "line": 159
+        },
+        {
+          "heading": "1.13 Exportação",
+          "level": 3,
+          "line": 170
+        },
+        {
+          "heading": "1.14 Retomada de sessões",
+          "level": 3,
+          "line": 181
+        },
+        {
+          "heading": "2. Inventário de contratos (spec §3.2)",
+          "level": 2,
+          "line": 192
+        },
+        {
+          "heading": "2.1 Contratos persistidos em `TuiSessionState` (`schemas.py:847-911`)",
+          "level": 3,
+          "line": 194
+        },
+        {
+          "heading": "2.2 Schemas centrais (definidos em `schemas.py`)",
+          "level": 3,
+          "line": 227
+        },
+        {
+          "heading": "2.3 `required_axes` / \"27 eixos\"",
+          "level": 3,
+          "line": 244
+        },
+        {
+          "heading": "2.4 Duplicação `memory_pack` ↔ `evidence_ledger`",
+          "level": 3,
+          "line": 252
+        },
+        {
+          "heading": "2.5 Contratos HTTP (frontend ↔ backend)",
+          "level": 3,
+          "line": 265
+        },
+        {
+          "heading": "2.6 Tipos do frontend (`frontend/src/lib/pe-types.ts`)",
+          "level": 3,
+          "line": 279
+        },
+        {
+          "heading": "2.7 Versionamento — 5 strings independentes (INCONSISTENTE)",
+          "level": 3,
+          "line": 286
+        },
+        {
+          "heading": "3. Rastreamento de dados (spec §3.3)",
+          "level": 2,
+          "line": 298
+        },
+        {
+          "heading": "4. Auditoria dos prompts (spec §3.4)",
+          "level": 2,
+          "line": 336
+        },
+        {
+          "heading": "4.1 Catálogo de prompts (30 arquivos + 1 placeholder)",
+          "level": 3,
+          "line": 338
+        },
+        {
+          "heading": "4.2 Auditoria por critério (spec §3.4)",
+          "level": 3,
+          "line": 353
+        },
+        {
+          "heading": "4.3 Variabilidade de placeholder (INCONSISTENTE)",
+          "level": 3,
+          "line": 369
+        },
+        {
+          "heading": "5. Corpus de avaliação (spec §3.5) — estado atual",
+          "level": 2,
+          "line": 379
+        },
+        {
+          "heading": "5.1 Material bruto disponível para semear o corpus",
+          "level": 3,
+          "line": 383
+        },
+        {
+          "heading": "5.2 Categorias do corpus V4 (`spec.md:165-178`) — cobertura",
+          "level": 3,
+          "line": 394
+        },
+        {
+          "heading": "6. Baseline da V3 (spec §3.6) — cobertura por testes existentes",
+          "level": 2,
+          "line": 415
+        },
+        {
+          "heading": "6.1 Comportamentos V3 preserváveis (inferidos dos testes)",
+          "level": 3,
+          "line": 432
+        },
+        {
+          "heading": "6.2 LLM fakes disponíveis (`tests/llm_fakes.py`)",
+          "level": 3,
+          "line": 440
+        },
+        {
+          "heading": "7. Entregáveis da pesquisa (spec §3.7) — status",
+          "level": 2,
+          "line": 452
+        },
+        {
+          "heading": "8. Inventário de inconsistências",
+          "level": 2,
+          "line": 471
+        },
+        {
+          "heading": "9. Quebra de contrato V4 (spec §11) — contratos a remover",
+          "level": 2,
+          "line": 499
+        },
+        {
+          "heading": "10. Mapeamento V4 → comportamentos V3 (para Épico 0)",
+          "level": 2,
+          "line": 518
+        },
+        {
+          "heading": "11. Arquitetura da execução LLM (contexto)",
+          "level": 2,
+          "line": 535
+        },
+        {
+          "heading": "12. Notas arquiteturais para V4",
+          "level": 2,
+          "line": 555
+        },
+        {
+          "heading": "13. Próximos passos da Fase 0 (gaps restantes)",
+          "level": 2,
+          "line": 579
+        },
+        {
+          "heading": "14. Entregáveis V4 concluídos",
+          "level": 2,
+          "line": 587
+        },
+        {
+          "heading": "14.1 Máquina de estados",
+          "level": 3,
+          "line": 589
+        },
+        {
+          "heading": "14.2 Diagrama de sequência V4",
+          "level": 3,
+          "line": 603
+        },
+        {
+          "heading": "14.3 Relatorio V2/V3 historico",
+          "level": 3,
+          "line": 639
+        },
+        {
+          "heading": "14.4 Plano de metricas comparativas",
+          "level": 3,
+          "line": 653
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 48
+      }
+    },
+    {
+      "path": "specs/spec-061/spec_061.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 955,
+      "nonEmptyLines": 704,
+      "sections": [
+        {
+          "heading": "SPEC — Post Engine V4",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Objetivo",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. Princípio central",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Fluxo atual",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "Fluxo V4",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "3. Fase 0 — Pesquisa e engenharia reversa",
+          "level": 1,
+          "line": 46
+        },
+        {
+          "heading": "3.1 Inventário funcional",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "3.2 Inventário de contratos",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "3.3 Rastreamento de dados",
+          "level": 2,
+          "line": 115
+        },
+        {
+          "heading": "3.4 Auditoria dos prompts",
+          "level": 2,
+          "line": 140
+        },
+        {
+          "heading": "3.5 Corpus de avaliação",
+          "level": 2,
+          "line": 163
+        },
+        {
+          "heading": "3.6 Baseline da V3",
+          "level": 2,
+          "line": 180
+        },
+        {
+          "heading": "3.7 Entregáveis da pesquisa",
+          "level": 2,
+          "line": 195
+        },
+        {
+          "heading": "4. Novo vocabulário",
+          "level": 1,
+          "line": 214
+        },
+        {
+          "heading": "Sinal autoral",
+          "level": 2,
+          "line": 216
+        },
+        {
+          "heading": "Evidência",
+          "level": 2,
+          "line": 233
+        },
+        {
+          "heading": "Dimensão autoral",
+          "level": 2,
+          "line": 237
+        },
+        {
+          "heading": "Lacuna",
+          "level": 2,
+          "line": 253
+        },
+        {
+          "heading": "Oportunidade de aprofundamento",
+          "level": 2,
+          "line": 257
+        },
+        {
+          "heading": "Grupo",
+          "level": 2,
+          "line": 261
+        },
+        {
+          "heading": "5. Arquitetura da entrevista",
+          "level": 1,
+          "line": 269
+        },
+        {
+          "heading": "5.1 Exploração aberta",
+          "level": 2,
+          "line": 271
+        },
+        {
+          "heading": "5.2 Geração de candidatas",
+          "level": 2,
+          "line": 314
+        },
+        {
+          "heading": "5.3 Preservação da resposta",
+          "level": 2,
+          "line": 342
+        },
+        {
+          "heading": "5.4 Extração de sinais",
+          "level": 2,
+          "line": 358
+        },
+        {
+          "heading": "6. Gateway de autoria híbrido",
+          "level": 1,
+          "line": 401
+        },
+        {
+          "heading": "6.1 Regra principal",
+          "level": 2,
+          "line": 413
+        },
+        {
+          "heading": "6.2 Gateway equilibrado",
+          "level": 2,
+          "line": 434
+        },
+        {
+          "heading": "6.3 Gateway desequilibrado forte",
+          "level": 2,
+          "line": 454
+        },
+        {
+          "heading": "6.4 Papel da LLM",
+          "level": 2,
+          "line": 481
+        },
+        {
+          "heading": "6.5 Papel da heurística determinística",
+          "level": 2,
+          "line": 509
+        },
+        {
+          "heading": "6.6 Vetos absolutos",
+          "level": 2,
+          "line": 542
+        },
+        {
+          "heading": "6.7 Resultado do gateway",
+          "level": 2,
+          "line": 562
+        },
+        {
+          "heading": "7. Análise de lacunas",
+          "level": 1,
+          "line": 591
+        },
+        {
+          "heading": "8. Seleção do aprofundamento",
+          "level": 1,
+          "line": 627
+        },
+        {
+          "heading": "9. Encerramento",
+          "level": 1,
+          "line": 648
+        },
+        {
+          "heading": "10. Modelo conceitual V4",
+          "level": 1,
+          "line": 668
+        },
+        {
+          "heading": "11. Quebra de contrato",
+          "level": 1,
+          "line": 692
+        },
+        {
+          "heading": "12. GUI V4",
+          "level": 1,
+          "line": 716
+        },
+        {
+          "heading": "12.1 Problema atual",
+          "level": 2,
+          "line": 718
+        },
+        {
+          "heading": "12.2 Regra da nova GUI",
+          "level": 2,
+          "line": 745
+        },
+        {
+          "heading": "12.3 Tela principal",
+          "level": 2,
+          "line": 759
+        },
+        {
+          "heading": "12.4 Estados das dimensões",
+          "level": 2,
+          "line": 777
+        },
+        {
+          "heading": "12.5 Painel de dimensão",
+          "level": 2,
+          "line": 794
+        },
+        {
+          "heading": "12.6 Visualizações",
+          "level": 2,
+          "line": 812
+        },
+        {
+          "heading": "12.7 Progresso da entrevista",
+          "level": 2,
+          "line": 834
+        },
+        {
+          "heading": "13. Épicos",
+          "level": 1,
+          "line": 850
+        },
+        {
+          "heading": "Épico 0 — Pesquisa",
+          "level": 2,
+          "line": 852
+        },
+        {
+          "heading": "Épico 1 — Domínio V4",
+          "level": 2,
+          "line": 856
+        },
+        {
+          "heading": "Épico 2 — Motor de exploração",
+          "level": 2,
+          "line": 860
+        },
+        {
+          "heading": "Épico 3 — Extração",
+          "level": 2,
+          "line": 864
+        },
+        {
+          "heading": "Épico 4 — Heurística determinística",
+          "level": 2,
+          "line": 868
+        },
+        {
+          "heading": "Épico 5 — Avaliação LLM",
+          "level": 2,
+          "line": 872
+        },
+        {
+          "heading": "Épico 6 — Gateway híbrido",
+          "level": 2,
+          "line": 876
+        },
+        {
+          "heading": "Épico 7 — Lacunas e aprofundamento",
+          "level": 2,
+          "line": 880
+        },
+        {
+          "heading": "Épico 8 — GUI",
+          "level": 2,
+          "line": 884
+        },
+        {
+          "heading": "Épico 9 — Avaliação comparativa",
+          "level": 2,
+          "line": 888
+        },
+        {
+          "heading": "Épico 10 — Migração",
+          "level": 2,
+          "line": 892
+        },
+        {
+          "heading": "14. Critérios de aceitação",
+          "level": 1,
+          "line": 898
+        },
+        {
+          "heading": "15. Não objetivos",
+          "level": 1,
+          "line": 923
+        },
+        {
+          "heading": "16. Resultado esperado",
+          "level": 1,
+          "line": 940
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 61
+      }
+    },
+    {
+      "path": "specs/spec-061/tasks.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 208,
+      "nonEmptyLines": 151,
+      "sections": [
+        {
+          "heading": "Tasks: SPEC-061 — Post Engine V4 (Entrevista)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Project Mode",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Epic / Capability Map",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Brownfield Notes",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "Phase 1: Épico 0 — Pesquisa",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "Phase 2: Épico 1 — Domínio (Fundacional)",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "Phase 3: Épico 3 — Extração",
+          "level": 2,
+          "line": 63
+        },
+        {
+          "heading": "Phase 4: Épico 4 — Heurística",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "Phase 5: Épico 5 — Avaliação LLM",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "Phase 6: Épico 6 — Gateway híbrido",
+          "level": 2,
+          "line": 93
+        },
+        {
+          "heading": "Phase 7: Épico 2 — Exploração",
+          "level": 2,
+          "line": 103
+        },
+        {
+          "heading": "Phase 8: Épico 7 — Lacunas",
+          "level": 2,
+          "line": 115
+        },
+        {
+          "heading": "Phase 9: Integração session_app",
+          "level": 2,
+          "line": 126
+        },
+        {
+          "heading": "Phase 10: Épico 8 — GUI",
+          "level": 2,
+          "line": 136
+        },
+        {
+          "heading": "Phase 11: Épico 9 — Métricas de qualidade",
+          "level": 2,
+          "line": 149
+        },
+        {
+          "heading": "Phase 12: Épico 10 — Remoção de legado (breaking)",
+          "level": 2,
+          "line": 159
+        },
+        {
+          "heading": "Phase 13: Polish",
+          "level": 2,
+          "line": 172
+        },
+        {
+          "heading": "Dependencies",
+          "level": 2,
+          "line": 180
+        },
+        {
+          "heading": "Definition of Done",
+          "level": 2,
+          "line": 201
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    }
+  ]
+}

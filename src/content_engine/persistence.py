@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from .editorial_flow import normalize_editorial_flow
+from .phase_progress import PHASE_ORDER
 from .schemas import (
     FERRAMENTAS_VALIDAS,
     SANDBOXES_VALIDOS,
@@ -80,6 +81,7 @@ def _state_to_dict(state: TuiSessionState) -> dict[str, Any]:
         "session_log_path": state.session_log_path,
         "current_phase": state.current_phase,
         "current_stage": state.current_stage,
+        "fases_liberadas": list(state.fases_liberadas),
         "tema": state.tema,
         "plataforma": state.plataforma,
         "objetivo_do_post": state.objetivo_do_post,
@@ -144,6 +146,9 @@ def _dict_to_state(payload: dict[str, Any]) -> TuiSessionState:
         session_log_path=_as_str(payload.get("session_log_path")),
         current_phase=phase if phase in _VALID_PHASES else "entrada_inicial",
         current_stage=stage if stage in _VALID_STAGES else "entry",
+        fases_liberadas=[
+            item for item in _as_list(payload.get("fases_liberadas")) if item in PHASE_ORDER
+        ],
         tema=_as_str(payload.get("tema")),
         plataforma=_as_str(payload.get("plataforma")),
         objetivo_do_post=_as_str(payload.get("objetivo_do_post")),

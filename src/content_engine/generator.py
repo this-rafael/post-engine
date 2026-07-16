@@ -440,7 +440,9 @@ class ContentGenerator:
         self.opencode_agent: str | None = opencode_agent
 
     def generate(self, data: GenerationPromptInput) -> ConteudoGerado:
-        prompt: str = build_generation_prompt(data)
+        prompt = build_generation_prompt(
+            data, provider=self.tool, model=self.model
+        )
 
         result: AgentResult = self.agent.run(
             self.tool,

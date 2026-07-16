@@ -1,0 +1,5483 @@
+{
+  "batchIndex": 2,
+  "totalBatches": 19,
+  "filesAnalyzed": 15,
+  "nodes": [
+    {
+      "id": "file:src/content_engine/briefing.py",
+      "type": "file",
+      "label": "briefing.py",
+      "file": "src/content_engine/briefing.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 16,
+        "nonEmptyLines": 9,
+        "description": "Monta o briefing autoral a partir do estado da entrevista e dos schemas de dados"
+      }
+    },
+    {
+      "id": "function:src/content_engine/briefing.py::montar_briefing_autoral",
+      "type": "function",
+      "label": "montar_briefing_autoral",
+      "file": "src/content_engine/briefing.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 10,
+        "endLine": 13,
+        "params": [
+          "state"
+        ]
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/__init__.py",
+      "type": "file",
+      "label": "__init__.py",
+      "file": "src/content_engine/interview/__init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 70,
+        "nonEmptyLines": 69,
+        "description": "Pacote interview - re-exporta os principais componentes do motor de entrevista"
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/briefing.py",
+      "type": "file",
+      "label": "briefing.py",
+      "file": "src/content_engine/interview/briefing.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 27,
+        "nonEmptyLines": 21,
+        "description": "Constrói o briefing final consolidando respostas, evidências e sinais da entrevista"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/briefing.py::build_briefing",
+      "type": "function",
+      "label": "build_briefing",
+      "file": "src/content_engine/interview/briefing.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 9,
+        "endLine": 24,
+        "params": [
+          "state"
+        ]
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/controller.py",
+      "type": "file",
+      "label": "controller.py",
+      "file": "src/content_engine/interview/controller.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 161,
+        "nonEmptyLines": 147,
+        "description": "Controlador principal da entrevista: orquestra geração de perguntas, processamento de respostas e decisão de aprofundamento"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/controller.py::InterviewController",
+      "type": "class",
+      "label": "InterviewController",
+      "file": "src/content_engine/interview/controller.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 20,
+        "endLine": 158,
+        "methods": [
+          "__init__",
+          "start",
+          "generate_next_question",
+          "process_answer",
+          "run_round",
+          "explain_decision",
+          "close"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/controller.py::InterviewController.__init__",
+      "type": "function",
+      "label": "__init__",
+      "file": "src/content_engine/interview/controller.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewController"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/controller.py::InterviewController.start",
+      "type": "function",
+      "label": "start",
+      "file": "src/content_engine/interview/controller.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewController"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/controller.py::InterviewController.generate_next_question",
+      "type": "function",
+      "label": "generate_next_question",
+      "file": "src/content_engine/interview/controller.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewController"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/controller.py::InterviewController.process_answer",
+      "type": "function",
+      "label": "process_answer",
+      "file": "src/content_engine/interview/controller.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewController"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/controller.py::InterviewController.run_round",
+      "type": "function",
+      "label": "run_round",
+      "file": "src/content_engine/interview/controller.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewController"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/controller.py::InterviewController.explain_decision",
+      "type": "function",
+      "label": "explain_decision",
+      "file": "src/content_engine/interview/controller.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewController"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/controller.py::InterviewController.close",
+      "type": "function",
+      "label": "close",
+      "file": "src/content_engine/interview/controller.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewController"
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/exploration.py",
+      "type": "file",
+      "label": "exploration.py",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 289,
+        "nonEmptyLines": 261,
+        "description": "Motor de exploração: gera candidatos a perguntas via LLM, seleciona a melhor e avança o estado da entrevista"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/exploration.py::_context",
+      "type": "function",
+      "label": "_context",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 28,
+        "endLine": 33,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/exploration.py::_as_signal_summary",
+      "type": "function",
+      "label": "_as_signal_summary",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 36,
+        "endLine": 47,
+        "params": [
+          "signals"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/exploration.py::build_exploration_prompt",
+      "type": "function",
+      "label": "build_exploration_prompt",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 50,
+        "endLine": 83,
+        "params": [
+          "context",
+          "previous_questions",
+          "signals",
+          "directions_explored",
+          "constraints"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/exploration.py::_invoke_runner",
+      "type": "function",
+      "label": "_invoke_runner",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 86,
+        "endLine": 95,
+        "params": [
+          "runner",
+          "tool",
+          "prompt"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/exploration.py::_candidate_items",
+      "type": "function",
+      "label": "_candidate_items",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 98,
+        "endLine": 109,
+        "params": [
+          "payload"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/exploration.py::generate_candidates",
+      "type": "function",
+      "label": "generate_candidates",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 112,
+        "endLine": 183,
+        "params": [
+          "runner",
+          "context",
+          "previous_questions",
+          "signals",
+          "directions_explored",
+          "constraints",
+          "tool",
+          "model",
+          "reasoning_effort",
+          "sandbox",
+          "validate_tool",
+          "validate_model",
+          "validate_reasoning_effort",
+          "validate_sandbox"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/exploration.py::_candidate_rank",
+      "type": "function",
+      "label": "_candidate_rank",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 186,
+        "endLine": 195,
+        "params": [
+          "candidate"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/exploration.py::select_question",
+      "type": "function",
+      "label": "select_question",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 198,
+        "endLine": 231,
+        "params": [
+          "runner",
+          "candidates",
+          "theme",
+          "previous_questions",
+          "tool",
+          "model",
+          "reasoning_effort",
+          "sandbox"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/exploration.py::generate_next_question",
+      "type": "function",
+      "label": "generate_next_question",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 234,
+        "endLine": 279,
+        "params": [
+          "runner",
+          "state",
+          "tool",
+          "model",
+          "reasoning_effort",
+          "sandbox",
+          "validate_tool",
+          "validate_model",
+          "validate_reasoning_effort",
+          "validate_sandbox"
+        ]
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/exploration.py::QuestionGenerationError",
+      "type": "class",
+      "label": "QuestionGenerationError",
+      "file": "src/content_engine/interview/exploration.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 20,
+        "endLine": 21,
+        "methods": []
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/extraction.py",
+      "type": "file",
+      "label": "extraction.py",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 210,
+        "nonEmptyLines": 179,
+        "description": "Extração de sinais autorais e evidências das respostas do usuário usando padrões regex"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::_answer_id",
+      "type": "function",
+      "label": "_answer_id",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 89,
+        "endLine": 92,
+        "params": [
+          "state",
+          "explicit"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::append_answer",
+      "type": "function",
+      "label": "append_answer",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 95,
+        "endLine": 117,
+        "params": [
+          "state",
+          "question",
+          "response",
+          "answer_id"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::_sentence_spans",
+      "type": "function",
+      "label": "_sentence_spans",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 120,
+        "endLine": 122,
+        "params": [
+          "text"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::_evidence_id",
+      "type": "function",
+      "label": "_evidence_id",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 125,
+        "endLine": 127,
+        "params": [
+          "answer_id",
+          "index",
+          "text"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::_signal_id",
+      "type": "function",
+      "label": "_signal_id",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 130,
+        "endLine": 131,
+        "params": [
+          "answer_id",
+          "signal_type",
+          "index"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::_status_for_sentence",
+      "type": "function",
+      "label": "_status_for_sentence",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 134,
+        "endLine": 139,
+        "params": [
+          "sentence",
+          "signal_type"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::extract_signals",
+      "type": "function",
+      "label": "extract_signals",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 142,
+        "endLine": 186,
+        "params": [
+          "answer",
+          "answer_id"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::append_extraction",
+      "type": "function",
+      "label": "append_extraction",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 189,
+        "endLine": 196,
+        "params": [
+          "state",
+          "result"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::signals_have_evidence",
+      "type": "function",
+      "label": "signals_have_evidence",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 199,
+        "endLine": 201,
+        "params": [
+          "signals",
+          "evidence"
+        ]
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/extraction.py::ExtractionResult",
+      "type": "class",
+      "label": "ExtractionResult",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 68,
+        "endLine": 86,
+        "methods": [
+          "evidences",
+          "__iter__",
+          "to_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::ExtractionResult.evidences",
+      "type": "function",
+      "label": "evidences",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "ExtractionResult"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::ExtractionResult.__iter__",
+      "type": "function",
+      "label": "__iter__",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "ExtractionResult"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/extraction.py::ExtractionResult.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/extraction.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "ExtractionResult"
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/gaps.py",
+      "type": "file",
+      "label": "gaps.py",
+      "file": "src/content_engine/interview/gaps.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 207,
+        "nonEmptyLines": 187,
+        "description": "Identificação de lacunas nas dimensões avaliadas e decisão de aprofundamento da entrevista"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gaps.py::_signal",
+      "type": "function",
+      "label": "_signal",
+      "file": "src/content_engine/interview/gaps.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 16,
+        "endLine": 17,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gaps.py::_dimension",
+      "type": "function",
+      "label": "_dimension",
+      "file": "src/content_engine/interview/gaps.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 20,
+        "endLine": 21,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gaps.py::identify_gaps",
+      "type": "function",
+      "label": "identify_gaps",
+      "file": "src/content_engine/interview/gaps.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 24,
+        "endLine": 124,
+        "params": [
+          "signals",
+          "dimensions",
+          "evidence_count",
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gaps.py::decide_deepening",
+      "type": "function",
+      "label": "decide_deepening",
+      "file": "src/content_engine/interview/gaps.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 127,
+        "endLine": 198,
+        "params": [
+          "gaps",
+          "gateway",
+          "question_count",
+          "max_questions",
+          "user_requested_end"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gaps.py::explain_decision",
+      "type": "function",
+      "label": "explain_decision",
+      "file": "src/content_engine/interview/gaps.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 201,
+        "endLine": 204,
+        "params": [
+          "decision"
+        ]
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/gateway.py",
+      "type": "file",
+      "label": "gateway.py",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 146,
+        "nonEmptyLines": 118,
+        "description": "Gateway de aprovação: combina avaliação heurística e LLM para decidir se o material está apto"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::_coerce_heuristic",
+      "type": "function",
+      "label": "_coerce_heuristic",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 16,
+        "endLine": 17,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::_coerce_llm",
+      "type": "function",
+      "label": "_coerce_llm",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 20,
+        "endLine": 21,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::_coerce_gaps",
+      "type": "function",
+      "label": "_coerce_gaps",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 24,
+        "endLine": 25,
+        "params": [
+          "gaps"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::_profile",
+      "type": "function",
+      "label": "_profile",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 28,
+        "endLine": 29,
+        "params": [
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::_essential",
+      "type": "function",
+      "label": "_essential",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 32,
+        "endLine": 33,
+        "params": [
+          "dimensions"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::_critical",
+      "type": "function",
+      "label": "_critical",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 36,
+        "endLine": 37,
+        "params": [
+          "dimensions"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::_balanced_gateway",
+      "type": "function",
+      "label": "_balanced_gateway",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 40,
+        "endLine": 48,
+        "params": [
+          "assessment",
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::_strong_imbalanced_gateway",
+      "type": "function",
+      "label": "_strong_imbalanced_gateway",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 51,
+        "endLine": 65,
+        "params": [
+          "assessment",
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::evaluate_gateway",
+      "type": "function",
+      "label": "evaluate_gateway",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 68,
+        "endLine": 131,
+        "params": [
+          "heuristic",
+          "llm",
+          "gaps",
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::gateway_equilibrado",
+      "type": "function",
+      "label": "gateway_equilibrado",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 134,
+        "endLine": 135,
+        "params": [
+          "assessment",
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/gateway.py::gateway_desequilibrado_forte",
+      "type": "function",
+      "label": "gateway_desequilibrado_forte",
+      "file": "src/content_engine/interview/gateway.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 138,
+        "endLine": 139,
+        "params": [
+          "assessment",
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/heuristic.py",
+      "type": "file",
+      "label": "heuristic.py",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 329,
+        "nonEmptyLines": 291,
+        "description": "Avaliação heurística determinística das dimensões de qualidade autoral com detecção de vetos absolutos"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::_profile",
+      "type": "function",
+      "label": "_profile",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 119,
+        "endLine": 120,
+        "params": [
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::_as_signal",
+      "type": "function",
+      "label": "_as_signal",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 123,
+        "endLine": 124,
+        "params": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::_as_evidence",
+      "type": "function",
+      "label": "_as_evidence",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 127,
+        "endLine": 128,
+        "params": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::_as_answer",
+      "type": "function",
+      "label": "_as_answer",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 131,
+        "endLine": 132,
+        "params": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::_state_inputs",
+      "type": "function",
+      "label": "_state_inputs",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 135,
+        "endLine": 147,
+        "params": [
+          "signals",
+          "evidence",
+          "answers"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::_state_for_score",
+      "type": "function",
+      "label": "_state_for_score",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 150,
+        "endLine": 163,
+        "params": [
+          "score",
+          "has_signal",
+          "conflict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::_score_dimension",
+      "type": "function",
+      "label": "_score_dimension",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 166,
+        "endLine": 225,
+        "params": [
+          "definition",
+          "signals",
+          "evidence_by_id"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::_question_echo",
+      "type": "function",
+      "label": "_question_echo",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 228,
+        "endLine": 234,
+        "params": [
+          "answer"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::detect_absolute_vetos",
+      "type": "function",
+      "label": "detect_absolute_vetos",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 237,
+        "endLine": 281,
+        "params": [
+          "answers",
+          "evidence",
+          "signals",
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/heuristic.py::assess_dimensions",
+      "type": "function",
+      "label": "assess_dimensions",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 284,
+        "endLine": 318,
+        "params": [
+          "signals",
+          "evidence",
+          "answers",
+          "formato"
+        ]
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/heuristic.py::DimensionDefinition",
+      "type": "class",
+      "label": "DimensionDefinition",
+      "file": "src/content_engine/interview/heuristic.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 19,
+        "endLine": 24,
+        "methods": []
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/llm_evaluation.py",
+      "type": "file",
+      "label": "llm_evaluation.py",
+      "file": "src/content_engine/interview/llm_evaluation.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 146,
+        "nonEmptyLines": 132,
+        "description": "Avaliação de autoria via LLM: constrói prompt e interpreta resposta do modelo para validar qualidade"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/llm_evaluation.py::_text_items",
+      "type": "function",
+      "label": "_text_items",
+      "file": "src/content_engine/interview/llm_evaluation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 12,
+        "endLine": 13,
+        "params": [
+          "items"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/llm_evaluation.py::build_authorship_prompt",
+      "type": "function",
+      "label": "build_authorship_prompt",
+      "file": "src/content_engine/interview/llm_evaluation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 16,
+        "endLine": 68,
+        "params": [
+          "context",
+          "answers",
+          "evidence",
+          "signals"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/llm_evaluation.py::_invoke",
+      "type": "function",
+      "label": "_invoke",
+      "file": "src/content_engine/interview/llm_evaluation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 71,
+        "endLine": 80,
+        "params": [
+          "runner",
+          "tool",
+          "prompt"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/llm_evaluation.py::evaluate_authorship_llm",
+      "type": "function",
+      "label": "evaluate_authorship_llm",
+      "file": "src/content_engine/interview/llm_evaluation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 83,
+        "endLine": 143,
+        "params": [
+          "runner",
+          "context",
+          "answers",
+          "evidence",
+          "signals",
+          "tool",
+          "model",
+          "reasoning_effort",
+          "sandbox"
+        ]
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/quality.py",
+      "type": "file",
+      "label": "quality.py",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 106,
+        "nonEmptyLines": 82,
+        "description": "Métricas de qualidade do corpus: taxa de respostas induzidas e preservação da língua original"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/quality.py::_record",
+      "type": "function",
+      "label": "_record",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 38,
+        "endLine": 43,
+        "params": [
+          "item"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/quality.py::_words",
+      "type": "function",
+      "label": "_words",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 46,
+        "endLine": 51,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/quality.py::_is_induced",
+      "type": "function",
+      "label": "_is_induced",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 54,
+        "endLine": 60,
+        "params": [
+          "question",
+          "answer"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/quality.py::measure_induced_answer_rate",
+      "type": "function",
+      "label": "measure_induced_answer_rate",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 63,
+        "endLine": 70,
+        "params": [
+          "items"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/quality.py::measure_original_language_preservation",
+      "type": "function",
+      "label": "measure_original_language_preservation",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 73,
+        "endLine": 83,
+        "params": [
+          "items"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/quality.py::evaluate_corpus",
+      "type": "function",
+      "label": "evaluate_corpus",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 86,
+        "endLine": 91,
+        "params": [
+          "items"
+        ]
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/quality.py::QualityMetric",
+      "type": "class",
+      "label": "QualityMetric",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 20,
+        "endLine": 35,
+        "methods": [
+          "rate",
+          "to_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/quality.py::QualityMetric.rate",
+      "type": "function",
+      "label": "rate",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "QualityMetric"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/quality.py::QualityMetric.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/quality.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "QualityMetric"
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/schemas.py",
+      "type": "file",
+      "label": "schemas.py",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 831,
+        "nonEmptyLines": 728,
+        "description": "Schemas de dados (dataclasses) para todos os estados e estruturas da entrevista: ThemeContext, UserAnswer, Evidence, AuthorialSignal, DimensionScore, InterviewState, etc."
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::_clean",
+      "type": "function",
+      "label": "_clean",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 38,
+        "endLine": 39,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::_normalise",
+      "type": "function",
+      "label": "_normalise",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 42,
+        "endLine": 43,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::_strings",
+      "type": "function",
+      "label": "_strings",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 46,
+        "endLine": 49,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::_dict",
+      "type": "function",
+      "label": "_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 52,
+        "endLine": 53,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::_clamp_score",
+      "type": "function",
+      "label": "_clamp_score",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 56,
+        "endLine": 61,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::criar_estado_inicial",
+      "type": "function",
+      "label": "criar_estado_inicial",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 782,
+        "endLine": 802,
+        "params": [
+          "tema",
+          "objetivo",
+          "formato",
+          "personalidade",
+          "restricoes",
+          "max_questions"
+        ]
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::ThemeContext",
+      "type": "class",
+      "label": "ThemeContext",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 65,
+        "endLine": 97,
+        "methods": [
+          "__post_init__",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::ThemeContext.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "ThemeContext"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::ThemeContext.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "ThemeContext"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::ThemeContext.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "ThemeContext"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::QuestionCandidate",
+      "type": "class",
+      "label": "QuestionCandidate",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 101,
+        "endLine": 155,
+        "methods": [
+          "__post_init__",
+          "question",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::QuestionCandidate.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "QuestionCandidate"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::QuestionCandidate.question",
+      "type": "function",
+      "label": "question",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "QuestionCandidate"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::QuestionCandidate.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "QuestionCandidate"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::QuestionCandidate.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "QuestionCandidate"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::SelectedQuestion",
+      "type": "class",
+      "label": "SelectedQuestion",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 159,
+        "endLine": 195,
+        "methods": [
+          "__post_init__",
+          "text",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::SelectedQuestion.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "SelectedQuestion"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::SelectedQuestion.text",
+      "type": "function",
+      "label": "text",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "SelectedQuestion"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::SelectedQuestion.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "SelectedQuestion"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::SelectedQuestion.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "SelectedQuestion"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::UserAnswer",
+      "type": "class",
+      "label": "UserAnswer",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 199,
+        "endLine": 241,
+        "methods": [
+          "__post_init__",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::UserAnswer.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "UserAnswer"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::UserAnswer.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "UserAnswer"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::UserAnswer.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "UserAnswer"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::Evidence",
+      "type": "class",
+      "label": "Evidence",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 245,
+        "endLine": 279,
+        "methods": [
+          "__post_init__",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::Evidence.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "Evidence"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::Evidence.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "Evidence"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::Evidence.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "Evidence"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::AuthorialSignal",
+      "type": "class",
+      "label": "AuthorialSignal",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 283,
+        "endLine": 332,
+        "methods": [
+          "__post_init__",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::AuthorialSignal.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "AuthorialSignal"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::AuthorialSignal.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "AuthorialSignal"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::AuthorialSignal.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "AuthorialSignal"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::DimensionScore",
+      "type": "class",
+      "label": "DimensionScore",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 336,
+        "endLine": 398,
+        "methods": [
+          "dimension",
+          "id",
+          "__post_init__",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DimensionScore.dimension",
+      "type": "function",
+      "label": "dimension",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DimensionScore"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DimensionScore.id",
+      "type": "function",
+      "label": "id",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DimensionScore"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DimensionScore.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DimensionScore"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DimensionScore.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DimensionScore"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DimensionScore.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DimensionScore"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::DeterministicAssessment",
+      "type": "class",
+      "label": "DeterministicAssessment",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 405,
+        "endLine": 458,
+        "methods": [
+          "approved",
+          "heuristic_approved",
+          "__post_init__",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.approved",
+      "type": "function",
+      "label": "approved",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DeterministicAssessment"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.heuristic_approved",
+      "type": "function",
+      "label": "heuristic_approved",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DeterministicAssessment"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DeterministicAssessment"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DeterministicAssessment"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DeterministicAssessment"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::LlmAssessment",
+      "type": "class",
+      "label": "LlmAssessment",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 462,
+        "endLine": 517,
+        "methods": [
+          "llm_approved",
+          "__post_init__",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::LlmAssessment.llm_approved",
+      "type": "function",
+      "label": "llm_approved",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "LlmAssessment"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::LlmAssessment.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "LlmAssessment"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::LlmAssessment.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "LlmAssessment"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::LlmAssessment.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "LlmAssessment"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::Gap",
+      "type": "class",
+      "label": "Gap",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 521,
+        "endLine": 565,
+        "methods": [
+          "gap_type",
+          "__post_init__",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::Gap.gap_type",
+      "type": "function",
+      "label": "gap_type",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "Gap"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::Gap.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "Gap"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::Gap.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "Gap"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::Gap.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "Gap"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::DeepeningDecision",
+      "type": "class",
+      "label": "DeepeningDecision",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 569,
+        "endLine": 598,
+        "methods": [
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DeepeningDecision.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DeepeningDecision"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::DeepeningDecision.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "DeepeningDecision"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::GatewayResult",
+      "type": "class",
+      "label": "GatewayResult",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 602,
+        "endLine": 680,
+        "methods": [
+          "tipo_gateway",
+          "gaps",
+          "__post_init__",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::GatewayResult.tipo_gateway",
+      "type": "function",
+      "label": "tipo_gateway",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "GatewayResult"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::GatewayResult.gaps",
+      "type": "function",
+      "label": "gaps",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "GatewayResult"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::GatewayResult.__post_init__",
+      "type": "function",
+      "label": "__post_init__",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "GatewayResult"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::GatewayResult.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "GatewayResult"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::GatewayResult.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "GatewayResult"
+      }
+    },
+    {
+      "id": "class:src/content_engine/interview/schemas.py::InterviewState",
+      "type": "class",
+      "label": "InterviewState",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 684,
+        "endLine": 776,
+        "methods": [
+          "theme",
+          "original_answers",
+          "to_dict",
+          "from_dict"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::InterviewState.theme",
+      "type": "function",
+      "label": "theme",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewState"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::InterviewState.original_answers",
+      "type": "function",
+      "label": "original_answers",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewState"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::InterviewState.to_dict",
+      "type": "function",
+      "label": "to_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewState"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/schemas.py::InterviewState.from_dict",
+      "type": "function",
+      "label": "from_dict",
+      "file": "src/content_engine/interview/schemas.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "InterviewState"
+      }
+    },
+    {
+      "id": "file:src/content_engine/interview/ui.py",
+      "type": "file",
+      "label": "ui.py",
+      "file": "src/content_engine/interview/ui.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 131,
+        "nonEmptyLines": 116,
+        "description": "Construção da interface de texto (TUI) para apresentar o estado da entrevista ao usuário"
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/ui.py::_as_state",
+      "type": "function",
+      "label": "_as_state",
+      "file": "src/content_engine/interview/ui.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 13,
+        "endLine": 21,
+        "params": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/interview/ui.py::build_interview_ui",
+      "type": "function",
+      "label": "build_interview_ui",
+      "file": "src/content_engine/interview/ui.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 24,
+        "endLine": 128,
+        "params": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "id": "file:src/content_engine/session_app.py",
+      "type": "file",
+      "label": "session_app.py",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 1055,
+        "nonEmptyLines": 932,
+        "description": "Aplicação TUI principal (Textual) que integra entrevista, geração, segmentação, avaliação e exportação de conteúdo"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::_safe_query",
+      "type": "function",
+      "label": "_safe_query",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 77,
+        "endLine": 81,
+        "params": [
+          "app",
+          "selector"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::_text",
+      "type": "function",
+      "label": "_text",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 84,
+        "endLine": 88,
+        "params": [
+          "widget"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::_set_text",
+      "type": "function",
+      "label": "_set_text",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 91,
+        "endLine": 102,
+        "params": [
+          "widget",
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::_select_value",
+      "type": "function",
+      "label": "_select_value",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 105,
+        "endLine": 109,
+        "params": [
+          "widget"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::_json",
+      "type": "function",
+      "label": "_json",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 112,
+        "endLine": 116,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "class:src/content_engine/session_app.py::PostEngineApp",
+      "type": "class",
+      "label": "PostEngineApp",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 119,
+        "endLine": 1041,
+        "methods": [
+          "__init__",
+          "_build_default_agent",
+          "session_path",
+          "compose",
+          "on_mount",
+          "on_button_pressed",
+          "_phase",
+          "_normalizar_estado_carregado",
+          "_povoar_widgets_com_estado",
+          "_collect_form",
+          "_v4_state",
+          "_v4_controller",
+          "_sync_v4_state",
+          "_interview_snapshot",
+          "_validate_entry",
+          "action_start_interview_v4",
+          "action_continue_phase1",
+          "_response_from_widget",
+          "action_submit_v4_answer",
+          "action_submit_round",
+          "action_register_answer",
+          "action_generate_other_question",
+          "action_close_interview_v4",
+          "action_update_gateway",
+          "_garantir_briefing_para_fase3",
+          "action_continue_phase2",
+          "action_clear_phase1",
+          "_clear_interview",
+          "action_reset_context",
+          "action_reset_phase",
+          "action_back_to_phase1",
+          "action_back_to_phase2",
+          "action_continue_phase3",
+          "_llm_config",
+          "_config_cache_key",
+          "_gateway_payload",
+          "_montar_generation_input",
+          "_garantir_prompt_para_fase4",
+          "action_preview",
+          "get_generator",
+          "action_run",
+          "_executar_agente",
+          "action_clear",
+          "_segmentar",
+          "action_segment",
+          "_conteudo_final",
+          "action_evaluate",
+          "_segmento_atual_dict",
+          "_segmento_atual_texto",
+          "_segmento_post_from_dict",
+          "action_rewrite_segment",
+          "action_apply_segment_adjustment",
+          "action_export_output",
+          "_default_export_path",
+          "_avaliacao_post_valida",
+          "_post_score_payload",
+          "_render_post_score",
+          "_render_avaliacao_texto",
+          "_render_avaliacao_lista",
+          "_render_jornada",
+          "_render_persona_ativa",
+          "_render_score_summary",
+          "_render_gateway_status",
+          "_render_gateway_status_curto",
+          "_render_total_bruto",
+          "_render_total_normalizado",
+          "_render_score_aspecto",
+          "_render_returncode",
+          "_build_interview_ui",
+          "_serialize_briefing",
+          "_serialize_events",
+          "_serialize_conteudo_json",
+          "_serialize_segmentos",
+          "_serialize_historico_entrevista",
+          "_serialize_historico_recente",
+          "_serialize_avaliacao_post",
+          "_set_status",
+          "_log_event",
+          "_persistir",
+          "_ativar_sessao_restaurada",
+          "action_generate_storyboard",
+          "action_update_storyboard",
+          "action_clear_storyboard",
+          "action_generate_block_drafts",
+          "action_generate_all_block_drafts",
+          "action_retry_block_draft",
+          "action_select_block_draft",
+          "action_compose_editorial"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.__init__",
+      "type": "function",
+      "label": "__init__",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._build_default_agent",
+      "type": "function",
+      "label": "_build_default_agent",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.session_path",
+      "type": "function",
+      "label": "session_path",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.compose",
+      "type": "function",
+      "label": "compose",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.on_mount",
+      "type": "function",
+      "label": "on_mount",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.on_button_pressed",
+      "type": "function",
+      "label": "on_button_pressed",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._phase",
+      "type": "function",
+      "label": "_phase",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._normalizar_estado_carregado",
+      "type": "function",
+      "label": "_normalizar_estado_carregado",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._povoar_widgets_com_estado",
+      "type": "function",
+      "label": "_povoar_widgets_com_estado",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._collect_form",
+      "type": "function",
+      "label": "_collect_form",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._v4_state",
+      "type": "function",
+      "label": "_v4_state",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._v4_controller",
+      "type": "function",
+      "label": "_v4_controller",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._sync_v4_state",
+      "type": "function",
+      "label": "_sync_v4_state",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._interview_snapshot",
+      "type": "function",
+      "label": "_interview_snapshot",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._validate_entry",
+      "type": "function",
+      "label": "_validate_entry",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_start_interview_v4",
+      "type": "function",
+      "label": "action_start_interview_v4",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_continue_phase1",
+      "type": "function",
+      "label": "action_continue_phase1",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._response_from_widget",
+      "type": "function",
+      "label": "_response_from_widget",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_submit_v4_answer",
+      "type": "function",
+      "label": "action_submit_v4_answer",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_submit_round",
+      "type": "function",
+      "label": "action_submit_round",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_register_answer",
+      "type": "function",
+      "label": "action_register_answer",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_generate_other_question",
+      "type": "function",
+      "label": "action_generate_other_question",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_close_interview_v4",
+      "type": "function",
+      "label": "action_close_interview_v4",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_update_gateway",
+      "type": "function",
+      "label": "action_update_gateway",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._garantir_briefing_para_fase3",
+      "type": "function",
+      "label": "_garantir_briefing_para_fase3",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_continue_phase2",
+      "type": "function",
+      "label": "action_continue_phase2",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_clear_phase1",
+      "type": "function",
+      "label": "action_clear_phase1",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._clear_interview",
+      "type": "function",
+      "label": "_clear_interview",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_reset_context",
+      "type": "function",
+      "label": "action_reset_context",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_reset_phase",
+      "type": "function",
+      "label": "action_reset_phase",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_back_to_phase1",
+      "type": "function",
+      "label": "action_back_to_phase1",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_back_to_phase2",
+      "type": "function",
+      "label": "action_back_to_phase2",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_continue_phase3",
+      "type": "function",
+      "label": "action_continue_phase3",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._llm_config",
+      "type": "function",
+      "label": "_llm_config",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._config_cache_key",
+      "type": "function",
+      "label": "_config_cache_key",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._gateway_payload",
+      "type": "function",
+      "label": "_gateway_payload",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._montar_generation_input",
+      "type": "function",
+      "label": "_montar_generation_input",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._garantir_prompt_para_fase4",
+      "type": "function",
+      "label": "_garantir_prompt_para_fase4",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_preview",
+      "type": "function",
+      "label": "action_preview",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.get_generator",
+      "type": "function",
+      "label": "get_generator",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_run",
+      "type": "function",
+      "label": "action_run",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._executar_agente",
+      "type": "function",
+      "label": "_executar_agente",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_clear",
+      "type": "function",
+      "label": "action_clear",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._segmentar",
+      "type": "function",
+      "label": "_segmentar",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_segment",
+      "type": "function",
+      "label": "action_segment",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._conteudo_final",
+      "type": "function",
+      "label": "_conteudo_final",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_evaluate",
+      "type": "function",
+      "label": "action_evaluate",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._segmento_atual_dict",
+      "type": "function",
+      "label": "_segmento_atual_dict",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._segmento_atual_texto",
+      "type": "function",
+      "label": "_segmento_atual_texto",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._segmento_post_from_dict",
+      "type": "function",
+      "label": "_segmento_post_from_dict",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_rewrite_segment",
+      "type": "function",
+      "label": "action_rewrite_segment",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_apply_segment_adjustment",
+      "type": "function",
+      "label": "action_apply_segment_adjustment",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_export_output",
+      "type": "function",
+      "label": "action_export_output",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._default_export_path",
+      "type": "function",
+      "label": "_default_export_path",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._avaliacao_post_valida",
+      "type": "function",
+      "label": "_avaliacao_post_valida",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._post_score_payload",
+      "type": "function",
+      "label": "_post_score_payload",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_post_score",
+      "type": "function",
+      "label": "_render_post_score",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_avaliacao_texto",
+      "type": "function",
+      "label": "_render_avaliacao_texto",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_avaliacao_lista",
+      "type": "function",
+      "label": "_render_avaliacao_lista",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_jornada",
+      "type": "function",
+      "label": "_render_jornada",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_persona_ativa",
+      "type": "function",
+      "label": "_render_persona_ativa",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_score_summary",
+      "type": "function",
+      "label": "_render_score_summary",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_gateway_status",
+      "type": "function",
+      "label": "_render_gateway_status",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_gateway_status_curto",
+      "type": "function",
+      "label": "_render_gateway_status_curto",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_total_bruto",
+      "type": "function",
+      "label": "_render_total_bruto",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_total_normalizado",
+      "type": "function",
+      "label": "_render_total_normalizado",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_score_aspecto",
+      "type": "function",
+      "label": "_render_score_aspecto",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._render_returncode",
+      "type": "function",
+      "label": "_render_returncode",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._build_interview_ui",
+      "type": "function",
+      "label": "_build_interview_ui",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._serialize_briefing",
+      "type": "function",
+      "label": "_serialize_briefing",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._serialize_events",
+      "type": "function",
+      "label": "_serialize_events",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._serialize_conteudo_json",
+      "type": "function",
+      "label": "_serialize_conteudo_json",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._serialize_segmentos",
+      "type": "function",
+      "label": "_serialize_segmentos",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._serialize_historico_entrevista",
+      "type": "function",
+      "label": "_serialize_historico_entrevista",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._serialize_historico_recente",
+      "type": "function",
+      "label": "_serialize_historico_recente",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._serialize_avaliacao_post",
+      "type": "function",
+      "label": "_serialize_avaliacao_post",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._set_status",
+      "type": "function",
+      "label": "_set_status",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._log_event",
+      "type": "function",
+      "label": "_log_event",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._persistir",
+      "type": "function",
+      "label": "_persistir",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp._ativar_sessao_restaurada",
+      "type": "function",
+      "label": "_ativar_sessao_restaurada",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_generate_storyboard",
+      "type": "function",
+      "label": "action_generate_storyboard",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_update_storyboard",
+      "type": "function",
+      "label": "action_update_storyboard",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_clear_storyboard",
+      "type": "function",
+      "label": "action_clear_storyboard",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_generate_block_drafts",
+      "type": "function",
+      "label": "action_generate_block_drafts",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_generate_all_block_drafts",
+      "type": "function",
+      "label": "action_generate_all_block_drafts",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_retry_block_draft",
+      "type": "function",
+      "label": "action_retry_block_draft",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_select_block_draft",
+      "type": "function",
+      "label": "action_select_block_draft",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "function:src/content_engine/session_app.py::PostEngineApp.action_compose_editorial",
+      "type": "function",
+      "label": "action_compose_editorial",
+      "file": "src/content_engine/session_app.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "PostEngineApp"
+      }
+    },
+    {
+      "id": "file:src/content_engine/tui_validation.py",
+      "type": "file",
+      "label": "tui_validation.py",
+      "file": "src/content_engine/tui_validation.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 132,
+        "nonEmptyLines": 108,
+        "description": "Validação de entradas da TUI: preview, sandbox e modelo LLM antes da execução"
+      }
+    },
+    {
+      "id": "function:src/content_engine/tui_validation.py::_is_real",
+      "type": "function",
+      "label": "_is_real",
+      "file": "src/content_engine/tui_validation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 20,
+        "endLine": 21,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/tui_validation.py::_validar_scores",
+      "type": "function",
+      "label": "_validar_scores",
+      "file": "src/content_engine/tui_validation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 24,
+        "endLine": 37,
+        "params": [
+          "scores"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/tui_validation.py::_validar_restricoes",
+      "type": "function",
+      "label": "_validar_restricoes",
+      "file": "src/content_engine/tui_validation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 40,
+        "endLine": 48,
+        "params": [
+          "restricoes"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/tui_validation.py::validar_preview",
+      "type": "function",
+      "label": "validar_preview",
+      "file": "src/content_engine/tui_validation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 51,
+        "endLine": 103,
+        "params": [
+          "tema",
+          "plataforma",
+          "objetivo",
+          "tipo_de_post",
+          "briefing_texto",
+          "scores",
+          "restricoes"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/tui_validation.py::validar_sandbox",
+      "type": "function",
+      "label": "validar_sandbox",
+      "file": "src/content_engine/tui_validation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 106,
+        "endLine": 113,
+        "params": [
+          "sandbox",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/tui_validation.py::validar_modelo",
+      "type": "function",
+      "label": "validar_modelo",
+      "file": "src/content_engine/tui_validation.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 116,
+        "endLine": 121,
+        "params": [
+          "modelo"
+        ]
+      }
+    },
+    {
+      "id": "class:src/content_engine/tui_validation.py::TuiValidationError",
+      "type": "class",
+      "label": "TuiValidationError",
+      "file": "src/content_engine/tui_validation.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 13,
+        "endLine": 17,
+        "methods": [
+          "__init__"
+        ]
+      }
+    },
+    {
+      "id": "function:src/content_engine/tui_validation.py::TuiValidationError.__init__",
+      "type": "function",
+      "label": "__init__",
+      "file": "src/content_engine/tui_validation.py",
+      "tags": [
+        "python",
+        "method"
+      ],
+      "properties": {
+        "class": "TuiValidationError"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/content_engine/briefing.py",
+      "target": "function:src/content_engine/briefing.py::montar_briefing_autoral",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/briefing.py",
+      "target": "function:src/content_engine/interview/briefing.py::build_briefing",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/controller.py",
+      "target": "class:src/content_engine/interview/controller.py::InterviewController",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/controller.py::InterviewController",
+      "target": "function:src/content_engine/interview/controller.py::InterviewController.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/controller.py::InterviewController",
+      "target": "function:src/content_engine/interview/controller.py::InterviewController.start",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/controller.py::InterviewController",
+      "target": "function:src/content_engine/interview/controller.py::InterviewController.generate_next_question",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/controller.py::InterviewController",
+      "target": "function:src/content_engine/interview/controller.py::InterviewController.process_answer",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/controller.py::InterviewController",
+      "target": "function:src/content_engine/interview/controller.py::InterviewController.run_round",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/controller.py::InterviewController",
+      "target": "function:src/content_engine/interview/controller.py::InterviewController.explain_decision",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/controller.py::InterviewController",
+      "target": "function:src/content_engine/interview/controller.py::InterviewController.close",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "function:src/content_engine/interview/exploration.py::_context",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "function:src/content_engine/interview/exploration.py::_as_signal_summary",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "function:src/content_engine/interview/exploration.py::build_exploration_prompt",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "function:src/content_engine/interview/exploration.py::_invoke_runner",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "function:src/content_engine/interview/exploration.py::_candidate_items",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "function:src/content_engine/interview/exploration.py::generate_candidates",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "function:src/content_engine/interview/exploration.py::_candidate_rank",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "function:src/content_engine/interview/exploration.py::select_question",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "function:src/content_engine/interview/exploration.py::generate_next_question",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "class:src/content_engine/interview/exploration.py::QuestionGenerationError",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "function:src/content_engine/interview/extraction.py::_answer_id",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "function:src/content_engine/interview/extraction.py::append_answer",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "function:src/content_engine/interview/extraction.py::_sentence_spans",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "function:src/content_engine/interview/extraction.py::_evidence_id",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "function:src/content_engine/interview/extraction.py::_signal_id",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "function:src/content_engine/interview/extraction.py::_status_for_sentence",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "function:src/content_engine/interview/extraction.py::extract_signals",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "function:src/content_engine/interview/extraction.py::append_extraction",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "function:src/content_engine/interview/extraction.py::signals_have_evidence",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "class:src/content_engine/interview/extraction.py::ExtractionResult",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/extraction.py::ExtractionResult",
+      "target": "function:src/content_engine/interview/extraction.py::ExtractionResult.evidences",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/extraction.py::ExtractionResult",
+      "target": "function:src/content_engine/interview/extraction.py::ExtractionResult.__iter__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/extraction.py::ExtractionResult",
+      "target": "function:src/content_engine/interview/extraction.py::ExtractionResult.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gaps.py",
+      "target": "function:src/content_engine/interview/gaps.py::_signal",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gaps.py",
+      "target": "function:src/content_engine/interview/gaps.py::_dimension",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gaps.py",
+      "target": "function:src/content_engine/interview/gaps.py::identify_gaps",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gaps.py",
+      "target": "function:src/content_engine/interview/gaps.py::decide_deepening",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gaps.py",
+      "target": "function:src/content_engine/interview/gaps.py::explain_decision",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::_coerce_heuristic",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::_coerce_llm",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::_coerce_gaps",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::_profile",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::_essential",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::_critical",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::_balanced_gateway",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::_strong_imbalanced_gateway",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::evaluate_gateway",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::gateway_equilibrado",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "function:src/content_engine/interview/gateway.py::gateway_desequilibrado_forte",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::_profile",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::_as_signal",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::_as_evidence",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::_as_answer",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::_state_inputs",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::_state_for_score",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::_score_dimension",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::_question_echo",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::detect_absolute_vetos",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "function:src/content_engine/interview/heuristic.py::assess_dimensions",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "class:src/content_engine/interview/heuristic.py::DimensionDefinition",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/llm_evaluation.py",
+      "target": "function:src/content_engine/interview/llm_evaluation.py::_text_items",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/llm_evaluation.py",
+      "target": "function:src/content_engine/interview/llm_evaluation.py::build_authorship_prompt",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/llm_evaluation.py",
+      "target": "function:src/content_engine/interview/llm_evaluation.py::_invoke",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/llm_evaluation.py",
+      "target": "function:src/content_engine/interview/llm_evaluation.py::evaluate_authorship_llm",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/quality.py",
+      "target": "function:src/content_engine/interview/quality.py::_record",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/quality.py",
+      "target": "function:src/content_engine/interview/quality.py::_words",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/quality.py",
+      "target": "function:src/content_engine/interview/quality.py::_is_induced",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/quality.py",
+      "target": "function:src/content_engine/interview/quality.py::measure_induced_answer_rate",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/quality.py",
+      "target": "function:src/content_engine/interview/quality.py::measure_original_language_preservation",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/quality.py",
+      "target": "function:src/content_engine/interview/quality.py::evaluate_corpus",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/quality.py",
+      "target": "class:src/content_engine/interview/quality.py::QualityMetric",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/quality.py::QualityMetric",
+      "target": "function:src/content_engine/interview/quality.py::QualityMetric.rate",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/quality.py::QualityMetric",
+      "target": "function:src/content_engine/interview/quality.py::QualityMetric.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "function:src/content_engine/interview/schemas.py::_clean",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "function:src/content_engine/interview/schemas.py::_normalise",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "function:src/content_engine/interview/schemas.py::_strings",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "function:src/content_engine/interview/schemas.py::_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "function:src/content_engine/interview/schemas.py::_clamp_score",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "function:src/content_engine/interview/schemas.py::criar_estado_inicial",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::ThemeContext",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::ThemeContext",
+      "target": "function:src/content_engine/interview/schemas.py::ThemeContext.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::ThemeContext",
+      "target": "function:src/content_engine/interview/schemas.py::ThemeContext.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::ThemeContext",
+      "target": "function:src/content_engine/interview/schemas.py::ThemeContext.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::QuestionCandidate",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::QuestionCandidate",
+      "target": "function:src/content_engine/interview/schemas.py::QuestionCandidate.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::QuestionCandidate",
+      "target": "function:src/content_engine/interview/schemas.py::QuestionCandidate.question",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::QuestionCandidate",
+      "target": "function:src/content_engine/interview/schemas.py::QuestionCandidate.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::QuestionCandidate",
+      "target": "function:src/content_engine/interview/schemas.py::QuestionCandidate.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::SelectedQuestion",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::SelectedQuestion",
+      "target": "function:src/content_engine/interview/schemas.py::SelectedQuestion.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::SelectedQuestion",
+      "target": "function:src/content_engine/interview/schemas.py::SelectedQuestion.text",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::SelectedQuestion",
+      "target": "function:src/content_engine/interview/schemas.py::SelectedQuestion.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::SelectedQuestion",
+      "target": "function:src/content_engine/interview/schemas.py::SelectedQuestion.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::UserAnswer",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::UserAnswer",
+      "target": "function:src/content_engine/interview/schemas.py::UserAnswer.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::UserAnswer",
+      "target": "function:src/content_engine/interview/schemas.py::UserAnswer.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::UserAnswer",
+      "target": "function:src/content_engine/interview/schemas.py::UserAnswer.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::Evidence",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::Evidence",
+      "target": "function:src/content_engine/interview/schemas.py::Evidence.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::Evidence",
+      "target": "function:src/content_engine/interview/schemas.py::Evidence.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::Evidence",
+      "target": "function:src/content_engine/interview/schemas.py::Evidence.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::AuthorialSignal",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::AuthorialSignal",
+      "target": "function:src/content_engine/interview/schemas.py::AuthorialSignal.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::AuthorialSignal",
+      "target": "function:src/content_engine/interview/schemas.py::AuthorialSignal.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::AuthorialSignal",
+      "target": "function:src/content_engine/interview/schemas.py::AuthorialSignal.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::DimensionScore",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DimensionScore",
+      "target": "function:src/content_engine/interview/schemas.py::DimensionScore.dimension",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DimensionScore",
+      "target": "function:src/content_engine/interview/schemas.py::DimensionScore.id",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DimensionScore",
+      "target": "function:src/content_engine/interview/schemas.py::DimensionScore.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DimensionScore",
+      "target": "function:src/content_engine/interview/schemas.py::DimensionScore.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DimensionScore",
+      "target": "function:src/content_engine/interview/schemas.py::DimensionScore.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::DeterministicAssessment",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DeterministicAssessment",
+      "target": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.approved",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DeterministicAssessment",
+      "target": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.heuristic_approved",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DeterministicAssessment",
+      "target": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DeterministicAssessment",
+      "target": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DeterministicAssessment",
+      "target": "function:src/content_engine/interview/schemas.py::DeterministicAssessment.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::LlmAssessment",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::LlmAssessment",
+      "target": "function:src/content_engine/interview/schemas.py::LlmAssessment.llm_approved",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::LlmAssessment",
+      "target": "function:src/content_engine/interview/schemas.py::LlmAssessment.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::LlmAssessment",
+      "target": "function:src/content_engine/interview/schemas.py::LlmAssessment.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::LlmAssessment",
+      "target": "function:src/content_engine/interview/schemas.py::LlmAssessment.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::Gap",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::Gap",
+      "target": "function:src/content_engine/interview/schemas.py::Gap.gap_type",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::Gap",
+      "target": "function:src/content_engine/interview/schemas.py::Gap.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::Gap",
+      "target": "function:src/content_engine/interview/schemas.py::Gap.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::Gap",
+      "target": "function:src/content_engine/interview/schemas.py::Gap.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::DeepeningDecision",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DeepeningDecision",
+      "target": "function:src/content_engine/interview/schemas.py::DeepeningDecision.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::DeepeningDecision",
+      "target": "function:src/content_engine/interview/schemas.py::DeepeningDecision.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::GatewayResult",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::GatewayResult",
+      "target": "function:src/content_engine/interview/schemas.py::GatewayResult.tipo_gateway",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::GatewayResult",
+      "target": "function:src/content_engine/interview/schemas.py::GatewayResult.gaps",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::GatewayResult",
+      "target": "function:src/content_engine/interview/schemas.py::GatewayResult.__post_init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::GatewayResult",
+      "target": "function:src/content_engine/interview/schemas.py::GatewayResult.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::GatewayResult",
+      "target": "function:src/content_engine/interview/schemas.py::GatewayResult.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/schemas.py",
+      "target": "class:src/content_engine/interview/schemas.py::InterviewState",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::InterviewState",
+      "target": "function:src/content_engine/interview/schemas.py::InterviewState.theme",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::InterviewState",
+      "target": "function:src/content_engine/interview/schemas.py::InterviewState.original_answers",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::InterviewState",
+      "target": "function:src/content_engine/interview/schemas.py::InterviewState.to_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/interview/schemas.py::InterviewState",
+      "target": "function:src/content_engine/interview/schemas.py::InterviewState.from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/ui.py",
+      "target": "function:src/content_engine/interview/ui.py::_as_state",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/ui.py",
+      "target": "function:src/content_engine/interview/ui.py::build_interview_ui",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "function:src/content_engine/session_app.py::_safe_query",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "function:src/content_engine/session_app.py::_text",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "function:src/content_engine/session_app.py::_set_text",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "function:src/content_engine/session_app.py::_select_value",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "function:src/content_engine/session_app.py::_json",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "class:src/content_engine/session_app.py::PostEngineApp",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._build_default_agent",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.session_path",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.compose",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.on_mount",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.on_button_pressed",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._phase",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._normalizar_estado_carregado",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._povoar_widgets_com_estado",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._collect_form",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._v4_state",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._v4_controller",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._sync_v4_state",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._interview_snapshot",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._validate_entry",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_start_interview_v4",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_continue_phase1",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._response_from_widget",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_submit_v4_answer",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_submit_round",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_register_answer",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_generate_other_question",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_close_interview_v4",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_update_gateway",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._garantir_briefing_para_fase3",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_continue_phase2",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_clear_phase1",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._clear_interview",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_reset_context",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_reset_phase",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_back_to_phase1",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_back_to_phase2",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_continue_phase3",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._llm_config",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._config_cache_key",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._gateway_payload",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._montar_generation_input",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._garantir_prompt_para_fase4",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_preview",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.get_generator",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_run",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._executar_agente",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_clear",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._segmentar",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_segment",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._conteudo_final",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_evaluate",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._segmento_atual_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._segmento_atual_texto",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._segmento_post_from_dict",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_rewrite_segment",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_apply_segment_adjustment",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_export_output",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._default_export_path",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._avaliacao_post_valida",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._post_score_payload",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_post_score",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_avaliacao_texto",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_avaliacao_lista",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_jornada",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_persona_ativa",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_score_summary",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_gateway_status",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_gateway_status_curto",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_total_bruto",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_total_normalizado",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_score_aspecto",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._render_returncode",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._build_interview_ui",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._serialize_briefing",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._serialize_events",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._serialize_conteudo_json",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._serialize_segmentos",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._serialize_historico_entrevista",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._serialize_historico_recente",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._serialize_avaliacao_post",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._set_status",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._log_event",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._persistir",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp._ativar_sessao_restaurada",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_generate_storyboard",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_update_storyboard",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_clear_storyboard",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_generate_block_drafts",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_generate_all_block_drafts",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_retry_block_draft",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_select_block_draft",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/session_app.py::PostEngineApp",
+      "target": "function:src/content_engine/session_app.py::PostEngineApp.action_compose_editorial",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/tui_validation.py",
+      "target": "function:src/content_engine/tui_validation.py::_is_real",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/tui_validation.py",
+      "target": "function:src/content_engine/tui_validation.py::_validar_scores",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/tui_validation.py",
+      "target": "function:src/content_engine/tui_validation.py::_validar_restricoes",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/tui_validation.py",
+      "target": "function:src/content_engine/tui_validation.py::validar_preview",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/tui_validation.py",
+      "target": "function:src/content_engine/tui_validation.py::validar_sandbox",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/tui_validation.py",
+      "target": "function:src/content_engine/tui_validation.py::validar_modelo",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/tui_validation.py",
+      "target": "class:src/content_engine/tui_validation.py::TuiValidationError",
+      "type": "contains"
+    },
+    {
+      "source": "class:src/content_engine/tui_validation.py::TuiValidationError",
+      "target": "function:src/content_engine/tui_validation.py::TuiValidationError.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/briefing.py",
+      "target": "file:src/content_engine/interview/briefing.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/briefing.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/__init__.py",
+      "target": "file:src/content_engine/interview/briefing.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/__init__.py",
+      "target": "file:src/content_engine/interview/controller.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/__init__.py",
+      "target": "file:src/content_engine/interview/exploration.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/__init__.py",
+      "target": "file:src/content_engine/interview/gaps.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/__init__.py",
+      "target": "file:src/content_engine/interview/gateway.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/__init__.py",
+      "target": "file:src/content_engine/interview/heuristic.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/__init__.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/__init__.py",
+      "target": "file:src/content_engine/interview/ui.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/briefing.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/controller.py",
+      "target": "file:src/content_engine/interview/exploration.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/controller.py",
+      "target": "file:src/content_engine/interview/extraction.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/controller.py",
+      "target": "file:src/content_engine/interview/gaps.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/controller.py",
+      "target": "file:src/content_engine/interview/gateway.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/controller.py",
+      "target": "file:src/content_engine/interview/heuristic.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/controller.py",
+      "target": "file:src/content_engine/interview/llm_evaluation.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/controller.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "file:src/content_engine/interview/validation.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/exploration.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/extraction.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/gaps.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "file:src/content_engine/interview/heuristic.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/gateway.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/heuristic.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/llm_evaluation.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/llm_evaluation.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/llm_evaluation.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/quality.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/ui.py",
+      "target": "file:src/content_engine/interview/heuristic.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/interview/ui.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/editorial_flow.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/interview/briefing.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/interview/controller.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/interview/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/interview/ui.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/llm_config.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/prompt_builder.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/trilhas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/session_app.py",
+      "target": "file:src/content_engine/tui_validation.py",
+      "type": "import"
+    }
+  ]
+}

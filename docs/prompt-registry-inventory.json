@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "generated_by": "content_engine.prompt_registry.importer",
+  "summary": {
+    "total": 38,
+    "by_classification": {
+      "OPERATIONAL": 30,
+      "REFERENCE_ONLY": 3,
+      "LEGACY": 4,
+      "ORPHAN": 1
+    }
+  },
+  "items": [
+    {
+      "key": "interview.questions",
+      "source": "registry-seeds/interview-questions.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "PROMPT_TEMPLATE",
+      "operations": [
+        "interview_questions"
+      ]
+    },
+    {
+      "key": "interview.validate",
+      "source": "registry-seeds/interview-validate.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "PROMPT_TEMPLATE",
+      "operations": [
+        "interview_validate"
+      ]
+    },
+    {
+      "key": "interview.evaluate",
+      "source": "registry-seeds/interview-evaluate.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "EVALUATION",
+      "operations": [
+        "interview_evaluate"
+      ]
+    },
+    {
+      "key": "interview.explore",
+      "source": "interview/explore.md",
+      "classification": "REFERENCE_ONLY",
+      "artifact_type": "REFERENCE",
+      "operations": []
+    },
+    {
+      "key": "interview.evaluate_authorship",
+      "source": "interview/evaluate-authorship.md",
+      "classification": "REFERENCE_ONLY",
+      "artifact_type": "REFERENCE",
+      "operations": []
+    },
+    {
+      "key": "interview.deepen",
+      "source": "interview/deepen.md",
+      "classification": "REFERENCE_ONLY",
+      "artifact_type": "REFERENCE",
+      "operations": []
+    },
+    {
+      "key": "generator.base",
+      "source": "generator/base.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "BASE",
+      "operations": [
+        "post_generate"
+      ]
+    },
+    {
+      "key": "generator.base_short_carousel",
+      "source": "generator/base-short-carousel.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "BASE",
+      "operations": [
+        "post_generate"
+      ]
+    },
+    {
+      "key": "generator.base_long_slide",
+      "source": "generator/base-long-slide.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "BASE",
+      "operations": [
+        "post_generate"
+      ]
+    },
+    {
+      "key": "generator.rules_post",
+      "source": "generator/rules-post.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "FORMAT_RULES",
+      "operations": [
+        "editorial_compose",
+        "post_generate"
+      ]
+    },
+    {
+      "key": "generator.rules_article",
+      "source": "generator/rules-article.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "FORMAT_RULES",
+      "operations": [
+        "editorial_compose",
+        "post_generate"
+      ]
+    },
+    {
+      "key": "generator.rules_short_carousel",
+      "source": "generator/rules-short-carousel.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "FORMAT_RULES",
+      "operations": [
+        "editorial_compose",
+        "post_generate",
+        "slidemark_export"
+      ]
+    },
+    {
+      "key": "generator.rules_long_slide",
+      "source": "generator/rules-long-slide.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "FORMAT_RULES",
+      "operations": [
+        "editorial_compose",
+        "post_generate",
+        "slidemark_export"
+      ]
+    },
+    {
+      "key": "generator.persona_post",
+      "source": "generator/personas/dev-interlocutor-post.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "PERSONA",
+      "operations": [
+        "post_generate"
+      ]
+    },
+    {
+      "key": "generator.persona_article",
+      "source": "generator/personas/dev-interlocutor-article.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "PERSONA",
+      "operations": [
+        "post_generate"
+      ]
+    },
+    {
+      "key": "generator.persona_short_carousel",
+      "source": "generator/personas/dev-interlocutor-short-carousel.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "PERSONA",
+      "operations": [
+        "post_generate"
+      ]
+    },
+    {
+      "key": "generator.persona_long_slide",
+      "source": "generator/personas/dev-interlocutor-long-slide.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "PERSONA",
+      "operations": [
+        "post_generate"
+      ]
+    },
+    {
+      "key": "policy.anti_ia",
+      "source": "registry-seeds/anti-ia-policy.json",
+      "classification": "OPERATIONAL",
+      "artifact_type": "POLICY",
+      "operations": [
+        "block_draft_generate",
+        "editorial_compose",
+        "post_generate"
+      ]
+    },
+    {
+      "key": "contract.slidemark",
+      "source": "registry-seeds/slidemark-contract.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "OUTPUT_CONTRACT",
+      "operations": [
+        "post_generate",
+        "slidemark_export"
+      ]
+    },
+    {
+      "key": "generator.segment",
+      "source": "generator/segment.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "SEGMENTATION",
+      "operations": [
+        "segment"
+      ]
+    },
+    {
+      "key": "generator.segment_slides",
+      "source": "generator/segment-slides.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "SEGMENTATION",
+      "operations": [
+        "segment"
+      ]
+    },
+    {
+      "key": "generator.adjust_segment",
+      "source": "generator/adjust-segment.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "SEGMENTATION",
+      "operations": [
+        "adjust_segment"
+      ]
+    },
+    {
+      "key": "generator.adjust_segments_bulk",
+      "source": "generator/adjust-segments-bulk.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "SEGMENTATION",
+      "operations": [
+        "adjust_segments_bulk"
+      ]
+    },
+    {
+      "key": "generator.export_slidemark",
+      "source": "generator/export-slidemark.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "PROMPT_TEMPLATE",
+      "operations": [
+        "slidemark_export"
+      ]
+    },
+    {
+      "key": "generator.evaluate_post_post",
+      "source": "generator/evaluate-post-post.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "EVALUATION",
+      "operations": [
+        "post_evaluate"
+      ]
+    },
+    {
+      "key": "generator.evaluate_post_article",
+      "source": "generator/evaluate-post-article.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "EVALUATION",
+      "operations": [
+        "post_evaluate"
+      ]
+    },
+    {
+      "key": "generator.evaluate_post_short_carousel",
+      "source": "generator/evaluate-post-short-carousel.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "EVALUATION",
+      "operations": [
+        "post_evaluate"
+      ]
+    },
+    {
+      "key": "generator.evaluate_post_long_slide",
+      "source": "generator/evaluate-post-long-slide.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "EVALUATION",
+      "operations": [
+        "post_evaluate"
+      ]
+    },
+    {
+      "key": "editorial.storyboard",
+      "source": "editorial/storyboard.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "EDITORIAL",
+      "operations": [
+        "storyboard_generate"
+      ]
+    },
+    {
+      "key": "editorial.block_approaches",
+      "source": "editorial/block_approaches.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "EDITORIAL",
+      "operations": [
+        "block_approaches_generate"
+      ]
+    },
+    {
+      "key": "editorial.block_draft",
+      "source": "editorial/block_draft.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "EDITORIAL",
+      "operations": [
+        "block_draft_generate"
+      ]
+    },
+    {
+      "key": "editorial.compose",
+      "source": "editorial/compose.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "EDITORIAL",
+      "operations": [
+        "editorial_compose"
+      ]
+    },
+    {
+      "key": "editorial.retry_preservation",
+      "source": "registry-seeds/editorial-retry-preservation.md",
+      "classification": "OPERATIONAL",
+      "artifact_type": "RETRY_APPENDIX",
+      "operations": [
+        "editorial_compose"
+      ]
+    },
+    {
+      "key": "generator.rules_feed",
+      "source": "generator/rules-feed.md",
+      "classification": "LEGACY",
+      "artifact_type": "LEGACY",
+      "operations": []
+    },
+    {
+      "key": "generator.rules_slide",
+      "source": "generator/rules-slide.md",
+      "classification": "LEGACY",
+      "artifact_type": "LEGACY",
+      "operations": []
+    },
+    {
+      "key": "generator.persona_feed",
+      "source": "generator/personas/dev-interlocutor-feed.md",
+      "classification": "LEGACY",
+      "artifact_type": "LEGACY",
+      "operations": []
+    },
+    {
+      "key": "generator.persona_slide",
+      "source": "generator/personas/dev-interlocutor-slide.md",
+      "classification": "LEGACY",
+      "artifact_type": "LEGACY",
+      "operations": []
+    },
+    {
+      "key": "router.suggest_content_type",
+      "source": null,
+      "classification": "ORPHAN",
+      "artifact_type": "REFERENCE",
+      "operations": []
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "batchIndex": 7,
+  "nodes": [
+    {
+      "id": "document:docs/archive/BUG_FIX_PLAN.md",
+      "type": "document",
+      "name": "BUG_FIX_PLAN.md",
+      "path": "docs/archive/BUG_FIX_PLAN.md",
+      "description": "Plano de correção do bug em que o campo tipo_de_post era resetado para \"post\". Identifica duas causas raiz: no backend (_atualizar_estado_do_formulario sobrescrevia sem verificar widget) e no frontend (syncDraftFromSession sobrescrevia draftRef com React state desatualizado). Contém as correções aplicadas em session_app.py e pe-store.tsx, além de 5 testes adicionados.",
+      "tags": ["bug-fix", "documentacao", "tipo_de_post", "backend", "frontend"],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 53,
+        "sectionCount": 9,
+        "status": "corrigido",
+        "arquivos_mencionados": ["src/content_engine/session_app.py", "frontend/src/lib/pe-store.tsx", "tests/test_tipo_de_post_bug.py"]
+      }
+    },
+    {
+      "id": "document:docs/archive/PLAN_CONFORMIDADE_AVALIACAO.md",
+      "type": "document",
+      "name": "PLAN_CONFORMIDADE_AVALIACAO.md",
+      "path": "docs/archive/PLAN_CONFORMIDADE_AVALIACAO.md",
+      "description": "Plano de conformidade para alinhar o novo prompt de avaliação short_carousel com a UI e o parser. Documenta divergências entre o shape de saída do prompt (9 critérios com pesos, veredito, slides fracos, redundâncias, falhas técnicas) e o código atual (ScoreDoPost antigo com 6 aspectos). Detalha etapas de implementação para schemas.py, post_evaluation.py, app.py (TUI), persistência e testes, com checklist de aceite.",
+      "tags": ["plano", "documentacao", "avaliacao", "short_carousel", "conformidade", "score"],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 142,
+        "sectionCount": 12,
+        "arquivos_mencionados": ["src/content_engine/schemas.py", "src/content_engine/post_evaluation.py", "src/tui/app.py", "src/content_engine/persistence.py", "src/content_engine/exporter.py"]
+      }
+    },
+    {
+      "id": "document:docs/archive/QUESTIONARIO.md",
+      "type": "document",
+      "name": "QUESTIONARIO.md",
+      "path": "docs/archive/QUESTIONARIO.md",
+      "description": "Questionário de diagnóstico e correção da geração de perguntas por LLM. Identifica que a string do modelo dedicado estava incorreta (\"gpt-5.4 mini\" com espaço em vez de \"gpt-5.4-mini\"), causando falha no Codex CLI e fallback silencioso para perguntas template. Documenta a solução aplicada: correção do modelo padrão, migração de sessões antigas, validação de retorno do agente e cobertura de testes (338 testes passando).",
+      "tags": ["diagnostico", "documentacao", "geracao-perguntas", "llm", "modelo", "fallback"],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 123,
+        "sectionCount": 11,
+        "arquivos_mencionados": ["src/content_engine/schemas.py", "src/content_engine/questions.py", "src/content_engine/persistence.py", "src/tui/app.py", "tests/test_spec_061.py"]
+      }
+    },
+    {
+      "id": "document:docs/archive/RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md",
+      "type": "document",
+      "name": "RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md",
+      "path": "docs/archive/RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md",
+      "description": "Resumo da implementação para corrigir o fluxo de perguntas e respostas da LLM. Resolve o problema de placeholders literais ({tema}, {contextoDoTema}) sendo exibidos como perguntas válidas. Inclui validação para rejeitar perguntas com placeholders não resolvidos, sanitização da restauração de sessão na TUI e ajuste do prompt initial-questions.md para instruir a LLM a não devolver placeholders.",
+      "tags": ["implementacao", "documentacao", "perguntas-llm", "placeholders", "validacao"],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 33,
+        "sectionCount": 7,
+        "arquivos_mencionados": ["src/content_engine/questions.py", "src/tui/app.py", "prompts/interview/initial-questions.md"]
+      }
+    },
+    {
+      "id": "document:docs/archive/TUI_DECREPATED.md",
+      "type": "document",
+      "name": "TUI_DECREPATED.md",
+      "path": "docs/archive/TUI_DECREPATED.md",
+      "description": "Plano completo de depreciação e remoção da interface TUI (Textual), com migração para GUI (React + HTTP server). Contém inventário detalhado de acoplamentos (código-fonte TUI, módulos auxiliares, imports da GUI, testes, scripts, configuração e documentação), 7 fases de remoção (extração de lógica, migração de entry point, migração de testes, remoção de código, remoção de textual, limpeza de docs, validação final), cronograma de 4-5 dias, critérios de conclusão e análise de riscos.",
+      "tags": ["depreciacao", "documentacao", "tui", "textual", "migracao", "gui", "remocao"],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 174,
+        "sectionCount": 20,
+        "arquivos_mencionados": ["src/tui/__init__.py", "src/tui/__main__.py", "src/tui/app.py", "src/gui/server.py", "src/content_engine/tui_validation.py", "pyproject.toml", "scripts/run.fish", "scripts/gui.fish"]
+      }
+    },
+    {
+      "id": "document:docs/archive/exportacao-md-json.md",
+      "type": "document",
+      "name": "exportacao-md-json.md",
+      "path": "docs/archive/exportacao-md-json.md",
+      "description": "Plano para transformar a exportação principal em um fluxo único que sempre salva Markdown + JSON simultaneamente para todos os tipos de post. Define o payload JSON estável (tema, plataforma, tipo_de_post, conteúdo, metadados, alertas, slides, segmentos, avaliação, parse_error), alterações na TUI fase 9 (botão único de exportação), APIs e contratos do exporter, e estratégia de testes.",
+      "tags": ["plano", "documentacao", "exportacao", "markdown", "json", "exporter"],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 72,
+        "sectionCount": 6,
+        "arquivos_mencionados": ["src/content_engine/exporter.py", "src/tui/app.py"]
+      }
+    },
+    {
+      "id": "document:docs/archive/fase2evo.md",
+      "type": "document",
+      "name": "fase2evo.md",
+      "path": "docs/archive/fase2evo.md",
+      "description": "Plano detalhado de evolução da fase 2 para motor de entrevista por lotes com contrato estruturado (InterviewPack). Define taxonomia oficial com 27 eixos (17 humanos em 4 grupos + 10 organizacionais em 3 grupos), contratos centrais (AxisDefinition, QuestionBatch, InterviewPack, QuestionGenerationError), 6 tarefas de implementação (estrutura de lotes, geração por lote, validação, persistência, exibição de erros, cálculo de cobertura), impacto nas fases subsequentes (briefing, prompt, execução, segmentação, ajuste, avaliação), módulos afetados e safeguards transversais.",
+      "tags": ["plano", "documentacao", "fase-2", "entrevista", "taxonomia", "lotes", "interview-pack", "eixos"],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 389,
+        "sectionCount": 35,
+        "arquivos_mencionados": ["src/content_engine/schemas.py", "src/content_engine/questions.py", "src/content_engine/interview.py", "src/content_engine/interview_state.py", "src/content_engine/briefing.py", "src/content_engine/prompt_builder.py", "src/content_engine/gateway.py", "src/content_engine/adjust_segment.py", "src/content_engine/scoring.py", "src/tui/app.py"]
+      }
+    },
+    {
+      "id": "document:docs/archive/fase2evo_change_log.md",
+      "type": "document",
+      "name": "fase2evo_change_log.md",
+      "path": "docs/archive/fase2evo_change_log.md",
+      "description": "Change log detalhado da implementação da fase 2 evo. Lista 3 arquivos novos (taxonomy.py com 502 linhas e 27 eixos, batch_validation.py com 236 linhas e 10 regras de validação, test_fase2evo.py com 640 linhas e 62 testes) e 6 arquivos modificados (schemas.py, interview_state.py, questions.py, interview.py, persistence.py, __init__.py). Documenta todos os símbolos criados, taxonomia implementada, regras de validação, safeguards e itens pendentes de implementação.",
+      "tags": ["change-log", "documentacao", "fase-2", "taxonomia", "validacao", "implementacao"],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 198,
+        "sectionCount": 14,
+        "arquivos_mencionados": ["src/content_engine/taxonomy.py", "src/content_engine/batch_validation.py", "tests/test_fase2evo.py", "src/content_engine/schemas.py", "src/content_engine/interview_state.py", "src/content_engine/questions.py", "src/content_engine/interview.py", "src/content_engine/persistence.py", "src/content_engine/__init__.py"]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:docs/archive/fase2evo.md",
+      "target": "document:docs/archive/fase2evo_change_log.md",
+      "type": "related",
+      "label": "plano → change log",
+      "description": "fase2evo.md é o plano de evolução da fase 2; fase2evo_change_log.md documenta as mudanças implementadas desse plano"
+    },
+    {
+      "source": "document:docs/archive/QUESTIONARIO.md",
+      "target": "document:docs/archive/RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md",
+      "type": "related",
+      "label": "diagnóstico → correção",
+      "description": "Ambos tratam da correção da geração de perguntas por LLM; QUESTIONARIO identifica causa raiz e RESUMO descreve a implementação da solução"
+    },
+    {
+      "source": "document:docs/archive/BUG_FIX_PLAN.md",
+      "target": "document:docs/archive/QUESTIONARIO.md",
+      "type": "related",
+      "label": "correções relacionadas",
+      "description": "Ambos documentam correções de bugs com impacto em schemas.py, persistence.py e questions.py; BUG_FIX trata de tipo_de_post e QUESTIONARIO trata de geração de perguntas"
+    },
+    {
+      "source": "document:docs/archive/BUG_FIX_PLAN.md",
+      "target": "document:docs/archive/TUI_DECREPATED.md",
+      "type": "related",
+      "label": "contexto TUI",
+      "description": "BUG_FIX_PLAN menciona correções em session_app.py e pe-store.tsx; TUI_DECREPATED planeja a remoção completa da TUI e migração para GUI"
+    },
+    {
+      "source": "document:docs/archive/PLAN_CONFORMIDADE_AVALIACAO.md",
+      "target": "document:docs/archive/exportacao-md-json.md",
+      "type": "related",
+      "label": "avaliação e exportação",
+      "description": "Ambos tratam de pipelines de dados que afetam persistence.py e exporter.py; conformidade da avaliação e unificação da exportação MD+JSON"
+    },
+    {
+      "source": "document:docs/archive/PLAN_CONFORMIDADE_AVALIACAO.md",
+      "target": "document:docs/archive/BUG_FIX_PLAN.md",
+      "type": "related",
+      "label": "correções em schemas",
+      "description": "Ambos envolvem modificações em schemas.py e app.py; conformidade do score de avaliação e correção do tipo_de_post"
+    },
+    {
+      "source": "document:docs/archive/fase2evo.md",
+      "target": "document:docs/archive/QUESTIONARIO.md",
+      "type": "related",
+      "label": "perguntas e entrevista",
+      "description": "fase2evo redefine a geração de perguntas por lotes com validação estrita; QUESTIONARIO documenta correção anterior na geração de perguntas"
+    },
+    {
+      "source": "document:docs/archive/fase2evo.md",
+      "target": "document:docs/archive/PLAN_CONFORMIDADE_AVALIACAO.md",
+      "type": "related",
+      "label": "avaliação por eixos",
+      "description": "fase2evo define impacto na avaliação com pesos por formato; PLAN_CONFORMIDADE detalha a nova avaliação com 9 critérios"
+    },
+    {
+      "source": "document:docs/archive/TUI_DECREPATED.md",
+      "target": "document:docs/archive/QUESTIONARIO.md",
+      "type": "documents",
+      "label": "referência TUI",
+      "description": "TUI_DECREPATED lista QUESTIONARIO.md entre os documentos que contêm referências à TUI que precisam ser limpas"
+    },
+    {
+      "source": "document:docs/archive/TUI_DECREPATED.md",
+      "target": "document:docs/archive/RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md",
+      "type": "documents",
+      "label": "referência TUI",
+      "description": "TUI_DECREPATED lista RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md entre os documentos com menções a sanitize TUI"
+    },
+    {
+      "source": "document:docs/archive/exportacao-md-json.md",
+      "target": "document:docs/archive/TUI_DECREPATED.md",
+      "type": "documents",
+      "label": "fase 9 TUI",
+      "description": "exportacao-md-json descreve alterações na TUI fase 9; TUI_DECREPATED planeja remoção completa da TUI"
+    }
+  ]
+}

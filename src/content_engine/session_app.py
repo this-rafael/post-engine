@@ -21,6 +21,7 @@ from . import post_evaluation as _post_evaluation
 from . import segmentation as _segmentation
 from . import session_log as _session_log
 from .editorial_flow import normalize_editorial_flow
+from .phase_progress import reconcile_phase_progress
 from .interview.briefing import build_briefing
 from .interview.controller import InterviewController
 from .interview.schemas import InterviewState, criar_estado_inicial
@@ -149,6 +150,7 @@ class PostEngineApp(App):
         self._segmento_reescrito = ""
         self._segmentos_reescritos: dict[int, str] = {}
         self._normalizar_estado_carregado()
+        self._persistir()
         self._log_event("session", "app_initialized", {"session_path": str(session_file)})
 
     def _build_default_agent(self) -> Any:
@@ -219,6 +221,7 @@ class PostEngineApp(App):
             self.state.error = "Estado de entrevista V4 invalido; inicie uma nova entrevista."
         elif interview is not None:
             self._sync_v4_state(interview)
+        reconcile_phase_progress(self.state, resume_at_latest=True)
 
     def _povoar_widgets_com_estado(self) -> None:
         values = {
@@ -273,18 +276,30 @@ class PostEngineApp(App):
         question_cfg = self._llm_config("interview_questions")
         evaluation_cfg = self._llm_config("interview_evaluate")
         validate_cfg = self._llm_config("interview_validate")
+        title_cfg = self._llm_config("interview_round_title")
+        gap_cfg = self._llm_config("interview_gap_diagnosis")
         return InterviewController(
             state,
             question_runner=self._question_agent_factory(),
             evaluation_runner=self._agent_factory(),
+            title_runner=self._agent_factory(),
+            gap_runner=self._agent_factory(),
             question_tool=question_cfg.provider,
             evaluation_tool=evaluation_cfg.provider,
+            title_tool=title_cfg.provider,
+            gap_tool=gap_cfg.provider,
             question_generation_model=question_cfg.model,
             evaluation_model=evaluation_cfg.model,
+            title_model=title_cfg.model,
+            gap_model=gap_cfg.model,
             question_reasoning_effort=question_cfg.reasoning_effort,
             evaluation_reasoning_effort=evaluation_cfg.reasoning_effort,
+            title_reasoning_effort=title_cfg.reasoning_effort,
+            gap_reasoning_effort=gap_cfg.reasoning_effort,
             question_sandbox=question_cfg.sandbox,
             evaluation_sandbox=evaluation_cfg.sandbox,
+            title_sandbox=title_cfg.sandbox,
+            gap_sandbox=gap_cfg.sandbox,
             validate_tool=validate_cfg.provider,
             validate_model=validate_cfg.model,
             validate_reasoning_effort=validate_cfg.reasoning_effort,
@@ -384,6 +399,8 @@ class PostEngineApp(App):
         decision = controller.run_round(answer, user_requested_end=user_requested_end)
         if decision.should_ask:
             controller.generate_next_question()
+        elif not (interview.gateway_result and interview.gateway_result.approved):
+            controller.diagnose_gaps(force=True)
         self._sync_v4_state(interview)
         self.state.current_phase = PHASE_ENTREVISTA
         self.state.current_stage = "interview"
@@ -393,6 +410,8 @@ class PostEngineApp(App):
             self.state.status_operacional = "Material suficiente. Voce pode montar o briefing."
         elif interview.current_question is not None:
             self.state.status_operacional = controller.explain_decision()
+        elif interview.pending_batch:
+            self.state.status_operacional = "Lote de extensao pronto; responda as perguntas."
         else:
             self.state.status_operacional = "Entrevista encerrada sem material suficiente."
         self._log_event(
@@ -402,6 +421,77 @@ class PostEngineApp(App):
                 "answer_count": len(interview.answers),
                 "should_ask": decision.should_ask,
                 "approved": bool(interview.gateway_result and interview.gateway_result.approved),
+            },
+        )
+        self._persistir()
+        self._povoar_widgets_com_estado()
+        return self._interview_snapshot(interview)
+
+    def action_diagnose_interview_gaps(self, *, force: bool = False) -> dict[str, Any]:
+        interview = self._v4_state()
+        if interview is None:
+            raise ValueError("Nenhuma entrevista V4 ativa.")
+        controller = self._v4_controller(interview)
+        diagnosis = controller.diagnose_gaps(force=force)
+        self._sync_v4_state(interview)
+        self.state.status_operacional = "Diagnostico de lacunas atualizado."
+        self._log_event(
+            "interview",
+            "interview.diagnose_gaps",
+            {"force": force, "length": len(diagnosis)},
+        )
+        self._persistir()
+        self._povoar_widgets_com_estado()
+        return self._interview_snapshot(interview)
+
+    def action_start_extension_batch(self, count: int = 5) -> dict[str, Any]:
+        interview = self._v4_state()
+        if interview is None:
+            raise ValueError("Nenhuma entrevista V4 ativa.")
+        controller = self._v4_controller(interview)
+        batch = controller.start_extension_batch(count=int(count or 5))
+        self._sync_v4_state(interview)
+        self.state.current_phase = PHASE_ENTREVISTA
+        self.state.current_stage = "interview"
+        self.state.fase_atual = "entrevista"
+        self.state.error = None
+        self.state.status_operacional = f"Lote de {len(batch)} perguntas gerado a partir das lacunas."
+        self._log_event(
+            "interview",
+            "interview.start_extension_batch",
+            {"count": len(batch), "max_questions": interview.max_questions},
+        )
+        self._persistir()
+        self._povoar_widgets_com_estado()
+        return self._interview_snapshot(interview)
+
+    def action_submit_extension_batch(
+        self,
+        responses: list[dict[str, Any]] | None = None,
+    ) -> dict[str, Any]:
+        interview = self._v4_state()
+        if interview is None:
+            raise ValueError("Nenhuma entrevista V4 ativa.")
+        payload = list(responses or [])
+        controller = self._v4_controller(interview)
+        decision = controller.submit_extension_batch(payload)
+        self._sync_v4_state(interview)
+        self.state.current_phase = PHASE_ENTREVISTA
+        self.state.current_stage = "interview"
+        self.state.fase_atual = "entrevista"
+        self.state.error = None
+        if interview.gateway_result and interview.gateway_result.approved:
+            self.state.status_operacional = "Material suficiente apos lote de extensao."
+        else:
+            self.state.status_operacional = "Lote reavaliado; ainda sem material suficiente."
+        self._log_event(
+            "interview",
+            "interview.submit_extension_batch",
+            {
+                "response_count": len(payload),
+                "batches_completed": interview.extension_batches_completed,
+                "approved": bool(interview.gateway_result and interview.gateway_result.approved),
+                "should_ask": decision.should_ask,
             },
         )
         self._persistir()
@@ -505,13 +595,11 @@ class PostEngineApp(App):
         self._persistir()
 
     def action_back_to_phase1(self) -> None:
-        self.state.current_phase = PHASE_ENTRADA
         self.state.current_stage = "entry"
         self.state.fase_atual = "entrada"
         self._persistir()
 
     def action_back_to_phase2(self) -> None:
-        self.state.current_phase = PHASE_ENTREVISTA
         self.state.current_stage = "interview"
         self.state.fase_atual = "entrevista"
         self._persistir()
@@ -978,6 +1066,7 @@ class PostEngineApp(App):
 
     def _persistir(self) -> None:
         try:
+            reconcile_phase_progress(self.state)
             _persistence.salvar_sessao(self.state, self._session_path)
         except OSError:
             return

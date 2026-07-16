@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 from typing import Any, Iterable
 
 from ..llm_json_parser import extract_json_object_from_llm_output
+from ..prompt_registry.resolver import resolve_prompt
 from ..schemas import AgentResult
 
 
@@ -43,6 +44,8 @@ def build_validation_prompt(
     *,
     theme: str = "",
     previous_questions: Iterable[str] = (),
+    provider: str | None = None,
+    model: str | None = None,
 ) -> str:
     previous = [str(q).strip() for q in previous_questions if str(q).strip()]
     payload: dict[str, Any] = {
@@ -50,35 +53,13 @@ def build_validation_prompt(
         "tema": theme,
         "perguntas_anteriores": previous,
     }
-    return (
-        "Voce e um revisor de qualidade de perguntas para entrevistas autoriais.\n"
-        "Avalie a pergunta fornecida e retorne SOMENTE JSON no formato:\n"
-        "{\n"
-        '  "accepted": true ou false,\n'
-        '  "issues": ["lista de problemas encontrados"],\n'
-        '  "risk_scores": {"induction": 0.0-1.0, "repetition": 0.0-1.0, "compound": 0.0-1.0},\n'
-        '  "relation_score": 0.0-1.0,\n'
-        '  "answerability_score": 0.0-1.0\n'
-        "}\n\n"
-        "Criterios de avaliacao:\n"
-        "- EMPTY: pergunta vazia, template ou placeholder.\n"
-        "- EDITORIAL_DELEGATION: pergunta que delega decisoes editoriais "
-        "(cta, titulo, headline, gancho, hook, slide, carrossel, secao, legenda, hashtag, copy, formato).\n"
-        "- COMPOUND_QUESTION: pergunta composta com multiplas interrogacoes ou conjuncoes que pedem mais de uma resposta.\n"
-        "- INDUCTION_RISK: pergunta indutiva que presume experiencia, opiniao, resultado "
-        "ou conduz a resposta esperada (presuposicao, leading question).\n"
-        "- NOT_RELATED_TO_THEME: pergunta sem relacao semantica com o tema da entrevista.\n"
-        "- NOT_ANSWERABLE: pergunta muito curta, sem ponto de interrogacao, "
-        "excessivamente longa ou impossivel de responder de forma concreta.\n"
-        "- REPETITION_RISK: pergunta semanticamente muito similar a uma das perguntas anteriores.\n\n"
-        "risk_scores deve conter valores entre 0.0 e 1.0 para induction, repetition e compound.\n"
-        "relation_score mede o quanto a pergunta se relaciona com o tema (0.0 = nada, 1.0 = total).\n"
-        "answerability_score mede o quanto a pergunta e respondivel de forma concreta (0.0 a 1.0).\n"
-        "accepted deve ser true apenas se NENHUM issue for encontrado.\n"
-        "issues deve conter apenas rotulos da lista: "
-        f"{', '.join(sorted(_KNOWN_ISSUES))}.\n\n"
-        f"Contexto: {json.dumps(payload, ensure_ascii=False)}"
-    )
+    return resolve_prompt(
+        "interview_validate",
+        {
+            "known_issues": ", ".join(sorted(_KNOWN_ISSUES)),
+            "context_json": json.dumps(payload, ensure_ascii=False),
+        }, provider=provider, model=model,
+    ).resolved_content
 
 
 def _invoke(runner: Any, tool: str, prompt: str, **kwargs: Any) -> AgentResult:
@@ -161,6 +142,8 @@ def validate_question(
         question,
         theme=theme,
         previous_questions=previous_questions,
+        provider=tool,
+        model=model,
     )
     run_kwargs: dict[str, Any] = {"model": model, "json_output": True}
     if reasoning_effort:

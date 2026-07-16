@@ -12,6 +12,7 @@ import { CurrentReadMoment } from "../interview/CurrentReadMoment";
 import { QuestionStage } from "../interview/QuestionStage";
 import { RoundNavigator } from "../interview/RoundNavigator";
 import { RoundReview } from "../interview/RoundReview";
+import { TerminalGaps } from "../interview/TerminalGaps";
 import { useInterviewUx } from "../interview/useInterviewUx";
 
 export function InterviewStage() {
@@ -21,6 +22,11 @@ export function InterviewStage() {
     answerQuestion,
     submitRound,
     nextInterviewQuestion,
+    diagnoseGaps,
+    startExtensionBatch,
+    submitExtensionBatch,
+    forceFinishInterview,
+    restartInterview,
     buildBriefing,
     rounds,
     phase,
@@ -32,6 +38,7 @@ export function InterviewStage() {
 
   const coveredTotal = interviewUi.counter?.covered ?? axes.reduce((a, x) => a + x.covered, 0);
   const totalAxes = interviewUi.counter?.denominator ?? axes.reduce((a, x) => a + x.total, 0);
+  const isExtensionRound = (interviewUi.pending_batch?.length ?? 0) > 0;
 
   const ux = useInterviewUx({
     round,
@@ -62,6 +69,12 @@ export function InterviewStage() {
 
   const handleAnalyze = async () => {
     ux.beginAnalysis();
+    if (isExtensionRound) {
+      await submitExtensionBatch(
+        round.map((q) => ({ question: q.prompt, answer: q.answer })),
+      );
+      return;
+    }
     await submitRound();
   };
 
@@ -70,18 +83,22 @@ export function InterviewStage() {
     ux.resetAfterNewRound();
   };
 
+  const handleExtendBatch = async () => {
+    await startExtensionBatch(5);
+  };
+
   const highlightKeys = new Set(ux.newAxes.map((axis) => axis.axisId));
 
   const showSidebar =
     !ux.focusMode &&
     ux.uxPhase !== "map_mode" &&
-    !["analyzing", "coverage_updated", "current_read"].includes(ux.uxPhase);
+    !["analyzing", "coverage_updated", "current_read", "terminal_gaps"].includes(ux.uxPhase);
 
   const showContextPanel = showSidebar && !ux.contextCollapsed;
 
   return (
     <div className="flex h-full min-h-0 flex-col overflow-hidden">
-      <div className="shrink-0 border-b border-hairline px-8 py-5">
+      <div className="shrink-0 border-b border-hairline px-4 py-4 sm:px-8 sm:py-5">
         <StageHeader
           eyebrow={`02 / entrevista`}
           title={
@@ -163,7 +180,7 @@ export function InterviewStage() {
       <div className="flex min-h-0 flex-1 overflow-hidden">
         <div
           className={cn(
-            "min-h-0 flex-1 overflow-y-auto px-8 py-6 [scrollbar-gutter:stable]",
+            "min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-5 sm:px-8 sm:py-6 [scrollbar-gutter:stable]",
             ux.focusMode && "flex items-start justify-center",
           )}
         >
@@ -221,6 +238,22 @@ export function InterviewStage() {
                   onContinue={handleNewRound}
                   onBriefing={() => buildBriefing()}
                   busy={busy}
+                />
+              ) : ux.uxPhase === "terminal_gaps" ? (
+                <TerminalGaps
+                  key="terminal"
+                  terminal={ux.terminal}
+                  busy={busy}
+                  onDiagnose={diagnoseGaps}
+                  onExtend={handleExtendBatch}
+                  onForceFinish={forceFinishInterview}
+                  onRestart={restartInterview}
+                  onBriefing={buildBriefing}
+                  gatewayApproved={Boolean(
+                    interviewUi.gateway &&
+                      typeof interviewUi.gateway === "object" &&
+                      (interviewUi.gateway as Record<string, unknown>).approved,
+                  )}
                 />
               ) : round.length === 0 ? (
                 <motion.div
@@ -308,7 +341,7 @@ export function InterviewStage() {
       </div>
 
       {ux.focusMode && round.length > 0 && ux.uxPhase === "answering" && (
-        <div className="shrink-0 border-t border-hairline px-8 py-2 text-center font-mono text-[10px] text-ink-faint">
+        <div className="shrink-0 border-t border-hairline px-4 py-2 text-center font-mono text-[10px] text-ink-faint sm:px-8">
           {ux.answered} / {round.length} respondidas · Ctrl+F para sair do foco
         </div>
       )}

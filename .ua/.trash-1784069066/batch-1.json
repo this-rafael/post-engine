@@ -1,0 +1,3170 @@
+{
+  "batch": 1,
+  "nodes": [
+    {
+      "id": "file:src/content_engine/__init__.py",
+      "kind": "file",
+      "label": "__init__.py",
+      "path": "src/content_engine/__init__.py",
+      "summary": "Pacote principal do content_engine. Re-exporta contratos publicos da entrevista V4 e schemas de runtime (geracao, segmentacao, avaliacao).",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/adjust_segment.py",
+      "kind": "file",
+      "label": "adjust_segment.py",
+      "path": "src/content_engine/adjust_segment.py",
+      "summary": "SPEC-032: ajuste de um segmento individual do post via LLM. Valida segmento, monta prompt e extrai segmento reescrito do JSON de saida.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/adjust_segment.py::SegmentAdjuster",
+      "kind": "class",
+      "label": "SegmentAdjuster",
+      "path": "src/content_engine/adjust_segment.py",
+      "summary": "Ajusta um unico segmento do post usando agente LLM. Recebe conteudo completo, segmento e pedido do usuario, retornando texto reescrito.",
+      "line": 14,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/adjust_segment.py::SegmentAdjuster.ajustar",
+      "kind": "function",
+      "label": "SegmentAdjuster.ajustar",
+      "path": "src/content_engine/adjust_segment.py",
+      "summary": "Valida segmento, renderiza prompt de ajuste e invoca agente LLM para reescrever segmento individual.",
+      "line": 31,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/adjust_segments_bulk.py",
+      "kind": "file",
+      "label": "adjust_segments_bulk.py",
+      "path": "src/content_engine/adjust_segments_bulk.py",
+      "summary": "Ajuste em lote de multiplos segmentos do post em uma unica chamada LLM.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/adjust_segments_bulk.py::SegmentAdjustRequest",
+      "kind": "class",
+      "label": "SegmentAdjustRequest",
+      "path": "src/content_engine/adjust_segments_bulk.py",
+      "summary": "Dataclass congelada representando um pedido de ajuste individual (segmento, pedido, problema, motivo).",
+      "line": 16,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/adjust_segments_bulk.py::trecho_to_segment_index",
+      "kind": "function",
+      "label": "trecho_to_segment_index",
+      "path": "src/content_engine/adjust_segments_bulk.py",
+      "summary": "Converte indice de trecho (1-based) para indice de segmento (0-based), com validacao de limites.",
+      "line": 23,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/adjust_segments_bulk.py::SegmentBulkAdjuster",
+      "kind": "class",
+      "label": "SegmentBulkAdjuster",
+      "path": "src/content_engine/adjust_segments_bulk.py",
+      "summary": "Ajusta multiplos segmentos de uma so vez via chamada LLM em lote. Retorna dicionario id->texto reescrito.",
+      "line": 41,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/adjust_segments_bulk.py::SegmentBulkAdjuster.ajustar",
+      "kind": "function",
+      "label": "SegmentBulkAdjuster.ajustar",
+      "path": "src/content_engine/adjust_segments_bulk.py",
+      "summary": "Valida lista de ajustes, monta prompt coletivo, invoca agente LLM e mapeia resultados por id de segmento.",
+      "line": 58,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/agent_wrapper.py",
+      "kind": "file",
+      "label": "agent_wrapper.py",
+      "path": "src/content_engine/agent_wrapper.py",
+      "summary": "SPEC-028/029: wrapper de invocacao de agentes CLI (codex, opencode, cursor). Gerencia workspace, subprocesso, parsing JSONL e log de sessao.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/agent_wrapper.py::_failure_message_from_output",
+      "kind": "function",
+      "label": "_failure_message_from_output",
+      "path": "src/content_engine/agent_wrapper.py",
+      "summary": "Extrai mensagem util de falha de stdout JSONL/eventos ou stderr.",
+      "line": 21,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/agent_wrapper.py::AgentWrapper",
+      "kind": "class",
+      "label": "AgentWrapper",
+      "path": "src/content_engine/agent_wrapper.py",
+      "summary": "Orquestrador de execucao de agentes CLI. Suporta codex, opencode e cursor com workspace isolado, timeout e log estruturado.",
+      "line": 60,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/agent_wrapper.py::AgentWrapper.run_codex",
+      "kind": "function",
+      "label": "AgentWrapper.run_codex",
+      "path": "src/content_engine/agent_wrapper.py",
+      "summary": "Executa codex exec com prompt via stdin e flags de sandbox/modelo.",
+      "line": 96,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/agent_wrapper.py::AgentWrapper.run_opencode",
+      "kind": "function",
+      "label": "AgentWrapper.run_opencode",
+      "path": "src/content_engine/agent_wrapper.py",
+      "summary": "Executa opencode run com suporte a agente, modelo e anexos.",
+      "line": 140,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/agent_wrapper.py::AgentWrapper.run_cursor",
+      "kind": "function",
+      "label": "AgentWrapper.run_cursor",
+      "path": "src/content_engine/agent_wrapper.py",
+      "summary": "Executa Cursor agent CLI com parsing de output stream-json.",
+      "line": 177,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/agent_wrapper.py::AgentWrapper.run",
+      "kind": "function",
+      "label": "AgentWrapper.run",
+      "path": "src/content_engine/agent_wrapper.py",
+      "summary": "Despacha execucao para run_codex, run_opencode ou run_cursor conforme a ferramenta.",
+      "line": 228,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/agent_wrapper.py::AgentWrapper._run_subprocess",
+      "kind": "function",
+      "label": "AgentWrapper._run_subprocess",
+      "path": "src/content_engine/agent_wrapper.py",
+      "summary": "Executa subprocesso generico com tratamento de erros, timeout e parsing JSONL.",
+      "line": 265,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/codex_llm_client.py",
+      "kind": "file",
+      "label": "codex_llm_client.py",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Cliente LLM via Codex CLI. Traducao fiel do CodexLlmClient Java. Suporta execucao via runner injetado ou Popen com threads concorrentes.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/codex_llm_client.py::LlmRequest",
+      "kind": "class",
+      "label": "LlmRequest",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Dataclass congelada com system_prompt, user_prompt, model, reasoning_effort e metadata.",
+      "line": 43,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/codex_llm_client.py::LlmResponse",
+      "kind": "class",
+      "label": "LlmResponse",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Dataclass congelada com texto de resposta e json_data opcional. Factory methods from_json e from_text.",
+      "line": 52,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/codex_llm_client.py::CodexLlmClient",
+      "kind": "class",
+      "label": "CodexLlmClient",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Cliente LLM que invoca codex exec com prompt via stdin, leitura concorrente stdout/stderr via threads, timeout e validacao de exit code.",
+      "line": 65,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/codex_llm_client.py::CodexLlmClient.complete",
+      "kind": "function",
+      "label": "CodexLlmClient.complete",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Completar requisicao LLM: monta prompt, executa codex e tenta parse JSON.",
+      "line": 111,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/codex_llm_client.py::CodexLlmClient._build_prompt",
+      "kind": "function",
+      "label": "CodexLlmClient._build_prompt",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Combina system_prompt e user_prompt em um unico prompt.",
+      "line": 136,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/codex_llm_client.py::CodexLlmClient._execute_codex",
+      "kind": "function",
+      "label": "CodexLlmClient._execute_codex",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Monta linha de comando codex exec e delega para runner ou Popen.",
+      "line": 144,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/codex_llm_client.py::CodexLlmClient._execute_via_runner",
+      "kind": "function",
+      "label": "CodexLlmClient._execute_via_runner",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Executa codex via runner injetado (subprocess.run).",
+      "line": 190,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/codex_llm_client.py::CodexLlmClient._execute_via_popen",
+      "kind": "function",
+      "label": "CodexLlmClient._execute_via_popen",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Executa codex via Popen com threads concorrentes para stdout/stderr.",
+      "line": 243,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/codex_llm_client.py::CodexLlmClient.run",
+      "kind": "function",
+      "label": "CodexLlmClient.run",
+      "path": "src/content_engine/codex_llm_client.py",
+      "summary": "Protocolo _LLMRunner compativel: converte kwargs em LlmRequest e retorna AgentResult.",
+      "line": 369,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/cursor_output.py",
+      "kind": "file",
+      "label": "cursor_output.py",
+      "path": "src/content_engine/cursor_output.py",
+      "summary": "Parse de output stream-json do Cursor CLI para texto plano e deteccao de erros.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/cursor_output.py::extract_json_lines",
+      "kind": "function",
+      "label": "extract_json_lines",
+      "path": "src/content_engine/cursor_output.py",
+      "summary": "Extrai linhas JSON validas do stdout do Cursor.",
+      "line": 8,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/cursor_output.py::_extract_assistant_text",
+      "kind": "function",
+      "label": "_extract_assistant_text",
+      "path": "src/content_engine/cursor_output.py",
+      "summary": "Extrai texto de blocos de assistente em evento Cursor.",
+      "line": 23,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/cursor_output.py::_stringify_error",
+      "kind": "function",
+      "label": "_stringify_error",
+      "path": "src/content_engine/cursor_output.py",
+      "summary": "Converte valores de erro diversos em string legivel.",
+      "line": 34,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/cursor_output.py::parse_cursor_output",
+      "kind": "function",
+      "label": "parse_cursor_output",
+      "path": "src/content_engine/cursor_output.py",
+      "summary": "Processa stdout/stderr do Cursor e retorna (texto, erro).",
+      "line": 49,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/cursor_output.py::resolve_cursor_model",
+      "kind": "function",
+      "label": "resolve_cursor_model",
+      "path": "src/content_engine/cursor_output.py",
+      "summary": "Resolve nome de modelo Cursor com sufixo de esforco de raciocinio.",
+      "line": 89,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/editorial_actions.py",
+      "kind": "file",
+      "label": "editorial_actions.py",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Orquestracao das actions editoriais V3: storyboard, rascunhos de bloco, composicao final. Cada action sincroniza briefing, atualiza flow e persiste.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/editorial_actions.py::EditorialHost",
+      "kind": "class",
+      "label": "EditorialHost",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Protocol para host de acoes editoriais. Exige state do tipo TuiSessionState com metodos _persistir e _log_event.",
+      "line": 28,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::_ensure_flow",
+      "kind": "function",
+      "label": "_ensure_flow",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Garante fluxo editorial normalizado no estado.",
+      "line": 38,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::_sync_briefing_fingerprint",
+      "kind": "function",
+      "label": "_sync_briefing_fingerprint",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Sincroniza fingerprint do briefing e invalida drafts se mudou.",
+      "line": 44,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::action_generate_storyboard",
+      "kind": "function",
+      "label": "action_generate_storyboard",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Gera storyboard via LLM e atualiza fluxo editorial.",
+      "line": 55,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::action_update_storyboard",
+      "kind": "function",
+      "label": "action_update_storyboard",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Atualiza blocos do storyboard manualmente.",
+      "line": 98,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::action_clear_storyboard",
+      "kind": "function",
+      "label": "action_clear_storyboard",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Limpa storyboard e invalida rascunhos/composicao.",
+      "line": 112,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::_block_entry",
+      "kind": "function",
+      "label": "_block_entry",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Obtem ou cria entrada de rascunho para um bloco.",
+      "line": 122,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::_find_block",
+      "kind": "function",
+      "label": "_find_block",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Localiza bloco no storyboard por id.",
+      "line": 132,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::_assert_prior_blocks_selected",
+      "kind": "function",
+      "label": "_assert_prior_blocks_selected",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Valida que blocos anteriores possuem rascunho selecionado.",
+      "line": 142,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::_invalidate_downstream_drafts",
+      "kind": "function",
+      "label": "_invalidate_downstream_drafts",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Invalida rascunhos de blocos a jusante do bloco alterado.",
+      "line": 170,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::_generate_block_drafts_internal",
+      "kind": "function",
+      "label": "_generate_block_drafts_internal",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Gera abordagens e rascunhos para um bloco via LLM.",
+      "line": 190,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::action_generate_block_drafts",
+      "kind": "function",
+      "label": "action_generate_block_drafts",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Action publica para gerar rascunhos de um bloco.",
+      "line": 290,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::action_generate_all_block_drafts",
+      "kind": "function",
+      "label": "action_generate_all_block_drafts",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Gera rascunhos para todos os blocos do storyboard.",
+      "line": 299,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::action_retry_block_draft",
+      "kind": "function",
+      "label": "action_retry_block_draft",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Regenera rascunho de um bloco com uma opcao especifica.",
+      "line": 305,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::action_select_block_draft",
+      "kind": "function",
+      "label": "action_select_block_draft",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Seleciona rascunho de um bloco e invalida blocos a jusante.",
+      "line": 371,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::action_compose_editorial",
+      "kind": "function",
+      "label": "action_compose_editorial",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Composicao final do conteudo a partir dos rascunhos selecionados.",
+      "line": 397,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_actions.py::_apply_composition_result",
+      "kind": "function",
+      "label": "_apply_composition_result",
+      "path": "src/content_engine/editorial_actions.py",
+      "summary": "Aplica resultado da composicao ao fluxo e atualiza status.",
+      "line": 445,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/editorial_flow.py",
+      "kind": "file",
+      "label": "editorial_flow.py",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Dominio do fluxo editorial V3: storyboard, rascunhos e composicao. Define personas editoriais e funcoes de manipulacao do fluxo.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::empty_editorial_flow",
+      "kind": "function",
+      "label": "empty_editorial_flow",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Cria estrutura de fluxo editorial vazia.",
+      "line": 29,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::normalize_editorial_flow",
+      "kind": "function",
+      "label": "normalize_editorial_flow",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Normaliza fluxo bruto (tipos, IDs, ordenacao) para formato canonico.",
+      "line": 51,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::compute_briefing_fingerprint",
+      "kind": "function",
+      "label": "compute_briefing_fingerprint",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Calcula hash SHA-256 do briefing autoral para deteccao de mudancas.",
+      "line": 112,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::compute_selection_fingerprint",
+      "kind": "function",
+      "label": "compute_selection_fingerprint",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Calcula hash SHA-256 das selecoes de rascunho por bloco.",
+      "line": 125,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::derive_editorial_status",
+      "kind": "function",
+      "label": "derive_editorial_status",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Deriva status editorial (sem_storyboard, em_andamento, composto, etc).",
+      "line": 149,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::new_block_id",
+      "kind": "function",
+      "label": "new_block_id",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Gera novo UUID para bloco do storyboard.",
+      "line": 211,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::new_option_id",
+      "kind": "function",
+      "label": "new_option_id",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Gera novo UUID para opcao de rascunho.",
+      "line": 215,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::assign_storyboard_blocks",
+      "kind": "function",
+      "label": "assign_storyboard_blocks",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Atribui IDs e normaliza blocos de storyboard crus.",
+      "line": 219,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::invalidate_drafts_and_composition",
+      "kind": "function",
+      "label": "invalidate_drafts_and_composition",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Invalida rascunhos e composicao marcando como obsoletos.",
+      "line": 242,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::clear_downstream_if_editorial_origin",
+      "kind": "function",
+      "label": "clear_downstream_if_editorial_origin",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Limpa composicao se a origem editorial for a fonte.",
+      "line": 260,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_flow.py::persona_by_id",
+      "kind": "function",
+      "label": "persona_by_id",
+      "path": "src/content_engine/editorial_flow.py",
+      "summary": "Busca persona editorial por ID.",
+      "line": 269,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/editorial_generation.py",
+      "kind": "file",
+      "label": "editorial_generation.py",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Servicos LLM do fluxo editorial V3: geracao de storyboard, abordagens de bloco, rascunhos e composicao final com validacao de preservacao.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/editorial_generation.py::EditorialParseError",
+      "kind": "class",
+      "label": "EditorialParseError",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Excecao para erros de parsing de payloads do fluxo editorial.",
+      "line": 30,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/editorial_generation.py::EditorialRunResult",
+      "kind": "class",
+      "label": "EditorialRunResult",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Resultado de execucao LLM no fluxo editorial: ok, data, error, agent_result e prompt.",
+      "line": 37,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/editorial_generation.py::StoryboardGenerator",
+      "kind": "class",
+      "label": "StoryboardGenerator",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Gera storyboard via LLM a partir do briefing autoral.",
+      "line": 234,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/editorial_generation.py::BlockDraftGenerator",
+      "kind": "class",
+      "label": "BlockDraftGenerator",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Gera abordagens e rascunhos para blocos do storyboard com sortear_personas.",
+      "line": 255,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/editorial_generation.py::EditorialComposer",
+      "kind": "class",
+      "label": "EditorialComposer",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Composicao final do conteudo com validacao de preservacao editorial.",
+      "line": 336,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::_run_json_llm",
+      "kind": "function",
+      "label": "_run_json_llm",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Executa agente LLM e extrai JSON da resposta.",
+      "line": 45,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::parse_storyboard_blocks",
+      "kind": "function",
+      "label": "parse_storyboard_blocks",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Parse blocos de storyboard do payload LLM.",
+      "line": 76,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::parse_approaches",
+      "kind": "function",
+      "label": "parse_approaches",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Parse abordagens de bloco do payload LLM.",
+      "line": 94,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::parse_draft_content",
+      "kind": "function",
+      "label": "parse_draft_content",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Parse conteudo de rascunho do payload LLM.",
+      "line": 114,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::_storyboard_context",
+      "kind": "function",
+      "label": "_storyboard_context",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Monta contexto JSON para prompt de storyboard.",
+      "line": 128,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::_composition_context",
+      "kind": "function",
+      "label": "_composition_context",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Monta contexto JSON para prompt de composicao.",
+      "line": 143,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::_composition_briefing",
+      "kind": "function",
+      "label": "_composition_briefing",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Extrai briefing autoral para contexto de composicao.",
+      "line": 172,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::_composition_authorial_evidence",
+      "kind": "function",
+      "label": "_composition_authorial_evidence",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Extrai evidencias autorais deduplicadas.",
+      "line": 184,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::_composition_interview_context",
+      "kind": "function",
+      "label": "_composition_interview_context",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Extrai contexto da entrevista para composicao.",
+      "line": 210,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::build_draft_options",
+      "kind": "function",
+      "label": "build_draft_options",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Combina abordagens e personas em opcoes de rascunho.",
+      "line": 428,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::collect_selected_drafts",
+      "kind": "function",
+      "label": "collect_selected_drafts",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Coleta todos os rascunhos selecionados do fluxo.",
+      "line": 508,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_generation.py::collect_previous_selected_drafts",
+      "kind": "function",
+      "label": "collect_previous_selected_drafts",
+      "path": "src/content_engine/editorial_generation.py",
+      "summary": "Coleta rascunhos selecionados de blocos anteriores.",
+      "line": 490,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/editorial_preservation.py",
+      "kind": "file",
+      "label": "editorial_preservation.py",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Salvaguardas deterministas de preservacao editorial para a etapa de composicao. Identifica ancora de fonte que nao devem ser colapsadas em rotulos e audita o payload retornado.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/editorial_preservation.py::EditorialAnchor",
+      "kind": "class",
+      "label": "EditorialAnchor",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Ancora editorial extraida de rascunho: contem tipo, trecho de origem, instrucao e grupos de evidencia.",
+      "line": 74,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/editorial_preservation.py::EditorialPreservationIssue",
+      "kind": "class",
+      "label": "EditorialPreservationIssue",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Problema de preservacao detectado: ancora com grupos de evidencia correspondentes.",
+      "line": 96,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::extract_editorial_anchors",
+      "kind": "function",
+      "label": "extract_editorial_anchors",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Extrai ancora editoriais de rascunhos selecionados.",
+      "line": 108,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::validate_composition_preservation",
+      "kind": "function",
+      "label": "validate_composition_preservation",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Valida se composicao preserva ancora editoriais.",
+      "line": 130,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::editorial_anchors_for_prompt",
+      "kind": "function",
+      "label": "editorial_anchors_for_prompt",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Formata ancora para inclusao em prompt LLM.",
+      "line": 149,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::format_preservation_issues",
+      "kind": "function",
+      "label": "format_preservation_issues",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Formata problemas de preservacao em texto legivel.",
+      "line": 153,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::_anchors_for_draft",
+      "kind": "function",
+      "label": "_anchors_for_draft",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Gera candidatos de ancora para um rascunho.",
+      "line": 157,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::_arrow_chain_anchors",
+      "kind": "function",
+      "label": "_arrow_chain_anchors",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Detecta cadeias de setas (A -> B -> C) como ancora.",
+      "line": 167,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::_ordinal_sequence_anchors",
+      "kind": "function",
+      "label": "_ordinal_sequence_anchors",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Detecta sequencias ordinais (primeiro, segundo, ...) como ancora.",
+      "line": 203,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::_graph_method_anchors",
+      "kind": "function",
+      "label": "_graph_method_anchors",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Detecta metodos/grafos mencionados como ancora.",
+      "line": 240,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::_concrete_scenario_anchors",
+      "kind": "function",
+      "label": "_concrete_scenario_anchors",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Detecta cenarios concretos com entidades nomeadas.",
+      "line": 263,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/editorial_preservation.py::_causal_consequence_anchors",
+      "kind": "function",
+      "label": "_causal_consequence_anchors",
+      "path": "src/content_engine/editorial_preservation.py",
+      "summary": "Detecta relacoes de causa e consequencia.",
+      "line": 295,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/exporter.py",
+      "kind": "file",
+      "label": "exporter.py",
+      "path": "src/content_engine/exporter.py",
+      "summary": "SPEC-036/037: exportacao do conteudo gerado em Markdown, JSON e TXT. Sanitiza nomes de arquivo e monta payloads de exportacao.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/exporter.py::sanitizar_nome_arquivo",
+      "kind": "function",
+      "label": "sanitizar_nome_arquivo",
+      "path": "src/content_engine/exporter.py",
+      "summary": "Sanitiza texto para nome de arquivo seguro (slug).",
+      "line": 19,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/exporter.py::nome_arquivo_base",
+      "kind": "function",
+      "label": "nome_arquivo_base",
+      "path": "src/content_engine/exporter.py",
+      "summary": "Gera nome de arquivo base a partir de tema, plataforma e tipo de post.",
+      "line": 30,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/exporter.py::montar_payload_json_exportacao",
+      "kind": "function",
+      "label": "montar_payload_json_exportacao",
+      "path": "src/content_engine/exporter.py",
+      "summary": "Monta payload JSON completo para exportacao com todos os metadados.",
+      "line": 75,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/exporter.py::exportar_markdown",
+      "kind": "function",
+      "label": "exportar_markdown",
+      "path": "src/content_engine/exporter.py",
+      "summary": "Exporta conteudo como arquivo Markdown.",
+      "line": 102,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/exporter.py::exportar_json",
+      "kind": "function",
+      "label": "exportar_json",
+      "path": "src/content_engine/exporter.py",
+      "summary": "Exporta payload como arquivo JSON.",
+      "line": 115,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/exporter.py::exportar_conteudo",
+      "kind": "function",
+      "label": "exportar_conteudo",
+      "path": "src/content_engine/exporter.py",
+      "summary": "Exporta conteudo completo em todos os formatos suportados.",
+      "line": 127,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/exporter.py::exportar_txt",
+      "kind": "function",
+      "label": "exportar_txt",
+      "path": "src/content_engine/exporter.py",
+      "summary": "Exporta conteudo como arquivo texto puro.",
+      "line": 169,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/generator.py",
+      "kind": "file",
+      "label": "generator.py",
+      "path": "src/content_engine/generator.py",
+      "summary": "SPEC-027: servico de geracao de conteudo autoral. Parse de payloads LLM com suporte a slides, slidemark, sugestoes de imagem e validacao slidemark.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/generator.py::ConteudoGerado",
+      "kind": "class",
+      "label": "ConteudoGerado",
+      "path": "src/content_engine/generator.py",
+      "summary": "Dataclass com resultado da geracao: conteudo, metadados, alertas, slides, slidemark e sugestoes de imagem.",
+      "line": 341,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/generator.py::ContentGenerator",
+      "kind": "class",
+      "label": "ContentGenerator",
+      "path": "src/content_engine/generator.py",
+      "summary": "Servico principal de geracao de conteudo via agente LLM. Monta prompt, executa agente e parse resultado.",
+      "line": 425,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/generator.py::_extrair_bullets_de_slide",
+      "kind": "function",
+      "label": "_extrair_bullets_de_slide",
+      "path": "src/content_engine/generator.py",
+      "summary": "Extrai bullets/texto de um slide para conteudo textual.",
+      "line": 24,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/generator.py::parse_generation_payload",
+      "kind": "function",
+      "label": "parse_generation_payload",
+      "path": "src/content_engine/generator.py",
+      "summary": "Parse payload completo de geracao LLM incluindo slides e slidemark.",
+      "line": 352,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/generator.py::ContentGenerator.generate",
+      "kind": "function",
+      "label": "ContentGenerator.generate",
+      "path": "src/content_engine/generator.py",
+      "summary": "Gera conteudo autoral via agente LLM com prompt de geracao.",
+      "line": 437,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/interview/validation.py",
+      "kind": "file",
+      "label": "validation.py",
+      "path": "src/content_engine/interview/validation.py",
+      "summary": "Validacao de perguntas via LLM para o gate de exibicao V4. Verifica questoes compostas, inducao, repeticao e respondibilidade.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/interview/validation.py::QuestionValidation",
+      "kind": "class",
+      "label": "QuestionValidation",
+      "path": "src/content_engine/interview/validation.py",
+      "summary": "Dataclass com resultado da validacao: accepted, issues, risk_scores, relation_score e answerability_score.",
+      "line": 24,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/interview/validation.py::validate_questions",
+      "kind": "function",
+      "label": "validate_questions",
+      "path": "src/content_engine/interview/validation.py",
+      "summary": "Envia perguntas para validacao via LLM e retorna resultados com issues e scores de risco.",
+      "line": 100,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/llm_config.py",
+      "kind": "file",
+      "label": "llm_config.py",
+      "path": "src/content_engine/llm_config.py",
+      "summary": "Configuracao de provider/modelo por operacao LLM. Suporta YAML global, resolucao de operacoes e status de providers.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/llm_config.py::LlmOperationConfig",
+      "kind": "class",
+      "label": "LlmOperationConfig",
+      "path": "src/content_engine/llm_config.py",
+      "summary": "Dataclass com configuracao de operacao LLM: provider, model, reasoning_effort e sandbox.",
+      "line": 50,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/llm_config.py::resolve",
+      "kind": "function",
+      "label": "resolve",
+      "path": "src/content_engine/llm_config.py",
+      "summary": "Resolve configuracao LLM para uma operacao especifica.",
+      "line": 100,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/llm_config.py::list_operations",
+      "kind": "function",
+      "label": "list_operations",
+      "path": "src/content_engine/llm_config.py",
+      "summary": "Lista todas as operacoes LLM disponiveis.",
+      "line": 180,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/llm_config.py::list_providers",
+      "kind": "function",
+      "label": "list_providers",
+      "path": "src/content_engine/llm_config.py",
+      "summary": "Lista providers LLM disponiveis e seu status.",
+      "line": 190,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/llm_config.py::load_global_config",
+      "kind": "function",
+      "label": "load_global_config",
+      "path": "src/content_engine/llm_config.py",
+      "summary": "Carrega configuracao global de YAML.",
+      "line": 200,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/llm_config.py::save_global_config",
+      "kind": "function",
+      "label": "save_global_config",
+      "path": "src/content_engine/llm_config.py",
+      "summary": "Salva configuracao global em YAML.",
+      "line": 220,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/llm_config.py::provider_status",
+      "kind": "function",
+      "label": "provider_status",
+      "path": "src/content_engine/llm_config.py",
+      "summary": "Verifica se CLI do provider esta disponivel no PATH.",
+      "line": 240,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/llm_config.py::ensure_default_config_file",
+      "kind": "function",
+      "label": "ensure_default_config_file",
+      "path": "src/content_engine/llm_config.py",
+      "summary": "Cria arquivo de configuracao padrao se nao existe.",
+      "line": 260,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/llm_json_parser.py",
+      "kind": "file",
+      "label": "llm_json_parser.py",
+      "path": "src/content_engine/llm_json_parser.py",
+      "summary": "Extracao robusta de JSON de retorno de LLM. Suporta JSON puro, JSONL, JSON embutido em texto/multiline e multiplos objetos concatenados.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/llm_json_parser.py::ParsedLLMJson",
+      "kind": "class",
+      "label": "ParsedLLMJson",
+      "path": "src/content_engine/llm_json_parser.py",
+      "summary": "Dataclass com resultado do parse: ok, data, error e estrategia utilizada.",
+      "line": 31,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/llm_json_parser.py::extract_json_object_from_llm_output",
+      "kind": "function",
+      "label": "extract_json_object_from_llm_output",
+      "path": "src/content_engine/llm_json_parser.py",
+      "summary": "Extrai objeto JSON de output LLM usando estrategias multiplas (JSON puro, JSONL, balanceamento de chaves).",
+      "line": 80,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/persistence.py",
+      "kind": "file",
+      "label": "persistence.py",
+      "path": "src/content_engine/persistence.py",
+      "summary": "Persistencia do contrato de sessao V4. Arquivos de sessao nao sao migrados; schema diferente de 4.0 e descartado.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/persistence.py::save_session",
+      "kind": "function",
+      "label": "save_session",
+      "path": "src/content_engine/persistence.py",
+      "summary": "Salva estado da sessao em arquivo JSON.",
+      "line": 40,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/persistence.py::load_session",
+      "kind": "function",
+      "label": "load_session",
+      "path": "src/content_engine/persistence.py",
+      "summary": "Carrega estado da sessao do arquivo JSON.",
+      "line": 60,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/persistence.py::session_file_path",
+      "kind": "function",
+      "label": "session_file_path",
+      "path": "src/content_engine/persistence.py",
+      "summary": "Retorna caminho do arquivo de sessao.",
+      "line": 100,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/persistence.py::delete_session",
+      "kind": "function",
+      "label": "delete_session",
+      "path": "src/content_engine/persistence.py",
+      "summary": "Deleta arquivo de sessao.",
+      "line": 110,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/persistence.py::session_exists",
+      "kind": "function",
+      "label": "session_exists",
+      "path": "src/content_engine/persistence.py",
+      "summary": "Verifica se arquivo de sessao existe.",
+      "line": 120,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/post_evaluation.py",
+      "kind": "file",
+      "label": "post_evaluation.py",
+      "path": "src/content_engine/post_evaluation.py",
+      "summary": "SPEC-034: avaliacao autoral de um post gerado. Avalia tes, progressao, concretude, precisao tecnica, retencao, autoridade e autoria.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/post_evaluation.py::PostEvaluator",
+      "kind": "class",
+      "label": "PostEvaluator",
+      "path": "src/content_engine/post_evaluation.py",
+      "summary": "Avaliador de post via LLM. Retorna ScoreDoPost com notas por aspecto, trechos fracos e alertas de slidemark.",
+      "line": 50,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/post_evaluation.py::_parse_score",
+      "kind": "function",
+      "label": "_parse_score",
+      "path": "src/content_engine/post_evaluation.py",
+      "summary": "Extrai scores individuais do payload de avaliacao.",
+      "line": 32,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/post_evaluation.py::_parse_trechos_fracos",
+      "kind": "function",
+      "label": "_parse_trechos_fracos",
+      "path": "src/content_engine/post_evaluation.py",
+      "summary": "Extrai trechos fracos da resposta LLM.",
+      "line": 70,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/post_evaluation.py::PostEvaluator.avaliar",
+      "kind": "function",
+      "label": "PostEvaluator.avaliar",
+      "path": "src/content_engine/post_evaluation.py",
+      "summary": "Executa avaliacao LLM do post completo.",
+      "line": 80,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/prompt_builder.py",
+      "kind": "file",
+      "label": "prompt_builder.py",
+      "path": "src/content_engine/prompt_builder.py",
+      "summary": "Construcao de prompts de geracao a partir do briefing autoral V4. Mapeia tipo de post para persona e regras especificas.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/prompt_builder.py::build_generation_prompt",
+      "kind": "function",
+      "label": "build_generation_prompt",
+      "path": "src/content_engine/prompt_builder.py",
+      "summary": "Monta prompt completo de geracao com persona, regras, briefing e politicas anti-IA.",
+      "line": 50,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/prompt_loader.py",
+      "kind": "file",
+      "label": "prompt_loader.py",
+      "path": "src/content_engine/prompt_loader.py",
+      "summary": "SPEC-050: loader de prompts Markdown versionados. Carrega templates de entrevista, geracao, segmentacao, avaliacao e personas do diretorio prompts/.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/prompt_loader.py::load_prompt",
+      "kind": "function",
+      "label": "load_prompt",
+      "path": "src/content_engine/prompt_loader.py",
+      "summary": "Carrega template de prompt por nome a partir do diretorio prompts/.",
+      "line": 54,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/prompt_loader.py::prompt_exists",
+      "kind": "function",
+      "label": "prompt_exists",
+      "path": "src/content_engine/prompt_loader.py",
+      "summary": "Verifica se um prompt existe no diretorio de templates.",
+      "line": 63,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/schemas.py",
+      "kind": "file",
+      "label": "schemas.py",
+      "path": "src/content_engine/schemas.py",
+      "summary": "Contratos compartilhados do runtime Post Engine. Define tipos de post, ferramentas, sandbox, sessao V4 e dataclasses de resultado.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/schemas.py::AgentResult",
+      "kind": "class",
+      "label": "AgentResult",
+      "path": "src/content_engine/schemas.py",
+      "summary": "Dataclass com resultado de execucao de agente: tool, command, returncode, stdout, stderr, events e error.",
+      "line": 60,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/schemas.py::SegmentoPost",
+      "kind": "class",
+      "label": "SegmentoPost",
+      "path": "src/content_engine/schemas.py",
+      "summary": "Dataclass representando segmento editavel do post: id, ordem, texto e papel_interno.",
+      "line": 80,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/schemas.py::ScoreDoPost",
+      "kind": "class",
+      "label": "ScoreDoPost",
+      "path": "src/content_engine/schemas.py",
+      "summary": "Dataclass com scores de avaliacao do post por aspecto (tese, progressao, concretude, etc).",
+      "line": 100,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/schemas.py::TuiSessionState",
+      "kind": "class",
+      "label": "TuiSessionState",
+      "path": "src/content_engine/schemas.py",
+      "summary": "Dataclass principal do estado da sessao V4 com briefing, geracao, segmentacao, avaliacao e fluxo editorial.",
+      "line": 120,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/schemas.py::migrate_tipo_de_post",
+      "kind": "function",
+      "label": "migrate_tipo_de_post",
+      "path": "src/content_engine/schemas.py",
+      "summary": "Retorna tipo de post valido sem carregar migracoes de sessao.",
+      "line": 35,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/segmentation.py",
+      "kind": "file",
+      "label": "segmentation.py",
+      "path": "src/content_engine/segmentation.py",
+      "summary": "SPEC-030: segmentacao do conteudo gerado em partes editaveis. Divide conteudo em segmentos com id, ordem, texto e papel interno.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/segmentation.py::Segmenter",
+      "kind": "class",
+      "label": "Segmenter",
+      "path": "src/content_engine/segmentation.py",
+      "summary": "Segmentador de conteudo via LLM. Divide texto em segmentos editaveis com suporte a trilhas visuais.",
+      "line": 50,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/segmentation.py::_texto_slide_slidemark",
+      "kind": "function",
+      "label": "_texto_slide_slidemark",
+      "path": "src/content_engine/segmentation.py",
+      "summary": "Extrai texto de slide no formato slidemark.",
+      "line": 15,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/segmentation.py::Segmenter.segmentar",
+      "kind": "function",
+      "label": "Segmenter.segmentar",
+      "path": "src/content_engine/segmentation.py",
+      "summary": "Segmenta conteudo completo via LLM em partes editaveis.",
+      "line": 80,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/session_controller.py",
+      "kind": "file",
+      "label": "session_controller.py",
+      "path": "src/content_engine/session_controller.py",
+      "summary": "API publica de sessao para GUI e testes. Orquestrador headless que ignora refresh de widgets Textual.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/session_controller.py::SessionController",
+      "kind": "class",
+      "label": "SessionController",
+      "path": "src/content_engine/session_controller.py",
+      "summary": "Orquestrador headless de sessao. Estende PostEngineApp sobrescrevendo metodos de UI com no-ops.",
+      "line": 19,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/session_log.py",
+      "kind": "file",
+      "label": "session_log.py",
+      "path": "src/content_engine/session_log.py",
+      "summary": "Log estruturado por sessao em JSONL. Gera session IDs com timestamp, escreve eventos com safe_write tolerante a erros.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "class:src/content_engine/session_log.py::SessionLogger",
+      "kind": "class",
+      "label": "SessionLogger",
+      "path": "src/content_engine/session_log.py",
+      "summary": "Logger de sessao em JSONL. Suporta write (com propagacao de erro) e safe_write (silenciosa).",
+      "line": 37,
+      "tags": [
+        "python",
+        "class"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/session_log.py::new_session_id",
+      "kind": "function",
+      "label": "new_session_id",
+      "path": "src/content_engine/session_log.py",
+      "summary": "Gera novo session ID com timestamp UTC e sufixo UUID.",
+      "line": 17,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/session_log.py::default_log_path",
+      "kind": "function",
+      "label": "default_log_path",
+      "path": "src/content_engine/session_log.py",
+      "summary": "Retorna caminho padrao do arquivo de log para uma sessao.",
+      "line": 28,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/session_log.py::ensure_session_logger",
+      "kind": "function",
+      "label": "ensure_session_logger",
+      "path": "src/content_engine/session_log.py",
+      "summary": "Cria ou reutiliza SessionLogger a partir do estado da sessao.",
+      "line": 72,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/slidemark_contract.py",
+      "kind": "file",
+      "label": "slidemark_contract.py",
+      "path": "src/content_engine/slidemark_contract.py",
+      "summary": "Contrato SlideMark v1 espelhado do schema Zod do SlideMark. Define tipos de slide, temas oficiais, campos e constantes do canvas.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/slidemark_contract.py::SLIDEMARK_LLM_CONTRACT",
+      "kind": "function",
+      "label": "SLIDEMARK_LLM_CONTRACT",
+      "path": "src/content_engine/slidemark_contract.py",
+      "summary": "Contrato completo SlideMark para inclusao em prompts LLM como referencia de schema.",
+      "line": 35,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/slidemark_converter.py",
+      "kind": "file",
+      "label": "slidemark_converter.py",
+      "path": "src/content_engine/slidemark_converter.py",
+      "summary": "Conversao de conteudo final editado para documento SlideMark JSON v1. Usa LLM para converter texto em slides estruturados com validacao.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/slidemark_converter.py::_regras_para_tipo",
+      "kind": "function",
+      "label": "_regras_para_tipo",
+      "path": "src/content_engine/slidemark_converter.py",
+      "summary": "Carrega regras de geracao especificas por tipo de post.",
+      "line": 29,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/slidemark_converter.py::converter_para_slidemark",
+      "kind": "function",
+      "label": "converter_para_slidemark",
+      "path": "src/content_engine/slidemark_converter.py",
+      "summary": "Converte conteudo texto em documento SlideMark via LLM.",
+      "line": 50,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/slidemark_validator.py",
+      "kind": "file",
+      "label": "slidemark_validator.py",
+      "path": "src/content_engine/slidemark_validator.py",
+      "summary": "Normalizacao e validacao estrita do contrato SlideMark JSON v1. Espelha schema TypeScript do SlideMark com normalizacao de formatos legados.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/slidemark_validator.py::normalize_slidemark_document",
+      "kind": "function",
+      "label": "normalize_slidemark_document",
+      "path": "src/content_engine/slidemark_validator.py",
+      "summary": "Normaliza documento SlideMark recuperando formatos legados.",
+      "line": 50,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/slidemark_validator.py::validate_slidemark_document",
+      "kind": "function",
+      "label": "validate_slidemark_document",
+      "path": "src/content_engine/slidemark_validator.py",
+      "summary": "Valida documento SlideMark contra contrato estrito.",
+      "line": 100,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/slidemark_validator.py::validate_slidemark_export_document",
+      "kind": "function",
+      "label": "validate_slidemark_export_document",
+      "path": "src/content_engine/slidemark_validator.py",
+      "summary": "Valida documento SlideMark para exportacao com regras adicionais.",
+      "line": 150,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/template_renderer.py",
+      "kind": "file",
+      "label": "template_renderer.py",
+      "path": "src/content_engine/template_renderer.py",
+      "summary": "SPEC-051: renderizacao simples de placeholders {{chave}}. Substitui identificadores por valores do contexto sem executar expressoes.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/template_renderer.py::render_template",
+      "kind": "function",
+      "label": "render_template",
+      "path": "src/content_engine/template_renderer.py",
+      "summary": "Substitui placeholders {{chave}} e {chave} por valores do contexto. Chaves ausentes geram KeyError.",
+      "line": 17,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/content_engine/trilhas.py",
+      "kind": "file",
+      "label": "trilhas.py",
+      "path": "src/content_engine/trilhas.py",
+      "summary": "Metadados editoriais das quatro trilhas de conteudo: Post, Artigo, Carrossel Curto e Slide Longo. Define rotulos, regras mentais e estruturas.",
+      "tags": [
+        "python",
+        "content_engine"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/trilhas.py::is_trilha_visual",
+      "kind": "function",
+      "label": "is_trilha_visual",
+      "path": "src/content_engine/trilhas.py",
+      "summary": "Verifica se trilha e visual (short_carousel ou long_slide).",
+      "line": 40,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/trilhas.py::trilha_estrutura",
+      "kind": "function",
+      "label": "trilha_estrutura",
+      "path": "src/content_engine/trilhas.py",
+      "summary": "Retorna estrutura narrativa da trilha.",
+      "line": 50,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "function:src/content_engine/trilhas.py::trilha_regra_mental",
+      "kind": "function",
+      "label": "trilha_regra_mental",
+      "path": "src/content_engine/trilhas.py",
+      "summary": "Retorna regra mental da trilha.",
+      "line": 60,
+      "tags": [
+        "python",
+        "function"
+      ]
+    },
+    {
+      "id": "file:src/gui/__init__.py",
+      "kind": "file",
+      "label": "__init__.py",
+      "path": "src/gui/__init__.py",
+      "summary": "Pacote GUI React mode. Re-exporta run_gui_server para iniciar o servidor HTTP da interface web.",
+      "tags": [
+        "python",
+        "gui"
+      ]
+    },
+    {
+      "id": "file:src/gui/server.py",
+      "kind": "file",
+      "label": "server.py",
+      "path": "src/gui/server.py",
+      "summary": "Servidor HTTP para modo GUI React. Reutiliza camada de orquestracao do app Textual para operar no mesmo formato de sessao persistido.",
+      "tags": [
+        "python",
+        "gui"
+      ]
+    },
+    {
+      "id": "function:src/gui/server.py::run_gui_server",
+      "kind": "function",
+      "label": "run_gui_server",
+      "path": "src/gui/server.py",
+      "summary": "Inicia servidor HTTP ThreadingHTTPServer para a interface React.",
+      "line": 50,
+      "tags": [
+        "python",
+        "gui"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/content_engine/adjust_segment.py",
+      "target": "class:src/content_engine/adjust_segment.py::SegmentAdjuster",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segment.py",
+      "target": "function:src/content_engine/adjust_segment.py::SegmentAdjuster.ajustar",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "class:src/content_engine/adjust_segments_bulk.py::SegmentAdjustRequest",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "function:src/content_engine/adjust_segments_bulk.py::trecho_to_segment_index",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "class:src/content_engine/adjust_segments_bulk.py::SegmentBulkAdjuster",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "function:src/content_engine/adjust_segments_bulk.py::SegmentBulkAdjuster.ajustar",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "function:src/content_engine/agent_wrapper.py::_failure_message_from_output",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "class:src/content_engine/agent_wrapper.py::AgentWrapper",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "function:src/content_engine/agent_wrapper.py::AgentWrapper.run_codex",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "function:src/content_engine/agent_wrapper.py::AgentWrapper.run_opencode",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "function:src/content_engine/agent_wrapper.py::AgentWrapper.run_cursor",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "function:src/content_engine/agent_wrapper.py::AgentWrapper.run",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "function:src/content_engine/agent_wrapper.py::AgentWrapper._run_subprocess",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "class:src/content_engine/codex_llm_client.py::LlmRequest",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "class:src/content_engine/codex_llm_client.py::LlmResponse",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "class:src/content_engine/codex_llm_client.py::CodexLlmClient",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "function:src/content_engine/codex_llm_client.py::CodexLlmClient.complete",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "function:src/content_engine/codex_llm_client.py::CodexLlmClient._build_prompt",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "function:src/content_engine/codex_llm_client.py::CodexLlmClient._execute_codex",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "function:src/content_engine/codex_llm_client.py::CodexLlmClient._execute_via_runner",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "function:src/content_engine/codex_llm_client.py::CodexLlmClient._execute_via_popen",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "function:src/content_engine/codex_llm_client.py::CodexLlmClient.run",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/cursor_output.py",
+      "target": "function:src/content_engine/cursor_output.py::extract_json_lines",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/cursor_output.py",
+      "target": "function:src/content_engine/cursor_output.py::_extract_assistant_text",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/cursor_output.py",
+      "target": "function:src/content_engine/cursor_output.py::_stringify_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/cursor_output.py",
+      "target": "function:src/content_engine/cursor_output.py::parse_cursor_output",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/cursor_output.py",
+      "target": "function:src/content_engine/cursor_output.py::resolve_cursor_model",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "class:src/content_engine/editorial_actions.py::EditorialHost",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::_ensure_flow",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::_sync_briefing_fingerprint",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::action_generate_storyboard",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::action_update_storyboard",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::action_clear_storyboard",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::_block_entry",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::_find_block",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::_assert_prior_blocks_selected",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::_invalidate_downstream_drafts",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::_generate_block_drafts_internal",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::action_generate_block_drafts",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::action_generate_all_block_drafts",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::action_retry_block_draft",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::action_select_block_draft",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::action_compose_editorial",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "function:src/content_engine/editorial_actions.py::_apply_composition_result",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::empty_editorial_flow",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::normalize_editorial_flow",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::compute_briefing_fingerprint",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::compute_selection_fingerprint",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::derive_editorial_status",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::new_block_id",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::new_option_id",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::assign_storyboard_blocks",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::invalidate_drafts_and_composition",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::clear_downstream_if_editorial_origin",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "function:src/content_engine/editorial_flow.py::persona_by_id",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "class:src/content_engine/editorial_generation.py::EditorialParseError",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "class:src/content_engine/editorial_generation.py::EditorialRunResult",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "class:src/content_engine/editorial_generation.py::StoryboardGenerator",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "class:src/content_engine/editorial_generation.py::BlockDraftGenerator",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "class:src/content_engine/editorial_generation.py::EditorialComposer",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::_run_json_llm",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::parse_storyboard_blocks",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::parse_approaches",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::parse_draft_content",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::_storyboard_context",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::_composition_context",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::_composition_briefing",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::_composition_authorial_evidence",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::_composition_interview_context",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::build_draft_options",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::collect_selected_drafts",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "function:src/content_engine/editorial_generation.py::collect_previous_selected_drafts",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "class:src/content_engine/editorial_preservation.py::EditorialAnchor",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "class:src/content_engine/editorial_preservation.py::EditorialPreservationIssue",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::extract_editorial_anchors",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::validate_composition_preservation",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::editorial_anchors_for_prompt",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::format_preservation_issues",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::_anchors_for_draft",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::_arrow_chain_anchors",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::_ordinal_sequence_anchors",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::_graph_method_anchors",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::_concrete_scenario_anchors",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/editorial_preservation.py",
+      "target": "function:src/content_engine/editorial_preservation.py::_causal_consequence_anchors",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/exporter.py",
+      "target": "function:src/content_engine/exporter.py::sanitizar_nome_arquivo",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/exporter.py",
+      "target": "function:src/content_engine/exporter.py::nome_arquivo_base",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/exporter.py",
+      "target": "function:src/content_engine/exporter.py::montar_payload_json_exportacao",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/exporter.py",
+      "target": "function:src/content_engine/exporter.py::exportar_markdown",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/exporter.py",
+      "target": "function:src/content_engine/exporter.py::exportar_json",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/exporter.py",
+      "target": "function:src/content_engine/exporter.py::exportar_conteudo",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/exporter.py",
+      "target": "function:src/content_engine/exporter.py::exportar_txt",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "class:src/content_engine/generator.py::ConteudoGerado",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "class:src/content_engine/generator.py::ContentGenerator",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "function:src/content_engine/generator.py::_extrair_bullets_de_slide",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "function:src/content_engine/generator.py::parse_generation_payload",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "function:src/content_engine/generator.py::ContentGenerator.generate",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/validation.py",
+      "target": "class:src/content_engine/interview/validation.py::QuestionValidation",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/interview/validation.py",
+      "target": "function:src/content_engine/interview/validation.py::validate_questions",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_config.py",
+      "target": "class:src/content_engine/llm_config.py::LlmOperationConfig",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_config.py",
+      "target": "function:src/content_engine/llm_config.py::resolve",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_config.py",
+      "target": "function:src/content_engine/llm_config.py::list_operations",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_config.py",
+      "target": "function:src/content_engine/llm_config.py::list_providers",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_config.py",
+      "target": "function:src/content_engine/llm_config.py::load_global_config",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_config.py",
+      "target": "function:src/content_engine/llm_config.py::save_global_config",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_config.py",
+      "target": "function:src/content_engine/llm_config.py::provider_status",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_config.py",
+      "target": "function:src/content_engine/llm_config.py::ensure_default_config_file",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_json_parser.py",
+      "target": "class:src/content_engine/llm_json_parser.py::ParsedLLMJson",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/llm_json_parser.py",
+      "target": "function:src/content_engine/llm_json_parser.py::extract_json_object_from_llm_output",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/persistence.py",
+      "target": "function:src/content_engine/persistence.py::save_session",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/persistence.py",
+      "target": "function:src/content_engine/persistence.py::load_session",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/persistence.py",
+      "target": "function:src/content_engine/persistence.py::session_file_path",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/persistence.py",
+      "target": "function:src/content_engine/persistence.py::delete_session",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/persistence.py",
+      "target": "function:src/content_engine/persistence.py::session_exists",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "class:src/content_engine/post_evaluation.py::PostEvaluator",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "function:src/content_engine/post_evaluation.py::_parse_score",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "function:src/content_engine/post_evaluation.py::_parse_trechos_fracos",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "function:src/content_engine/post_evaluation.py::PostEvaluator.avaliar",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/prompt_builder.py",
+      "target": "function:src/content_engine/prompt_builder.py::build_generation_prompt",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/prompt_loader.py",
+      "target": "function:src/content_engine/prompt_loader.py::load_prompt",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/prompt_loader.py",
+      "target": "function:src/content_engine/prompt_loader.py::prompt_exists",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/schemas.py",
+      "target": "class:src/content_engine/schemas.py::AgentResult",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/schemas.py",
+      "target": "class:src/content_engine/schemas.py::SegmentoPost",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/schemas.py",
+      "target": "class:src/content_engine/schemas.py::ScoreDoPost",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/schemas.py",
+      "target": "class:src/content_engine/schemas.py::TuiSessionState",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/schemas.py",
+      "target": "function:src/content_engine/schemas.py::migrate_tipo_de_post",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "class:src/content_engine/segmentation.py::Segmenter",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "function:src/content_engine/segmentation.py::_texto_slide_slidemark",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "function:src/content_engine/segmentation.py::Segmenter.segmentar",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_controller.py",
+      "target": "class:src/content_engine/session_controller.py::SessionController",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_log.py",
+      "target": "class:src/content_engine/session_log.py::SessionLogger",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_log.py",
+      "target": "function:src/content_engine/session_log.py::new_session_id",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_log.py",
+      "target": "function:src/content_engine/session_log.py::default_log_path",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/session_log.py",
+      "target": "function:src/content_engine/session_log.py::ensure_session_logger",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_contract.py",
+      "target": "function:src/content_engine/slidemark_contract.py::SLIDEMARK_LLM_CONTRACT",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "function:src/content_engine/slidemark_converter.py::_regras_para_tipo",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "function:src/content_engine/slidemark_converter.py::converter_para_slidemark",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_validator.py",
+      "target": "function:src/content_engine/slidemark_validator.py::normalize_slidemark_document",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_validator.py",
+      "target": "function:src/content_engine/slidemark_validator.py::validate_slidemark_document",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_validator.py",
+      "target": "function:src/content_engine/slidemark_validator.py::validate_slidemark_export_document",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/template_renderer.py",
+      "target": "function:src/content_engine/template_renderer.py::render_template",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/trilhas.py",
+      "target": "function:src/content_engine/trilhas.py::is_trilha_visual",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/trilhas.py",
+      "target": "function:src/content_engine/trilhas.py::trilha_estrutura",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/trilhas.py",
+      "target": "function:src/content_engine/trilhas.py::trilha_regra_mental",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/gui/server.py",
+      "target": "function:src/gui/server.py::run_gui_server",
+      "type": "contains"
+    },
+    {
+      "source": "file:src/content_engine/__init__.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segment.py",
+      "target": "file:src/content_engine/agent_wrapper.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segment.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segment.py",
+      "target": "file:src/content_engine/prompt_loader.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segment.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segment.py",
+      "target": "file:src/content_engine/template_renderer.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "file:src/content_engine/agent_wrapper.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "file:src/content_engine/prompt_loader.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "file:src/content_engine/template_renderer.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "file:src/content_engine/cursor_output.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "file:src/content_engine/session_log.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "file:src/content_engine/session_log.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "file:src/content_engine/editorial_flow.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "file:src/content_engine/editorial_generation.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "file:src/content_engine/generator.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "file:src/content_engine/llm_config.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_actions.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/agent_wrapper.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/editorial_flow.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/editorial_preservation.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/generator.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/llm_config.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/prompt_builder.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/prompt_loader.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:src/content_engine/template_renderer.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/exporter.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "file:src/content_engine/agent_wrapper.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "file:src/content_engine/prompt_builder.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "file:src/content_engine/slidemark_validator.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/interview/validation.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/interview/validation.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/llm_config.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/persistence.py",
+      "target": "file:src/content_engine/editorial_flow.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/persistence.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "file:src/content_engine/agent_wrapper.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "file:src/content_engine/prompt_loader.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "file:src/content_engine/template_renderer.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/prompt_builder.py",
+      "target": "file:src/content_engine/prompt_loader.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/prompt_builder.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/prompt_builder.py",
+      "target": "file:src/content_engine/slidemark_contract.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/prompt_builder.py",
+      "target": "file:src/content_engine/template_renderer.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "file:src/content_engine/agent_wrapper.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "file:src/content_engine/prompt_loader.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "file:src/content_engine/template_renderer.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "file:src/content_engine/trilhas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/agent_wrapper.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/generator.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/llm_json_parser.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/prompt_builder.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/prompt_loader.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/slidemark_contract.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/slidemark_validator.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/template_renderer.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:src/content_engine/trilhas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_validator.py",
+      "target": "file:src/content_engine/slidemark_contract.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/content_engine/trilhas.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/gui/__init__.py",
+      "target": "file:src/gui/server.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/gui/server.py",
+      "target": "file:src/content_engine/__init__.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/gui/server.py",
+      "target": "file:src/content_engine/editorial_flow.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/gui/server.py",
+      "target": "file:src/content_engine/llm_config.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/gui/server.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/gui/server.py",
+      "target": "file:src/content_engine/session_controller.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:src/gui/server.py",
+      "target": "file:src/content_engine/trilhas.py",
+      "type": "imports"
+    }
+  ]
+}

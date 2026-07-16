@@ -15,6 +15,49 @@ export interface LlmConfigSnapshot {
   provider_status: Array<{ id: string; label: string; available: boolean }>;
 }
 
+export interface PromptRegistryCatalog {
+  summary: { operations: number; artifacts: number; compositions: number; diagnostics: number; last_execution: string | null };
+  phases: Array<{ key: string; label: string; group: string; order: number; operations: string[]; artifact_count: number }>;
+  operations: Array<Record<string, unknown>>;
+  artifacts: Array<Record<string, unknown>>;
+  diagnostics: Array<Record<string, unknown>>;
+}
+
+async function promptRegistryRequest<T>(path: string, init?: RequestInit): Promise<T> {
+  const res = await fetch(`/api/prompt-registry${path}`, init);
+  const payload = await res.json();
+  if (!res.ok) throw new Error(payload.error || "Falha no Prompt Registry");
+  return payload as T;
+}
+
+export function fetchPromptRegistry(): Promise<PromptRegistryCatalog> {
+  return promptRegistryRequest<PromptRegistryCatalog>("");
+}
+
+export function fetchPromptOperation(key: string): Promise<Record<string, unknown>> {
+  return promptRegistryRequest(`/operations/${encodeURIComponent(key)}`);
+}
+
+export function fetchPromptArtifact(key: string): Promise<Record<string, unknown>> {
+  return promptRegistryRequest(`/artifacts/${encodeURIComponent(key)}`);
+}
+
+export function previewPrompt(payload: Record<string, unknown>): Promise<Record<string, unknown>> {
+  return promptRegistryRequest("/preview", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+}
+
+export function createPromptVersion(key: string, payload: Record<string, unknown>): Promise<Record<string, unknown>> {
+  return promptRegistryRequest(`/artifacts/${encodeURIComponent(key)}/versions`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+}
+
+export function activatePromptVersion(key: string, version: number, payload: Record<string, unknown>): Promise<Record<string, unknown>> {
+  return promptRegistryRequest(`/artifacts/${encodeURIComponent(key)}/versions/${version}/activate`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+}
+
+export function rollbackPromptVersion(key: string, version: number): Promise<Record<string, unknown>> {
+  return promptRegistryRequest(`/artifacts/${encodeURIComponent(key)}/versions/${version}/rollback`, { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" });
+}
+
 export async function fetchSession(): Promise<ApiSnapshot> {
   const res = await fetch("/api/session");
   const payload = await res.json();

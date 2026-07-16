@@ -1,0 +1,133 @@
+[
+  {
+    "step": 1,
+    "title": "Ponto de Entrada: CLI e Roteamento",
+    "description": "O Post Engine inicia em __main__.py, um modulo minimalista que oferece duas vias: o servidor GUI React (--gui) ou a saida imediata informando que o TUI foi removido. Este arquivo e a porta de entrada e demonstra a decisao arquitetural de centralizar a interface no navegador.",
+    "files": [
+      "src/content_engine/__main__.py"
+    ],
+    "concepts": ["CLI", "argparse", "ponto de entrada", "roteamento GUI"],
+    "narrative": "Comece pelo topo: o CLI decide entre HTTP (React) ou encerrar. O servidor GUI carrega o GuiController, que instancia o SessionController — a versao headless do orquestrador central."
+  },
+  {
+    "step": 2,
+    "title": "O Orquestrador Central: PostEngineApp",
+    "description": "PostEngineApp em session_app.py e o coracao do sistema (1055 linhas). Mantem o estado da sessao (TuiSessionState), gerencia as 8 fases do pipeline (entrada, entrevista, briefing, prompt, execucao, segmentacao, avaliacao, exportacao) e orquestra todas as acoes. Cada fase avanca via methods action_* que validam pre-condicoes, executam a operacao e persistem o estado.",
+    "files": [
+      "src/content_engine/session_app.py"
+    ],
+    "concepts": ["orquestracao", "maquina de estados", "fases do pipeline", "persistencia"],
+    "narrative": "Este e o modulo com maior fan-out (12 dependencias). Ele importa schemas, entrevista, gerador, segmentador, avaliador e exportador. Toda transicao de fase passa por aqui: acao → validacao → execucao → persistencia → notificacao da UI."
+  },
+  {
+    "step": 3,
+    "title": "Contratos da Sessao e Tipos de Conteudo",
+    "description": "schemas.py define o estado global da sessao (TuiSessionState), os tipos de post validos (post, article, short_carousel, long_slide), politicas de sandbox e o score de avaliacao. E o modulo com maior fan-in (22 dependencias) — quase tudo no engine depende destes contratos.",
+    "files": [
+      "src/content_engine/schemas.py"
+    ],
+    "concepts": ["dataclasses", "contratos", "TuiSessionState", "tipo de post", "validacao"],
+    "narrative": "Antes de entender o fluxo, entenda os dados. TuiSessionState carrega tema, plataforma, objetivo, estado da entrevista, briefing, prompt renderizado, conteudo gerado, segmentos, avaliacao e exportacao. Toda a engine manipula esta estrutura."
+  },
+  {
+    "step": 4,
+    "title": "O Controlador de Entrevista V4",
+    "description": "InterviewController em interview/controller.py orquestra uma rodada completa: gera pergunta → coleta resposta → extrai sinais → avalia heuristicamente → avalia via LLM → calcula gateway → decide aprofundamento. O processo_answer e o metodo central, compondo 6 sub-modulos em sequencia.",
+    "files": [
+      "src/content_engine/interview/controller.py"
+    ],
+    "concepts": ["controller", "rodada de entrevista", "pipeline de avaliacao", "decisao de aprofundamento"],
+    "narrative": "A entrevista e o diferencial do Post Engine: em vez de gerar direto, o sistema entrevista o autor. O controller coordena exploracao (gerar pergunta), extracao (sinais da resposta), heuristic (pontuacao deterministica), llm_evaluation (avaliacao semantica), gateway (decisao hibrida) e gaps (o que falta)."
+  },
+  {
+    "step": 5,
+    "title": "Esquemas V4: O Modelo de Dados da Entrevista",
+    "description": "interview/schemas.py (831 linhas) define todos os contratos da entrevista: ThemeContext, UserAnswer, Evidence, AuthorialSignal, DimensionScore, DeterministicAssessment, LlmAssessment, GatewayResult, InterviewState. O schema version 4.0 garante que o texto literal do autor fique congelado em UserAnswer enquanto derivacoes vivem em objetos separados.",
+    "files": [
+      "src/content_engine/interview/schemas.py"
+    ],
+    "concepts": ["entrevista V4", "evidence ledger", "dimensoes de autoria", "gateway result", "serializacao"],
+    "narrative": "Este e o segundo modulo mais dependido (13 imports). A arquitetura separa evidencia literal (o que o autor disse) de inferencia (o que o sistema conclui). InterviewState e um grafo: contexto → perguntas → respostas → evidencias → sinais → dimensoes → gaps → gateway."
+  },
+  {
+    "step": 6,
+    "title": "Gateway Hibrido: LLM + Heuristica Deterministica",
+    "description": "O gateway (gateway.py) combina duas avaliacoes independentes — heuristica deterministica (heuristic.py) e avaliacao LLM (llm_evaluation.py) — e so aprova quando ambas concordam. A heuristica pontua 8+ dimensoes de autoria (experiencia vivida, posicao propria, concretude, voz, tensao) com regras explicitas e veto. O gateway tem dois caminhos de aprovacao: equilibrado (todas dimensoes essenciais acima do limiar) ou desequilibrado forte (dimensoes excepcionais compensam fracitas).",
+    "files": [
+      "src/content_engine/interview/gateway.py",
+      "src/content_engine/interview/heuristic.py",
+      "src/content_engine/interview/llm_evaluation.py"
+    ],
+    "concepts": ["gateway hibrido", "avaliacao deterministica", "dimensoes de autoria", "veto", "perfis por formato"],
+    "narrative": "Este e o mecanismo central de garantia de autoria. Nem LLM puro (alucinacao) nem heuristica pura (rigida demais): o gateway exige que o material tenha evidencia vivida concreta (heuristica) E que o LLM confirme a qualidade autoral. Perfis por formato (post, article, carrossel) ajustam limiares."
+  },
+  {
+    "step": 7,
+    "title": "Fluxo Editorial: Storyboard, Rascunhos e Composicao",
+    "description": "editorial_flow.py gerencia o dominio editorial V3: 10 personas (Provocador, Analitico, Contador de Historias, etc.), storyboard com blocos estruturais, rascunhos multiplos por bloco e composicao final. editorial_actions.py implementa as acoes concretas que orquestram LLMs para gerar storyboard, produzir rascunhos e compor o texto final.",
+    "files": [
+      "src/content_engine/editorial_flow.py",
+      "src/content_engine/editorial_actions.py",
+      "src/content_engine/editorial_generation.py"
+    ],
+    "concepts": ["personas editoriais", "storyboard", "rascunhos", "composicao", "fluxo V3"],
+    "narrative": "Apos o briefing autoral, o sistema entra no fluxo editorial: gera um storyboard (blocos com roles e focos), depois rascunhos multiplos por bloco (cada persona oferece uma abordagem), o autor seleciona, e a composicao une tudo. editorial_generation.py tem fan-out 10 — um dos modulos mais conectados."
+  },
+  {
+    "step": 8,
+    "title": "Geracao, Segmentacao e Exportacao",
+    "description": "generator.py executa o LLM com o prompt renderizado e parseia o resultado (conteudo, slides, slidemark, alertas). segmentation.py divide o conteudo em segmentos editaveis (via slidemark ou LLM). exporter.py serializa tudo para markdown com metadados, alertas e informacoes de avaliacao. O pipeline completo: prompt → execucao LLM → parse JSON → segmentacao → avaliacao → export.",
+    "files": [
+      "src/content_engine/generator.py",
+      "src/content_engine/segmentation.py",
+      "src/content_engine/exporter.py",
+      "src/content_engine/prompt_builder.py",
+      "src/content_engine/post_evaluation.py"
+    ],
+    "concepts": ["geracao de conteudo", "segmentacao", "slidemark", "exportacao markdown", "avaliacao pos-geracao"],
+    "narrative": "Estes modulos formam o tunel de saida. O prompt_builder monta o prompt a partir do briefing autoral e contexto da entrevista. O generator executa e parseia. O segmentador divide em partes editaveis. O avaliador da scores em 9 aspectos. O exportador gera o markdown final com tudo embutido."
+  },
+  {
+    "step": 9,
+    "title": "A Ponte HTTP: GuiController",
+    "description": "gui/server.py (938 linhas) expoe a engine via HTTP. GuiController encapsula SessionController e oferece endpoints REST: GET /api/session (snapshot completo), POST /api/action (dispatch de acoes), PATCH /api/session (update parcial), PUT /api/llm-config (configuracao de LLM), POST /api/restore (restaurar sessao). O metodo _dispatch mapeia ~30 nomes de acao para methods do app.",
+    "files": [
+      "src/gui/server.py",
+      "src/content_engine/session_controller.py",
+      "src/content_engine/llm_config.py"
+    ],
+    "concepts": ["servidor HTTP", "API REST", "session snapshot", "dispatch de acoes", "configuracao LLM"],
+    "narrative": "O GuiController e a ponte entre o frontend React e o engine Python. Ele traduz acoes do frontend (start_interview_v4, submit_v4_answer, run, segment, evaluate, export) em chamadas ao SessionController. O snapshot retorna tudo que a UI precisa: estado, derivados (entrevista mapeada, scores, briefing) e opcoes (plataformas, tipos, providers)."
+  },
+  {
+    "step": 10,
+    "title": "Estacao de Trabalho React: Store e Workstation",
+    "description": "O frontend React gira em torno de pe-store.tsx (753 linhas, contexto React com hook usePE) e Workstation.tsx (shell visual). O store gerencia estado local, faz polling via pe-api.ts e mapeia o snapshot Python em tipos TypeScript via mappers/. A Workstation compoe PipelineRail (navegacao de stages), ContextBar (informacoes da sessao) e estagios animados (Entry, Interview, Briefing, Storyboard, Drafts, Composition, Segmentation, Evaluation, Export).",
+    "files": [
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/pe-api.ts",
+      "frontend/src/lib/pe-types.ts",
+      "frontend/src/components/workstation/Workstation.tsx",
+      "frontend/src/lib/mappers/interview.ts",
+      "frontend/src/lib/mappers/editorial.ts"
+    ],
+    "concepts": ["React context", "state management", "mapeamento backend-frontend", "stages", "animacoes"],
+    "narrative": "O store aplica o snapshot do servidor em ~30 estados React. Os mappers traduzem estruturas Python (InterviewState, editorial_flow) em tipos UI (InterviewUi, Segment, EvalDimension). A Workstation usa Framer Motion para transicoes entre stages e o PipelineRail permite navegacao livre pelas fases."
+  },
+  {
+    "step": 11,
+    "title": "Visao de Conjunto: O Fluxo Completo",
+    "description": "O Post Engine executa 10 estagios na workstation: (1) roteamento de agentes → (2) entrada inicial (tema, plataforma, objetivo) → (3) entrevista adaptativa com gateway hibrido → (4) briefing autoral → (5) storyboard com personas → (6) rascunhos multiplos → (7) composicao editorial → (8) execucao LLM final → (9) segmentacao e avaliacao → (10) exportacao. O sistema recusa gerar conteudo sem material humano real — o gateway hibrido (LLM + heuristica) e o guardiao dessa promessa.",
+    "files": [
+      "src/content_engine/__main__.py",
+      "src/content_engine/session_app.py",
+      "src/content_engine/interview/controller.py",
+      "src/content_engine/interview/gateway.py",
+      "src/content_engine/editorial_flow.py",
+      "src/gui/server.py",
+      "frontend/src/components/workstation/Workstation.tsx"
+    ],
+    "concepts": ["pipeline completo", "arquitetura em camadas", "autoria", "fluxo de dados", "design filosofico"],
+    "narrative": "Reuna tudo: o CLI inicia o servidor HTTP → React carrega o snapshot → usuario preenche entrada → entrevista extrai material humano → gateway aprova/reprova → briefing sintetiza → storyboard estrutura → rascunhos exploram personas → composicao une → LLM gera → segmentos editaveis → avaliacao com 9 scores → export. Cada estagio so avanca com o anterior valido."
+  }
+]

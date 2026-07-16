@@ -1,0 +1,572 @@
+{
+  "batchIndex": 15,
+  "nodes": [
+    {
+      "id": "document:specs/archive/spec-010/spec_010.md",
+      "type": "document",
+      "label": "SPEC-010 — Prompt de avaliação de resposta",
+      "file": "specs/archive/spec-010/spec_010.md",
+      "tags": ["markdown", "spec", "archive", "prompt", "avaliação", "resposta"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define o template de prompt para o LLM avaliar respostas do usuário na entrevista — retorna deltas, evidências, lacunas, aspecto mais fraco e próxima pergunta, com validação defensiva antes de afetar scores"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-011/spec_011.md",
+      "type": "document",
+      "label": "SPEC-011 — Cliente de avaliação autoral",
+      "file": "specs/archive/spec-011/spec_011.md",
+      "tags": ["markdown", "spec", "archive", "cliente", "avaliação", "autoral"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa a camada de produto que chama o LLM para avaliar respostas — monta prompt, chama executor, valida JSON e retorna AvaliacaoAutoralDaResposta sem misturar responsabilidades com o AgentWrapper"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-012/spec_012.md",
+      "type": "document",
+      "label": "SPEC-012 — Atualização do memory pack",
+      "file": "specs/archive/spec-012/spec_012.md",
+      "tags": ["markdown", "spec", "archive", "memory-pack", "atualização", "contexto"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Atualiza o MemoryPack com sinais autorais extraídos da resposta — preserva contexto relevante, reduz repetição nas próximas rodadas e alimenta geração sem reenviar todo o histórico bruto"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-013/spec_013.md",
+      "type": "document",
+      "label": "SPEC-013 — Prompt de atualização do memory pack",
+      "file": "specs/archive/spec-013/spec_013.md",
+      "tags": ["markdown", "spec", "archive", "prompt", "memory-pack", "atualização"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define o template usado pelo LLM para atualizar o MemoryPack — extrai sinais autorais, preserva frases e lacunas, e impede extrapolações narrativas que comprometam a fidelidade"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-014/spec_014.md",
+      "type": "document",
+      "label": "SPEC-014 — Geração de perguntas iniciais",
+      "file": "specs/archive/spec-014/spec_014.md",
+      "tags": ["markdown", "spec", "archive", "perguntas", "iniciais", "entrevista"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Gera as primeiras perguntas da entrevista cobrindo experiência, opinião, sentimento e aprendizado — perguntas abertas, contextuais e específicas, sem parecer formulário genérico"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-015/spec_015.md",
+      "type": "document",
+      "label": "SPEC-015 — Meta-prompt de experiência",
+      "file": "specs/archive/spec-015/spec_015.md",
+      "tags": ["markdown", "spec", "archive", "meta-prompt", "experiência", "vivência"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define o meta-prompt para extrair vivência factual — busca contexto prático, caso real, decisão e consequência, mas permite respostas honestas quando o usuário não viveu algo diretamente"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-016/spec_016.md",
+      "type": "document",
+      "label": "SPEC-016 — Meta-prompt de opinião",
+      "file": "specs/archive/spec-016/spec_016.md",
+      "tags": ["markdown", "spec", "archive", "meta-prompt", "opinião", "posicionamento"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define o meta-prompt para extrair visão própria — busca posicionamento, crítica, nuance e trade-offs, evitando perguntas genéricas ou respostas sem tese"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-017/spec_017.md",
+      "type": "document",
+      "label": "SPEC-017 — Meta-prompt de sentimento",
+      "file": "specs/archive/spec-017/spec_017.md",
+      "tags": ["markdown", "spec", "archive", "meta-prompt", "sentimento", "percepção"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define o meta-prompt para extrair percepção subjetiva sem tom terapêutico — captura incômodo, alívio, frustração, orgulho ou tensão humana quando existente no relato"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-018/spec_018.md",
+      "type": "document",
+      "label": "SPEC-018 — Meta-prompt de aprendizado",
+      "file": "specs/archive/spec-018/spec_018.md",
+      "tags": ["markdown", "spec", "archive", "meta-prompt", "aprendizado", "transformação"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define o meta-prompt para extrair mudança de visão, critério prático ou conclusão amadurecida — evita lições de moral artificiais e só captura transformação quando demonstrada"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-019/spec_019.md",
+      "type": "document",
+      "label": "SPEC-019 — Perguntas recursivas",
+      "file": "specs/archive/spec-019/spec_019.md",
+      "tags": ["markdown", "spec", "archive", "perguntas", "recursivas", "iteração"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Gera novas perguntas após cada rodada considerando scores, memory pack, lacunas e proximidade dos gateways — melhora chance de aprovação sem insistir em categorias saturadas"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-020/spec_020.md",
+      "type": "document",
+      "label": "SPEC-020 — Loop principal da entrevista",
+      "file": "specs/archive/spec-020/spec_020.md",
+      "tags": ["markdown", "spec", "archive", "loop", "entrevista", "orquestração"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa o fluxo completo da entrevista — criar estado, gerar perguntas, coletar respostas, avaliar, atualizar scores e memory pack, reavaliar gateway e montar briefing autoral; encerra por aprovação ou max_rodadas"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-021/spec_021.md",
+      "type": "document",
+      "label": "SPEC-021 — Montagem do briefing autoral",
+      "file": "specs/archive/spec-021/spec_021.md",
+      "tags": ["markdown", "spec", "archive", "briefing", "autoral", "montagem"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Transforma o estado da entrevista em BriefingAutoral — agrupa material por aspecto autoral com scores, gateway, restrições, memory pack e dados do post sem ser exportado automaticamente como arquivo"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-022/spec_022.md",
+      "type": "document",
+      "label": "SPEC-022 — Personas oficiais",
+      "file": "specs/archive/spec-022/spec_022.md",
+      "tags": ["markdown", "spec", "archive", "personas", "feed", "article", "slide"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Cria personas oficiais para feed, article e slide — orientam voz, ritmo, profundidade e limites narrativos, sem serem editáveis pela TUI no MVP; versionadas como assets de prompt"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-023/spec_023.md",
+      "type": "document",
+      "label": "SPEC-023 — Regras por tipo de post",
+      "file": "specs/archive/spec-023/spec_023.md",
+      "tags": ["markdown", "spec", "archive", "regras", "formato", "feed", "article", "slide"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define blocos de regras separados para feed, article e slide — o sistema renderiza apenas o bloco do formato ativo para reduzir ambiguidade e impedir mistura de instruções"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-024/spec_024.md",
+      "type": "document",
+      "label": "SPEC-024 — PromptBuilder",
+      "file": "specs/archive/spec-024/spec_024.md",
+      "tags": ["markdown", "spec", "archive", "prompt-builder", "renderização", "geração"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Renderiza o prompt final de geração a partir de GenerationPromptInput — escolhe persona e regras por tipo_de_post antes da chamada ao LLM, deixando o modelo focado em gerar conteúdo autoral"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-025/spec_025.md",
+      "type": "document",
+      "label": "SPEC-025 — Contrato do PromptBuilder",
+      "file": "specs/archive/spec-025/spec_025.md",
+      "tags": ["markdown", "spec", "archive", "contrato", "prompt-builder", "teste"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define critérios de aceite do PromptBuilder — o prompt renderizado deve conter somente a persona e regras do tipo ativo, nunca condicionais concorrentes para outros formatos"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-026/spec_026.md",
+      "type": "document",
+      "label": "SPEC-026 — Prompt gerador base",
+      "file": "specs/archive/spec-026/spec_026.md",
+      "tags": ["markdown", "spec", "archive", "prompt", "gerador", "base", "template"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa o template base do gerador de conteúdo autoral — transforma briefing em conteúdo final preservando voz, limites narrativos, scores, restrições e contrato JSON"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-027/spec_027.md",
+      "type": "document",
+      "label": "SPEC-027 — Geração de conteúdo",
+      "file": "specs/archive/spec-027/spec_027.md",
+      "tags": ["markdown", "spec", "archive", "geração", "conteúdo", "serviço"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa a camada de produto que usa PromptBuilder e AgentWrapper para gerar conteúdo final — não faz scoring de entrevista e preserva stdout bruto quando JSON falhar"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-028/spec_028.md",
+      "type": "document",
+      "label": "SPEC-028 — AgentWrapper genérico",
+      "file": "specs/archive/spec-028/spec_028.md",
+      "tags": ["markdown", "spec", "archive", "agent-wrapper", "infraestrutura", "subprocesso"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa o AgentWrapper como infraestrutura genérica para codex e opencode — monta comandos, executa subprocessos e retorna AgentResult, sem conhecer regras de produto"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-029/spec_029.md",
+      "type": "document",
+      "label": "SPEC-029 — Robustez do AgentWrapper",
+      "file": "specs/archive/spec-029/spec_029.md",
+      "tags": ["markdown", "spec", "archive", "agent-wrapper", "robustez", "tratamento-erros"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Adiciona tratamento controlado para falhas de subprocesso e saídas inválidas — torna execução observável e segura para a TUI sem esconder erro técnico do usuário"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-030/spec_030.md",
+      "type": "document",
+      "label": "SPEC-030 — Segmentação do post",
+      "file": "specs/archive/spec-030/spec_030.md",
+      "tags": ["markdown", "spec", "archive", "segmentação", "post", "edição"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Divide o conteúdo gerado em segmentos editáveis — cada segmento tem id, ordem, texto e papel interno, permitindo revisão isolada sem obrigar avaliação prévia do post"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-031/spec_031.md",
+      "type": "document",
+      "label": "SPEC-031 — Prompt de segmentação",
+      "file": "specs/archive/spec-031/spec_031.md",
+      "tags": ["markdown", "spec", "archive", "prompt", "segmentação", "template"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define o template que solicita ao LLM a divisão do conteúdo em segmentos editáveis — preserva o texto final sem títulos artificiais e retorna JSON com array de segmentos"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-032/spec_032.md",
+      "type": "document",
+      "label": "SPEC-032 — Ajuste por segmento",
+      "file": "specs/archive/spec-032/spec_032.md",
+      "tags": ["markdown", "spec", "archive", "ajuste", "segmento", "reescrever"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Permite reescrever apenas um segmento do post a partir de um pedido do usuário — preserva coerência com o conteúdo completo e nunca inventa novas experiências"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-033/spec_033.md",
+      "type": "document",
+      "label": "SPEC-033 — Prompt de ajuste por segmento",
+      "file": "specs/archive/spec-033/spec_033.md",
+      "tags": ["markdown", "spec", "archive", "prompt", "ajuste", "segmento"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define o template de reescrita parcial — preserva objetivo, plataforma, voz do usuário, tipo de autoria e restrições narrativas, retornando apenas segmentoReescrito"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-034/spec_034.md",
+      "type": "document",
+      "label": "SPEC-034 — Avaliação do conteúdo gerado",
+      "file": "specs/archive/spec-034/spec_034.md",
+      "tags": ["markdown", "spec", "archive", "avaliação", "conteúdo", "gerado"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Avalia o conteúdo gerado após segmentação sem bloquear a etapa de segmentar — mede experiência, opinião, sentimento, aprendizado, personalidade, fidelidade e naturalidade"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:specs/archive/spec-010/spec_010.md",
+      "target": "document:specs/archive/spec-011/spec_011.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-011/spec_011.md",
+      "target": "document:specs/archive/spec-012/spec_012.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-012/spec_012.md",
+      "target": "document:specs/archive/spec-013/spec_013.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-013/spec_013.md",
+      "target": "document:specs/archive/spec-014/spec_014.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-014/spec_014.md",
+      "target": "document:specs/archive/spec-015/spec_015.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-015/spec_015.md",
+      "target": "document:specs/archive/spec-016/spec_016.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-016/spec_016.md",
+      "target": "document:specs/archive/spec-017/spec_017.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-017/spec_017.md",
+      "target": "document:specs/archive/spec-018/spec_018.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-018/spec_018.md",
+      "target": "document:specs/archive/spec-019/spec_019.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-019/spec_019.md",
+      "target": "document:specs/archive/spec-020/spec_020.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-020/spec_020.md",
+      "target": "document:specs/archive/spec-021/spec_021.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-021/spec_021.md",
+      "target": "document:specs/archive/spec-022/spec_022.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-022/spec_022.md",
+      "target": "document:specs/archive/spec-023/spec_023.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-023/spec_023.md",
+      "target": "document:specs/archive/spec-024/spec_024.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-024/spec_024.md",
+      "target": "document:specs/archive/spec-025/spec_025.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-025/spec_025.md",
+      "target": "document:specs/archive/spec-026/spec_026.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-026/spec_026.md",
+      "target": "document:specs/archive/spec-027/spec_027.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-027/spec_027.md",
+      "target": "document:specs/archive/spec-028/spec_028.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-028/spec_028.md",
+      "target": "document:specs/archive/spec-029/spec_029.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-029/spec_029.md",
+      "target": "document:specs/archive/spec-030/spec_030.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-030/spec_030.md",
+      "target": "document:specs/archive/spec-031/spec_031.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-031/spec_031.md",
+      "target": "document:specs/archive/spec-032/spec_032.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-032/spec_032.md",
+      "target": "document:specs/archive/spec-033/spec_033.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-033/spec_033.md",
+      "target": "document:specs/archive/spec-034/spec_034.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-010/spec_010.md",
+      "target": "document:specs/archive/spec-011/spec_011.md",
+      "type": "documents",
+      "label": "template de prompt utilizado pelo cliente de avaliacao"
+    },
+    {
+      "source": "document:specs/archive/spec-012/spec_012.md",
+      "target": "document:specs/archive/spec-013/spec_013.md",
+      "type": "documents",
+      "label": "logica de atualizacao e seu template de prompt"
+    },
+    {
+      "source": "document:specs/archive/spec-014/spec_014.md",
+      "target": "document:specs/archive/spec-015/spec_015.md",
+      "type": "documents",
+      "label": "perguntas iniciais dependem dos meta-prompts de autoria"
+    },
+    {
+      "source": "document:specs/archive/spec-014/spec_014.md",
+      "target": "document:specs/archive/spec-016/spec_016.md",
+      "type": "documents",
+      "label": "perguntas iniciais dependem dos meta-prompts de autoria"
+    },
+    {
+      "source": "document:specs/archive/spec-014/spec_014.md",
+      "target": "document:specs/archive/spec-017/spec_017.md",
+      "type": "documents",
+      "label": "perguntas iniciais dependem dos meta-prompts de autoria"
+    },
+    {
+      "source": "document:specs/archive/spec-014/spec_014.md",
+      "target": "document:specs/archive/spec-018/spec_018.md",
+      "type": "documents",
+      "label": "perguntas iniciais dependem dos meta-prompts de autoria"
+    },
+    {
+      "source": "document:specs/archive/spec-019/spec_019.md",
+      "target": "document:specs/archive/spec-020/spec_020.md",
+      "type": "documents",
+      "label": "perguntas recursivas integradas ao loop principal"
+    },
+    {
+      "source": "document:specs/archive/spec-020/spec_020.md",
+      "target": "document:specs/archive/spec-021/spec_021.md",
+      "type": "documents",
+      "label": "loop da entrevista produz o briefing autoral"
+    },
+    {
+      "source": "document:specs/archive/spec-022/spec_022.md",
+      "target": "document:specs/archive/spec-024/spec_024.md",
+      "type": "documents",
+      "label": "personas oficiais consumidas pelo PromptBuilder"
+    },
+    {
+      "source": "document:specs/archive/spec-023/spec_023.md",
+      "target": "document:specs/archive/spec-024/spec_024.md",
+      "type": "documents",
+      "label": "regras por formato consumidas pelo PromptBuilder"
+    },
+    {
+      "source": "document:specs/archive/spec-024/spec_024.md",
+      "target": "document:specs/archive/spec-025/spec_025.md",
+      "type": "documents",
+      "label": "contrato de aceite do PromptBuilder"
+    },
+    {
+      "source": "document:specs/archive/spec-026/spec_026.md",
+      "target": "document:specs/archive/spec-027/spec_027.md",
+      "type": "documents",
+      "label": "template base utilizado pelo servico de geracao"
+    },
+    {
+      "source": "document:specs/archive/spec-027/spec_027.md",
+      "target": "document:specs/archive/spec-028/spec_028.md",
+      "type": "documents",
+      "label": "geracao de conteudo usa o AgentWrapper"
+    },
+    {
+      "source": "document:specs/archive/spec-028/spec_028.md",
+      "target": "document:specs/archive/spec-029/spec_029.md",
+      "type": "documents",
+      "label": "robustez complementa o AgentWrapper generico"
+    },
+    {
+      "source": "document:specs/archive/spec-030/spec_030.md",
+      "target": "document:specs/archive/spec-031/spec_031.md",
+      "type": "documents",
+      "label": "servico de segmentacao usa o prompt de segmentacao"
+    },
+    {
+      "source": "document:specs/archive/spec-032/spec_032.md",
+      "target": "document:specs/archive/spec-033/spec_033.md",
+      "type": "documents",
+      "label": "servico de ajuste por segmento usa seu prompt dedicado"
+    }
+  ]
+}

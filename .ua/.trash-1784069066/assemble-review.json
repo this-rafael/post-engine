@@ -1,0 +1,77 @@
+{
+  "verdict": "approved",
+  "summary": "Assembled graph is clean and well-formed. 1079 nodes, 1442 edges (3 import edges added during review). No dangling edges, no duplicates. Tested-by edges are correct in direction and content.",
+  "stats": {
+    "totalNodes": 1079,
+    "totalEdges": 1442,
+    "fileNodes": 146,
+    "functionNodes": 933,
+    "edgeTypeCounts": {
+      "contains": 794,
+      "imports": 264,
+      "import": 126,
+      "tested_by": 29,
+      "captures": 8,
+      "sequence": 7,
+      "related": 147,
+      "documents": 35,
+      "depends_on": 2,
+      "configures": 10,
+      "document": 16,
+      "references": 3,
+      "tests": 1
+    }
+  },
+  "fixedSectionReview": {
+    "testedByFlipped": {
+      "count": 4,
+      "assessment": "reasonable",
+      "notes": "4 tested_by edges were flipped from test->production to production->test. This is the correct direction."
+    },
+    "testedByDropped": {
+      "count": 27,
+      "assessment": "acceptable",
+      "notes": "27 tested_by edges dropped due to orphan endpoints or test<->test / prod<->prod pairs. These were invalid edges that should not exist."
+    },
+    "complexityDefaulted": {
+      "count": 1079,
+      "assessment": "acceptable",
+      "notes": "All 1079 nodes had complexity=None, defaulted to 'moderate'. This is a safe default. No nodes have varied complexity values, which suggests the extraction phase did not compute complexity."
+    },
+    "containsDroppedForTestHelpers": {
+      "assessment": "acceptable",
+      "notes": "Contains edges dropped for missing class method targets in test files (tests/llm_fakes.py, test_*.py). These are internal test helpers that were not significant enough to have their own nodes. Correct behavior."
+    }
+  },
+  "crossBatchVerification": {
+    "importMapEdges": 273,
+    "graphFileImportEdges": 307,
+    "missingFromGraph": 3,
+    "extraInGraph": 37,
+    "notes": "3 import edges from the import map were missing from the assembled graph (all within Python backend). These were added during review. The 37 extra edges are test->production file-level edges resolved from function-level import analysis, which are legitimate tested_by relationships captured as import edges."
+  },
+  "fixesApplied": [
+    {
+      "type": "added_missing_import_edge",
+      "source": "file:src/content_engine/__init__.py",
+      "target": "file:src/content_engine/interview/__init__.py",
+      "reason": "Present in import map but missing from assembled graph"
+    },
+    {
+      "type": "added_missing_import_edge",
+      "source": "file:src/content_engine/session_controller.py",
+      "target": "file:src/content_engine/session_app.py",
+      "reason": "Present in import map but missing from assembled graph"
+    },
+    {
+      "type": "added_missing_import_edge",
+      "source": "file:src/gui/server.py",
+      "target": "file:src/content_engine/interview/ui.py",
+      "reason": "Present in import map but missing from assembled graph"
+    }
+  ],
+  "remainingConcerns": [
+    "All 1079 nodes have uniform 'moderate' complexity. The extraction phase likely did not compute complexity scores, so the graph lacks granularity for identifying truly complex vs simple nodes. Future extraction runs should compute complexity.",
+    "The 'import' edge type (126 edges) coexists with 'imports' (264 edges). These should ideally be normalized to a single type for consistency, though both represent the same relationship."
+  ]
+}

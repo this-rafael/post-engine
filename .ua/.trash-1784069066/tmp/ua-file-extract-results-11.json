@@ -1,0 +1,223 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "prompts/generator/personas/dev-interlocutor-article.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 32,
+      "nonEmptyLines": 25,
+      "sections": [
+        {
+          "heading": "Persona: DevInterlocutorArticle",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Resumo operacional",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Identidade",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Regras essenciais",
+          "level": 2,
+          "line": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "prompts/generator/personas/dev-interlocutor-feed.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 39,
+      "nonEmptyLines": 32,
+      "sections": [
+        {
+          "heading": "Persona: DevInterlocutorFeed",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Resumo operacional",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Identidade",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "Regras essenciais",
+          "level": 2,
+          "line": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "prompts/generator/personas/dev-interlocutor-long-slide.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 47,
+      "nonEmptyLines": 40,
+      "sections": [
+        {
+          "heading": "Persona: DevInterlocutorLongSlide",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Resumo operacional",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Identidade",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "Regras essenciais",
+          "level": 2,
+          "line": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "prompts/generator/personas/dev-interlocutor-post.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 35,
+      "nonEmptyLines": 28,
+      "sections": [
+        {
+          "heading": "Persona: DevInterlocutorPost",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Resumo operacional",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Identidade",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "Regras essenciais",
+          "level": 2,
+          "line": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "prompts/generator/personas/dev-interlocutor-short-carousel.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 49,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "Persona: DevInterlocutorShortCarousel",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Resumo operacional",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Identidade",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "Regras essenciais",
+          "level": 2,
+          "line": 40
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "prompts/generator/personas/dev-interlocutor-slide.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 45,
+      "nonEmptyLines": 38,
+      "sections": [
+        {
+          "heading": "Persona: DevInterlocutorSlide",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Resumo operacional",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Identidade",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Regras essenciais",
+          "level": 2,
+          "line": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,1228 @@
+{
+  "batchIndex": 3,
+  "totalBatches": 19,
+  "filesAnalyzed": 13,
+  "nodes": [
+    {
+      "id": "file:frontend/src/components/workstation/interview/AnalyzingState.tsx",
+      "type": "file",
+      "label": "AnalyzingState.tsx",
+      "file": "frontend/src/components/workstation/interview/AnalyzingState.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 100,
+        "nonEmptyLines": 95,
+        "description": "Componente de estado de análise com indicadores de progresso animados e etapas de envio, avaliação e cobertura"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/AnalyzingState.tsx::AnalyzingState",
+      "type": "function",
+      "label": "AnalyzingState",
+      "file": "frontend/src/components/workstation/interview/AnalyzingState.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 10,
+        "endLine": 100,
+        "params": [
+          "{\n  roundNumber,\n  answerCount,\n  phase,\n  busy,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "type": "file",
+      "label": "AuthorContextCompact.tsx",
+      "file": "frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 74,
+        "nonEmptyLines": 69,
+        "description": "Visão compacta do contexto autoral com barras de progresso por eixo e botão para explorar o mapa completo"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/AuthorContextCompact.tsx::AuthorContextCompact",
+      "type": "function",
+      "label": "AuthorContextCompact",
+      "file": "frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 14,
+        "endLine": 74,
+        "params": [
+          "{\n  coveredTotal,\n  totalAxes,\n  axes,\n  onExploreMap,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "type": "file",
+      "label": "AuthorContextMapMode.tsx",
+      "file": "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 77,
+        "nonEmptyLines": 73,
+        "description": "Modo de mapa completo do contexto autoral com radar SVG, contadores animados e painel de detalhes de dimensões"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx::AuthorContextMapMode",
+      "type": "function",
+      "label": "AuthorContextMapMode",
+      "file": "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 9,
+        "endLine": 77,
+        "params": [
+          "{\n  interviewUi,\n  coveredTotal,\n  totalAxes,\n  editorialFeedback,\n  onClose,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "type": "file",
+      "label": "AuthorialMap.tsx",
+      "file": "frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 95,
+        "nonEmptyLines": 90,
+        "description": "Mapa radar SVG das dimensões autorais V4 com anéis concêntricos, polígono de cobertura e barras de nível por dimensão"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/AuthorialMap.tsx::clampScore",
+      "type": "function",
+      "label": "clampScore",
+      "file": "frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 4,
+        "endLine": 6,
+        "params": [
+          "score"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/AuthorialMap.tsx::levelLabel",
+      "type": "function",
+      "label": "levelLabel",
+      "file": "frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 8,
+        "endLine": 12,
+        "params": [
+          "score"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/AuthorialMap.tsx::AuthorialMap",
+      "type": "function",
+      "label": "AuthorialMap",
+      "file": "frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 15,
+        "endLine": 95,
+        "params": [
+          "{\n  dimensions,\n  expanded = false,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "type": "file",
+      "label": "AxisDetailPanel.tsx",
+      "file": "frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 81,
+        "nonEmptyLines": 74,
+        "description": "Painel de detalhes de dimensão autoral com tabs navegáveis, indicadores de evidências, sinais e regras disparadas"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/AxisDetailPanel.tsx::clampScore",
+      "type": "function",
+      "label": "clampScore",
+      "file": "frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 5,
+        "endLine": 7,
+        "params": [
+          "score"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/AxisDetailPanel.tsx::levelLabel",
+      "type": "function",
+      "label": "levelLabel",
+      "file": "frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 9,
+        "endLine": 13,
+        "params": [
+          "score"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/AxisDetailPanel.tsx::AxisDetailPanel",
+      "type": "function",
+      "label": "AxisDetailPanel",
+      "file": "frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 15,
+        "endLine": 81,
+        "params": [
+          "{\n  dimensions,\n  selectedDimensionId,\n  onSelect,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "type": "file",
+      "label": "CoverageUpdated.tsx",
+      "file": "frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 72,
+        "nonEmptyLines": 67,
+        "description": "Tela de atualização de cobertura exibindo novos eixos capturados com animações e transição de contadores"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/CoverageUpdated.tsx::CoverageUpdated",
+      "type": "function",
+      "label": "CoverageUpdated",
+      "file": "frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 6,
+        "endLine": 72,
+        "params": [
+          "{\n  newAxes,\n  coveredTotal,\n  totalAxes,\n  prevCovered,\n  onContinue,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+      "type": "file",
+      "label": "CurrentReadMoment.tsx",
+      "file": "frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 30,
+        "nonEmptyLines": 29,
+        "description": "Exibição do momento de leitura atual com texto do feedback editorial e botão para continuar"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/CurrentReadMoment.tsx::CurrentReadMoment",
+      "type": "function",
+      "label": "CurrentReadMoment",
+      "file": "frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 4,
+        "endLine": 30,
+        "params": [
+          "{\n  text,\n  onContinue,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "type": "file",
+      "label": "RoundNavigator.tsx",
+      "file": "frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 79,
+        "nonEmptyLines": 75,
+        "description": "Navegador lateral de rodada com lista de perguntas, indicadores de estado (respondida/atual/pendente) e contador"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/RoundNavigator.tsx::itemState",
+      "type": "function",
+      "label": "itemState",
+      "file": "frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 8,
+        "endLine": 12,
+        "params": [
+          "index",
+          "currentIndex",
+          "answer"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/RoundNavigator.tsx::RoundNavigator",
+      "type": "function",
+      "label": "RoundNavigator",
+      "file": "frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 14,
+        "endLine": 79,
+        "params": [
+          "{\n  round,\n  currentIndex,\n  roundNumber,\n  onSelect,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/RoundReview.tsx",
+      "type": "file",
+      "label": "RoundReview.tsx",
+      "file": "frontend/src/components/workstation/interview/RoundReview.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 84,
+        "nonEmptyLines": 80,
+        "description": "Revisão de rodada com lista de respostas capturadas, opções de edição individual e submissão para análise"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/RoundReview.tsx::excerpt",
+      "type": "function",
+      "label": "excerpt",
+      "file": "frontend/src/components/workstation/interview/RoundReview.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 5,
+        "endLine": 9,
+        "params": [
+          "text",
+          "max"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/RoundReview.tsx::RoundReview",
+      "type": "function",
+      "label": "RoundReview",
+      "file": "frontend/src/components/workstation/interview/RoundReview.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 11,
+        "endLine": 84,
+        "params": [
+          "{\n  round,\n  roundNumber,\n  onEdit,\n  onBack,\n  onAnalyze,\n  loading,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/motion.ts",
+      "type": "file",
+      "label": "motion.ts",
+      "file": "frontend/src/components/workstation/interview/motion.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 33,
+        "nonEmptyLines": 28,
+        "description": "Utilitários de animação segura com hook useMotionSafe que respeita preferências de movimento reduzido do sistema"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/motion.ts::useMotionSafe",
+      "type": "function",
+      "label": "useMotionSafe",
+      "file": "frontend/src/components/workstation/interview/motion.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 5,
+        "endLine": 18,
+        "params": []
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/motion.ts::questionExit",
+      "type": "function",
+      "label": "questionExit",
+      "file": "frontend/src/components/workstation/interview/motion.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 20,
+        "endLine": 23,
+        "params": [
+          "reduced"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/motion.ts::questionEnter",
+      "type": "function",
+      "label": "questionEnter",
+      "file": "frontend/src/components/workstation/interview/motion.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 25,
+        "endLine": 28,
+        "params": [
+          "reduced"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/motion.ts::questionInitial",
+      "type": "function",
+      "label": "questionInitial",
+      "file": "frontend/src/components/workstation/interview/motion.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 30,
+        "endLine": 33,
+        "params": [
+          "reduced"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "type": "file",
+      "label": "useInterviewUx.ts",
+      "file": "frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 201,
+        "nonEmptyLines": 179,
+        "description": "Hook de gerenciamento de estado UX da entrevista com máquina de fases, navegação entre perguntas e detecção de novos eixos"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/useInterviewUx.ts::snapshotCoverage",
+      "type": "function",
+      "label": "snapshotCoverage",
+      "file": "frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 21,
+        "endLine": 32,
+        "params": [
+          "axes",
+          "coveredTotal",
+          "totalAxes",
+          "interviewUi"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/useInterviewUx.ts::deriveNewAxes",
+      "type": "function",
+      "label": "deriveNewAxes",
+      "file": "frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 40,
+        "endLine": 57,
+        "params": [
+          "before",
+          "after",
+          "interviewUi"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/interview/useInterviewUx.ts::useInterviewUx",
+      "type": "function",
+      "label": "useInterviewUx",
+      "file": "frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 59,
+        "endLine": 201,
+        "params": [
+          "{\n  round,\n  axes,\n  coveredTotal,\n  totalAxes,\n  interviewUi,\n  busy,\n  phase,\n  editorialFeedback,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "type": "file",
+      "label": "InterviewStage.tsx",
+      "file": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 362,
+        "nonEmptyLines": 345,
+        "description": "Stage principal da entrevista que orquestra todos os sub-componentes UX, sidebar, modo foco e transições entre fases"
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/InterviewStage.tsx::InterviewStage",
+      "type": "function",
+      "label": "InterviewStage",
+      "file": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 17,
+        "endLine": 317,
+        "params": []
+      }
+    },
+    {
+      "id": "function:frontend/src/components/workstation/stages/InterviewStage.tsx::NextRoundReady",
+      "type": "function",
+      "label": "NextRoundReady",
+      "file": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 319,
+        "endLine": 362,
+        "params": [
+          "{\n  roundNumber,\n  editorialFeedback,\n  coveredTotal,\n  totalAxes,\n  onContinue,\n  onBriefing,\n  busy,\n}"
+        ]
+      }
+    },
+    {
+      "id": "file:frontend/src/lib/mappers/interview.ts",
+      "type": "file",
+      "label": "interview.ts",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 334,
+        "nonEmptyLines": 306,
+        "description": "Mapeadores e normalizadores de dados da entrevista V4 convertendo respostas da API em tipos tipados para o frontend"
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::asRecord",
+      "type": "function",
+      "label": "asRecord",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 49,
+        "endLine": 53,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::asRecords",
+      "type": "function",
+      "label": "asRecords",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 55,
+        "endLine": 57,
+        "params": [
+          "value"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::normalizeDimension",
+      "type": "function",
+      "label": "normalizeDimension",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 59,
+        "endLine": 79,
+        "params": [
+          "value",
+          "index"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::mapInterview",
+      "type": "function",
+      "label": "mapInterview",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 82,
+        "endLine": 109,
+        "params": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::axesFromInterviewUi",
+      "type": "function",
+      "label": "axesFromInterviewUi",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 111,
+        "endLine": 120,
+        "params": [
+          "interviewUi"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::questionsFromInterview",
+      "type": "function",
+      "label": "questionsFromInterview",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 122,
+        "endLine": 155,
+        "params": [
+          "ui"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::buildEditorialFeedback",
+      "type": "function",
+      "label": "buildEditorialFeedback",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 157,
+        "endLine": 164,
+        "params": [
+          "interviewUi"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::segmentsFromState",
+      "type": "function",
+      "label": "segmentsFromState",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 166,
+        "endLine": 200,
+        "params": [
+          "segmentos",
+          "segmentoReescrito",
+          "segmentIndex",
+          "pendingByIndex"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::parseScoreValue",
+      "type": "function",
+      "label": "parseScoreValue",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 214,
+        "endLine": 219,
+        "params": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::evaluationFromUi",
+      "type": "function",
+      "label": "evaluationFromUi",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 221,
+        "endLine": 255,
+        "params": [
+          "avaliacaoUi",
+          "avaliacaoPost"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::trechoToSegmentIndex",
+      "type": "function",
+      "label": "trechoToSegmentIndex",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 257,
+        "endLine": 263,
+        "params": [
+          "trechoRaw",
+          "segmentCount"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::weakSegmentsFromEvaluation",
+      "type": "function",
+      "label": "weakSegmentsFromEvaluation",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 265,
+        "endLine": 304,
+        "params": [
+          "avaliacaoUi",
+          "segments"
+        ]
+      }
+    },
+    {
+      "id": "function:frontend/src/lib/mappers/interview.ts::briefingCardsFromState",
+      "type": "function",
+      "label": "briefingCardsFromState",
+      "file": "frontend/src/lib/mappers/interview.ts",
+      "tags": [
+        "typescript",
+        "function"
+      ],
+      "properties": {
+        "startLine": 306,
+        "endLine": 334,
+        "params": [
+          "briefing",
+          "serialized"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:frontend/src/components/workstation/interview/AnalyzingState.tsx",
+      "target": "function:frontend/src/components/workstation/interview/AnalyzingState.tsx::AnalyzingState",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AnalyzingState.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "target": "function:frontend/src/components/workstation/interview/AuthorContextCompact.tsx::AuthorContextCompact",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "target": "file:frontend/src/components/workstation/interview/motion.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "target": "function:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx::AuthorContextMapMode",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "target": "file:frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "target": "file:frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "target": "file:frontend/src/components/workstation/interview/motion.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "target": "file:frontend/src/lib/mappers/interview.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "target": "function:frontend/src/components/workstation/interview/AuthorialMap.tsx::clampScore",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "target": "function:frontend/src/components/workstation/interview/AuthorialMap.tsx::levelLabel",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "target": "function:frontend/src/components/workstation/interview/AuthorialMap.tsx::AuthorialMap",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "target": "file:frontend/src/lib/mappers/interview.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "target": "function:frontend/src/components/workstation/interview/AxisDetailPanel.tsx::clampScore",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "target": "function:frontend/src/components/workstation/interview/AxisDetailPanel.tsx::levelLabel",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "target": "function:frontend/src/components/workstation/interview/AxisDetailPanel.tsx::AxisDetailPanel",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "target": "file:frontend/src/lib/mappers/interview.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "target": "function:frontend/src/components/workstation/interview/CoverageUpdated.tsx::CoverageUpdated",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "target": "file:frontend/src/components/workstation/interview/motion.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "target": "file:frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+      "target": "function:frontend/src/components/workstation/interview/CurrentReadMoment.tsx::CurrentReadMoment",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "target": "function:frontend/src/components/workstation/interview/RoundNavigator.tsx::itemState",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "target": "function:frontend/src/components/workstation/interview/RoundNavigator.tsx::RoundNavigator",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "target": "file:frontend/src/components/workstation/interview/motion.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/RoundReview.tsx",
+      "target": "function:frontend/src/components/workstation/interview/RoundReview.tsx::excerpt",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/RoundReview.tsx",
+      "target": "function:frontend/src/components/workstation/interview/RoundReview.tsx::RoundReview",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/RoundReview.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/RoundReview.tsx",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/motion.ts",
+      "target": "function:frontend/src/components/workstation/interview/motion.ts::useMotionSafe",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/motion.ts",
+      "target": "function:frontend/src/components/workstation/interview/motion.ts::questionExit",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/motion.ts",
+      "target": "function:frontend/src/components/workstation/interview/motion.ts::questionEnter",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/motion.ts",
+      "target": "function:frontend/src/components/workstation/interview/motion.ts::questionInitial",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "target": "function:frontend/src/components/workstation/interview/useInterviewUx.ts::snapshotCoverage",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "target": "function:frontend/src/components/workstation/interview/useInterviewUx.ts::deriveNewAxes",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "target": "function:frontend/src/components/workstation/interview/useInterviewUx.ts::useInterviewUx",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "target": "file:frontend/src/lib/mappers/interview.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/InterviewStage.tsx::InterviewStage",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "function:frontend/src/components/workstation/stages/InterviewStage.tsx::NextRoundReady",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/AnalyzingState.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/RoundReview.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/stages/common.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/components/workstation/ui.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/lib/pe-store.tsx",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "type": "import"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::asRecord",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::asRecords",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::normalizeDimension",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::mapInterview",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::axesFromInterviewUi",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::questionsFromInterview",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::buildEditorialFeedback",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::segmentsFromState",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::parseScoreValue",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::evaluationFromUi",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::trechoToSegmentIndex",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::weakSegmentsFromEvaluation",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "function:frontend/src/lib/mappers/interview.ts::briefingCardsFromState",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/lib/mappers/interview.ts",
+      "target": "file:frontend/src/lib/pe-types.ts",
+      "type": "import"
+    }
+  ]
+}

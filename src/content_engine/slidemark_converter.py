@@ -9,26 +9,19 @@ from typing import Any
 from .agent_wrapper import AgentWrapper
 from .generator import _parse_slidemark
 from .llm_json_parser import extract_json_object_from_llm_output
-from .prompt_builder import RULES_FILES_POR_TIPO
-from .prompt_loader import load_prompt
+from .prompt_registry.resolver import resolve_prompt
 from .schemas import AgentResult, SandboxPolicy, TipoDePost, ToolName
-from .slidemark_contract import OFFICIAL_THEMES, SLIDEMARK_LLM_CONTRACT
+from .slidemark_contract import OFFICIAL_THEMES
 from .slidemark_validator import (
     normalize_slidemark_document,
     validate_slidemark_export_document,
 )
-from .template_renderer import render_template
 from .trilhas import TRILHA_ESTRUTURAS, is_trilha_visual
 
 AUTHOR_NAME = "Rafael Pereira"
 AUTHOR_HANDLE = "@this-rafael-pereira"
 _DEFAULT_THEME = "rafael-io-executive-dark"
 _TECH_THEME = "diffvision-dracula"
-
-
-def _regras_para_tipo(tipo_de_post: TipoDePost) -> str:
-    key = RULES_FILES_POR_TIPO.get(tipo_de_post, "generator.rules_short_carousel")
-    return load_prompt(key)
 
 
 def _serializar_json(value: object) -> str:
@@ -175,23 +168,24 @@ class SlideMarkConverter:
             raise ValueError("conteudo final nao pode ser vazio")
 
         sugestoes = _combinar_sugestoes_imagem(segmentos, sugestoes_imagem)
-        template = load_prompt("generator.export_slidemark")
-        prompt = render_template(
-            template,
+        prompt = resolve_prompt(
+            "slidemark_export",
             {
                 "tema": tema,
                 "plataforma": plataforma,
                 "tipoDePost": tipo_de_post,
-                "regrasDoTipoDePost": _regras_para_tipo(tipo_de_post),
                 "estruturaNarrativa": TRILHA_ESTRUTURAS.get(tipo_de_post, ""),
                 "conteudoFinal": conteudo,
                 "segmentosJson": _serializar_json(segmentos or []),
                 "briefingAutoral": _serializar_json(briefing_autoral or {}),
                 "slidemarkOriginal": _serializar_json(slidemark_original),
                 "sugestoesImagem": _serializar_json(sugestoes),
-                "contratoSlideMarkAtual": SLIDEMARK_LLM_CONTRACT,
+                "content_type": tipo_de_post,
+                "is_visual_track": True,
             },
-        )
+            provider=self.tool,
+            model=self.model,
+        ).resolved_content
 
         result: AgentResult = self.agent.run(
             self.tool,

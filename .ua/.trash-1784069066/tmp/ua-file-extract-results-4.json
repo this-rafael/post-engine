@@ -1,0 +1,4278 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 11,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "tests/llm_fakes.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 73,
+      "functions": [
+        {
+          "name": "fake_v4_llm_run",
+          "startLine": 44,
+          "endLine": 79,
+          "params": [
+            "tool",
+            "prompt"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AgentFakeRunMixin",
+          "startLine": 10,
+          "endLine": 41,
+          "methods": [
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AgentFakeRunMixin",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "fake_v4_llm_run",
+          "line": 44,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "self.run_opencode",
+          "lineNumber": 26
+        },
+        {
+          "caller": "run",
+          "callee": "self.run_codex",
+          "lineNumber": 41
+        },
+        {
+          "caller": "fake_v4_llm_run",
+          "callee": "json.dumps",
+          "lineNumber": 48
+        },
+        {
+          "caller": "fake_v4_llm_run",
+          "callee": "json.dumps",
+          "lineNumber": 60
+        },
+        {
+          "caller": "fake_v4_llm_run",
+          "callee": "AgentResult",
+          "lineNumber": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_adjust_segments_bulk.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 107,
+      "nonEmptyLines": 88,
+      "functions": [
+        {
+          "name": "test_trecho_to_segment_index_one_based",
+          "startLine": 37,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "test_trecho_to_segment_index_zero_based",
+          "startLine": 42,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "test_trecho_to_segment_index_invalid",
+          "startLine": 46,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "test_bulk_adjuster_returns_all_segments",
+          "startLine": 52,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "test_bulk_adjuster_raises_on_incomplete_response",
+          "startLine": 77,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "test_load_prompt_adjust_segments_bulk_contem_placeholders",
+          "startLine": 99,
+          "endLine": 107,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeAgent",
+          "startLine": 18,
+          "endLine": 34,
+          "methods": [
+            "__init__",
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeAgent",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "test_trecho_to_segment_index_one_based",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "test_trecho_to_segment_index_zero_based",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "test_trecho_to_segment_index_invalid",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "test_bulk_adjuster_returns_all_segments",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "test_bulk_adjuster_raises_on_incomplete_response",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "test_load_prompt_adjust_segments_bulk_contem_placeholders",
+          "line": 99,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "AgentResult",
+          "lineNumber": 27
+        },
+        {
+          "caller": "test_trecho_to_segment_index_one_based",
+          "callee": "trecho_to_segment_index",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_trecho_to_segment_index_one_based",
+          "callee": "trecho_to_segment_index",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_trecho_to_segment_index_zero_based",
+          "callee": "trecho_to_segment_index",
+          "lineNumber": 43
+        },
+        {
+          "caller": "test_trecho_to_segment_index_invalid",
+          "callee": "trecho_to_segment_index",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_trecho_to_segment_index_invalid",
+          "callee": "trecho_to_segment_index",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_trecho_to_segment_index_invalid",
+          "callee": "trecho_to_segment_index",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_bulk_adjuster_returns_all_segments",
+          "callee": "FakeAgent",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_bulk_adjuster_returns_all_segments",
+          "callee": "json.dumps",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_bulk_adjuster_returns_all_segments",
+          "callee": "SegmentBulkAdjuster",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_bulk_adjuster_returns_all_segments",
+          "callee": "SegmentAdjustRequest",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_bulk_adjuster_returns_all_segments",
+          "callee": "SegmentoPost",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_bulk_adjuster_returns_all_segments",
+          "callee": "SegmentAdjustRequest",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_bulk_adjuster_returns_all_segments",
+          "callee": "SegmentoPost",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_bulk_adjuster_returns_all_segments",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_bulk_adjuster_raises_on_incomplete_response",
+          "callee": "FakeAgent",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_bulk_adjuster_raises_on_incomplete_response",
+          "callee": "json.dumps",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_bulk_adjuster_raises_on_incomplete_response",
+          "callee": "SegmentBulkAdjuster",
+          "lineNumber": 84
+        },
+        {
+          "caller": "test_bulk_adjuster_raises_on_incomplete_response",
+          "callee": "SegmentAdjustRequest",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_bulk_adjuster_raises_on_incomplete_response",
+          "callee": "SegmentoPost",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_bulk_adjuster_raises_on_incomplete_response",
+          "callee": "SegmentAdjustRequest",
+          "lineNumber": 90
+        },
+        {
+          "caller": "test_bulk_adjuster_raises_on_incomplete_response",
+          "callee": "SegmentoPost",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_bulk_adjuster_raises_on_incomplete_response",
+          "callee": "pytest.raises",
+          "lineNumber": 95
+        },
+        {
+          "caller": "test_bulk_adjuster_raises_on_incomplete_response",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 96
+        },
+        {
+          "caller": "test_load_prompt_adjust_segments_bulk_contem_placeholders",
+          "callee": "load_prompt",
+          "lineNumber": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_editorial_composition.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 247,
+      "nonEmptyLines": 209,
+      "functions": [
+        {
+          "name": "_flow_for_selected",
+          "startLine": 46,
+          "endLine": 71,
+          "params": [
+            "contents"
+          ]
+        },
+        {
+          "name": "_compose",
+          "startLine": 74,
+          "endLine": 111,
+          "params": [
+            "contents",
+            "payloads",
+            "tipo_de_post"
+          ]
+        },
+        {
+          "name": "_payload",
+          "startLine": 114,
+          "endLine": 115,
+          "params": [
+            "conteudo"
+          ]
+        },
+        {
+          "name": "test_rejects_concrete_example_reduced_to_abstract_category",
+          "startLine": 118,
+          "endLine": 125,
+          "params": []
+        },
+        {
+          "name": "test_rejects_causal_chain_reduced_to_label",
+          "startLine": 128,
+          "endLine": 137,
+          "params": []
+        },
+        {
+          "name": "test_rejects_authorial_graph_method_reduced_to_metrics",
+          "startLine": 140,
+          "endLine": 146,
+          "params": []
+        },
+        {
+          "name": "test_rejects_ambiguous_logical_to_physical_extraction",
+          "startLine": 149,
+          "endLine": 155,
+          "params": []
+        },
+        {
+          "name": "test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+          "startLine": 158,
+          "endLine": 170,
+          "params": []
+        },
+        {
+          "name": "test_allows_cohesive_bridge_without_replacing_selected_material",
+          "startLine": 173,
+          "endLine": 189,
+          "params": []
+        },
+        {
+          "name": "test_compose_prompt_contains_full_source_contract_and_authorial_context",
+          "startLine": 192,
+          "endLine": 206,
+          "params": []
+        },
+        {
+          "name": "test_compose_prompt_contains_anti_ia_policies",
+          "startLine": 209,
+          "endLine": 223,
+          "params": []
+        },
+        {
+          "name": "test_long_slide_anchor_can_survive_in_slidemark_without_plain_content",
+          "startLine": 226,
+          "endLine": 247,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RecordingAgent",
+          "startLine": 11,
+          "endLine": 43,
+          "methods": [
+            "__init__",
+            "run_codex"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RecordingAgent",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "_flow_for_selected",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "_compose",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "_payload",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "test_rejects_concrete_example_reduced_to_abstract_category",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "test_rejects_causal_chain_reduced_to_label",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "test_rejects_authorial_graph_method_reduced_to_metrics",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "test_rejects_ambiguous_logical_to_physical_extraction",
+          "line": 149,
+          "isDefault": false
+        },
+        {
+          "name": "test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+          "line": 158,
+          "isDefault": false
+        },
+        {
+          "name": "test_allows_cohesive_bridge_without_replacing_selected_material",
+          "line": 173,
+          "isDefault": false
+        },
+        {
+          "name": "test_compose_prompt_contains_full_source_contract_and_authorial_context",
+          "line": 192,
+          "isDefault": false
+        },
+        {
+          "name": "test_compose_prompt_contains_anti_ia_policies",
+          "line": 209,
+          "isDefault": false
+        },
+        {
+          "name": "test_long_slide_anchor_can_survive_in_slidemark_without_plain_content",
+          "line": 226,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "list",
+          "lineNumber": 13
+        },
+        {
+          "caller": "run_codex",
+          "callee": "self.prompts.append",
+          "lineNumber": 32
+        },
+        {
+          "caller": "run_codex",
+          "callee": "min",
+          "lineNumber": 33
+        },
+        {
+          "caller": "run_codex",
+          "callee": "len",
+          "lineNumber": 33
+        },
+        {
+          "caller": "run_codex",
+          "callee": "AgentResult",
+          "lineNumber": 35
+        },
+        {
+          "caller": "run_codex",
+          "callee": "json.dumps",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_flow_for_selected",
+          "callee": "enumerate",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_flow_for_selected",
+          "callee": "blocks.append",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_compose",
+          "callee": "_flow_for_selected",
+          "lineNumber": 80
+        },
+        {
+          "caller": "_compose",
+          "callee": "TuiSessionState",
+          "lineNumber": 81
+        },
+        {
+          "caller": "_compose",
+          "callee": "collect_selected_drafts",
+          "lineNumber": 108
+        },
+        {
+          "caller": "_compose",
+          "callee": "RecordingAgent",
+          "lineNumber": 109
+        },
+        {
+          "caller": "_compose",
+          "callee": "EditorialComposer(agent).compose",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_compose",
+          "callee": "EditorialComposer",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_rejects_concrete_example_reduced_to_abstract_category",
+          "callee": "_compose",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_rejects_concrete_example_reduced_to_abstract_category",
+          "callee": "_payload",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_rejects_concrete_example_reduced_to_abstract_category",
+          "callee": "len",
+          "lineNumber": 125
+        },
+        {
+          "caller": "test_rejects_causal_chain_reduced_to_label",
+          "callee": "_compose",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_rejects_causal_chain_reduced_to_label",
+          "callee": "_payload",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_rejects_authorial_graph_method_reduced_to_metrics",
+          "callee": "_compose",
+          "lineNumber": 142
+        },
+        {
+          "caller": "test_rejects_authorial_graph_method_reduced_to_metrics",
+          "callee": "_payload",
+          "lineNumber": 142
+        },
+        {
+          "caller": "test_rejects_ambiguous_logical_to_physical_extraction",
+          "callee": "_compose",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_rejects_ambiguous_logical_to_physical_extraction",
+          "callee": "_payload",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+          "callee": "_compose",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+          "callee": "_payload",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+          "callee": "conteudo.conteudo.lower().count",
+          "lineNumber": 169
+        },
+        {
+          "caller": "test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+          "callee": "conteudo.conteudo.lower",
+          "lineNumber": 169
+        },
+        {
+          "caller": "test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+          "callee": "len",
+          "lineNumber": 170
+        },
+        {
+          "caller": "test_allows_cohesive_bridge_without_replacing_selected_material",
+          "callee": "_compose",
+          "lineNumber": 184
+        },
+        {
+          "caller": "test_allows_cohesive_bridge_without_replacing_selected_material",
+          "callee": "_payload",
+          "lineNumber": 184
+        },
+        {
+          "caller": "test_compose_prompt_contains_full_source_contract_and_authorial_context",
+          "callee": "_compose",
+          "lineNumber": 195
+        },
+        {
+          "caller": "test_compose_prompt_contains_full_source_contract_and_authorial_context",
+          "callee": "_payload",
+          "lineNumber": 195
+        },
+        {
+          "caller": "test_compose_prompt_contains_anti_ia_policies",
+          "callee": "_compose",
+          "lineNumber": 212
+        },
+        {
+          "caller": "test_compose_prompt_contains_anti_ia_policies",
+          "callee": "_payload",
+          "lineNumber": 212
+        },
+        {
+          "caller": "test_compose_prompt_contains_anti_ia_policies",
+          "callee": "prompt.lower",
+          "lineNumber": 221
+        },
+        {
+          "caller": "test_compose_prompt_contains_anti_ia_policies",
+          "callee": "prompt.lower",
+          "lineNumber": 221
+        },
+        {
+          "caller": "test_long_slide_anchor_can_survive_in_slidemark_without_plain_content",
+          "callee": "_compose",
+          "lineNumber": 243
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 13,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_gui_editorial.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 423,
+      "nonEmptyLines": 367,
+      "functions": [
+        {
+          "name": "controller",
+          "startLine": 50,
+          "endLine": 54,
+          "params": [
+            "tmp_path",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_parse_storyboard_blocks_rejects_invalid",
+          "startLine": 57,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "test_parse_approaches_requires_three",
+          "startLine": 62,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "test_assign_storyboard_increments_order",
+          "startLine": 67,
+          "endLine": 73,
+          "params": []
+        },
+        {
+          "name": "test_generate_storyboard_action",
+          "startLine": 76,
+          "endLine": 97,
+          "params": [
+            "controller",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_update_storyboard_invalidates_drafts",
+          "startLine": 100,
+          "endLine": 122,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_generate_block_drafts_keeps_generated_options",
+          "startLine": 125,
+          "endLine": 168,
+          "params": [
+            "controller",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_snapshot_preserves_editorial_stage_across_restore",
+          "startLine": 171,
+          "endLine": 183,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_navigate_by_editorial_stage",
+          "startLine": 186,
+          "endLine": 195,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "_two_block_storyboard",
+          "startLine": 198,
+          "endLine": 211,
+          "params": []
+        },
+        {
+          "name": "test_generate_block_drafts_requires_prior_selection",
+          "startLine": 214,
+          "endLine": 218,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_generate_all_block_drafts_rejected",
+          "startLine": 221,
+          "endLine": 225,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_select_block_invalidates_downstream",
+          "startLine": 228,
+          "endLine": 265,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_previous_selected_drafts_in_prompt",
+          "startLine": 303,
+          "endLine": 351,
+          "params": [
+            "controller",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_block_draft_prompt_contains_anti_ia_policies",
+          "startLine": 354,
+          "endLine": 387,
+          "params": [
+            "controller",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_selection_blocks_compose",
+          "startLine": 390,
+          "endLine": 423,
+          "params": [
+            "controller"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeAgent",
+          "startLine": 16,
+          "endLine": 46,
+          "methods": [
+            "__init__",
+            "run_codex"
+          ],
+          "properties": []
+        },
+        {
+          "name": "PromptCapturingAgent",
+          "startLine": 268,
+          "endLine": 300,
+          "methods": [
+            "__init__",
+            "run_codex"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeAgent",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "controller",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "test_parse_storyboard_blocks_rejects_invalid",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "test_parse_approaches_requires_three",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "test_assign_storyboard_increments_order",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "test_generate_storyboard_action",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "test_update_storyboard_invalidates_drafts",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "test_generate_block_drafts_keeps_generated_options",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "test_snapshot_preserves_editorial_stage_across_restore",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "test_navigate_by_editorial_stage",
+          "line": 186,
+          "isDefault": false
+        },
+        {
+          "name": "_two_block_storyboard",
+          "line": 198,
+          "isDefault": false
+        },
+        {
+          "name": "test_generate_block_drafts_requires_prior_selection",
+          "line": 214,
+          "isDefault": false
+        },
+        {
+          "name": "test_generate_all_block_drafts_rejected",
+          "line": 221,
+          "isDefault": false
+        },
+        {
+          "name": "test_select_block_invalidates_downstream",
+          "line": 228,
+          "isDefault": false
+        },
+        {
+          "name": "PromptCapturingAgent",
+          "line": 268,
+          "isDefault": false
+        },
+        {
+          "name": "test_previous_selected_drafts_in_prompt",
+          "line": 303,
+          "isDefault": false
+        },
+        {
+          "name": "test_block_draft_prompt_contains_anti_ia_policies",
+          "line": 354,
+          "isDefault": false
+        },
+        {
+          "name": "test_selection_blocks_compose",
+          "line": 390,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "list",
+          "lineNumber": 18
+        },
+        {
+          "caller": "run_codex",
+          "callee": "min",
+          "lineNumber": 36
+        },
+        {
+          "caller": "run_codex",
+          "callee": "len",
+          "lineNumber": 36
+        },
+        {
+          "caller": "run_codex",
+          "callee": "AgentResult",
+          "lineNumber": 38
+        },
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 51
+        },
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 52
+        },
+        {
+          "caller": "controller",
+          "callee": "GuiController",
+          "lineNumber": 53
+        },
+        {
+          "caller": "test_parse_storyboard_blocks_rejects_invalid",
+          "callee": "pytest.raises",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_parse_storyboard_blocks_rejects_invalid",
+          "callee": "parse_storyboard_blocks",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_parse_approaches_requires_three",
+          "callee": "pytest.raises",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_parse_approaches_requires_three",
+          "callee": "parse_approaches",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_assign_storyboard_increments_order",
+          "callee": "assign_storyboard_blocks",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_generate_storyboard_action",
+          "callee": "FakeAgent",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_generate_storyboard_action",
+          "callee": "json.dumps",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_generate_storyboard_action",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_generate_storyboard_action",
+          "callee": "controller.action",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_generate_storyboard_action",
+          "callee": "controller.snapshot",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_generate_storyboard_action",
+          "callee": "len",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_update_storyboard_invalidates_drafts",
+          "callee": "compute_briefing_fingerprint",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_update_storyboard_invalidates_drafts",
+          "callee": "controller.action",
+          "lineNumber": 116
+        },
+        {
+          "caller": "test_update_storyboard_invalidates_drafts",
+          "callee": "controller.snapshot",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_generate_block_drafts_keeps_generated_options",
+          "callee": "json.dumps",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_generate_block_drafts_keeps_generated_options",
+          "callee": "json.dumps",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_generate_block_drafts_keeps_generated_options",
+          "callee": "json.dumps",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_generate_block_drafts_keeps_generated_options",
+          "callee": "json.dumps",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_generate_block_drafts_keeps_generated_options",
+          "callee": "FakeAgent",
+          "lineNumber": 140
+        },
+        {
+          "caller": "test_generate_block_drafts_keeps_generated_options",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 145
+        },
+        {
+          "caller": "test_generate_block_drafts_keeps_generated_options",
+          "callee": "controller.action",
+          "lineNumber": 159
+        },
+        {
+          "caller": "test_generate_block_drafts_keeps_generated_options",
+          "callee": "controller.snapshot",
+          "lineNumber": 160
+        },
+        {
+          "caller": "test_snapshot_preserves_editorial_stage_across_restore",
+          "callee": "controller.app._persistir",
+          "lineNumber": 175
+        },
+        {
+          "caller": "test_snapshot_preserves_editorial_stage_across_restore",
+          "callee": "GuiController",
+          "lineNumber": 177
+        },
+        {
+          "caller": "test_snapshot_preserves_editorial_stage_across_restore",
+          "callee": "restored.snapshot",
+          "lineNumber": 178
+        },
+        {
+          "caller": "test_navigate_by_editorial_stage",
+          "callee": "controller.action",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_navigate_by_editorial_stage",
+          "callee": "controller.snapshot",
+          "lineNumber": 190
+        },
+        {
+          "caller": "test_generate_block_drafts_requires_prior_selection",
+          "callee": "_two_block_storyboard",
+          "lineNumber": 215
+        },
+        {
+          "caller": "test_generate_block_drafts_requires_prior_selection",
+          "callee": "controller.action",
+          "lineNumber": 216
+        },
+        {
+          "caller": "test_generate_all_block_drafts_rejected",
+          "callee": "_two_block_storyboard",
+          "lineNumber": 222
+        },
+        {
+          "caller": "test_generate_all_block_drafts_rejected",
+          "callee": "controller.action",
+          "lineNumber": 223
+        },
+        {
+          "caller": "test_generate_all_block_drafts_rejected",
+          "callee": "controller.app.state.error.lower",
+          "lineNumber": 225
+        },
+        {
+          "caller": "test_select_block_invalidates_downstream",
+          "callee": "_two_block_storyboard",
+          "lineNumber": 229
+        },
+        {
+          "caller": "test_select_block_invalidates_downstream",
+          "callee": "controller.action",
+          "lineNumber": 263
+        },
+        {
+          "caller": "test_select_block_invalidates_downstream",
+          "callee": "controller.snapshot",
+          "lineNumber": 264
+        },
+        {
+          "caller": "__init__",
+          "callee": "list",
+          "lineNumber": 270
+        },
+        {
+          "caller": "run_codex",
+          "callee": "self.prompts.append",
+          "lineNumber": 287
+        },
+        {
+          "caller": "run_codex",
+          "callee": "min",
+          "lineNumber": 290
+        },
+        {
+          "caller": "run_codex",
+          "callee": "len",
+          "lineNumber": 290
+        },
+        {
+          "caller": "run_codex",
+          "callee": "AgentResult",
+          "lineNumber": 292
+        },
+        {
+          "caller": "test_previous_selected_drafts_in_prompt",
+          "callee": "json.dumps",
+          "lineNumber": 305
+        },
+        {
+          "caller": "test_previous_selected_drafts_in_prompt",
+          "callee": "json.dumps",
+          "lineNumber": 314
+        },
+        {
+          "caller": "test_previous_selected_drafts_in_prompt",
+          "callee": "json.dumps",
+          "lineNumber": 315
+        },
+        {
+          "caller": "test_previous_selected_drafts_in_prompt",
+          "callee": "json.dumps",
+          "lineNumber": 316
+        },
+        {
+          "caller": "test_previous_selected_drafts_in_prompt",
+          "callee": "PromptCapturingAgent",
+          "lineNumber": 318
+        },
+        {
+          "caller": "test_previous_selected_drafts_in_prompt",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 323
+        },
+        {
+          "caller": "test_previous_selected_drafts_in_prompt",
+          "callee": "_two_block_storyboard",
+          "lineNumber": 326
+        },
+        {
+          "caller": "test_previous_selected_drafts_in_prompt",
+          "callee": "controller.action",
+          "lineNumber": 346
+        },
+        {
+          "caller": "test_previous_selected_drafts_in_prompt",
+          "callee": "len",
+          "lineNumber": 351
+        },
+        {
+          "caller": "test_block_draft_prompt_contains_anti_ia_policies",
+          "callee": "json.dumps",
+          "lineNumber": 356
+        },
+        {
+          "caller": "test_block_draft_prompt_contains_anti_ia_policies",
+          "callee": "json.dumps",
+          "lineNumber": 365
+        },
+        {
+          "caller": "test_block_draft_prompt_contains_anti_ia_policies",
+          "callee": "json.dumps",
+          "lineNumber": 366
+        },
+        {
+          "caller": "test_block_draft_prompt_contains_anti_ia_policies",
+          "callee": "json.dumps",
+          "lineNumber": 367
+        },
+        {
+          "caller": "test_block_draft_prompt_contains_anti_ia_policies",
+          "callee": "PromptCapturingAgent",
+          "lineNumber": 369
+        },
+        {
+          "caller": "test_block_draft_prompt_contains_anti_ia_policies",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 374
+        },
+        {
+          "caller": "test_block_draft_prompt_contains_anti_ia_policies",
+          "callee": "_two_block_storyboard",
+          "lineNumber": 377
+        },
+        {
+          "caller": "test_block_draft_prompt_contains_anti_ia_policies",
+          "callee": "controller.action",
+          "lineNumber": 381
+        },
+        {
+          "caller": "test_selection_blocks_compose",
+          "callee": "controller.action",
+          "lineNumber": 420
+        },
+        {
+          "caller": "test_selection_blocks_compose",
+          "callee": "derive_editorial_status",
+          "lineNumber": 422
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 18,
+        "functionCount": 16,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "tests/test_gui_slidemark_export.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 225,
+      "nonEmptyLines": 197,
+      "functions": [
+        {
+          "name": "_slidemark_valido",
+          "startLine": 59,
+          "endLine": 103,
+          "params": []
+        },
+        {
+          "name": "_avaliacao_payload",
+          "startLine": 106,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "controller",
+          "startLine": 125,
+          "endLine": 130,
+          "params": [
+            "tmp_path",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_snapshot_is_trilha_visual",
+          "startLine": 133,
+          "endLine": 140,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "startLine": 143,
+          "endLine": 189,
+          "params": [
+            "controller",
+            "tmp_path",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_export_slidemark_rejeita_post",
+          "startLine": 192,
+          "endLine": 203,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "startLine": 206,
+          "endLine": 225,
+          "params": [
+            "controller",
+            "tmp_path"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeAgent",
+          "startLine": 15,
+          "endLine": 56,
+          "methods": [
+            "__init__",
+            "run_codex",
+            "run_opencode"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeAgent",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "_slidemark_valido",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "_avaliacao_payload",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "controller",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "test_snapshot_is_trilha_visual",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "line": 143,
+          "isDefault": false
+        },
+        {
+          "name": "test_export_slidemark_rejeita_post",
+          "line": 192,
+          "isDefault": false
+        },
+        {
+          "name": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "line": 206,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run_codex",
+          "callee": "self.calls.append",
+          "lineNumber": 35
+        },
+        {
+          "caller": "run_codex",
+          "callee": "AgentResult",
+          "lineNumber": 36
+        },
+        {
+          "caller": "run_opencode",
+          "callee": "self.calls.append",
+          "lineNumber": 47
+        },
+        {
+          "caller": "run_opencode",
+          "callee": "kwargs.get",
+          "lineNumber": 47
+        },
+        {
+          "caller": "run_opencode",
+          "callee": "AgentResult",
+          "lineNumber": 48
+        },
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 128
+        },
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 129
+        },
+        {
+          "caller": "controller",
+          "callee": "GuiController",
+          "lineNumber": 130
+        },
+        {
+          "caller": "test_snapshot_is_trilha_visual",
+          "callee": "controller.snapshot",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_snapshot_is_trilha_visual",
+          "callee": "controller.snapshot",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "FakeAgent",
+          "lineNumber": 148
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "json.dumps",
+          "lineNumber": 148
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "_slidemark_valido",
+          "lineNumber": 148
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 150
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "_avaliacao_payload",
+          "lineNumber": 173
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "controller.action",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "str",
+          "lineNumber": 178
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "destino.exists",
+          "lineNumber": 184
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "destino.with_suffix",
+          "lineNumber": 185
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "json_path.exists",
+          "lineNumber": 186
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "json.loads",
+          "lineNumber": 187
+        },
+        {
+          "caller": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+          "callee": "json_path.read_text",
+          "lineNumber": 187
+        },
+        {
+          "caller": "test_export_slidemark_rejeita_post",
+          "callee": "_avaliacao_payload",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_export_slidemark_rejeita_post",
+          "callee": "controller.action",
+          "lineNumber": 202
+        },
+        {
+          "caller": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "callee": "_slidemark_valido",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "callee": "FakeAgent",
+          "lineNumber": 212
+        },
+        {
+          "caller": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "callee": "json.dumps",
+          "lineNumber": 212
+        },
+        {
+          "caller": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "callee": "_avaliacao_payload",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "callee": "controller.action",
+          "lineNumber": 221
+        },
+        {
+          "caller": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "callee": "str",
+          "lineNumber": 221
+        },
+        {
+          "caller": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "callee": "destino.exists",
+          "lineNumber": 224
+        },
+        {
+          "caller": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "callee": "destino.with_suffix(\".slidemark.json\").exists",
+          "lineNumber": 225
+        },
+        {
+          "caller": "test_export_slidemark_nao_grava_documento_rejeitado",
+          "callee": "destino.with_suffix",
+          "lineNumber": 225
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_post_evaluation_parser.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 122,
+      "nonEmptyLines": 104,
+      "functions": [
+        {
+          "name": "_payload_completo",
+          "startLine": 27,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "test_parse_payload_com_todos_os_campos_novos",
+          "startLine": 58,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "test_coerce_severidade_invalida_para_media",
+          "startLine": 71,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "test_total_ponderado_ignora_total_da_llm",
+          "startLine": 77,
+          "endLine": 95,
+          "params": []
+        },
+        {
+          "name": "test_total_cap_quando_tese_alta_e_progressao_baixa",
+          "startLine": 98,
+          "endLine": 110,
+          "params": []
+        },
+        {
+          "name": "test_campos_faltantes_viram_vazios_sem_excecao",
+          "startLine": 113,
+          "endLine": 122,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeAgent",
+          "startLine": 11,
+          "endLine": 24,
+          "methods": [
+            "__init__",
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeAgent",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "_payload_completo",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "test_parse_payload_com_todos_os_campos_novos",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "test_coerce_severidade_invalida_para_media",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "test_total_ponderado_ignora_total_da_llm",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "test_total_cap_quando_tese_alta_e_progressao_baixa",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "test_campos_faltantes_viram_vazios_sem_excecao",
+          "line": 113,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "AgentResult",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_parse_payload_com_todos_os_campos_novos",
+          "callee": "FakeAgent",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_parse_payload_com_todos_os_campos_novos",
+          "callee": "json.dumps",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_parse_payload_com_todos_os_campos_novos",
+          "callee": "_payload_completo",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_parse_payload_com_todos_os_campos_novos",
+          "callee": "PostEvaluator(agent, \"codex\").avaliar",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_parse_payload_com_todos_os_campos_novos",
+          "callee": "PostEvaluator",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_parse_payload_com_todos_os_campos_novos",
+          "callee": "isinstance",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_coerce_severidade_invalida_para_media",
+          "callee": "_coerce_severidade",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_coerce_severidade_invalida_para_media",
+          "callee": "_coerce_severidade",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_coerce_severidade_invalida_para_media",
+          "callee": "_coerce_severidade",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_total_ponderado_ignora_total_da_llm",
+          "callee": "_payload_completo",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_total_ponderado_ignora_total_da_llm",
+          "callee": "FakeAgent",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_total_ponderado_ignora_total_da_llm",
+          "callee": "json.dumps",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_total_ponderado_ignora_total_da_llm",
+          "callee": "PostEvaluator(agent, \"codex\").avaliar",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_total_ponderado_ignora_total_da_llm",
+          "callee": "PostEvaluator",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_total_cap_quando_tese_alta_e_progressao_baixa",
+          "callee": "ScoreDoPost",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_campos_faltantes_viram_vazios_sem_excecao",
+          "callee": "FakeAgent",
+          "lineNumber": 114
+        },
+        {
+          "caller": "test_campos_faltantes_viram_vazios_sem_excecao",
+          "callee": "json.dumps",
+          "lineNumber": 114
+        },
+        {
+          "caller": "test_campos_faltantes_viram_vazios_sem_excecao",
+          "callee": "PostEvaluator(agent, \"codex\").avaliar",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_campos_faltantes_viram_vazios_sem_excecao",
+          "callee": "PostEvaluator",
+          "lineNumber": 115
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_session_log.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 105,
+      "nonEmptyLines": 82,
+      "functions": [
+        {
+          "name": "_records",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "_ok",
+          "startLine": 24,
+          "endLine": 25,
+          "params": [
+            "stdout",
+            "stderr",
+            "returncode"
+          ]
+        },
+        {
+          "name": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "startLine": 33,
+          "endLine": 48,
+          "params": [
+            "tmp_path"
+          ]
+        },
+        {
+          "name": "test_agent_wrapper_loga_prompt_e_resposta_llm",
+          "startLine": 51,
+          "endLine": 66,
+          "params": [
+            "tmp_path"
+          ]
+        },
+        {
+          "name": "test_codex_llm_client_loga_stdin_e_resposta",
+          "startLine": 69,
+          "endLine": 84,
+          "params": [
+            "tmp_path"
+          ]
+        },
+        {
+          "name": "test_session_app_logs_v4_interview_start",
+          "startLine": 87,
+          "endLine": 105,
+          "params": [
+            "tmp_path"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "V4Agent",
+          "startLine": 28,
+          "endLine": 30,
+          "methods": [
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_records",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "_ok",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "V4Agent",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "test_agent_wrapper_loga_prompt_e_resposta_llm",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "test_codex_llm_client_loga_stdin_e_resposta",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "test_session_app_logs_v4_interview_start",
+          "line": 87,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_records",
+          "callee": "json.loads",
+          "lineNumber": 18
+        },
+        {
+          "caller": "_records",
+          "callee": "path.read_text(encoding=\"utf-8\").splitlines",
+          "lineNumber": 19
+        },
+        {
+          "caller": "_records",
+          "callee": "path.read_text",
+          "lineNumber": 19
+        },
+        {
+          "caller": "_records",
+          "callee": "line.strip",
+          "lineNumber": 20
+        },
+        {
+          "caller": "_ok",
+          "callee": "SimpleNamespace",
+          "lineNumber": 25
+        },
+        {
+          "caller": "run",
+          "callee": "fake_v4_llm_run",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "callee": "TuiSessionState",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "callee": "ensure_session_logger",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "callee": "logger.write",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "callee": "state.session_log_path.endswith",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "callee": "_records",
+          "lineNumber": 40
+        },
+        {
+          "caller": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "callee": "Path",
+          "lineNumber": 40
+        },
+        {
+          "caller": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "callee": "salvar_sessao",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+          "callee": "carregar_sessao",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_agent_wrapper_loga_prompt_e_resposta_llm",
+          "callee": "SessionLogger",
+          "lineNumber": 52
+        },
+        {
+          "caller": "test_agent_wrapper_loga_prompt_e_resposta_llm",
+          "callee": "AgentWrapper",
+          "lineNumber": 53
+        },
+        {
+          "caller": "test_agent_wrapper_loga_prompt_e_resposta_llm",
+          "callee": "wrapper.run_codex",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_agent_wrapper_loga_prompt_e_resposta_llm",
+          "callee": "_ok",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_agent_wrapper_loga_prompt_e_resposta_llm",
+          "callee": "_records",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_codex_llm_client_loga_stdin_e_resposta",
+          "callee": "SessionLogger",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_codex_llm_client_loga_stdin_e_resposta",
+          "callee": "CodexLlmClient",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_codex_llm_client_loga_stdin_e_resposta",
+          "callee": "_ok",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_codex_llm_client_loga_stdin_e_resposta",
+          "callee": "client.run",
+          "lineNumber": 77
+        },
+        {
+          "caller": "test_codex_llm_client_loga_stdin_e_resposta",
+          "callee": "_records",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_session_app_logs_v4_interview_start",
+          "callee": "PostEngineApp",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_session_app_logs_v4_interview_start",
+          "callee": "V4Agent",
+          "lineNumber": 90
+        },
+        {
+          "caller": "test_session_app_logs_v4_interview_start",
+          "callee": "V4Agent",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_session_app_logs_v4_interview_start",
+          "callee": "app.action_start_interview_v4",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_session_app_logs_v4_interview_start",
+          "callee": "_records",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_session_app_logs_v4_interview_start",
+          "callee": "Path",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_session_app_logs_v4_interview_start",
+          "callee": "json.loads",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_session_app_logs_v4_interview_start",
+          "callee": "session_path.read_text",
+          "lineNumber": 105
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_slidemark_converter.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 176,
+      "nonEmptyLines": 158,
+      "functions": [
+        {
+          "name": "_slidemark_valido",
+          "startLine": 54,
+          "endLine": 100,
+          "params": []
+        },
+        {
+          "name": "test_converter_retorna_slidemark_valido",
+          "startLine": 103,
+          "endLine": 119,
+          "params": []
+        },
+        {
+          "name": "test_converter_aplica_defaults_autor_quando_ausentes",
+          "startLine": 122,
+          "endLine": 137,
+          "params": []
+        },
+        {
+          "name": "test_converter_rejeita_tipo_nao_visual",
+          "startLine": 140,
+          "endLine": 149,
+          "params": []
+        },
+        {
+          "name": "test_converter_json_invalido_levanta_value_error",
+          "startLine": 152,
+          "endLine": 161,
+          "params": []
+        },
+        {
+          "name": "test_converter_rejeita_documento_incompleto",
+          "startLine": 164,
+          "endLine": 176,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeAgent",
+          "startLine": 15,
+          "endLine": 51,
+          "methods": [
+            "__init__",
+            "run_codex"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeAgent",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "_slidemark_valido",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "test_converter_retorna_slidemark_valido",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "test_converter_aplica_defaults_autor_quando_ausentes",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "test_converter_rejeita_tipo_nao_visual",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "test_converter_json_invalido_levanta_value_error",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "test_converter_rejeita_documento_incompleto",
+          "line": 164,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run_codex",
+          "callee": "self.calls.append",
+          "lineNumber": 42
+        },
+        {
+          "caller": "run_codex",
+          "callee": "AgentResult",
+          "lineNumber": 43
+        },
+        {
+          "caller": "test_converter_retorna_slidemark_valido",
+          "callee": "_slidemark_valido",
+          "lineNumber": 104
+        },
+        {
+          "caller": "test_converter_retorna_slidemark_valido",
+          "callee": "FakeAgent",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_converter_retorna_slidemark_valido",
+          "callee": "json.dumps",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_converter_retorna_slidemark_valido",
+          "callee": "SlideMarkConverter",
+          "lineNumber": 106
+        },
+        {
+          "caller": "test_converter_retorna_slidemark_valido",
+          "callee": "converter.converter",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_converter_retorna_slidemark_valido",
+          "callee": "validate_slidemark_document",
+          "lineNumber": 116
+        },
+        {
+          "caller": "test_converter_aplica_defaults_autor_quando_ausentes",
+          "callee": "_slidemark_valido",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_converter_aplica_defaults_autor_quando_ausentes",
+          "callee": "FakeAgent",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_converter_aplica_defaults_autor_quando_ausentes",
+          "callee": "json.dumps",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_converter_aplica_defaults_autor_quando_ausentes",
+          "callee": "SlideMarkConverter",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_converter_aplica_defaults_autor_quando_ausentes",
+          "callee": "converter.converter",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_converter_rejeita_tipo_nao_visual",
+          "callee": "FakeAgent",
+          "lineNumber": 141
+        },
+        {
+          "caller": "test_converter_rejeita_tipo_nao_visual",
+          "callee": "SlideMarkConverter",
+          "lineNumber": 142
+        },
+        {
+          "caller": "test_converter_rejeita_tipo_nao_visual",
+          "callee": "pytest.raises",
+          "lineNumber": 143
+        },
+        {
+          "caller": "test_converter_rejeita_tipo_nao_visual",
+          "callee": "converter.converter",
+          "lineNumber": 144
+        },
+        {
+          "caller": "test_converter_json_invalido_levanta_value_error",
+          "callee": "FakeAgent",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_converter_json_invalido_levanta_value_error",
+          "callee": "SlideMarkConverter",
+          "lineNumber": 154
+        },
+        {
+          "caller": "test_converter_json_invalido_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 155
+        },
+        {
+          "caller": "test_converter_json_invalido_levanta_value_error",
+          "callee": "converter.converter",
+          "lineNumber": 156
+        },
+        {
+          "caller": "test_converter_rejeita_documento_incompleto",
+          "callee": "_slidemark_valido",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_converter_rejeita_documento_incompleto",
+          "callee": "FakeAgent",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_converter_rejeita_documento_incompleto",
+          "callee": "json.dumps",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_converter_rejeita_documento_incompleto",
+          "callee": "SlideMarkConverter",
+          "lineNumber": 169
+        },
+        {
+          "caller": "test_converter_rejeita_documento_incompleto",
+          "callee": "pytest.raises",
+          "lineNumber": 170
+        },
+        {
+          "caller": "test_converter_rejeita_documento_incompleto",
+          "callee": "converter.converter",
+          "lineNumber": 171
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_slidemark_direct_integration.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 221,
+      "nonEmptyLines": 207,
+      "functions": [
+        {
+          "name": "_documento_llm_legado",
+          "startLine": 36,
+          "endLine": 131,
+          "params": []
+        },
+        {
+          "name": "_slidemark_root",
+          "startLine": 134,
+          "endLine": 139,
+          "params": []
+        },
+        {
+          "name": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "startLine": 143,
+          "endLine": 221,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeAgent",
+          "startLine": 18,
+          "endLine": 33,
+          "methods": [
+            "__init__",
+            "run_codex"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeAgent",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "_documento_llm_legado",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "_slidemark_root",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "line": 142,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run_codex",
+          "callee": "self.calls.append",
+          "lineNumber": 24
+        },
+        {
+          "caller": "run_codex",
+          "callee": "kwargs.get",
+          "lineNumber": 24
+        },
+        {
+          "caller": "run_codex",
+          "callee": "AgentResult",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_slidemark_root",
+          "callee": "os.environ.get",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_slidemark_root",
+          "callee": "Path",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_slidemark_root",
+          "callee": "Path(__file__).resolve",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_slidemark_root",
+          "callee": "Path",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_slidemark_root",
+          "callee": "(root / \"src/core/schema/slidemark.schema.ts\").is_file",
+          "lineNumber": 137
+        },
+        {
+          "caller": "_slidemark_root",
+          "callee": "pytest.skip",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "FakeAgent",
+          "lineNumber": 144
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "json.dumps",
+          "lineNumber": 144
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "_documento_llm_legado",
+          "lineNumber": 144
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "SlideMarkConverter",
+          "lineNumber": 145
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "converter.converter",
+          "lineNumber": 146
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "len",
+          "lineNumber": 182
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "validate_slidemark_export_document",
+          "lineNumber": 183
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "_slidemark_root",
+          "lineNumber": 202
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "runner.is_file",
+          "lineNumber": 204
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "pytest.skip",
+          "lineNumber": 205
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "Path(__file__).with_name",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "Path",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "subprocess.run",
+          "lineNumber": 207
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "str",
+          "lineNumber": 208
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "str",
+          "lineNumber": 208
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "str",
+          "lineNumber": 208
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "json.dumps",
+          "lineNumber": 209
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "json.loads",
+          "lineNumber": 216
+        },
+        {
+          "caller": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+          "callee": "all",
+          "lineNumber": 221
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_spec_030_037.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 578,
+      "nonEmptyLines": 490,
+      "functions": [
+        {
+          "name": "_payload_segmentos_valido",
+          "startLine": 94,
+          "endLine": 115,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_valido_retorna_lista",
+          "startLine": 118,
+          "endLine": 128,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_aceita_id_ordem_texto_ausentes_com_erro",
+          "startLine": 131,
+          "endLine": 138,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+          "startLine": 141,
+          "endLine": 151,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+          "startLine": 154,
+          "endLine": 163,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_segmentos_nao_lista_levanta_value_error",
+          "startLine": 166,
+          "endLine": 168,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_item_nao_dict_levanta_value_error",
+          "startLine": 171,
+          "endLine": 173,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_ordem_zero_levanta_value_error",
+          "startLine": 176,
+          "endLine": 183,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+          "startLine": 186,
+          "endLine": 195,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+          "startLine": 198,
+          "endLine": 203,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+          "startLine": 206,
+          "endLine": 211,
+          "params": []
+        },
+        {
+          "name": "test_spec_030_segmenter_com_opencode",
+          "startLine": 214,
+          "endLine": 219,
+          "params": []
+        },
+        {
+          "name": "test_spec_031_load_prompt_generator_segment_contem_placeholder",
+          "startLine": 222,
+          "endLine": 225,
+          "params": []
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+          "startLine": 228,
+          "endLine": 242,
+          "params": []
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+          "startLine": 245,
+          "endLine": 249,
+          "params": []
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+          "startLine": 252,
+          "endLine": 257,
+          "params": []
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+          "startLine": 260,
+          "endLine": 265,
+          "params": []
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+          "startLine": 268,
+          "endLine": 274,
+          "params": []
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+          "startLine": 277,
+          "endLine": 282,
+          "params": []
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+          "startLine": 285,
+          "endLine": 290,
+          "params": []
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+          "startLine": 293,
+          "endLine": 300,
+          "params": []
+        },
+        {
+          "name": "test_spec_033_load_prompt_adjust_segment_contem_placeholders",
+          "startLine": 303,
+          "endLine": 312,
+          "params": []
+        },
+        {
+          "name": "_payload_avaliacao_short_carousel",
+          "startLine": 315,
+          "endLine": 344,
+          "params": []
+        },
+        {
+          "name": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+          "startLine": 347,
+          "endLine": 372,
+          "params": []
+        },
+        {
+          "name": "test_spec_034_post_evaluator_calcula_total_quando_ausente",
+          "startLine": 375,
+          "endLine": 391,
+          "params": []
+        },
+        {
+          "name": "test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+          "startLine": 394,
+          "endLine": 418,
+          "params": []
+        },
+        {
+          "name": "test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+          "startLine": 421,
+          "endLine": 425,
+          "params": []
+        },
+        {
+          "name": "test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+          "startLine": 428,
+          "endLine": 432,
+          "params": []
+        },
+        {
+          "name": "test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+          "startLine": 435,
+          "endLine": 439,
+          "params": []
+        },
+        {
+          "name": "test_spec_035_load_prompt_evaluate_post_contem_placeholders",
+          "startLine": 442,
+          "endLine": 451,
+          "params": []
+        },
+        {
+          "name": "test_spec_036_exportar_markdown_cria_arquivo_md",
+          "startLine": 454,
+          "endLine": 465,
+          "params": [
+            "tmp_path"
+          ]
+        },
+        {
+          "name": "test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+          "startLine": 468,
+          "endLine": 479,
+          "params": [
+            "tmp_path"
+          ]
+        },
+        {
+          "name": "test_spec_036_exportar_markdown_sanitiza_nome",
+          "startLine": 482,
+          "endLine": 484,
+          "params": []
+        },
+        {
+          "name": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "startLine": 487,
+          "endLine": 502,
+          "params": [
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_spec_037_exportar_txt_cria_arquivo_txt",
+          "startLine": 505,
+          "endLine": 514,
+          "params": [
+            "tmp_path"
+          ]
+        },
+        {
+          "name": "test_spec_037_exportar_txt_reutiliza_sanitizacao",
+          "startLine": 517,
+          "endLine": 519,
+          "params": []
+        },
+        {
+          "name": "test_exportar_conteudo_gera_md_e_json_para_post",
+          "startLine": 522,
+          "endLine": 546,
+          "params": [
+            "tmp_path"
+          ]
+        },
+        {
+          "name": "test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+          "startLine": 549,
+          "endLine": 569,
+          "params": [
+            "tmp_path"
+          ]
+        },
+        {
+          "name": "test_sanitizar_nome_arquivo_basico",
+          "startLine": 572,
+          "endLine": 578,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeAgent",
+          "startLine": 25,
+          "endLine": 91,
+          "methods": [
+            "__init__",
+            "run_codex",
+            "run_opencode"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeAgent",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "_payload_segmentos_valido",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_valido_retorna_lista",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_aceita_id_ordem_texto_ausentes_com_erro",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+          "line": 154,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_segmentos_nao_lista_levanta_value_error",
+          "line": 166,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_item_nao_dict_levanta_value_error",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_parse_segmentos_ordem_zero_levanta_value_error",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+          "line": 186,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+          "line": 198,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+          "line": 206,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_030_segmenter_com_opencode",
+          "line": 214,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_031_load_prompt_generator_segment_contem_placeholder",
+          "line": 222,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+          "line": 228,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+          "line": 245,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+          "line": 252,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+          "line": 260,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+          "line": 268,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+          "line": 277,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+          "line": 285,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+          "line": 293,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_033_load_prompt_adjust_segment_contem_placeholders",
+          "line": 303,
+          "isDefault": false
+        },
+        {
+          "name": "_payload_avaliacao_short_carousel",
+          "line": 315,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+          "line": 347,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_034_post_evaluator_calcula_total_quando_ausente",
+          "line": 375,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+          "line": 394,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+          "line": 421,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+          "line": 428,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+          "line": 435,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_035_load_prompt_evaluate_post_contem_placeholders",
+          "line": 442,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_036_exportar_markdown_cria_arquivo_md",
+          "line": 454,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+          "line": 468,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_036_exportar_markdown_sanitiza_nome",
+          "line": 482,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "line": 487,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_037_exportar_txt_cria_arquivo_txt",
+          "line": 505,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_037_exportar_txt_reutiliza_sanitizacao",
+          "line": 517,
+          "isDefault": false
+        },
+        {
+          "name": "test_exportar_conteudo_gera_md_e_json_para_post",
+          "line": 522,
+          "isDefault": false
+        },
+        {
+          "name": "test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+          "line": 549,
+          "isDefault": false
+        },
+        {
+          "name": "test_sanitizar_nome_arquivo_basico",
+          "line": 572,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run_codex",
+          "callee": "self.calls.append",
+          "lineNumber": 46
+        },
+        {
+          "caller": "run_codex",
+          "callee": "AgentResult",
+          "lineNumber": 54
+        },
+        {
+          "caller": "run_opencode",
+          "callee": "self.calls.append",
+          "lineNumber": 76
+        },
+        {
+          "caller": "run_opencode",
+          "callee": "AgentResult",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_valido_retorna_lista",
+          "callee": "parse_segmentos",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_valido_retorna_lista",
+          "callee": "_payload_segmentos_valido",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_valido_retorna_lista",
+          "callee": "isinstance",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_valido_retorna_lista",
+          "callee": "len",
+          "lineNumber": 121
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_valido_retorna_lista",
+          "callee": "all",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_valido_retorna_lista",
+          "callee": "isinstance",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_aceita_id_ordem_texto_ausentes_com_erro",
+          "callee": "pytest.raises",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_aceita_id_ordem_texto_ausentes_com_erro",
+          "callee": "parse_segmentos",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 148
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 149
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+          "callee": "str(excinfo.value).lower",
+          "lineNumber": 150
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+          "callee": "str",
+          "lineNumber": 150
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 161
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+          "callee": "str(excinfo.value).lower",
+          "lineNumber": 163
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+          "callee": "str",
+          "lineNumber": 163
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_segmentos_nao_lista_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 167
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_segmentos_nao_lista_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_item_nao_dict_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 172
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_item_nao_dict_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 173
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ordem_zero_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 182
+        },
+        {
+          "caller": "test_spec_030_parse_segmentos_ordem_zero_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 183
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+          "callee": "FakeAgent",
+          "lineNumber": 187
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+          "callee": "json.dumps",
+          "lineNumber": 187
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+          "callee": "_payload_segmentos_valido",
+          "lineNumber": 187
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+          "callee": "Segmenter",
+          "lineNumber": 188
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+          "callee": "segmenter.segmentar",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+          "callee": "len",
+          "lineNumber": 190
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+          "callee": "FakeAgent",
+          "lineNumber": 199
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+          "callee": "Segmenter",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+          "callee": "pytest.raises",
+          "lineNumber": 201
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+          "callee": "segmenter.segmentar",
+          "lineNumber": 202
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+          "callee": "str",
+          "lineNumber": 203
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+          "callee": "FakeAgent",
+          "lineNumber": 207
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+          "callee": "Segmenter",
+          "lineNumber": 208
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 209
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+          "callee": "segmenter.segmentar",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+          "callee": "str",
+          "lineNumber": 211
+        },
+        {
+          "caller": "test_spec_030_segmenter_com_opencode",
+          "callee": "FakeAgent",
+          "lineNumber": 215
+        },
+        {
+          "caller": "test_spec_030_segmenter_com_opencode",
+          "callee": "json.dumps",
+          "lineNumber": 215
+        },
+        {
+          "caller": "test_spec_030_segmenter_com_opencode",
+          "callee": "_payload_segmentos_valido",
+          "lineNumber": 215
+        },
+        {
+          "caller": "test_spec_030_segmenter_com_opencode",
+          "callee": "Segmenter",
+          "lineNumber": 216
+        },
+        {
+          "caller": "test_spec_030_segmenter_com_opencode",
+          "callee": "segmenter.segmentar",
+          "lineNumber": 217
+        },
+        {
+          "caller": "test_spec_030_segmenter_com_opencode",
+          "callee": "len",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_spec_031_load_prompt_generator_segment_contem_placeholder",
+          "callee": "load_prompt",
+          "lineNumber": 223
+        },
+        {
+          "caller": "test_spec_031_load_prompt_generator_segment_contem_placeholder",
+          "callee": "template.strip",
+          "lineNumber": 224
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+          "callee": "SegmentoPost",
+          "lineNumber": 229
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+          "callee": "FakeAgent",
+          "lineNumber": 233
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+          "callee": "json.dumps",
+          "lineNumber": 233
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+          "callee": "SegmentAdjuster",
+          "lineNumber": 234
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 235
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+          "callee": "FakeAgent",
+          "lineNumber": 246
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+          "callee": "SegmentAdjuster",
+          "lineNumber": 247
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 248
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 249
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+          "callee": "SegmentoPost",
+          "lineNumber": 253
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+          "callee": "FakeAgent",
+          "lineNumber": 254
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+          "callee": "SegmentAdjuster",
+          "lineNumber": 255
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 256
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 257
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+          "callee": "SegmentoPost",
+          "lineNumber": 261
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+          "callee": "FakeAgent",
+          "lineNumber": 262
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+          "callee": "SegmentAdjuster",
+          "lineNumber": 263
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 264
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 265
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+          "callee": "SegmentoPost",
+          "lineNumber": 269
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+          "callee": "FakeAgent",
+          "lineNumber": 270
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+          "callee": "SegmentAdjuster",
+          "lineNumber": 271
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+          "callee": "pytest.raises",
+          "lineNumber": 272
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 273
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+          "callee": "str",
+          "lineNumber": 274
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+          "callee": "SegmentoPost",
+          "lineNumber": 278
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+          "callee": "FakeAgent",
+          "lineNumber": 279
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+          "callee": "SegmentAdjuster",
+          "lineNumber": 280
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 281
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 282
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+          "callee": "SegmentoPost",
+          "lineNumber": 286
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+          "callee": "FakeAgent",
+          "lineNumber": 287
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+          "callee": "json.dumps",
+          "lineNumber": 287
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+          "callee": "SegmentAdjuster",
+          "lineNumber": 288
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 289
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 290
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+          "callee": "SegmentoPost",
+          "lineNumber": 294
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+          "callee": "FakeAgent",
+          "lineNumber": 296
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+          "callee": "json.dumps",
+          "lineNumber": 296
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+          "callee": "SegmentAdjuster",
+          "lineNumber": 297
+        },
+        {
+          "caller": "test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+          "callee": "adjuster.ajustar",
+          "lineNumber": 298
+        },
+        {
+          "caller": "test_spec_033_load_prompt_adjust_segment_contem_placeholders",
+          "callee": "load_prompt",
+          "lineNumber": 304
+        },
+        {
+          "caller": "_payload_avaliacao_short_carousel",
+          "callee": "base.update",
+          "lineNumber": 343
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+          "callee": "_payload_avaliacao_short_carousel",
+          "lineNumber": 348
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+          "callee": "FakeAgent",
+          "lineNumber": 349
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+          "callee": "json.dumps",
+          "lineNumber": 349
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+          "callee": "PostEvaluator",
+          "lineNumber": 350
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+          "callee": "evaluator.avaliar",
+          "lineNumber": 352
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+          "callee": "isinstance",
+          "lineNumber": 355
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+          "callee": "len",
+          "lineNumber": 368
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_calcula_total_quando_ausente",
+          "callee": "_payload_avaliacao_short_carousel",
+          "lineNumber": 376
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_calcula_total_quando_ausente",
+          "callee": "FakeAgent",
+          "lineNumber": 388
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_calcula_total_quando_ausente",
+          "callee": "json.dumps",
+          "lineNumber": 388
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_calcula_total_quando_ausente",
+          "callee": "PostEvaluator",
+          "lineNumber": 389
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_calcula_total_quando_ausente",
+          "callee": "evaluator.avaliar",
+          "lineNumber": 390
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+          "callee": "_payload_avaliacao_short_carousel",
+          "lineNumber": 395
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+          "callee": "FakeAgent",
+          "lineNumber": 407
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+          "callee": "json.dumps",
+          "lineNumber": 407
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+          "callee": "PostEvaluator",
+          "lineNumber": 408
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+          "callee": "evaluator.avaliar",
+          "lineNumber": 409
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+          "callee": "FakeAgent",
+          "lineNumber": 422
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+          "callee": "PostEvaluator",
+          "lineNumber": 423
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+          "callee": "pytest.raises",
+          "lineNumber": 424
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+          "callee": "evaluator.avaliar",
+          "lineNumber": 425
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+          "callee": "FakeAgent",
+          "lineNumber": 429
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+          "callee": "PostEvaluator",
+          "lineNumber": 430
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 431
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+          "callee": "evaluator.avaliar",
+          "lineNumber": 432
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+          "callee": "FakeAgent",
+          "lineNumber": 436
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+          "callee": "json.dumps",
+          "lineNumber": 436
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+          "callee": "PostEvaluator",
+          "lineNumber": 437
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 438
+        },
+        {
+          "caller": "test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+          "callee": "evaluator.avaliar",
+          "lineNumber": 439
+        },
+        {
+          "caller": "test_spec_035_load_prompt_evaluate_post_contem_placeholders",
+          "callee": "load_prompt",
+          "lineNumber": 449
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_cria_arquivo_md",
+          "callee": "exportar_markdown",
+          "lineNumber": 455
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_cria_arquivo_md",
+          "callee": "destino.exists",
+          "lineNumber": 462
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_cria_arquivo_md",
+          "callee": "destino.read_text",
+          "lineNumber": 464
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+          "callee": "novo_dir.exists",
+          "lineNumber": 470
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+          "callee": "exportar_markdown",
+          "lineNumber": 471
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+          "callee": "novo_dir.is_dir",
+          "lineNumber": 478
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+          "callee": "destino.exists",
+          "lineNumber": 479
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_sanitiza_nome",
+          "callee": "nome_arquivo_base",
+          "lineNumber": 483
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 492
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "callee": "Path",
+          "lineNumber": 492
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "callee": "caminho.mkdir",
+          "lineNumber": 494
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "callee": "caminho.iterdir",
+          "lineNumber": 495
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "callee": "f.is_file",
+          "lineNumber": 496
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "callee": "f.unlink",
+          "lineNumber": 497
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "callee": "exportar_markdown",
+          "lineNumber": 498
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "callee": "destino.exists",
+          "lineNumber": 501
+        },
+        {
+          "caller": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+          "callee": "destino.read_text",
+          "lineNumber": 502
+        },
+        {
+          "caller": "test_spec_037_exportar_txt_cria_arquivo_txt",
+          "callee": "exportar_txt",
+          "lineNumber": 506
+        },
+        {
+          "caller": "test_spec_037_exportar_txt_cria_arquivo_txt",
+          "callee": "destino.read_text",
+          "lineNumber": 514
+        },
+        {
+          "caller": "test_spec_037_exportar_txt_reutiliza_sanitizacao",
+          "callee": "nome_arquivo_base",
+          "lineNumber": 518
+        },
+        {
+          "caller": "test_exportar_conteudo_gera_md_e_json_para_post",
+          "callee": "exportar_conteudo",
+          "lineNumber": 523
+        },
+        {
+          "caller": "test_exportar_conteudo_gera_md_e_json_para_post",
+          "callee": "md_path.read_text",
+          "lineNumber": 538
+        },
+        {
+          "caller": "test_exportar_conteudo_gera_md_e_json_para_post",
+          "callee": "json.loads",
+          "lineNumber": 539
+        },
+        {
+          "caller": "test_exportar_conteudo_gera_md_e_json_para_post",
+          "callee": "json_path.read_text",
+          "lineNumber": 539
+        },
+        {
+          "caller": "test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+          "callee": "exportar_conteudo",
+          "lineNumber": 557
+        },
+        {
+          "caller": "test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+          "callee": "json_path.name.endswith",
+          "lineNumber": 568
+        },
+        {
+          "caller": "test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+          "callee": "json.loads",
+          "lineNumber": 569
+        },
+        {
+          "caller": "test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+          "callee": "json_path.read_text",
+          "lineNumber": 569
+        },
+        {
+          "caller": "test_sanitizar_nome_arquivo_basico",
+          "callee": "sanitizar_nome_arquivo",
+          "lineNumber": 573
+        },
+        {
+          "caller": "test_sanitizar_nome_arquivo_basico",
+          "callee": "sanitizar_nome_arquivo",
+          "lineNumber": 574
+        },
+        {
+          "caller": "test_sanitizar_nome_arquivo_basico",
+          "callee": "sanitizar_nome_arquivo",
+          "lineNumber": 575
+        },
+        {
+          "caller": "test_sanitizar_nome_arquivo_basico",
+          "callee": "len",
+          "lineNumber": 576
+        },
+        {
+          "caller": "test_sanitizar_nome_arquivo_basico",
+          "callee": "sanitizar_nome_arquivo",
+          "lineNumber": 576
+        },
+        {
+          "caller": "test_sanitizar_nome_arquivo_basico",
+          "callee": "sanitizar_nome_arquivo",
+          "lineNumber": 577
+        },
+        {
+          "caller": "test_sanitizar_nome_arquivo_basico",
+          "callee": "sanitizar_nome_arquivo",
+          "lineNumber": 578
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 40,
+        "functionCount": 39,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_spec_059_060.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 316,
+      "nonEmptyLines": 272,
+      "functions": [
+        {
+          "name": "_slidemark_valido",
+          "startLine": 72,
+          "endLine": 119,
+          "params": []
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_payload_sem_segmentos_levanta_value_error",
+          "startLine": 122,
+          "endLine": 124,
+          "params": []
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_segmentos_string_levanta_value_error",
+          "startLine": 127,
+          "endLine": 129,
+          "params": []
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_item_string_na_lista_levanta_value_error",
+          "startLine": 132,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_campos_ausentes",
+          "startLine": 137,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_ids_duplicados_levanta_value_error",
+          "startLine": 146,
+          "endLine": 154,
+          "params": []
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_ordem_nao_sequencial_inicia_em_2",
+          "startLine": 157,
+          "endLine": 165,
+          "params": []
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_ordem_com_pulo",
+          "startLine": 168,
+          "endLine": 177,
+          "params": []
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_ordem_zero_levanta_value_error",
+          "startLine": 180,
+          "endLine": 187,
+          "params": []
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_id_vazio_levanta_value_error",
+          "startLine": 190,
+          "endLine": 197,
+          "params": []
+        },
+        {
+          "name": "test_spec_060_content_generator_payload_completo",
+          "startLine": 200,
+          "endLine": 220,
+          "params": []
+        },
+        {
+          "name": "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+          "startLine": 223,
+          "endLine": 237,
+          "params": []
+        },
+        {
+          "name": "test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+          "startLine": 240,
+          "endLine": 253,
+          "params": []
+        },
+        {
+          "name": "test_spec_060_content_generator_com_opencode",
+          "startLine": 256,
+          "endLine": 269,
+          "params": []
+        },
+        {
+          "name": "test_slidemark_validator_aceita_documento_valido",
+          "startLine": 272,
+          "endLine": 273,
+          "params": []
+        },
+        {
+          "name": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "startLine": 276,
+          "endLine": 305,
+          "params": []
+        },
+        {
+          "name": "test_segmentar_slidemark_usa_id_type_e_texto_do_slide",
+          "startLine": 308,
+          "endLine": 316,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeAgent",
+          "startLine": 16,
+          "endLine": 69,
+          "methods": [
+            "__init__",
+            "run_codex",
+            "run_opencode"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeAgent",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "_slidemark_valido",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_payload_sem_segmentos_levanta_value_error",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_segmentos_string_levanta_value_error",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_item_string_na_lista_levanta_value_error",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_campos_ausentes",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_ids_duplicados_levanta_value_error",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_ordem_nao_sequencial_inicia_em_2",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_ordem_com_pulo",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_ordem_zero_levanta_value_error",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_059_parse_segmentos_id_vazio_levanta_value_error",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_060_content_generator_payload_completo",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+          "line": 223,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+          "line": 240,
+          "isDefault": false
+        },
+        {
+          "name": "test_spec_060_content_generator_com_opencode",
+          "line": 256,
+          "isDefault": false
+        },
+        {
+          "name": "test_slidemark_validator_aceita_documento_valido",
+          "line": 272,
+          "isDefault": false
+        },
+        {
+          "name": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "line": 276,
+          "isDefault": false
+        },
+        {
+          "name": "test_segmentar_slidemark_usa_id_type_e_texto_do_slide",
+          "line": 308,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run_codex",
+          "callee": "self.calls.append",
+          "lineNumber": 37
+        },
+        {
+          "caller": "run_codex",
+          "callee": "AgentResult",
+          "lineNumber": 38
+        },
+        {
+          "caller": "run_opencode",
+          "callee": "self.calls.append",
+          "lineNumber": 60
+        },
+        {
+          "caller": "run_opencode",
+          "callee": "AgentResult",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_payload_sem_segmentos_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_payload_sem_segmentos_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 124
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_segmentos_string_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_segmentos_string_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_item_string_na_lista_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_item_string_na_lista_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_campos_ausentes",
+          "callee": "pytest.raises",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_campos_ausentes",
+          "callee": "parse_segmentos",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_campos_ausentes",
+          "callee": "pytest.raises",
+          "lineNumber": 140
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_campos_ausentes",
+          "callee": "parse_segmentos",
+          "lineNumber": 141
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_campos_ausentes",
+          "callee": "pytest.raises",
+          "lineNumber": 142
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_campos_ausentes",
+          "callee": "parse_segmentos",
+          "lineNumber": 143
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_ids_duplicados_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_ids_duplicados_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 154
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_ordem_nao_sequencial_inicia_em_2",
+          "callee": "pytest.raises",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_ordem_nao_sequencial_inicia_em_2",
+          "callee": "parse_segmentos",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_ordem_com_pulo",
+          "callee": "pytest.raises",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_ordem_com_pulo",
+          "callee": "parse_segmentos",
+          "lineNumber": 177
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_ordem_zero_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 186
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_ordem_zero_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 187
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_id_vazio_levanta_value_error",
+          "callee": "pytest.raises",
+          "lineNumber": 196
+        },
+        {
+          "caller": "test_spec_059_parse_segmentos_id_vazio_levanta_value_error",
+          "callee": "parse_segmentos",
+          "lineNumber": 197
+        },
+        {
+          "caller": "test_spec_060_content_generator_payload_completo",
+          "callee": "FakeAgent",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_spec_060_content_generator_payload_completo",
+          "callee": "json.dumps",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_spec_060_content_generator_payload_completo",
+          "callee": "ContentGenerator",
+          "lineNumber": 207
+        },
+        {
+          "caller": "test_spec_060_content_generator_payload_completo",
+          "callee": "GenerationPromptInput",
+          "lineNumber": 208
+        },
+        {
+          "caller": "test_spec_060_content_generator_payload_completo",
+          "callee": "generator.generate",
+          "lineNumber": 215
+        },
+        {
+          "caller": "test_spec_060_content_generator_payload_completo",
+          "callee": "resultado.metadados.get",
+          "lineNumber": 217
+        },
+        {
+          "caller": "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+          "callee": "FakeAgent",
+          "lineNumber": 224
+        },
+        {
+          "caller": "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+          "callee": "ContentGenerator",
+          "lineNumber": 225
+        },
+        {
+          "caller": "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+          "callee": "GenerationPromptInput",
+          "lineNumber": 226
+        },
+        {
+          "caller": "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+          "callee": "generator.generate",
+          "lineNumber": 233
+        },
+        {
+          "caller": "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+          "callee": "resultado.metadados.get",
+          "lineNumber": 235
+        },
+        {
+          "caller": "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+          "callee": "any",
+          "lineNumber": 237
+        },
+        {
+          "caller": "test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+          "callee": "FakeAgent",
+          "lineNumber": 241
+        },
+        {
+          "caller": "test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+          "callee": "ContentGenerator",
+          "lineNumber": 242
+        },
+        {
+          "caller": "test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+          "callee": "GenerationPromptInput",
+          "lineNumber": 243
+        },
+        {
+          "caller": "test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+          "callee": "generator.generate",
+          "lineNumber": 250
+        },
+        {
+          "caller": "test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+          "callee": "any",
+          "lineNumber": 253
+        },
+        {
+          "caller": "test_spec_060_content_generator_com_opencode",
+          "callee": "FakeAgent",
+          "lineNumber": 258
+        },
+        {
+          "caller": "test_spec_060_content_generator_com_opencode",
+          "callee": "json.dumps",
+          "lineNumber": 258
+        },
+        {
+          "caller": "test_spec_060_content_generator_com_opencode",
+          "callee": "ContentGenerator",
+          "lineNumber": 259
+        },
+        {
+          "caller": "test_spec_060_content_generator_com_opencode",
+          "callee": "GenerationPromptInput",
+          "lineNumber": 260
+        },
+        {
+          "caller": "test_spec_060_content_generator_com_opencode",
+          "callee": "generator.generate",
+          "lineNumber": 267
+        },
+        {
+          "caller": "test_slidemark_validator_aceita_documento_valido",
+          "callee": "validate_slidemark_document",
+          "lineNumber": 273
+        },
+        {
+          "caller": "test_slidemark_validator_aceita_documento_valido",
+          "callee": "_slidemark_valido",
+          "lineNumber": 273
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "_slidemark_valido",
+          "lineNumber": 277
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "\"\\n\".join",
+          "lineNumber": 278
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "range",
+          "lineNumber": 278
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "FakeAgent",
+          "lineNumber": 287
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "json.dumps",
+          "lineNumber": 287
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "ContentGenerator",
+          "lineNumber": 288
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "GenerationPromptInput",
+          "lineNumber": 289
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "generator.generate",
+          "lineNumber": 297
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "validate_slidemark_document",
+          "lineNumber": 300
+        },
+        {
+          "caller": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+          "callee": "resultado.conteudo.startswith",
+          "lineNumber": 303
+        },
+        {
+          "caller": "test_segmentar_slidemark_usa_id_type_e_texto_do_slide",
+          "callee": "segmentar_slidemark",
+          "lineNumber": 309
+        },
+        {
+          "caller": "test_segmentar_slidemark_usa_id_type_e_texto_do_slide",
+          "callee": "_slidemark_valido",
+          "lineNumber": 309
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 18,
+        "functionCount": 17,
+        "classCount": 1
+      }
+    }
+  ]
+}

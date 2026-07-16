@@ -5,6 +5,7 @@ import json
 from typing import Any, Iterable
 
 from ..llm_json_parser import extract_json_object_from_llm_output
+from ..prompt_registry.resolver import resolve_prompt
 from ..schemas import AgentResult
 from .schemas import AuthorialSignal, Evidence, InterviewState, LlmAssessment, ThemeContext, UserAnswer
 
@@ -18,6 +19,8 @@ def build_authorship_prompt(
     answers: Iterable[UserAnswer | dict[str, Any]] | None = None,
     evidence: Iterable[Evidence | dict[str, Any]] | None = None,
     signals: Iterable[AuthorialSignal | dict[str, Any]] | None = None,
+    provider: str | None = None,
+    model: str | None = None,
 ) -> str:
     if isinstance(context, InterviewState):
         state = context
@@ -56,16 +59,12 @@ def build_authorship_prompt(
         "evidence": evidence_payload,
         "signals": signal_payload,
     }
-    return (
-        "Avalie a autoria do material humano abaixo sem inventar fatos.\n"
-        "A avaliacao deve considerar autenticidade percebida, coerencia narrativa, "
-        "forca da posicao, originalidade, riqueza editorial, contradicoes e integridade epistemica.\n"
-        "Nao confunda sugestoes editoriais com fala do autor.\n"
-        "Aprovacao significa que existe material suficiente para produzir conteudo sem inventar.\n"
-        "Retorne somente JSON com as chaves: aprovou, confianca, forcas, fraquezas, riscos, "
-        "justificativa, integridade_epistemica.\n\n"
-        f"Material: {json.dumps(payload, ensure_ascii=False)}"
-    )
+    return resolve_prompt(
+        "interview_evaluate",
+        {"material_json": json.dumps(payload, ensure_ascii=False)},
+        provider=provider,
+        model=model,
+    ).resolved_content
 
 
 def _invoke(runner: Any, tool: str, prompt: str, **kwargs: Any) -> AgentResult:
@@ -92,7 +91,9 @@ def evaluate_authorship_llm(
     reasoning_effort: str | None = None,
     sandbox: str | None = None,
 ) -> LlmAssessment:
-    prompt = build_authorship_prompt(context, answers, evidence, signals)
+    prompt = build_authorship_prompt(
+        context, answers, evidence, signals, provider=tool, model=model
+    )
     run_kwargs: dict[str, Any] = {"model": model, "json_output": True}
     if reasoning_effort:
         run_kwargs["reasoning_effort"] = reasoning_effort

@@ -39,11 +39,29 @@ export interface InterviewUi {
   quality?: Record<string, unknown>;
   closure_reason?: string;
   current_question?: Record<string, unknown> | null;
+  pending_batch?: Array<Record<string, unknown>>;
+  gap_diagnosis?: string;
+  extension_batches_completed?: number;
   chart_series?: Array<{
     id: string;
     label: string;
     score?: number;
   }>;
+  round_title?: string;
+  round_titles?: Record<string, string>;
+}
+
+export interface InterviewTerminal {
+  isTerminal: boolean;
+  canExtend: boolean;
+  canForceFinish: boolean;
+  canRestart: boolean;
+  gapDiagnosis: string;
+  counts: {
+    questionCount: number;
+    maxQuestions: number;
+    extensionBatchesCompleted: number;
+  };
 }
 
 function asRecord(value: unknown): Record<string, unknown> {
@@ -98,6 +116,12 @@ export function mapInterview(raw: unknown): InterviewUi {
     ...source as InterviewUi,
     schema_version: String(source.schema_version ?? "4.0"),
     progress_state: String(source.progress_state ?? "EXPLORANDO"),
+    question_count: Number(source.question_count ?? 0),
+    max_questions: Number(source.max_questions ?? 0),
+    gap_diagnosis: String(source.gap_diagnosis ?? ""),
+    extension_batches_completed: Number(source.extension_batches_completed ?? 0),
+    pending_batch: asRecords(source.pending_batch),
+    closure_reason: source.closure_reason ? String(source.closure_reason) : undefined,
     dimensions,
     chart_series: dimensions.map((item) => ({
       id: item.id,
@@ -119,39 +143,102 @@ export function axesFromInterviewUi(interviewUi: InterviewUi | undefined): AxisC
   }));
 }
 
+function questionPrompt(item: Record<string, unknown>): string {
+  return String(item.question ?? item.text ?? "").trim();
+}
+
 export function questionsFromInterview(ui: InterviewUi | undefined): Question[] {
+  const roundTitle = String(ui?.round_title ?? "");
+  const pendingBatch = ui?.pending_batch ?? [];
+  if (pendingBatch.length > 0) {
+    const fromBatch: Question[] = [];
+    pendingBatch.forEach((item, index) => {
+      const prompt = questionPrompt(item);
+      if (!prompt) return;
+      fromBatch.push({
+        id: String(item.id ?? `v4-batch-${index}`),
+        axis: roundTitle || "entrevista",
+        category: "v4",
+        prompt,
+        rationale: String(item.why_now ?? ""),
+        answer: "",
+        covered: false,
+        roundTitle: roundTitle || undefined,
+      });
+    });
+    if (fromBatch.length > 0) return fromBatch;
+  }
+
   const current = ui?.current_question;
   if (current) {
-    const prompt = String(current.question ?? current.text ?? "").trim();
+    const prompt = questionPrompt(asRecord(current));
     if (prompt) {
       return [{
         id: String(current.id ?? "v4-current"),
-        axis: "entrevista",
+        axis: roundTitle || "entrevista",
         category: "v4",
         prompt,
         rationale: String(current.why_now ?? ""),
         answer: "",
         covered: false,
+        roundTitle: roundTitle || undefined,
       }];
     }
   }
+
+  // Terminal / closed interview: do not remount history as an active round.
+  if (String(ui?.progress_state ?? "") === "CONCLUIDA") {
+    return [];
+  }
+
   const history = ui?.history ?? [];
   const questions: Question[] = [];
   history.forEach((item, index) => {
-    const prompt = String(item.question ?? "").trim();
+    const prompt = questionPrompt(item);
     if (prompt) {
       questions.push({
         id: String(item.answer_id ?? `v4-q-${index}`),
-        axis: "entrevista",
+        axis: roundTitle || "entrevista",
         category: "v4",
         prompt,
         rationale: "",
         answer: String(item.answer ?? ""),
         covered: Boolean(String(item.answer ?? "").trim()),
+        roundTitle: roundTitle || undefined,
       });
     }
   });
   return questions;
+}
+
+export function deriveInterviewTerminal(ui: InterviewUi | undefined): InterviewTerminal {
+  const gateway = asRecord(ui?.gateway);
+  const approved = Boolean(gateway.approved);
+  const pendingBatch = ui?.pending_batch ?? [];
+  const hasPendingBatch = pendingBatch.some((item) => Boolean(questionPrompt(item)));
+  const current = asRecord(ui?.current_question);
+  const hasCurrent = Boolean(questionPrompt(current));
+  const progress = String(ui?.progress_state ?? "");
+  const batchesCompleted = Number(ui?.extension_batches_completed ?? 0);
+  const closureReason = String(ui?.closure_reason ?? "").trim();
+  const isTerminal =
+    !approved &&
+    !hasPendingBatch &&
+    !hasCurrent &&
+    (progress === "CONCLUIDA" || Boolean(closureReason));
+
+  return {
+    isTerminal,
+    canExtend: isTerminal,
+    canForceFinish: isTerminal && batchesCompleted >= 1,
+    canRestart: isTerminal && batchesCompleted >= 1,
+    gapDiagnosis: String(ui?.gap_diagnosis ?? "").trim(),
+    counts: {
+      questionCount: Number(ui?.question_count ?? 0),
+      maxQuestions: Number(ui?.max_questions ?? 0),
+      extensionBatchesCompleted: batchesCompleted,
+    },
+  };
 }
 
 export function buildEditorialFeedback(interviewUi: InterviewUi | undefined): string | null {

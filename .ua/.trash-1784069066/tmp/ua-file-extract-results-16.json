@@ -1,0 +1,1032 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "specs/archive/spec-035/spec_035.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-035 — Prompt de avaliação do post",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-036/spec_036.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-036 — Exportação Markdown",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-037/spec_037.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-037 — Exportação TXT",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-038/spec_038.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-038 — Persistência de sessão",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-039/spec_039.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-039 — Restauração de sessão",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-040/spec_040.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-040 — Validação de entrada da TUI",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-041/spec_041.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-041 — Tela única da TUI MVP",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-042/spec_042.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-042 — Preview do prompt na TUI",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-043/spec_043.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-043 — Execução LLM pela TUI",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-044/spec_044.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-044 — Bloqueio de gerações concorrentes",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-045/spec_045.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-045 — Exibição de resultado bruto e JSON parseado",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-046/spec_046.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-046 — Limpeza de saída",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-047/spec_047.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-047 — Seleção de executor LLM",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-048/spec_048.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-048 — Seleção de sandbox",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-049/spec_049.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-049 — Estrutura de pastas do projeto",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-050/spec_050.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-050 — Loader de prompts Markdown",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-051/spec_051.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-051 — Renderização de templates",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-052/spec_052.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-052 — Testes do PromptBuilder",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-053/spec_053.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-053 — Testes de gateway",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-054/spec_054.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-054 — Testes de scoring",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-055/spec_055.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-055 — Testes do AgentWrapper",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-056/spec_056.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-056 — Testes de persistência",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-057/spec_057.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-057 — Testes do exporter",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-058/spec_058.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-058 — Testes da TUI de preview",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/archive/spec-059/spec_059.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-059 — Testes de segmentação",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "batchIndex": 14,
+  "nodes": [
+    {
+      "id": "config:.ua/.understandignore",
+      "type": "file",
+      "label": ".understandignore",
+      "file": ".ua/.understandignore",
+      "tags": ["config", "ignore", "understand"],
+      "properties": {
+        "language": "unknown",
+        "totalLines": 78,
+        "nonEmptyLines": 72,
+        "description": "Arquivo de configuracao de exclusoes para a ferramenta understand, definindo padroes de arquivos e diretorios ignorados na analise"
+      }
+    },
+    {
+      "id": "config:.ua/intermediate/scan-result.json",
+      "type": "file",
+      "label": "scan-result.json",
+      "file": ".ua/intermediate/scan-result.json",
+      "tags": ["json", "config", "scan", "intermediate"],
+      "properties": {
+        "language": "json",
+        "totalLines": 2341,
+        "nonEmptyLines": 2341,
+        "description": "Resultado completo do scan do repositorio contendo metadata do projeto (nome, descricao, linguagens, frameworks), lista de arquivos e mapa de imports"
+      }
+    },
+    {
+      "id": "config:pyproject.toml",
+      "type": "file",
+      "label": "pyproject.toml",
+      "file": "pyproject.toml",
+      "tags": ["toml", "config", "python", "build"],
+      "properties": {
+        "language": "toml",
+        "totalLines": 30,
+        "nonEmptyLines": 26,
+        "description": "Configuracao principal do projeto Python — define sistema de build (setuptools), metadata do projeto (post-engine), dependencias opcionais (dev, test) e configuracao do pytest"
+      }
+    },
+    {
+      "id": "config:frontend/vite.config.ts",
+      "type": "file",
+      "label": "vite.config.ts",
+      "file": "frontend/vite.config.ts",
+      "tags": ["typescript", "config", "vite", "frontend"],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 25,
+        "nonEmptyLines": 23,
+        "description": "Configuracao do Vite para o frontend — define plugins, alias de caminhos e opcoes de build para a aplicacao React"
+      }
+    },
+    {
+      "id": "config:frontend/playwright.config.ts",
+      "type": "file",
+      "label": "playwright.config.ts",
+      "file": "frontend/playwright.config.ts",
+      "tags": ["typescript", "config", "playwright", "e2e", "frontend"],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 27,
+        "nonEmptyLines": 26,
+        "description": "Configuracao do Playwright para testes end-to-end do frontend — define base URL, diretorios de testes e navegadores"
+      }
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "label": "README.md",
+      "file": "README.md",
+      "tags": ["markdown", "docs", "readme", "projeto"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 238,
+        "nonEmptyLines": 162,
+        "description": "Documentacao principal do Post Engine — apresenta a proposta (motor de entrevista autoral para geracao de conteudo), arquitetura (gateway de autoria, oficio de engenharia), formatos de exportacao, quick start e mapa do repositorio. Versao bilingue (PT/EN)."
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-001/spec_001.md",
+      "type": "document",
+      "label": "SPEC-001 — Modelos de dominio e contratos Python",
+      "file": "specs/archive/spec-001/spec_001.md",
+      "tags": ["markdown", "spec", "archive", "dominio", "contratos"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Especificacao arquivada sobre modelos de dominio e contratos Python — define estruturas de dados e interfaces do sistema"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-002/spec_002.md",
+      "type": "document",
+      "label": "SPEC-002 — Inicializacao do estado da entrevista",
+      "file": "specs/archive/spec-002/spec_002.md",
+      "tags": ["markdown", "spec", "archive", "entrevista", "estado"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Especificacao arquivada sobre inicializacao do estado da entrevista — define como o estado da sessao de entrevista e criado e gerenciado"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-003/spec_003.md",
+      "type": "document",
+      "label": "SPEC-003 — Scoring autoral",
+      "file": "specs/archive/spec-003/spec_003.md",
+      "tags": ["markdown", "spec", "archive", "scoring", "autoria"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Especificacao arquivada sobre scoring autoral — define metricas e algoritmos de avaliacao da autoria do conteudo gerado"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-004/spec_004.md",
+      "type": "document",
+      "label": "SPEC-004 — Gateway equilibrado",
+      "file": "specs/archive/spec-004/spec_004.md",
+      "tags": ["markdown", "spec", "archive", "gateway", "equilibrado"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Especificacao arquivada sobre o gateway equilibrado — define o comportamento do gateway de autoria em cenarios balanceados"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-005/spec_005.md",
+      "type": "document",
+      "label": "SPEC-005 — Gateway desequilibrado",
+      "file": "specs/archive/spec-005/spec_005.md",
+      "tags": ["markdown", "spec", "archive", "gateway", "desequilibrado"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Especificacao arquivada sobre o gateway desequilibrado — define o comportamento do gateway de autoria em cenarios assimetricos"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-006/spec_006.md",
+      "type": "document",
+      "label": "SPEC-006 — Classificacao do tipo de autoria",
+      "file": "specs/archive/spec-006/spec_006.md",
+      "tags": ["markdown", "spec", "archive", "classificacao", "autoria"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Especificacao arquivada sobre classificacao do tipo de autoria — define categorias e criterios de classificacao da autoria"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-007/spec_007.md",
+      "type": "document",
+      "label": "SPEC-007 — Restricoes de geracao",
+      "file": "specs/archive/spec-007/spec_007.md",
+      "tags": ["markdown", "spec", "archive", "restricoes", "geracao"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Especificacao arquivada sobre restricoes de geracao — define limites e regras para a geracao de conteudo"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-008/spec_008.md",
+      "type": "document",
+      "label": "SPEC-008 — Avaliacao consolidada do gateway",
+      "file": "specs/archive/spec-008/spec_008.md",
+      "tags": ["markdown", "spec", "archive", "avaliacao", "gateway"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Especificacao arquivada sobre avaliacao consolidada do gateway — define metricas e processos de avaliacao do gateway de autoria"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-009/spec_009.md",
+      "type": "document",
+      "label": "SPEC-009 — Identificacao de lacunas autorais",
+      "file": "specs/archive/spec-009/spec_009.md",
+      "tags": ["markdown", "spec", "archive", "lacunas", "autoria"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Especificacao arquivada sobre identificacao de lacunas autorais — define metodos para detectar areas nao cobertas na autoria"
+      }
+    },
+    {
+      "id": "file:frontend/e2e/composition.spec.ts",
+      "type": "file",
+      "label": "composition.spec.ts",
+      "file": "frontend/e2e/composition.spec.ts",
+      "tags": ["typescript", "e2e", "test", "playwright", "frontend"],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 7,
+        "nonEmptyLines": 6,
+        "description": "Teste end-to-end do Playwright para a etapa de composicao do pipeline editorial"
+      }
+    },
+    {
+      "id": "file:frontend/e2e/drafts.spec.ts",
+      "type": "file",
+      "label": "drafts.spec.ts",
+      "file": "frontend/e2e/drafts.spec.ts",
+      "tags": ["typescript", "e2e", "test", "playwright", "frontend"],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 6,
+        "nonEmptyLines": 5,
+        "description": "Teste end-to-end do Playwright para a etapa de rascunhos do pipeline editorial"
+      }
+    },
+    {
+      "id": "file:frontend/e2e/pipeline-regression.spec.ts",
+      "type": "file",
+      "label": "pipeline-regression.spec.ts",
+      "file": "frontend/e2e/pipeline-regression.spec.ts",
+      "tags": ["typescript", "e2e", "test", "playwright", "frontend", "regression"],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 10,
+        "nonEmptyLines": 9,
+        "description": "Teste de regressao end-to-end do pipeline editorial completo via Playwright"
+      }
+    },
+    {
+      "id": "file:frontend/e2e/storyboard.spec.ts",
+      "type": "file",
+      "label": "storyboard.spec.ts",
+      "file": "frontend/e2e/storyboard.spec.ts",
+      "tags": ["typescript", "e2e", "test", "playwright", "frontend"],
+      "properties": {
+        "language": "typescript",
+        "totalLines": 8,
+        "nonEmptyLines": 7,
+        "description": "Teste end-to-end do Playwright para a etapa de storyboard do pipeline editorial"
+      }
+    },
+    {
+      "id": "file:frontend/src/styles.css",
+      "type": "file",
+      "label": "styles.css",
+      "file": "frontend/src/styles.css",
+      "tags": ["css", "styles", "frontend"],
+      "properties": {
+        "language": "css",
+        "totalLines": 362,
+        "nonEmptyLines": 332,
+        "description": "Folha de estilos global do frontend — define variaveis CSS, resets, tipografia, layout e componentes visuais da aplicacao"
+      }
+    },
+    {
+      "id": "file:scripts/gui.fish",
+      "type": "file",
+      "label": "gui.fish",
+      "file": "scripts/gui.fish",
+      "tags": ["fish", "script", "shell"],
+      "properties": {
+        "language": "fish",
+        "totalLines": 12,
+        "nonEmptyLines": 9,
+        "description": "Script Fish shell para inicializacao da interface grafica do Post Engine"
+      }
+    },
+    {
+      "id": "function:scripts/reorganize_specs.py::main",
+      "type": "function",
+      "label": "main",
+      "file": "scripts/reorganize_specs.py",
+      "tags": ["python", "exported"],
+      "properties": {
+        "exported": true,
+        "parent_file": "scripts/reorganize_specs.py",
+        "description": "Funcao principal que reorganiza arquivos de especificacoes em diretorios por categoria, movendo specs para pastas adequadas e atualizando referencias"
+      }
+    },
+    {
+      "id": "function:scripts/reorganize_specs.py::rewrite_checklist",
+      "type": "function",
+      "label": "rewrite_checklist",
+      "file": "scripts/reorganize_specs.py",
+      "tags": ["python", "exported"],
+      "properties": {
+        "exported": true,
+        "parent_file": "scripts/reorganize_specs.py",
+        "description": "Reescreve links de especificacoes em arquivos de checklist apos reorganizacao de diretorios"
+      }
+    },
+    {
+      "id": "function:scripts/reorganize_specs.py::rewrite_global",
+      "type": "function",
+      "label": "rewrite_global",
+      "file": "scripts/reorganize_specs.py",
+      "tags": ["python", "exported"],
+      "properties": {
+        "exported": true,
+        "parent_file": "scripts/reorganize_specs.py",
+        "description": "Reescreve headings e referencias globais de especificacoes em arquivos de checklist apos reorganizacao"
+      }
+    },
+    {
+      "id": "file:scripts/reorganize_specs.py",
+      "type": "file",
+      "label": "reorganize_specs.py",
+      "file": "scripts/reorganize_specs.py",
+      "tags": ["python", "script", "utilitario"],
+      "properties": {
+        "language": "python",
+        "totalLines": 75,
+        "nonEmptyLines": 57,
+        "description": "Script utilitario para reorganizacao de especificacoes — move specs para diretorios categorizados e atualiza links/referencias em checklists e arquivos globais"
+      }
+    },
+    {
+      "id": "function:scripts/run_interview_quality_eval.py::main",
+      "type": "function",
+      "label": "main",
+      "file": "scripts/run_interview_quality_eval.py",
+      "tags": ["python", "exported"],
+      "properties": {
+        "exported": true,
+        "parent_file": "scripts/run_interview_quality_eval.py",
+        "description": "Funcao principal que executa avaliacao de qualidade de entrevistas — le corpus JSON, avalia e retorna metricas de qualidade"
+      }
+    },
+    {
+      "id": "file:scripts/run_interview_quality_eval.py",
+      "type": "file",
+      "label": "run_interview_quality_eval.py",
+      "file": "scripts/run_interview_quality_eval.py",
+      "tags": ["python", "script", "avaliacao", "entrevista"],
+      "properties": {
+        "language": "python",
+        "totalLines": 27,
+        "nonEmptyLines": 21,
+        "description": "Script de avaliacao de qualidade de entrevistas — carrega um corpus de entrevistas e executa avaliacao usando o modulo evaluate_corpus"
+      }
+    },
+    {
+      "id": "file:docs/archive/plano-de-inteligencia",
+      "type": "file",
+      "label": "plano-de-inteligencia",
+      "file": "docs/archive/plano-de-inteligencia",
+      "tags": ["archive", "docs", "plano"],
+      "properties": {
+        "language": "unknown",
+        "totalLines": 12,
+        "nonEmptyLines": 12,
+        "description": "Plano de inteligencia arquivado — documento estrategico do projeto"
+      }
+    },
+    {
+      "id": "file:prompts/router/.gitkeep",
+      "type": "file",
+      "label": ".gitkeep",
+      "file": "prompts/router/.gitkeep",
+      "tags": ["gitkeep", "placeholder"],
+      "properties": {
+        "language": "unknown",
+        "totalLines": 1,
+        "nonEmptyLines": 0,
+        "description": "Arquivo placeholder para manter o diretorio prompts/router no controle de versao"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:frontend/playwright.config.ts",
+      "target": "file:frontend/e2e/composition.spec.ts",
+      "type": "configures",
+      "label": "configura testes e2e de composicao"
+    },
+    {
+      "source": "config:frontend/playwright.config.ts",
+      "target": "file:frontend/e2e/drafts.spec.ts",
+      "type": "configures",
+      "label": "configura testes e2e de rascunhos"
+    },
+    {
+      "source": "config:frontend/playwright.config.ts",
+      "target": "file:frontend/e2e/pipeline-regression.spec.ts",
+      "type": "configures",
+      "label": "configura testes de regressao do pipeline"
+    },
+    {
+      "source": "config:frontend/playwright.config.ts",
+      "target": "file:frontend/e2e/storyboard.spec.ts",
+      "type": "configures",
+      "label": "configura testes e2e de storyboard"
+    },
+    {
+      "source": "config:frontend/vite.config.ts",
+      "target": "file:frontend/src/styles.css",
+      "type": "configures",
+      "label": "configura build do frontend com estilos globais"
+    },
+    {
+      "source": "config:pyproject.toml",
+      "target": "file:scripts/reorganize_specs.py",
+      "type": "configures",
+      "label": "configura ambiente Python para scripts"
+    },
+    {
+      "source": "config:pyproject.toml",
+      "target": "file:scripts/run_interview_quality_eval.py",
+      "type": "configures",
+      "label": "configura ambiente Python para scripts"
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:specs/archive/spec-001/spec_001.md",
+      "type": "related",
+      "label": "documenta especificacoes do projeto"
+    },
+    {
+      "source": "document:specs/archive/spec-001/spec_001.md",
+      "target": "document:specs/archive/spec-002/spec_002.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-002/spec_002.md",
+      "target": "document:specs/archive/spec-003/spec_003.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-003/spec_003.md",
+      "target": "document:specs/archive/spec-004/spec_004.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-004/spec_004.md",
+      "target": "document:specs/archive/spec-005/spec_005.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-005/spec_005.md",
+      "target": "document:specs/archive/spec-006/spec_006.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-006/spec_006.md",
+      "target": "document:specs/archive/spec-007/spec_007.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-007/spec_007.md",
+      "target": "document:specs/archive/spec-008/spec_008.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "document:specs/archive/spec-008/spec_008.md",
+      "target": "document:specs/archive/spec-009/spec_009.md",
+      "type": "related",
+      "label": "sequencia de especificacoes"
+    },
+    {
+      "source": "file:scripts/reorganize_specs.py",
+      "target": "document:specs/archive/spec-001/spec_001.md",
+      "type": "related",
+      "label": "reorganiza especificacoes arquivadas"
+    },
+    {
+      "source": "file:scripts/run_interview_quality_eval.py",
+      "target": "document:specs/archive/spec-002/spec_002.md",
+      "type": "related",
+      "label": "avalia qualidade da entrevista"
+    },
+    {
+      "source": "config:.ua/.understandignore",
+      "target": "config:.ua/intermediate/scan-result.json",
+      "type": "related",
+      "label": "exclusoes aplicadas ao scan"
+    }
+  ]
+}

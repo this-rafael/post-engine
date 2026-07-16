@@ -73,7 +73,11 @@ export function DevDrawer({ open, onClose }: { open: boolean; onClose: () => voi
             onClick={onClose}
           />
           <motion.aside
-            className="fixed right-0 top-0 z-50 flex h-full w-[440px] max-w-[92vw] flex-col panel !rounded-none !rounded-l-xl"
+            className="fixed right-0 top-0 z-50 flex h-full w-[min(440px,100vw)] max-w-[100vw] flex-col panel !rounded-none sm:!rounded-l-xl sm:max-w-[92vw]"
+            style={{
+              paddingTop: "env(safe-area-inset-top, 0px)",
+              paddingBottom: "env(safe-area-inset-bottom, 0px)",
+            }}
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}

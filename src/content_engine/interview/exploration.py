@@ -6,6 +6,7 @@ import hashlib
 from typing import Any, Iterable
 
 from ..llm_json_parser import extract_json_object_from_llm_output
+from ..prompt_registry.resolver import resolve_prompt
 from ..schemas import AgentResult
 from .schemas import (
     AuthorialSignal,
@@ -15,6 +16,7 @@ from .schemas import (
     ThemeContext,
 )
 from .validation import validate_question
+from .round_title_generator import generate_round_title
 
 
 class QuestionGenerationError(RuntimeError):
@@ -54,13 +56,16 @@ def build_exploration_prompt(
     signals: Iterable[AuthorialSignal | dict[str, Any]] = (),
     directions_explored: Iterable[str] = (),
     constraints: Iterable[str] = (),
+    extension_mode: bool = False,
+    provider: str | None = None,
+    model: str | None = None,
 ) -> str:
     """Constroi o prompt inicial sem estrutura editorial ou evidencia esperada."""
     theme = _context(context)
     previous = [str(item).strip() for item in previous_questions if str(item).strip()]
     directions = [str(item).strip() for item in directions_explored if str(item).strip()]
     restrictions = list(theme.restricoes) + [str(item).strip() for item in constraints if str(item).strip()]
-    payload = {
+    payload: dict[str, Any] = {
         "tema": theme.tema,
         "objetivo_geral": theme.objetivo,
         "formato": theme.formato,
@@ -70,17 +75,35 @@ def build_exploration_prompt(
         "direcoes_ja_exploradas": directions,
         "restricoes_explicitas": restrictions,
     }
-    return (
-        "Voce conduz uma entrevista aberta para descobrir material humano autoral.\n"
-        f"Gere exatamente {CANDIDATE_COUNT} perguntas independentes e respondiveis sobre o tema.\n"
-        "Nao presuma experiencia, opiniao, resultado ou conclusao do autor.\n"
-        "Varie as direcoes internas entre as duas: experiencia, opiniao, memoria, erro, decisao, "
-        "mudanca de crenca, contradicao, incomodo, caso concreto e limite.\n"
-        "Nao transforme essas direcoes em checklist e nao repita perguntas anteriores.\n"
-        "Retorne somente JSON no formato {\"candidatas\": [{\"pergunta\": \"...\", "
-        "\"direcao\": \"...\", \"por_que_agora\": \"...\"}]}.\n\n"
-        f"Contexto: {json.dumps(payload, ensure_ascii=False)}"
-    )
+    if extension_mode and isinstance(context, InterviewState):
+        payload["modo_extensao"] = True
+        payload["diagnostico_lacunas"] = context.gap_diagnosis
+        payload["lacunas"] = [gap.to_dict() for gap in context.gaps]
+        gateway = context.gateway_result
+        if gateway is not None:
+            payload["dimensoes_fracas"] = list(gateway.weak_dimensions)
+            payload["vetos"] = list(gateway.vetoes)
+            payload["justificativa_gateway"] = gateway.justification
+        if not restrictions:
+            targeting = []
+            if context.gap_diagnosis:
+                targeting.append(
+                    "Priorize perguntas que cubram as lacunas do diagnostico: "
+                    + context.gap_diagnosis
+                )
+            for gap in context.gaps[:6]:
+                label = gap.dimension or gap.type or "lacuna"
+                reason = gap.reason or gap.suggested_question
+                if reason:
+                    targeting.append(f"Cobrir {label}: {reason}")
+            payload["restricoes_explicitas"] = targeting
+    return resolve_prompt(
+        "interview_questions",
+        {
+            "candidate_count": CANDIDATE_COUNT,
+            "context_json": json.dumps(payload, ensure_ascii=False),
+        }, provider=provider, model=model,
+    ).resolved_content
 
 
 def _invoke_runner(runner: Any, tool: str, prompt: str, **kwargs: Any) -> AgentResult:
@@ -117,6 +140,7 @@ def generate_candidates(
     signals: Iterable[AuthorialSignal | dict[str, Any]] = (),
     directions_explored: Iterable[str] = (),
     constraints: Iterable[str] = (),
+    extension_mode: bool = False,
     tool: str = "codex",
     model: str | None = None,
     reasoning_effort: str | None = None,
@@ -132,6 +156,9 @@ def generate_candidates(
         signals=signals,
         directions_explored=directions_explored,
         constraints=constraints,
+        extension_mode=extension_mode,
+        provider=tool,
+        model=model,
     )
     run_kwargs: dict[str, Any] = {"model": model, "json_output": True}
     if reasoning_effort:
@@ -243,6 +270,12 @@ def generate_next_question(
     validate_model: str | None = None,
     validate_reasoning_effort: str | None = None,
     validate_sandbox: str | None = None,
+    title_runner: Any | None = None,
+    title_tool: str | None = None,
+    title_model: str | None = None,
+    title_reasoning_effort: str | None = None,
+    title_sandbox: str | None = None,
+    extension_mode: bool = False,
 ) -> SelectedQuestion | None:
     previous = [item.question for item in state.questions]
     directions = [item.direction for item in state.questions if item.direction]
@@ -252,6 +285,7 @@ def generate_next_question(
         previous_questions=previous,
         signals=state.signals,
         directions_explored=directions,
+        extension_mode=extension_mode,
         tool=tool,
         model=model,
         reasoning_effort=reasoning_effort,
@@ -276,6 +310,15 @@ def generate_next_question(
         state.questions.append(selected)
         state.question_count += 1
         state.current_question = selected
+        if title_runner is not None:
+            generate_round_title(
+                title_runner,
+                state,
+                tool=title_tool or "opencode",
+                model=title_model,
+                reasoning_effort=title_reasoning_effort,
+                sandbox=title_sandbox,
+            )
     return selected
 
 

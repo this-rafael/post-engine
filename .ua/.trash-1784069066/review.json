@@ -1,0 +1,45 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'file:scripts/gui.fish' has no edges (orphan)",
+    "Node 'function:scripts/reorganize_specs.py::main' has no edges (orphan)",
+    "Node 'function:scripts/reorganize_specs.py::rewrite_checklist' has no edges (orphan)",
+    "Node 'function:scripts/reorganize_specs.py::rewrite_global' has no edges (orphan)",
+    "Node 'function:scripts/run_interview_quality_eval.py::main' has no edges (orphan)",
+    "Node 'file:docs/archive/plano-de-inteligencia' has no edges (orphan)",
+    "Node 'file:prompts/router/.gitkeep' has no edges (orphan)",
+    "Node 'file:src/__init__.py' has no edges (orphan)",
+    "Node 'file:src/gui/static/index.html' has no edges (orphan)",
+    "Node 'file:src/tui/__init__.py' has no edges (orphan)",
+    "Node 'file:tests/__init__.py' has no edges (orphan)",
+    "Node 'file:tests/fixtures/validate_and_render_slidemark.mts' has no edges (orphan)",
+    "Node 'file:tests/test_editorial_flow.py' has no edges (orphan)",
+    "Node 'file:tests/test_generator_image_suggestions.py' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 1079,
+    "totalEdges": 1442,
+    "totalLayers": 8,
+    "tourSteps": 11,
+    "nodeTypes": {
+      "file": 159,
+      "function": 731,
+      "class": 65,
+      "document": 118,
+      "config": 6
+    },
+    "edgeTypes": {
+      "contains": 794,
+      "imports": 390,
+      "tested_by": 29,
+      "captures": 8,
+      "sequence": 7,
+      "related": 147,
+      "documents": 51,
+      "depends_on": 2,
+      "configures": 10,
+      "references": 3,
+      "tests": 1
+    }
+  }
+}

@@ -210,6 +210,7 @@ class TuiSessionState:
     session_log_path: str = ""
     current_phase: str = "entrada_inicial"
     current_stage: str = "entry"
+    fases_liberadas: list[str] = field(default_factory=lambda: ["entrada_inicial"])
 
     tema: str = ""
     plataforma: str = ""

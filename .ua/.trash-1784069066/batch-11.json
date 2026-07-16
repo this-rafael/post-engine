@@ -1,0 +1,135 @@
+{
+  "batchIndex": 11,
+  "totalBatches": 19,
+  "filesAnalyzed": 6,
+  "nodes": [
+    {
+      "id": "document:prompts/generator/personas/dev-interlocutor-article.md",
+      "type": "document",
+      "label": "dev-interlocutor-article.md",
+      "file": "prompts/generator/personas/dev-interlocutor-article.md",
+      "tags": ["markdown", "docs", "persona", "generator", "article"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 32,
+        "nonEmptyLines": 25,
+        "sections": ["Resumo operacional", "Identidade", "Regras essenciais"],
+        "description": "Persona de geração para conteúdo tipo article. Define voz, estilo e guardrails para artigos técnicos investigativos com tese, argumentos, contrapontos e evidências. Alta profundidade técnica, média-alta fricção, baixo humor."
+      }
+    },
+    {
+      "id": "document:prompts/generator/personas/dev-interlocutor-feed.md",
+      "type": "document",
+      "label": "dev-interlocutor-feed.md",
+      "file": "prompts/generator/personas/dev-interlocutor-feed.md",
+      "tags": ["markdown", "docs", "persona", "generator", "feed"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 39,
+        "nonEmptyLines": 32,
+        "sections": ["Resumo operacional", "Identidade", "Regras essenciais"],
+        "description": "Persona de geração para conteúdo tipo feed. Define voz, estilo e guardrails para conteúdos rápidos, opinativos, diretos e críticos com atrito produtivo. Baixa-média profundidade técnica, alta fricção, médio humor. Limite de 1600 caracteres."
+      }
+    },
+    {
+      "id": "document:prompts/generator/personas/dev-interlocutor-long-slide.md",
+      "type": "document",
+      "label": "dev-interlocutor-long-slide.md",
+      "file": "prompts/generator/personas/dev-interlocutor-long-slide.md",
+      "tags": ["markdown", "docs", "persona", "generator", "long_slide", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 47,
+        "nonEmptyLines": 40,
+        "sections": ["Resumo operacional", "Identidade", "Regras essenciais"],
+        "description": "Persona de geração para conteúdo tipo long_slide no formato SlideMark. Define guias visuais longos (9-20 slides) que ensinam um assunto de forma progressiva com fundamentos, conceitos, exemplos, implementação e edge cases. Alta profundidade técnica."
+      }
+    },
+    {
+      "id": "document:prompts/generator/personas/dev-interlocutor-post.md",
+      "type": "document",
+      "label": "dev-interlocutor-post.md",
+      "file": "prompts/generator/personas/dev-interlocutor-post.md",
+      "tags": ["markdown", "docs", "persona", "generator", "post"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 35,
+        "nonEmptyLines": 28,
+        "sections": ["Resumo operacional", "Identidade", "Regras essenciais"],
+        "description": "Persona de geração para conteúdo tipo post. Define voz para conteúdos rápidos e opinativos que defendem uma ideia central com profundidade média. Alta fricção, médio humor, limite de 1600 caracteres. Não deve virar artigo ou tutorial."
+      }
+    },
+    {
+      "id": "document:prompts/generator/personas/dev-interlocutor-short-carousel.md",
+      "type": "document",
+      "label": "dev-interlocutor-short-carousel.md",
+      "file": "prompts/generator/personas/dev-interlocutor-short-carousel.md",
+      "tags": ["markdown", "docs", "persona", "generator", "short_carousel", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 49,
+        "nonEmptyLines": 42,
+        "sections": ["Resumo operacional", "Identidade", "Regras essenciais"],
+        "description": "Persona de geração para conteúdo tipo short_carousel no formato SlideMark. Define carrosséis curtos (4-8 slides) sobre uma ideia específica: dica, erro comum, comparação, conceito ou mini passo a passo. Baixa-média profundidade técnica."
+      }
+    },
+    {
+      "id": "document:prompts/generator/personas/dev-interlocutor-slide.md",
+      "type": "document",
+      "label": "dev-interlocutor-slide.md",
+      "file": "prompts/generator/personas/dev-interlocutor-slide.md",
+      "tags": ["markdown", "docs", "persona", "generator", "slide"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 45,
+        "nonEmptyLines": 38,
+        "sections": ["Resumo operacional", "Identidade", "Regras essenciais"],
+        "description": "Persona de geração para conteúdo tipo slide. Define camada intermediária entre feed e artigo com 6-10 slides, uma ideia principal por slide, títulos fortes, bullets objetivos e progressão narrativa clara. Média profundidade técnica."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:prompts/generator/personas/dev-interlocutor-post.md",
+      "target": "document:prompts/generator/personas/dev-interlocutor-feed.md",
+      "type": "related",
+      "label": "família de personas: post e feed compartilham formato textual curto com atrito"
+    },
+    {
+      "source": "document:prompts/generator/personas/dev-interlocutor-feed.md",
+      "target": "document:prompts/generator/personas/dev-interlocutor-post.md",
+      "type": "related",
+      "label": "família de personas: feed e post são variações de conteúdo textual rápido e opinativo"
+    },
+    {
+      "source": "document:prompts/generator/personas/dev-interlocutor-slide.md",
+      "target": "document:prompts/generator/personas/dev-interlocutor-long-slide.md",
+      "type": "related",
+      "label": "família de personas: slide e long_slide são variações de conteúdo em slides com progressão"
+    },
+    {
+      "source": "document:prompts/generator/personas/dev-interlocutor-long-slide.md",
+      "target": "document:prompts/generator/personas/dev-interlocutor-short-carousel.md",
+      "type": "related",
+      "label": "família de personas: long_slide e short_carousel usam formato SlideMark com templates visuais"
+    },
+    {
+      "source": "document:prompts/generator/personas/dev-interlocutor-short-carousel.md",
+      "target": "document:prompts/generator/personas/dev-interlocutor-slide.md",
+      "type": "related",
+      "label": "família de personas: short_carousel e slide compartilham estrutura de uma ideia por slide"
+    },
+    {
+      "source": "document:prompts/generator/personas/dev-interlocutor-article.md",
+      "target": "document:prompts/generator/personas/dev-interlocutor-post.md",
+      "type": "related",
+      "label": "família de personas: article e post divergem em profundidade mas compartilham formato textual"
+    },
+    {
+      "source": "document:prompts/generator/personas/dev-interlocutor-article.md",
+      "target": "document:prompts/generator/personas/dev-interlocutor-long-slide.md",
+      "type": "related",
+      "label": "família de personas: article e long_slide compartilham alta profundidade técnica"
+    }
+  ]
+}

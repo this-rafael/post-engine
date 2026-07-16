@@ -77,7 +77,11 @@ export function GamePopup() {
             exit={{ opacity: 0, y: 24, scale: 0.9 }}
             transition={{ type: "spring", stiffness: 280, damping: 22 }}
             onClick={() => setAskOpen(true)}
-            className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full border border-[color-mix(in_oklab,var(--flux)_55%,transparent)] bg-surface/80 px-4 py-2.5 text-[13px] font-medium text-ink shadow-[0_8px_32px_color-mix(in_oklab,var(--flux)_22%,transparent)] backdrop-blur-md hover:border-[color-mix(in_oklab,var(--flux)_80%,transparent)] hover:bg-surface-2"
+            className="fixed z-40 flex items-center gap-2 rounded-full border border-[color-mix(in_oklab,var(--flux)_55%,transparent)] bg-surface/80 px-4 py-2.5 text-[13px] font-medium text-ink shadow-[0_8px_32px_color-mix(in_oklab,var(--flux)_22%,transparent)] backdrop-blur-md hover:border-[color-mix(in_oklab,var(--flux)_80%,transparent)] hover:bg-surface-2"
+            style={{
+              bottom: "calc(1.5rem + env(safe-area-inset-bottom, 0px))",
+              right: "calc(1.5rem + env(safe-area-inset-right, 0px))",
+            }}
             data-testid="game-floating-button"
           >
             <motion.span

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Question } from "@/lib/pe-types";
-import type { InterviewUi } from "@/lib/mappers/interview";
+import { deriveInterviewTerminal, type InterviewUi } from "@/lib/mappers/interview";
 
 export type InterviewUxPhase =
   | "answering"
@@ -9,6 +9,7 @@ export type InterviewUxPhase =
   | "coverage_updated"
   | "current_read"
   | "next_round_ready"
+  | "terminal_gaps"
   | "map_mode";
 
 export interface CoverageSnapshot {
@@ -56,6 +57,19 @@ export function deriveNewAxes(
   return added;
 }
 
+function resolvePostAnalysisPhase(
+  interviewUi: InterviewUi,
+  editorialFeedback: string | null,
+  added: NewAxisCapture[],
+): InterviewUxPhase {
+  if (deriveInterviewTerminal(interviewUi).isTerminal) {
+    return "terminal_gaps";
+  }
+  if (added.length > 0) return "coverage_updated";
+  if (editorialFeedback) return "current_read";
+  return "next_round_ready";
+}
+
 export function useInterviewUx({
   round,
   axes,
@@ -86,6 +100,7 @@ export function useInterviewUx({
 
   const answered = round.filter((q) => q.answer.trim().length > 0).length;
   const allAnswered = round.length > 0 && answered === round.length;
+  const terminal = deriveInterviewTerminal(interviewUi);
 
   const goToQuestion = useCallback(
     (index: number) => {
@@ -129,12 +144,20 @@ export function useInterviewUx({
   const closeMapMode = useCallback(() => setUxPhase("answering"), []);
 
   const continueFromCoverage = useCallback(() => {
+    if (deriveInterviewTerminal(interviewUi).isTerminal) {
+      setUxPhase("terminal_gaps");
+      return;
+    }
     setUxPhase(editorialFeedback ? "current_read" : "next_round_ready");
-  }, [editorialFeedback]);
+  }, [editorialFeedback, interviewUi]);
 
   const continueFromRead = useCallback(() => {
+    if (deriveInterviewTerminal(interviewUi).isTerminal) {
+      setUxPhase("terminal_gaps");
+      return;
+    }
     setUxPhase("next_round_ready");
-  }, []);
+  }, [interviewUi]);
 
   const resetAfterNewRound = useCallback(() => {
     setCurrentIndex(0);
@@ -144,19 +167,17 @@ export function useInterviewUx({
     wasAnalyzingRef.current = false;
   }, []);
 
+  const enterTerminalGaps = useCallback(() => {
+    setUxPhase("terminal_gaps");
+  }, []);
+
   useEffect(() => {
     if (uxPhase === "analyzing" && !busy && wasAnalyzingRef.current) {
       wasAnalyzingRef.current = false;
       const after = snapshotCoverage(axes, coveredTotal, totalAxes, interviewUi);
       const added = deriveNewAxes(preSubmitRef.current, after, interviewUi);
       setNewAxes(added);
-      if (added.length > 0) {
-        setUxPhase("coverage_updated");
-      } else if (editorialFeedback) {
-        setUxPhase("current_read");
-      } else {
-        setUxPhase("next_round_ready");
-      }
+      setUxPhase(resolvePostAnalysisPhase(interviewUi, editorialFeedback, added));
     }
   }, [busy, uxPhase, axes, coveredTotal, totalAxes, interviewUi, editorialFeedback]);
 
@@ -172,6 +193,28 @@ export function useInterviewUx({
       setCurrentIndex(round.length - 1);
     }
   }, [round.length, currentIndex]);
+
+  // Hydrate terminal screen when snapshot is already closed without an active round.
+  useEffect(() => {
+    if (!terminal.isTerminal) return;
+    if (busy) return;
+    if (round.length > 0) return;
+    if (
+      uxPhase === "answering" ||
+      uxPhase === "next_round_ready" ||
+      (uxPhase === "current_read" && !editorialFeedback)
+    ) {
+      setUxPhase("terminal_gaps");
+    }
+  }, [terminal.isTerminal, busy, round.length, uxPhase, editorialFeedback]);
+
+  // After extension batch generation, leave terminal and answer the new questions.
+  useEffect(() => {
+    if (uxPhase !== "terminal_gaps") return;
+    if (round.length === 0) return;
+    if (terminal.isTerminal) return;
+    resetAfterNewRound();
+  }, [uxPhase, round.length, terminal.isTerminal, resetAfterNewRound]);
 
   return {
     uxPhase,
@@ -195,6 +238,8 @@ export function useInterviewUx({
     continueFromCoverage,
     continueFromRead,
     resetAfterNewRound,
+    enterTerminalGaps,
+    terminal,
     newAxes,
     preSubmitCoverage: preSubmitRef.current,
   };

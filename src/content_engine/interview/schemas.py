@@ -700,6 +700,12 @@ class InterviewState:
     deepening_decision: DeepeningDecision | None = None
     current_question: SelectedQuestion | None = None
     closure_reason: str = ""
+    round_title: str = ""
+    round_titles: dict[int, str] = field(default_factory=dict)
+    extension_batches_completed: int = 0
+    pending_batch: list[SelectedQuestion] = field(default_factory=list)
+    pending_answers: dict[str, str] = field(default_factory=dict)
+    gap_diagnosis: str = ""
 
     @property
     def theme(self) -> ThemeContext:
@@ -733,6 +739,12 @@ class InterviewState:
             else None,
             "current_question": self.current_question.to_dict() if self.current_question else None,
             "closure_reason": self.closure_reason,
+            "round_title": self.round_title,
+            "round_titles": self.round_titles,
+            "extension_batches_completed": self.extension_batches_completed,
+            "pending_batch": [item.to_dict() for item in self.pending_batch],
+            "pending_answers": dict(self.pending_answers),
+            "gap_diagnosis": self.gap_diagnosis,
         }
 
     @classmethod
@@ -740,6 +752,7 @@ class InterviewState:
         data = _dict(raw)
         context = ThemeContext.from_dict(data.get("context", {}))
         dimensions_raw = data.get("dimensions", {})
+        pending_answers_raw = data.get("pending_answers", {})
         return cls(
             schema_version=_clean(data.get("schema_version", SESSION_SCHEMA_VERSION)),
             context=context,
@@ -773,6 +786,19 @@ class InterviewState:
             if isinstance(data.get("current_question"), dict)
             else None,
             closure_reason=_clean(data.get("closure_reason", "")),
+            round_title=_clean(data.get("round_title", "")),
+            round_titles={int(k): _clean(v) for k, v in _dict(data.get("round_titles", {})).items()},
+            extension_batches_completed=max(0, int(data.get("extension_batches_completed", 0) or 0)),
+            pending_batch=[
+                SelectedQuestion.from_dict(item)
+                for item in data.get("pending_batch", [])
+                if isinstance(item, dict)
+            ],
+            pending_answers={
+                str(key): _clean(value)
+                for key, value in _dict(pending_answers_raw).items()
+            },
+            gap_diagnosis=_clean(data.get("gap_diagnosis", "")),
         )
 
 

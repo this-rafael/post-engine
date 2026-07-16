@@ -35,8 +35,11 @@ export function QuestionStage({
   useEffect(() => {
     const ta = textareaRef.current;
     if (!ta) return;
+    const max = window.innerWidth < 640
+      ? (focusMode ? 320 : 220)
+      : (focusMode ? 480 : 360);
     ta.style.height = "auto";
-    ta.style.height = `${Math.min(ta.scrollHeight, focusMode ? 480 : 360)}px`;
+    ta.style.height = `${Math.min(ta.scrollHeight, max)}px`;
   }, [question.answer, focusMode]);
 
   const goNext = () => {
@@ -62,31 +65,22 @@ export function QuestionStage({
           transition={{ duration, ease }}
           className="flex flex-1 flex-col"
         >
-          <div className="mb-6 flex items-baseline gap-3">
-            <motion.span
-              layoutId="question-counter"
-              className="font-mono text-[13px] flux-text tabular-nums"
-            >
-              {String(index + 1).padStart(2, "0")}
-            </motion.span>
-            <span className="text-ink-faint">/</span>
-            <span className="font-mono text-[13px] text-ink-faint tabular-nums">
-              {String(total).padStart(2, "0")}
-            </span>
-          </div>
+
 
           <motion.div layoutId="question-axis" className="mb-4 flex items-center gap-2">
             <span className="font-mono text-[11px] uppercase tracking-wide flux-text">
               {groupLabel || question.category || "entrevista"}
             </span>
             <span className="h-1 w-1 rounded-full bg-ink-faint" />
-            <span className="mono-tag !text-[10px]">{question.axis}</span>
+            <span className="font-mono text-[11px] text-ink-dim">
+              {question.roundTitle || question.axis || "entrevista"}
+            </span>
           </motion.div>
 
           <h2
             className={cn(
               "font-display font-semibold leading-snug tracking-tight text-ink",
-              focusMode ? "text-[28px]" : "text-[22px] xl:text-[26px]",
+              focusMode ? "text-[22px] sm:text-[28px]" : "text-[18px] sm:text-[22px] xl:text-[26px]",
             )}
           >
             {question.prompt}
@@ -99,9 +93,11 @@ export function QuestionStage({
             placeholder="Sua experiência, opinião ou história real…"
             rows={focusMode ? 12 : 8}
             className={cn(
-              "field mt-8 w-full resize-none px-4 py-4 outline-none placeholder:text-ink-faint/50",
+              "field mt-5 w-full resize-none px-3 py-3 outline-none placeholder:text-ink-faint/50 sm:mt-8 sm:px-4 sm:py-4",
               "text-[15px] leading-[1.75] field-focus",
-              focusMode ? "min-h-[280px]" : "min-h-[200px] max-h-[360px]",
+              focusMode
+                ? "min-h-[180px] sm:min-h-[280px]"
+                : "min-h-[140px] max-h-[min(40dvh,360px)] sm:min-h-[200px] sm:max-h-[360px]",
             )}
           />
 
@@ -114,7 +110,7 @@ export function QuestionStage({
         </motion.div>
       </AnimatePresence>
 
-      <div className="mt-8 flex items-center justify-between gap-4 border-t border-hairline pt-5">
+      <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-hairline pt-4 sm:mt-8 sm:gap-4 sm:pt-5">
         <PeButton
           variant="ghost"
           onClick={goPrev}

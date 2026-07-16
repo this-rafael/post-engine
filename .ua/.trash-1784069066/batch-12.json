@@ -1,0 +1,111 @@
+{
+  "batchIndex": 12,
+  "totalBatches": 19,
+  "filesAnalyzed": 3,
+  "nodes": [
+    {
+      "id": "document:prompts/interview/deepen.md",
+      "type": "document",
+      "label": "deepen.md",
+      "file": "prompts/interview/deepen.md",
+      "tags": ["markdown", "docs", "interview", "prompt", "deepening"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 6,
+        "nonEmptyLines": 5,
+        "sections": ["Aprofundamento V4"],
+        "description": "Prompt de aprofundamento da entrevista que gera uma única pergunta para preencher uma lacuna relevante já observada nos sinais autorais. Não pressupõe resposta nem introduz estrutura editorial. Se o gateway já estiver aprovado, não prolonga a entrevista por lacuna opcional."
+      }
+    },
+    {
+      "id": "document:prompts/interview/evaluate-authorship.md",
+      "type": "document",
+      "label": "evaluate-authorship.md",
+      "file": "prompts/interview/evaluate-authorship.md",
+      "tags": ["markdown", "docs", "interview", "prompt", "evaluation", "authorship"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 8,
+        "nonEmptyLines": 6,
+        "sections": ["Avaliacao de autoria V4"],
+        "description": "Prompt de avaliação de autoria que analisa somente o material humano preservado nas respostas e evidências literais. Não inventa experiência e não trata organização editorial como fala do autor. Retorna JSON com aprovou, confianca, forcas, fraquezas, riscos, justificativa e integridade_epistemica."
+      }
+    },
+    {
+      "id": "document:prompts/interview/explore.md",
+      "type": "document",
+      "label": "explore.md",
+      "file": "prompts/interview/explore.md",
+      "tags": ["markdown", "docs", "interview", "prompt", "exploration"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 12,
+        "nonEmptyLines": 9,
+        "sections": ["Exploracao aberta V4"],
+        "description": "Prompt de exploração aberta que gera exatamente 2 perguntas independentes, respondíveis e não indutivas antes de classificar dimensões autorais. Não presume experiência, opinião, resultado ou conclusão do autor. Usa apenas tema, objetivo geral, formato, histórico, sinais extraídos e restrições explícitas. Retorna JSON com candidatas contendo pergunta, direcao e por_que_agora."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:prompts/interview/explore.md",
+      "target": "document:prompts/interview/deepen.md",
+      "type": "related",
+      "label": "pipeline de entrevista: exploração aberta gera perguntas iniciais; aprofundamento preenche lacunas"
+    },
+    {
+      "source": "document:prompts/interview/explore.md",
+      "target": "document:prompts/interview/evaluate-authorship.md",
+      "type": "related",
+      "label": "pipeline de entrevista: material da exploração é avaliado quanto à autoria"
+    },
+    {
+      "source": "document:prompts/interview/deepen.md",
+      "target": "document:prompts/interview/evaluate-authorship.md",
+      "type": "related",
+      "label": "pipeline de entrevista: aprofundamento gera material adicional submetido à avaliação de autoria"
+    },
+    {
+      "source": "document:prompts/interview/evaluate-authorship.md",
+      "target": "document:prompts/interview/deepen.md",
+      "type": "related",
+      "label": "feedback de avaliação: resultado da autoria detecta lacunas que alimentam o aprofundamento"
+    },
+    {
+      "source": "document:prompts/interview/explore.md",
+      "target": "file:src/content_engine/interview/exploration.py",
+      "type": "documents",
+      "label": "prompt carregado e usado por build_exploration_prompt() e generate_candidates()"
+    },
+    {
+      "source": "document:prompts/interview/evaluate-authorship.md",
+      "target": "file:src/content_engine/interview/llm_evaluation.py",
+      "type": "documents",
+      "label": "prompt carregado e referenciado por build_authorship_prompt() e evaluate_authorship_llm()"
+    },
+    {
+      "source": "document:prompts/interview/deepen.md",
+      "target": "file:src/content_engine/interview/gaps.py",
+      "type": "documents",
+      "label": "prompt referenciado pela lógica de decisão de aprofundamento em decide_deepening()"
+    },
+    {
+      "source": "file:src/content_engine/prompt_loader.py",
+      "target": "document:prompts/interview/explore.md",
+      "type": "documents",
+      "label": "registra caminho interview.explore -> interview/explore.md"
+    },
+    {
+      "source": "file:src/content_engine/prompt_loader.py",
+      "target": "document:prompts/interview/evaluate-authorship.md",
+      "type": "documents",
+      "label": "registra caminho interview.evaluate_authorship -> interview/evaluate-authorship.md"
+    },
+    {
+      "source": "file:src/content_engine/prompt_loader.py",
+      "target": "document:prompts/interview/deepen.md",
+      "type": "documents",
+      "label": "registra caminho interview.deepen -> interview/deepen.md"
+    }
+  ]
+}

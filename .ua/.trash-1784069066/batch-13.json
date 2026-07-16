@@ -1,0 +1,168 @@
+{
+  "batchIndex": 13,
+  "nodes": [
+    {
+      "id": "document:specs/spec-061/spec_061.md",
+      "type": "document",
+      "name": "spec_061.md",
+      "path": "specs/spec-061/spec_061.md",
+      "description": "Especificação completa do Post Engine V4 — redefine a entrevista como exploração aberta do tema antes da classificação, com extração de sinais autorais rastreáveis, gateway híbrido LLM+heurística, análise de lacunas e aprofundamento seletivo. Breaking change total: sem modo legado, sem migrador, schema 4.0. Define 11 épicos (pesquisa, domínio, exploração, extração, heurística, avaliação LLM, gateway híbrido, lacunas, GUI, métricas, migração), novo vocabulário (sinal autoral, evidência, dimensão, lacuna, grupo) e critérios de aceitação.",
+      "tags": [
+        "markdown",
+        "specs",
+        "V4",
+        "entrevista",
+        "breaking-change",
+        "gateway-híbrido",
+        "sinais-autorais"
+      ],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 955,
+        "sectionCount": 61
+      }
+    },
+    {
+      "id": "document:specs/spec-061/plan.md",
+      "type": "document",
+      "name": "plan.md",
+      "path": "specs/spec-061/plan.md",
+      "description": "Plano de implementação da V4 — descreve a abordagem brownfield de substituição integral do pipeline de entrevista em src/content_engine/interview/, removendo campos legados (interview_mode, memory_pack, 27 eixos). Inclui diagrama de arquitetura C4, fluxo V4 por rodada (sequence diagram), decisões arquiteturais, modelo de dados, superfície de API, estratégia de testes com stubs P1, tratamento de erros, pontos de integração, mitigação de riscos, mapa de cobertura por épico e estrutura de source code com notas brownfield.",
+      "tags": [
+        "markdown",
+        "specs",
+        "plano",
+        "implementação",
+        "V4",
+        "arquitetura",
+        "brownfield"
+      ],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 337,
+        "sectionCount": 20
+      }
+    },
+    {
+      "id": "document:specs/spec-061/research.md",
+      "type": "document",
+      "name": "research.md",
+      "path": "specs/spec-061/research.md",
+      "description": "Documento de pesquisa e engenharia reversa da Fase 0 da V4 — mapeia exaustivamente o comportamento real da V3: trajetória do produto (V2→fase2→adaptive→V3→V4), inventário funcional dos 3 modos (legacy/batch/adaptive), inventário de contratos (TuiSessionState, schemas, 27 eixos, duplicação memory_pack↔evidence_ledger, contratos HTTP, tipos frontend), rastreamento de dados, auditoria de 30 prompts, corpus de avaliação, baseline V3 via testes, inconsistências identificadas, quebras de contrato, mapeamento V4→V3 para Épico 0, arquitetura de execução LLM e entregáveis V4 concluídos (máquina de estados, diagrama de sequência, relatório histórico, plano de métricas).",
+      "tags": [
+        "markdown",
+        "specs",
+        "pesquisa",
+        "engenharia-reversa",
+        "V3",
+        "V4",
+        "Fase-0",
+        "inventário"
+      ],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 665,
+        "sectionCount": 48
+      }
+    },
+    {
+      "id": "document:specs/spec-061/tasks.md",
+      "type": "document",
+      "name": "tasks.md",
+      "path": "specs/spec-061/tasks.md",
+      "description": "Lista de tarefas da SPEC-061 organizada em 13 fases alinhadas aos Épicos 0–10. Cobre pesquisa, domínio V4 (schema 4.0), extração de sinais, heurística determinística, avaliação LLM, gateway híbrido, exploração, lacunas/aprofundamento, integração session_app, GUI React, métricas comparativas via corpus, remoção de legado e polish. Inclui notas brownfield (substituir/deletar/portar), mapa de épicos e definição de done. Política breaking change: sem suporte a V2/V3.",
+      "tags": [
+        "markdown",
+        "specs",
+        "tarefas",
+        "V4",
+        "épicos",
+        "brownfield",
+        "breaking-change"
+      ],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 208,
+        "sectionCount": 19
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:specs/spec-061/tasks.md",
+      "target": "document:specs/spec-061/spec_061.md",
+      "type": "documents",
+      "description": "tasks.md tem spec_061.md como entrada obrigatória e referência normativa"
+    },
+    {
+      "source": "document:specs/spec-061/tasks.md",
+      "target": "document:specs/spec-061/plan.md",
+      "type": "documents",
+      "description": "tasks.md requer plan.md como pré-requisito para execução das fases"
+    },
+    {
+      "source": "document:specs/spec-061/tasks.md",
+      "target": "document:specs/spec-061/research.md",
+      "type": "documents",
+      "description": "tasks.md depende de research.md (Fase 0) como pré-requisito parcial"
+    },
+    {
+      "source": "document:specs/spec-061/plan.md",
+      "target": "document:specs/spec-061/spec_061.md",
+      "type": "documents",
+      "description": "plan.md implementa os requisitos definidos em spec_061.md"
+    },
+    {
+      "source": "document:specs/spec-061/research.md",
+      "target": "document:specs/spec-061/spec_061.md",
+      "type": "documents",
+      "description": "research.md realiza a engenharia reversa solicitada pela §3 de spec_061.md"
+    },
+    {
+      "source": "document:specs/spec-061/plan.md",
+      "target": "document:specs/spec-061/research.md",
+      "type": "related",
+      "description": "plano de implementação se baseia nos achados da pesquisa Fase 0"
+    },
+    {
+      "source": "document:specs/spec-061/spec_061.md",
+      "target": "document:docs/PRD.md",
+      "type": "related",
+      "description": "V4 preserva a essência do PRD: extrair conteúdo humano autoral antes de organização editorial"
+    },
+    {
+      "source": "document:specs/spec-061/spec_061.md",
+      "target": "document:docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+      "type": "related",
+      "description": "V4 rompe com o modelo adaptive (evidence_ledger, needs, gates) substituindo por sinais/dimensões/gateway híbrido"
+    },
+    {
+      "source": "document:specs/spec-061/spec_061.md",
+      "target": "document:docs/V3_EVO.md",
+      "type": "related",
+      "description": "V4 substitui o fluxo V3 (storyboard→rascunhador→composição) por exploração aberta + gateway híbrido"
+    },
+    {
+      "source": "document:specs/spec-061/spec_061.md",
+      "target": "document:docs/archive/TUI_DECREPATED.md",
+      "type": "related",
+      "description": "V4 confirma GUI React como único frontend de entrevista, TUI deprecada"
+    },
+    {
+      "source": "document:specs/spec-061/research.md",
+      "target": "document:docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+      "type": "related",
+      "description": "research.md documenta o modo adaptive como base para a evolução V4"
+    },
+    {
+      "source": "document:specs/spec-061/research.md",
+      "target": "document:docs/archive/fase2evo.md",
+      "type": "related",
+      "description": "research.md inventaria o modo batch originado do plano fase2evo (27 eixos em 7 batches)"
+    }
+  ]
+}

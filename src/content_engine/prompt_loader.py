@@ -1,11 +1,14 @@
-"""SPEC-050: Loader de prompts Markdown versionados.
+"""Compatibilidade legada para catalogo de prompts.
 
-Carrega templates de entrevista, geracao, segmentacao, avaliacao e personas
-a partir do diretorio ``prompts/`` na raiz do projeto.
+Novos consumidores nao devem importar este modulo. O conteudo retornado vem
+do Prompt Registry, nunca de ``prompts/`` em runtime.
 """
 from __future__ import annotations
 
 from pathlib import Path
+
+from .prompt_registry.importer import ensure_registry_initialized
+from .prompt_registry.repository import PromptRegistryRepository
 
 PROMPTS_ROOT: Path = Path(__file__).resolve().parents[2] / "prompts"
 
@@ -51,14 +54,38 @@ def _resolve_path(name: str) -> Path:
     return PROMPTS_ROOT / name
 
 
+def _artifact_key(name: str) -> str | None:
+    if name in PROMPT_PATHS:
+        return name
+    normalized = name.replace("\\", "/")
+    for key, relative in PROMPT_PATHS.items():
+        if normalized == relative:
+            return key
+    return None
+
+
 def load_prompt(name: str) -> str:
-    path = _resolve_path(name)
-    if not path.is_file():
+    key = _artifact_key(name)
+    if key is None:
+        path = _resolve_path(name)
         raise FileNotFoundError(
             f"Prompt nao encontrado: '{name}' (caminho procurado: {path})"
         )
-    return path.read_text(encoding="utf-8")
+    ensure_registry_initialized()
+    with PromptRegistryRepository() as repository:
+        version = repository.active_version(key)
+    if version is None:
+        path = _resolve_path(name)
+        raise FileNotFoundError(
+            f"Prompt nao encontrado: '{name}' (caminho procurado: {path})"
+        )
+    return version.content
 
 
 def prompt_exists(name: str) -> bool:
-    return _resolve_path(name).is_file()
+    key = _artifact_key(name)
+    if key is None:
+        return False
+    ensure_registry_initialized()
+    with PromptRegistryRepository() as repository:
+        return repository.active_version(key) is not None

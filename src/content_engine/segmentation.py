@@ -6,9 +6,8 @@ from typing import Any
 
 from .agent_wrapper import AgentWrapper
 from .llm_json_parser import extract_json_object_from_llm_output
-from .prompt_loader import load_prompt, prompt_exists
+from .prompt_registry.resolver import resolve_prompt
 from .schemas import AgentResult, SandboxPolicy, SegmentoPost, TipoDePost, ToolName
-from .template_renderer import render_template
 from .trilhas import is_trilha_visual
 
 
@@ -244,20 +243,20 @@ class Segmenter:
         briefing: dict[str, Any] | None = None,
         interview_context: dict[str, Any] | None = None,
     ) -> list[SegmentoPost]:
-        if is_trilha_visual(tipo_de_post) and prompt_exists("generator.segment_slides"):
-            template = load_prompt("generator.segment_slides")
-        else:
-            template = load_prompt("generator.segment")
-        prompt: str = render_template(
-            template,
+        prompt = resolve_prompt(
+            "segment",
             {
                 "conteudoDoPost": conteudo,
                 "tipoDePost": tipo_de_post,
                 "briefingAutoral": json.dumps(briefing or {}, ensure_ascii=False, indent=2),
                 "interviewContext": json.dumps(interview_context or {}, ensure_ascii=False, indent=2),
                 "papeisEsperados": ", ".join(_papeis_esperados_por_formato(tipo_de_post)),
+                "content_type": tipo_de_post,
+                "is_visual_track": is_trilha_visual(tipo_de_post),
             },
-        )
+            provider=self.tool,
+            model=self.model,
+        ).resolved_content
 
         result: AgentResult = self.agent.run(
             self.tool,

@@ -24,6 +24,7 @@ def test_v4_interview_state_round_trip(tmp_path) -> None:
     assert restored.interview_state == state.interview_state
     assert restored.evidence_ledger == state.evidence_ledger
     assert restored.gateway_result == state.gateway_result
+    assert restored.fases_liberadas == ["entrada_inicial"]
 
 
 def test_v4_rejects_explicit_older_schema() -> None:

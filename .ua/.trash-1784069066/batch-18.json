@@ -1,0 +1,3746 @@
+{
+  "batchIndex": 18,
+  "nodes": [
+    {
+      "id": "file:tests/test_interview_heuristic.py",
+      "type": "file",
+      "name": "test_interview_heuristic.py",
+      "path": "tests/test_interview_heuristic.py",
+      "description": "Testes de heurística de entrevista - verifica pontuação determinística e explicável das dimensões",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 23
+      }
+    },
+    {
+      "id": "function:tests/test_interview_heuristic.py::test_FR_007_deterministic_score_is_explainable",
+      "type": "function",
+      "name": "test_FR_007_deterministic_score_is_explainable",
+      "path": "tests/test_interview_heuristic.py",
+      "description": "Teste: FR 007 deterministic score is explainable",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 8,
+        "endLine": 23,
+        "params": [],
+        "parent_file": "tests/test_interview_heuristic.py"
+      }
+    },
+    {
+      "id": "file:tests/test_interview_persistence.py",
+      "type": "file",
+      "name": "test_interview_persistence.py",
+      "path": "tests/test_interview_persistence.py",
+      "description": "Testes de persistência da sessão de entrevista v4 - round-trip de estado e compatibilidade de schema",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 38
+      }
+    },
+    {
+      "id": "function:tests/test_interview_persistence.py::test_v4_interview_state_round_trip",
+      "type": "function",
+      "name": "test_v4_interview_state_round_trip",
+      "path": "tests/test_interview_persistence.py",
+      "description": "Teste: v4 interview state round trip",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 11,
+        "endLine": 26,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_interview_persistence.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_persistence.py::test_v4_rejects_explicit_older_schema",
+      "type": "function",
+      "name": "test_v4_rejects_explicit_older_schema",
+      "path": "tests/test_interview_persistence.py",
+      "description": "Teste: v4 rejects explicit older schema",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 29,
+        "endLine": 31,
+        "params": [],
+        "parent_file": "tests/test_interview_persistence.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_persistence.py::test_v4_missing_schema_is_treated_as_fresh_payload",
+      "type": "function",
+      "name": "test_v4_missing_schema_is_treated_as_fresh_payload",
+      "path": "tests/test_interview_persistence.py",
+      "description": "Teste: v4 missing schema is treated as fresh payload",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 34,
+        "endLine": 38,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_interview_persistence.py"
+      }
+    },
+    {
+      "id": "file:tests/test_interview_quality.py",
+      "type": "file",
+      "name": "test_interview_quality.py",
+      "path": "tests/test_interview_quality.py",
+      "description": "Testes de qualidade de entrevista - métricas determinísticas, taxa de resposta induzida e preservação de idioma",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 41
+      }
+    },
+    {
+      "id": "function:tests/test_interview_quality.py::_corpus",
+      "type": "function",
+      "name": "_corpus",
+      "path": "tests/test_interview_quality.py",
+      "description": "Função auxiliar privada '_corpus' em test_interview_quality.py",
+      "tags": [
+        "python",
+        "private"
+      ],
+      "metadata": {
+        "startLine": 13,
+        "endLine": 15,
+        "params": [],
+        "parent_file": "tests/test_interview_quality.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_quality.py::test_v4_quality_metrics_are_deterministic",
+      "type": "function",
+      "name": "test_v4_quality_metrics_are_deterministic",
+      "path": "tests/test_interview_quality.py",
+      "description": "Teste: v4 quality metrics are deterministic",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 18,
+        "endLine": 26,
+        "params": [],
+        "parent_file": "tests/test_interview_quality.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_quality.py::test_v4_quality_report_contains_named_metrics",
+      "type": "function",
+      "name": "test_v4_quality_report_contains_named_metrics",
+      "path": "tests/test_interview_quality.py",
+      "description": "Teste: v4 quality report contains named metrics",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 29,
+        "endLine": 33,
+        "params": [],
+        "parent_file": "tests/test_interview_quality.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_quality.py::test_FR_019_induced_answer_rate_is_reported",
+      "type": "function",
+      "name": "test_FR_019_induced_answer_rate_is_reported",
+      "path": "tests/test_interview_quality.py",
+      "description": "Teste: FR 019 induced answer rate is reported",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 36,
+        "endLine": 37,
+        "params": [],
+        "parent_file": "tests/test_interview_quality.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_quality.py::test_FR_020_original_language_preservation_is_reported",
+      "type": "function",
+      "name": "test_FR_020_original_language_preservation_is_reported",
+      "path": "tests/test_interview_quality.py",
+      "description": "Teste: FR 020 original language preservation is reported",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 40,
+        "endLine": 41,
+        "params": [],
+        "parent_file": "tests/test_interview_quality.py"
+      }
+    },
+    {
+      "id": "file:tests/test_interview_session_v4.py",
+      "type": "file",
+      "name": "test_interview_session_v4.py",
+      "path": "tests/test_interview_session_v4.py",
+      "description": "Testes de sessão de entrevista v4 - persistência de respostas, tolerância a falhas LLM e bootstrap",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 170
+      }
+    },
+    {
+      "id": "function:tests/test_interview_session_v4.py::test_v4_actions_persist_original_answer_and_projection",
+      "type": "function",
+      "name": "test_v4_actions_persist_original_answer_and_projection",
+      "path": "tests/test_interview_session_v4.py",
+      "description": "Teste: v4 actions persist original answer and projection",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 48,
+        "endLine": 73,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_interview_session_v4.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_session_v4.py::test_start_persists_interview_when_first_question_llm_fails",
+      "type": "function",
+      "name": "test_start_persists_interview_when_first_question_llm_fails",
+      "path": "tests/test_interview_session_v4.py",
+      "description": "Teste: start persists interview when first question llm fails",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 128,
+        "endLine": 151,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_interview_session_v4.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_session_v4.py::test_generate_other_question_bootstraps_missing_interview",
+      "type": "function",
+      "name": "test_generate_other_question_bootstraps_missing_interview",
+      "path": "tests/test_interview_session_v4.py",
+      "description": "Teste: generate other question bootstraps missing interview",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 154,
+        "endLine": 170,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_interview_session_v4.py"
+      }
+    },
+    {
+      "id": "class:tests/test_interview_session_v4.py::V4Agent",
+      "type": "class",
+      "name": "V4Agent",
+      "path": "tests/test_interview_session_v4.py",
+      "description": "Classe auxiliar de teste 'V4Agent' em test_interview_session_v4.py",
+      "tags": [
+        "python",
+        "test_helper"
+      ],
+      "metadata": {
+        "startLine": 10,
+        "endLine": 45,
+        "methods": [
+          "run"
+        ],
+        "parent_file": "tests/test_interview_session_v4.py"
+      }
+    },
+    {
+      "id": "class:tests/test_interview_session_v4.py::FailingThenOkAgent",
+      "type": "class",
+      "name": "FailingThenOkAgent",
+      "path": "tests/test_interview_session_v4.py",
+      "description": "Classe auxiliar de teste 'FailingThenOkAgent' em test_interview_session_v4.py",
+      "tags": [
+        "python",
+        "test_helper"
+      ],
+      "metadata": {
+        "startLine": 76,
+        "endLine": 125,
+        "methods": [
+          "__init__",
+          "run"
+        ],
+        "parent_file": "tests/test_interview_session_v4.py"
+      }
+    },
+    {
+      "id": "file:tests/test_interview_session.py",
+      "type": "file",
+      "name": "test_interview_session.py",
+      "path": "tests/test_interview_session.py",
+      "description": "Testes de sessão de entrevista - explicação de questão e fechamento pelo controlador",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 26
+      }
+    },
+    {
+      "id": "function:tests/test_interview_session.py::test_FR_015_system_explains_question_and_closure",
+      "type": "function",
+      "name": "test_FR_015_system_explains_question_and_closure",
+      "path": "tests/test_interview_session.py",
+      "description": "Teste: FR 015 system explains question and closure",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 7,
+        "endLine": 26,
+        "params": [],
+        "parent_file": "tests/test_interview_session.py"
+      }
+    },
+    {
+      "id": "file:tests/test_interview_ui.py",
+      "type": "file",
+      "name": "test_interview_ui.py",
+      "path": "tests/test_interview_ui.py",
+      "description": "Testes de interface da entrevista - dimensões do gráfico, contador e campos de explicação",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 78
+      }
+    },
+    {
+      "id": "function:tests/test_interview_ui.py::test_v4_ui_exposes_the_same_flat_dimensions_for_chart_and_list",
+      "type": "function",
+      "name": "test_v4_ui_exposes_the_same_flat_dimensions_for_chart_and_list",
+      "path": "tests/test_interview_ui.py",
+      "description": "Teste: v4 ui exposes the same flat dimensions for chart and list",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 13,
+        "endLine": 44,
+        "params": [],
+        "parent_file": "tests/test_interview_ui.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_ui.py::test_FR_016_counter_uses_the_dimension_collection",
+      "type": "function",
+      "name": "test_FR_016_counter_uses_the_dimension_collection",
+      "path": "tests/test_interview_ui.py",
+      "description": "Teste: FR 016 counter uses the dimension collection",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 47,
+        "endLine": 51,
+        "params": [],
+        "parent_file": "tests/test_interview_ui.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_ui.py::test_FR_017_chart_and_list_ids_are_identical",
+      "type": "function",
+      "name": "test_FR_017_chart_and_list_ids_are_identical",
+      "path": "tests/test_interview_ui.py",
+      "description": "Teste: FR 017 chart and list ids are identical",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 54,
+        "endLine": 59,
+        "params": [],
+        "parent_file": "tests/test_interview_ui.py"
+      }
+    },
+    {
+      "id": "function:tests/test_interview_ui.py::test_FR_018_dimension_contains_explanation_fields",
+      "type": "function",
+      "name": "test_FR_018_dimension_contains_explanation_fields",
+      "path": "tests/test_interview_ui.py",
+      "description": "Teste: FR 018 dimension contains explanation fields",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 62,
+        "endLine": 78,
+        "params": [],
+        "parent_file": "tests/test_interview_ui.py"
+      }
+    },
+    {
+      "id": "file:tests/test_isolation_integration.py",
+      "type": "file",
+      "name": "test_isolation_integration.py",
+      "path": "tests/test_isolation_integration.py",
+      "description": "Testes de integração de isolamento - workspace isolado para execução LLM e prevenção de traversal",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 163
+      }
+    },
+    {
+      "id": "function:tests/test_isolation_integration.py::_ok",
+      "type": "function",
+      "name": "_ok",
+      "path": "tests/test_isolation_integration.py",
+      "description": "Função auxiliar privada '_ok' em test_isolation_integration.py",
+      "tags": [
+        "python",
+        "private"
+      ],
+      "metadata": {
+        "startLine": 16,
+        "endLine": 17,
+        "params": [
+          "stdout",
+          "stderr",
+          "returncode"
+        ],
+        "parent_file": "tests/test_isolation_integration.py"
+      }
+    },
+    {
+      "id": "function:tests/test_isolation_integration.py::test_agent_wrapper_workspace_is_not_project_root",
+      "type": "function",
+      "name": "test_agent_wrapper_workspace_is_not_project_root",
+      "path": "tests/test_isolation_integration.py",
+      "description": "Teste: agent wrapper workspace is not project root",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 20,
+        "endLine": 49,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_isolation_integration.py"
+      }
+    },
+    {
+      "id": "function:tests/test_isolation_integration.py::test_agent_wrapper_subprocess_receives_isolated_cwd",
+      "type": "function",
+      "name": "test_agent_wrapper_subprocess_receives_isolated_cwd",
+      "path": "tests/test_isolation_integration.py",
+      "description": "Teste: agent wrapper subprocess receives isolated cwd",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 52,
+        "endLine": 78,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_isolation_integration.py"
+      }
+    },
+    {
+      "id": "function:tests/test_isolation_integration.py::test_codex_llm_client_creates_isolated_workspace",
+      "type": "function",
+      "name": "test_codex_llm_client_creates_isolated_workspace",
+      "path": "tests/test_isolation_integration.py",
+      "description": "Teste: codex llm client creates isolated workspace",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 81,
+        "endLine": 110,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_isolation_integration.py"
+      }
+    },
+    {
+      "id": "function:tests/test_isolation_integration.py::test_workspace_isolation_prevents_traversal_in_destination",
+      "type": "function",
+      "name": "test_workspace_isolation_prevents_traversal_in_destination",
+      "path": "tests/test_isolation_integration.py",
+      "description": "Teste: workspace isolation prevents traversal in destination",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 113,
+        "endLine": 130,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_isolation_integration.py"
+      }
+    },
+    {
+      "id": "function:tests/test_isolation_integration.py::test_full_isolation_chain",
+      "type": "function",
+      "name": "test_full_isolation_chain",
+      "path": "tests/test_isolation_integration.py",
+      "description": "Teste: full isolation chain",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 133,
+        "endLine": 163,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_isolation_integration.py"
+      }
+    },
+    {
+      "id": "file:tests/test_llm_config.py",
+      "type": "file",
+      "name": "test_llm_config.py",
+      "path": "tests/test_llm_config.py",
+      "description": "Testes de configuração LLM - resolução de operações, defaults, migração legada e independência editorial",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 239
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::isolated_config",
+      "type": "function",
+      "name": "isolated_config",
+      "path": "tests/test_llm_config.py",
+      "description": "Função 'isolated_config' em test_llm_config.py",
+      "tags": [
+        "python"
+      ],
+      "metadata": {
+        "startLine": 21,
+        "endLine": 25,
+        "params": [
+          "tmp_path",
+          "monkeypatch"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_resolve_uses_defaults_without_files",
+      "type": "function",
+      "name": "test_resolve_uses_defaults_without_files",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: resolve uses defaults without files",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 28,
+        "endLine": 34,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_requested_operation_defaults",
+      "type": "function",
+      "name": "test_requested_operation_defaults",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: requested operation defaults",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 37,
+        "endLine": 54,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_legacy_yaml_keys_map_to_interview_ops",
+      "type": "function",
+      "name": "test_legacy_yaml_keys_map_to_interview_ops",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: legacy yaml keys map to interview ops",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 57,
+        "endLine": 71,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_content_generate_migrates_to_post_generate",
+      "type": "function",
+      "name": "test_content_generate_migrates_to_post_generate",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: content generate migrates to post generate",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 74,
+        "endLine": 94,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_content_generate_no_longer_exists",
+      "type": "function",
+      "name": "test_content_generate_no_longer_exists",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: content generate no longer exists",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 97,
+        "endLine": 100,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_post_generate_default",
+      "type": "function",
+      "name": "test_post_generate_default",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: post generate default",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 103,
+        "endLine": 107,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_editorial_operations_have_independent_defaults",
+      "type": "function",
+      "name": "test_editorial_operations_have_independent_defaults",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: editorial operations have independent defaults",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 110,
+        "endLine": 114,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_editorial_operations_resolve_independently",
+      "type": "function",
+      "name": "test_editorial_operations_resolve_independently",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: editorial operations resolve independently",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 117,
+        "endLine": 154,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_changing_storyboard_does_not_change_compose",
+      "type": "function",
+      "name": "test_changing_storyboard_does_not_change_compose",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: changing storyboard does not change compose",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 157,
+        "endLine": 174,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_changing_block_draft_does_not_change_approaches",
+      "type": "function",
+      "name": "test_changing_block_draft_does_not_change_approaches",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: changing block draft does not change approaches",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 177,
+        "endLine": 199,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_slidemark_export_operation_default",
+      "type": "function",
+      "name": "test_slidemark_export_operation_default",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: slidemark export operation default",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 202,
+        "endLine": 207,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_global_yaml_overrides_defaults",
+      "type": "function",
+      "name": "test_global_yaml_overrides_defaults",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: global yaml overrides defaults",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 210,
+        "endLine": 218,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_resolve_all_returns_all_operations",
+      "type": "function",
+      "name": "test_resolve_all_returns_all_operations",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: resolve all returns all operations",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 221,
+        "endLine": 231,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_config.py::test_ensure_default_config_file_creates_yaml",
+      "type": "function",
+      "name": "test_ensure_default_config_file_creates_yaml",
+      "path": "tests/test_llm_config.py",
+      "description": "Teste: ensure default config file creates yaml",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 234,
+        "endLine": 239,
+        "params": [
+          "isolated_config"
+        ],
+        "parent_file": "tests/test_llm_config.py"
+      }
+    },
+    {
+      "id": "file:tests/test_llm_json_parser.py",
+      "type": "file",
+      "name": "test_llm_json_parser.py",
+      "path": "tests/test_llm_json_parser.py",
+      "description": "Testes do parser JSON LLM - extração de objetos de output NDJSON, fences markdown e payloads opencode",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 134
+      }
+    },
+    {
+      "id": "function:tests/test_llm_json_parser.py::_opencode_ndjson_with_fenced_payload",
+      "type": "function",
+      "name": "_opencode_ndjson_with_fenced_payload",
+      "path": "tests/test_llm_json_parser.py",
+      "description": "Função auxiliar privada '_opencode_ndjson_with_fenced_payload' em test_llm_json_parser.py",
+      "tags": [
+        "python",
+        "private"
+      ],
+      "metadata": {
+        "startLine": 9,
+        "endLine": 36,
+        "params": [
+          "payload"
+        ],
+        "parent_file": "tests/test_llm_json_parser.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_json_parser.py::test_parser_opencode_part_text_markdown_fence_candidatas",
+      "type": "function",
+      "name": "test_parser_opencode_part_text_markdown_fence_candidatas",
+      "path": "tests/test_llm_json_parser.py",
+      "description": "Teste: parser opencode part text markdown fence candidatas",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 39,
+        "endLine": 59,
+        "params": [],
+        "parent_file": "tests/test_llm_json_parser.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_json_parser.py::test_parser_codex_legacy_item_text_still_works",
+      "type": "function",
+      "name": "test_parser_codex_legacy_item_text_still_works",
+      "path": "tests/test_llm_json_parser.py",
+      "description": "Teste: parser codex legacy item text still works",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 62,
+        "endLine": 77,
+        "params": [],
+        "parent_file": "tests/test_llm_json_parser.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_json_parser.py::test_parser_opencode_prefers_payload_over_envelope",
+      "type": "function",
+      "name": "test_parser_opencode_prefers_payload_over_envelope",
+      "path": "tests/test_llm_json_parser.py",
+      "description": "Teste: parser opencode prefers payload over envelope",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 80,
+        "endLine": 90,
+        "params": [],
+        "parent_file": "tests/test_llm_json_parser.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_json_parser.py::test_parser_real_session_opencode_stdout_excerpt",
+      "type": "function",
+      "name": "test_parser_real_session_opencode_stdout_excerpt",
+      "path": "tests/test_llm_json_parser.py",
+      "description": "Teste: parser real session opencode stdout excerpt",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 93,
+        "endLine": 134,
+        "params": [],
+        "parent_file": "tests/test_llm_json_parser.py"
+      }
+    },
+    {
+      "id": "file:tests/test_llm_workspace.py",
+      "type": "file",
+      "name": "test_llm_workspace.py",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Testes de workspace LLM - criação, destruição, cópia de arquivos permitidos, symlinks e contexto isolado",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 237
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_create_creates_temp_directory",
+      "type": "function",
+      "name": "test_create_creates_temp_directory",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: create creates temp directory",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 17,
+        "endLine": 25,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_destroy_removes_directory",
+      "type": "function",
+      "name": "test_destroy_removes_directory",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: destroy removes directory",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 28,
+        "endLine": 33,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_destroy_persistent_keeps_directory",
+      "type": "function",
+      "name": "test_destroy_persistent_keeps_directory",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: destroy persistent keeps directory",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 36,
+        "endLine": 44,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_copy_allowed_file",
+      "type": "function",
+      "name": "test_copy_allowed_file",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: copy allowed file",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 47,
+        "endLine": 60,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_copy_denied_file_raises",
+      "type": "function",
+      "name": "test_copy_denied_file_raises",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: copy denied file raises",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 63,
+        "endLine": 71,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_copy_from_denied_directory_raises",
+      "type": "function",
+      "name": "test_copy_from_denied_directory_raises",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: copy from denied directory raises",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 74,
+        "endLine": 84,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_symlink_rejected",
+      "type": "function",
+      "name": "test_symlink_rejected",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: symlink rejected",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 87,
+        "endLine": 97,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_nonexistent_file_raises",
+      "type": "function",
+      "name": "test_nonexistent_file_raises",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: nonexistent file raises",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 100,
+        "endLine": 106,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_isolated_workspace_context_manager",
+      "type": "function",
+      "name": "test_isolated_workspace_context_manager",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: isolated workspace context manager",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 109,
+        "endLine": 114,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_isolated_workspace_cleanup_on_exception",
+      "type": "function",
+      "name": "test_isolated_workspace_cleanup_on_exception",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: isolated workspace cleanup on exception",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 117,
+        "endLine": 122,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_manifest_to_log_dict",
+      "type": "function",
+      "name": "test_manifest_to_log_dict",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: manifest to log dict",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 125,
+        "endLine": 134,
+        "params": [],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_workspace_to_log_dict",
+      "type": "function",
+      "name": "test_workspace_to_log_dict",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: workspace to log dict",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 137,
+        "endLine": 150,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_workspace_persistent_log_mode",
+      "type": "function",
+      "name": "test_workspace_persistent_log_mode",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: workspace persistent log mode",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 153,
+        "endLine": 166,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_allowed_files_for_operation_returns_empty_list",
+      "type": "function",
+      "name": "test_allowed_files_for_operation_returns_empty_list",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: allowed files for operation returns empty list",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 169,
+        "endLine": 171,
+        "params": [],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_destroy_idempotent",
+      "type": "function",
+      "name": "test_destroy_idempotent",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: destroy idempotent",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 174,
+        "endLine": 177,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_copy_allowed_directory",
+      "type": "function",
+      "name": "test_copy_allowed_directory",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: copy allowed directory",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 180,
+        "endLine": 194,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_copy_directory_ignores_denied_subdirs",
+      "type": "function",
+      "name": "test_copy_directory_ignores_denied_subdirs",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: copy directory ignores denied subdirs",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 197,
+        "endLine": 212,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:tests/test_llm_workspace.py::test_no_project_files_leak_into_workspace",
+      "type": "function",
+      "name": "test_no_project_files_leak_into_workspace",
+      "path": "tests/test_llm_workspace.py",
+      "description": "Teste: no project files leak into workspace",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 215,
+        "endLine": 237,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_llm_workspace.py"
+      }
+    },
+    {
+      "id": "file:tests/test_parse_generation_payload.py",
+      "type": "file",
+      "name": "test_parse_generation_payload.py",
+      "path": "tests/test_parse_generation_payload.py",
+      "description": "Testes de parsing de payload de geração - conteúdo texto, slidemark, slides legados e sugestões de imagem",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 100
+      }
+    },
+    {
+      "id": "function:tests/test_parse_generation_payload.py::_slidemark_minimo",
+      "type": "function",
+      "name": "_slidemark_minimo",
+      "path": "tests/test_parse_generation_payload.py",
+      "description": "Função auxiliar privada '_slidemark_minimo' em test_parse_generation_payload.py",
+      "tags": [
+        "python",
+        "private"
+      ],
+      "metadata": {
+        "startLine": 10,
+        "endLine": 41,
+        "params": [],
+        "parent_file": "tests/test_parse_generation_payload.py"
+      }
+    },
+    {
+      "id": "function:tests/test_parse_generation_payload.py::test_parse_conteudo_texto_simples",
+      "type": "function",
+      "name": "test_parse_conteudo_texto_simples",
+      "path": "tests/test_parse_generation_payload.py",
+      "description": "Teste: parse conteudo texto simples",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 44,
+        "endLine": 57,
+        "params": [],
+        "parent_file": "tests/test_parse_generation_payload.py"
+      }
+    },
+    {
+      "id": "function:tests/test_parse_generation_payload.py::test_parse_slidemark_deriva_conteudo",
+      "type": "function",
+      "name": "test_parse_slidemark_deriva_conteudo",
+      "path": "tests/test_parse_generation_payload.py",
+      "description": "Teste: parse slidemark deriva conteudo",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 60,
+        "endLine": 68,
+        "params": [],
+        "parent_file": "tests/test_parse_generation_payload.py"
+      }
+    },
+    {
+      "id": "function:tests/test_parse_generation_payload.py::test_parse_slides_legacy",
+      "type": "function",
+      "name": "test_parse_slides_legacy",
+      "path": "tests/test_parse_generation_payload.py",
+      "description": "Teste: parse slides legacy",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 71,
+        "endLine": 81,
+        "params": [],
+        "parent_file": "tests/test_parse_generation_payload.py"
+      }
+    },
+    {
+      "id": "function:tests/test_parse_generation_payload.py::test_parse_sugestoes_imagem",
+      "type": "function",
+      "name": "test_parse_sugestoes_imagem",
+      "path": "tests/test_parse_generation_payload.py",
+      "description": "Teste: parse sugestoes imagem",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 84,
+        "endLine": 100,
+        "params": [],
+        "parent_file": "tests/test_parse_generation_payload.py"
+      }
+    },
+    {
+      "id": "file:tests/test_post_evaluation_prompt.py",
+      "type": "file",
+      "name": "test_post_evaluation_prompt.py",
+      "path": "tests/test_post_evaluation_prompt.py",
+      "description": "Testes de prompt de avaliação de post - existência e seções obrigatórias do prompt short_carousel",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 14
+      }
+    },
+    {
+      "id": "function:tests/test_post_evaluation_prompt.py::test_prompt_short_carousel_existe",
+      "type": "function",
+      "name": "test_prompt_short_carousel_existe",
+      "path": "tests/test_post_evaluation_prompt.py",
+      "description": "Teste: prompt short carousel existe",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 7,
+        "endLine": 8,
+        "params": [],
+        "parent_file": "tests/test_post_evaluation_prompt.py"
+      }
+    },
+    {
+      "id": "function:tests/test_post_evaluation_prompt.py::test_prompt_short_carousel_contem_secoes_obrigatorias",
+      "type": "function",
+      "name": "test_prompt_short_carousel_contem_secoes_obrigatorias",
+      "path": "tests/test_post_evaluation_prompt.py",
+      "description": "Teste: prompt short carousel contem secoes obrigatorias",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 11,
+        "endLine": 14,
+        "params": [],
+        "parent_file": "tests/test_post_evaluation_prompt.py"
+      }
+    },
+    {
+      "id": "file:tests/test_spec_022_023_049_057.py",
+      "type": "file",
+      "name": "test_spec_022_023_049_057.py",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Testes de especificações - personas, regras de trilhas, estrutura de pastas e exportação markdown/txt",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 250
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_022_personas_existem",
+      "type": "function",
+      "name": "test_spec_022_personas_existem",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 022 personas existem",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 26,
+        "endLine": 33,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_022_personas_contem_yaml_resumo",
+      "type": "function",
+      "name": "test_spec_022_personas_contem_yaml_resumo",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 022 personas contem yaml resumo",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 36,
+        "endLine": 46,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_022_aceita_somente_formatos_atuais",
+      "type": "function",
+      "name": "test_spec_022_aceita_somente_formatos_atuais",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 022 aceita somente formatos atuais",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 49,
+        "endLine": 64,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_023_rules_existem_para_quatro_trilhas",
+      "type": "function",
+      "name": "test_spec_023_rules_existem_para_quatro_trilhas",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 023 rules existem para quatro trilhas",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 67,
+        "endLine": 74,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_023_rules_contem_secao_regras_conteudo",
+      "type": "function",
+      "name": "test_spec_023_rules_contem_secao_regras_conteudo",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 023 rules contem secao regras conteudo",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 77,
+        "endLine": 85,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_023_prompt_builder_seleciona_apenas_arquivo_ativo",
+      "type": "function",
+      "name": "test_spec_023_prompt_builder_seleciona_apenas_arquivo_ativo",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 023 prompt builder seleciona apenas arquivo ativo",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 88,
+        "endLine": 106,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_049_estrutura_de_pastas",
+      "type": "function",
+      "name": "test_spec_049_estrutura_de_pastas",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 049 estrutura de pastas",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 109,
+        "endLine": 120,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_049_prompts_root_aponta_para_prompts_do_projeto",
+      "type": "function",
+      "name": "test_spec_049_prompts_root_aponta_para_prompts_do_projeto",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 049 prompts root aponta para prompts do projeto",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 123,
+        "endLine": 124,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_049_data_dir_aponta_para_data_sessions_do_projeto",
+      "type": "function",
+      "name": "test_spec_049_data_dir_aponta_para_data_sessions_do_projeto",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 049 data dir aponta para data sessions do projeto",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 127,
+        "endLine": 131,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportar_markdown_salva_conteudo",
+      "type": "function",
+      "name": "test_spec_057_exportar_markdown_salva_conteudo",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 057 exportar markdown salva conteudo",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 134,
+        "endLine": 144,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportar_txt_salva_conteudo",
+      "type": "function",
+      "name": "test_spec_057_exportar_txt_salva_conteudo",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 057 exportar txt salva conteudo",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 147,
+        "endLine": 157,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportacao_md_e_txt_consistentes",
+      "type": "function",
+      "name": "test_spec_057_exportacao_md_e_txt_consistentes",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 057 exportacao md e txt consistentes",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 160,
+        "endLine": 177,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_057_sanitizacao_nome_arquivo",
+      "type": "function",
+      "name": "test_spec_057_sanitizacao_nome_arquivo",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 057 sanitizacao nome arquivo",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 180,
+        "endLine": 189,
+        "params": [],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_057_nome_arquivo_base_composto",
+      "type": "function",
+      "name": "test_spec_057_nome_arquivo_base_composto",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 057 nome arquivo base composto",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 192,
+        "endLine": 204,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportacao_cria_diretorio",
+      "type": "function",
+      "name": "test_spec_057_exportacao_cria_diretorio",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 057 exportacao cria diretorio",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 207,
+        "endLine": 217,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportacao_nao_automatica_no_generator",
+      "type": "function",
+      "name": "test_spec_057_exportacao_nao_automatica_no_generator",
+      "path": "tests/test_spec_022_023_049_057.py",
+      "description": "Teste: spec 057 exportacao nao automatica no generator",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 220,
+        "endLine": 250,
+        "params": [
+          "tmp_path",
+          "monkeypatch"
+        ],
+        "parent_file": "tests/test_spec_022_023_049_057.py"
+      }
+    },
+    {
+      "id": "file:tests/test_spec_028_029.py",
+      "type": "file",
+      "name": "test_spec_028_029.py",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Testes de especificações 028/029 - montagem de comandos codex/opencode, parsing JSONL e tratamento de erros",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 413
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::_ok",
+      "type": "function",
+      "name": "_ok",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Função auxiliar privada '_ok' em test_spec_028_029.py",
+      "tags": [
+        "python",
+        "private"
+      ],
+      "metadata": {
+        "startLine": 14,
+        "endLine": 15,
+        "params": [
+          "stdout",
+          "stderr",
+          "returncode"
+        ],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::_capture_runner",
+      "type": "function",
+      "name": "_capture_runner",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Função auxiliar privada '_capture_runner' em test_spec_028_029.py",
+      "tags": [
+        "python",
+        "private"
+      ],
+      "metadata": {
+        "startLine": 18,
+        "endLine": 24,
+        "params": [
+          "captured"
+        ],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_codex_command_assembly_all_params",
+      "type": "function",
+      "name": "test_codex_command_assembly_all_params",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: codex command assembly all params",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 27,
+        "endLine": 61,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_codex_command_default_ephemeral_only",
+      "type": "function",
+      "name": "test_codex_command_default_ephemeral_only",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: codex command default ephemeral only",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 64,
+        "endLine": 85,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_codex_no_ephemeral_and_no_ignore_user_config",
+      "type": "function",
+      "name": "test_codex_no_ephemeral_and_no_ignore_user_config",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: codex no ephemeral and no ignore user config",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 88,
+        "endLine": 95,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_opencode_command_assembly_all_params",
+      "type": "function",
+      "name": "test_opencode_command_assembly_all_params",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: opencode command assembly all params",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 98,
+        "endLine": 125,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_opencode_command_minimal",
+      "type": "function",
+      "name": "test_opencode_command_minimal",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: opencode command minimal",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 128,
+        "endLine": 134,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_opencode_command_uses_medium_variant",
+      "type": "function",
+      "name": "test_opencode_command_uses_medium_variant",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: opencode command uses medium variant",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 137,
+        "endLine": 145,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_opencode_command_ignores_codex_only_reasoning_levels",
+      "type": "function",
+      "name": "test_opencode_command_ignores_codex_only_reasoning_levels",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: opencode command ignores codex only reasoning levels",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 148,
+        "endLine": 154,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_both_include_workspace_in_cwd_and_kwarg",
+      "type": "function",
+      "name": "test_both_include_workspace_in_cwd_and_kwarg",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: both include workspace in cwd and kwarg",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 157,
+        "endLine": 171,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_prompt_preserved_as_last_element_both",
+      "type": "function",
+      "name": "test_prompt_preserved_as_last_element_both",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: prompt preserved as last element both",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 174,
+        "endLine": 192,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_run_dispatches_to_codex_and_opencode",
+      "type": "function",
+      "name": "test_run_dispatches_to_codex_and_opencode",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: run dispatches to codex and opencode",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 195,
+        "endLine": 202,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_run_raises_value_error_on_unknown_tool",
+      "type": "function",
+      "name": "test_run_raises_value_error_on_unknown_tool",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: run raises value error on unknown tool",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 205,
+        "endLine": 208,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_workspace_path_resolved_in_init",
+      "type": "function",
+      "name": "test_workspace_path_resolved_in_init",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: workspace path resolved in init",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 211,
+        "endLine": 214,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_env_merged_with_os_environ",
+      "type": "function",
+      "name": "test_env_merged_with_os_environ",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: env merged with os environ",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 217,
+        "endLine": 221,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_instantiation_does_not_execute",
+      "type": "function",
+      "name": "test_instantiation_does_not_execute",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: instantiation does not execute",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 224,
+        "endLine": 225,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_jsonl_events_parsed_when_json_output",
+      "type": "function",
+      "name": "test_jsonl_events_parsed_when_json_output",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: jsonl events parsed when json output",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 228,
+        "endLine": 243,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_jsonl_raw_fallback_for_invalid_lines",
+      "type": "function",
+      "name": "test_jsonl_raw_fallback_for_invalid_lines",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: jsonl raw fallback for invalid lines",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 246,
+        "endLine": 261,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_jsonl_empty_lines_skipped",
+      "type": "function",
+      "name": "test_jsonl_empty_lines_skipped",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: jsonl empty lines skipped",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 264,
+        "endLine": 271,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_jsonl_not_parsed_when_json_output_false",
+      "type": "function",
+      "name": "test_jsonl_not_parsed_when_json_output_false",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: jsonl not parsed when json output false",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 274,
+        "endLine": 280,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_subclass_overriding_run_subprocess",
+      "type": "function",
+      "name": "test_subclass_overriding_run_subprocess",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: subclass overriding run subprocess",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 283,
+        "endLine": 313,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_filenotfound_returns_127_with_message",
+      "type": "function",
+      "name": "test_filenotfound_returns_127_with_message",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: filenotfound returns 127 with message",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 316,
+        "endLine": 324,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_permissionerror_returns_126_with_message",
+      "type": "function",
+      "name": "test_permissionerror_returns_126_with_message",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: permissionerror returns 126 with message",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 327,
+        "endLine": 337,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_timeoutexpired_returns_124_with_message",
+      "type": "function",
+      "name": "test_timeoutexpired_returns_124_with_message",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: timeoutexpired returns 124 with message",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 340,
+        "endLine": 350,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_nonzero_returncode_captured_in_result",
+      "type": "function",
+      "name": "test_nonzero_returncode_captured_in_result",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: nonzero returncode captured in result",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 353,
+        "endLine": 362,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_empty_stdout_nonempty_stderr_sets_error",
+      "type": "function",
+      "name": "test_empty_stdout_nonempty_stderr_sets_error",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: empty stdout nonempty stderr sets error",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 365,
+        "endLine": 375,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_success_with_both_streams_populated",
+      "type": "function",
+      "name": "test_success_with_both_streams_populated",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: success with both streams populated",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 378,
+        "endLine": 385,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_jsonl_invalid_line_preserved_as_raw_event_in_subprocess_path",
+      "type": "function",
+      "name": "test_jsonl_invalid_line_preserved_as_raw_event_in_subprocess_path",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: jsonl invalid line preserved as raw event in subprocess path",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 388,
+        "endLine": 401,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_028_029.py::test_no_real_codex_or_opencode_invocation",
+      "type": "function",
+      "name": "test_no_real_codex_or_opencode_invocation",
+      "path": "tests/test_spec_028_029.py",
+      "description": "Teste: no real codex or opencode invocation",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 404,
+        "endLine": 413,
+        "params": [],
+        "parent_file": "tests/test_spec_028_029.py"
+      }
+    },
+    {
+      "id": "file:tests/test_spec_050_051.py",
+      "type": "file",
+      "name": "test_spec_050_051.py",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Testes de especificações 050/051 - carregamento de prompts, renderização de templates e substituição de placeholders",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 178
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_prompts_root_aponta_para_diretorio_prompts",
+      "type": "function",
+      "name": "test_prompts_root_aponta_para_diretorio_prompts",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: prompts root aponta para diretorio prompts",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 17,
+        "endLine": 22,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_load_prompt_generator_base_retorna_string_nao_vazia",
+      "type": "function",
+      "name": "test_load_prompt_generator_base_retorna_string_nao_vazia",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: load prompt generator base retorna string nao vazia",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 25,
+        "endLine": 28,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_load_prompt_avaliacao_autoria_v4",
+      "type": "function",
+      "name": "test_load_prompt_avaliacao_autoria_v4",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: load prompt avaliacao autoria v4",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 31,
+        "endLine": 34,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_load_prompt_desconhecido_levanta_file_not_found",
+      "type": "function",
+      "name": "test_load_prompt_desconhecido_levanta_file_not_found",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: load prompt desconhecido levanta file not found",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 37,
+        "endLine": 42,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_load_prompt_caminho_relativo_direto",
+      "type": "function",
+      "name": "test_load_prompt_caminho_relativo_direto",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: load prompt caminho relativo direto",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 45,
+        "endLine": 48,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_prompt_exists_para_nomes_conhecidos",
+      "type": "function",
+      "name": "test_prompt_exists_para_nomes_conhecidos",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: prompt exists para nomes conhecidos",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 51,
+        "endLine": 56,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_prompt_exists_para_nomes_desconhecidos",
+      "type": "function",
+      "name": "test_prompt_exists_para_nomes_desconhecidos",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: prompt exists para nomes desconhecidos",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 59,
+        "endLine": 61,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_load_prompt_todos_os_nomes_logicos_resolvem",
+      "type": "function",
+      "name": "test_load_prompt_todos_os_nomes_logicos_resolvem",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: load prompt todos os nomes logicos resolvem",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 64,
+        "endLine": 87,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_substitui_placeholders_simples",
+      "type": "function",
+      "name": "test_render_template_substitui_placeholders_simples",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template substitui placeholders simples",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 90,
+        "endLine": 93,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_substitui_placeholders_com_chaves_duplas_atomicamente",
+      "type": "function",
+      "name": "test_render_template_substitui_placeholders_com_chaves_duplas_atomicamente",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template substitui placeholders com chaves duplas atomicamente",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 96,
+        "endLine": 99,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_chave_dupla_ausente_levanta_keyerror_sem_renderizar_a_chave_interna",
+      "type": "function",
+      "name": "test_render_template_chave_dupla_ausente_levanta_keyerror_sem_renderizar_a_chave_interna",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template chave dupla ausente levanta keyerror sem renderizar a chave interna",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 102,
+        "endLine": 105,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_chave_ausente_levanta_keyerror",
+      "type": "function",
+      "name": "test_render_template_chave_ausente_levanta_keyerror",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template chave ausente levanta keyerror",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 108,
+        "endLine": 112,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_preserva_json",
+      "type": "function",
+      "name": "test_render_template_preserva_json",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template preserva json",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 115,
+        "endLine": 124,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_preserva_acentos_e_quebras_de_linha",
+      "type": "function",
+      "name": "test_render_template_preserva_acentos_e_quebras_de_linha",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template preserva acentos e quebras de linha",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 127,
+        "endLine": 135,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_nao_avalia_expressoes",
+      "type": "function",
+      "name": "test_render_template_nao_avalia_expressoes",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template nao avalia expressoes",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 138,
+        "endLine": 141,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_nao_avalia_aritmetica_com_chave_valida",
+      "type": "function",
+      "name": "test_render_template_nao_avalia_aritmetica_com_chave_valida",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template nao avalia aritmetica com chave valida",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 144,
+        "endLine": 147,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_converte_valores_nao_strings",
+      "type": "function",
+      "name": "test_render_template_converte_valores_nao_strings",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template converte valores nao strings",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 150,
+        "endLine": 153,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_sem_placeholders_retorna_original",
+      "type": "function",
+      "name": "test_render_template_sem_placeholders_retorna_original",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template sem placeholders retorna original",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 156,
+        "endLine": 158,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_padrao_regex_somente_identificadores",
+      "type": "function",
+      "name": "test_render_template_padrao_regex_somente_identificadores",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template padrao regex somente identificadores",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 161,
+        "endLine": 166,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_chaves_repetidas_sao_substituidas",
+      "type": "function",
+      "name": "test_render_template_chaves_repetidas_sao_substituidas",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template chaves repetidas sao substituidas",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 169,
+        "endLine": 171,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_050_051.py::test_render_template_chave_com_unicode_permanece_literal",
+      "type": "function",
+      "name": "test_render_template_chave_com_unicode_permanece_literal",
+      "path": "tests/test_spec_050_051.py",
+      "description": "Teste: render template chave com unicode permanece literal",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 174,
+        "endLine": 178,
+        "params": [],
+        "parent_file": "tests/test_spec_050_051.py"
+      }
+    },
+    {
+      "id": "file:tests/test_tipo_de_post_bug.py",
+      "type": "file",
+      "name": "test_tipo_de_post_bug.py",
+      "path": "tests/test_tipo_de_post_bug.py",
+      "description": "Testes de bug tipo_de_post - preservação no state patch, snapshot e migração de formatos",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "metadata": {
+        "language": "python",
+        "totalLines": 30
+      }
+    },
+    {
+      "id": "function:tests/test_tipo_de_post_bug.py::test_tipo_de_post_preservado_no_state_patch",
+      "type": "function",
+      "name": "test_tipo_de_post_preservado_no_state_patch",
+      "path": "tests/test_tipo_de_post_bug.py",
+      "description": "Teste: tipo de post preservado no state patch",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 10,
+        "endLine": 16,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_tipo_de_post_bug.py"
+      }
+    },
+    {
+      "id": "function:tests/test_tipo_de_post_bug.py::test_tipo_de_post_snapshot_retorna_valor_correto",
+      "type": "function",
+      "name": "test_tipo_de_post_snapshot_retorna_valor_correto",
+      "path": "tests/test_tipo_de_post_bug.py",
+      "description": "Teste: tipo de post snapshot retorna valor correto",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 19,
+        "endLine": 22,
+        "params": [
+          "tmp_path"
+        ],
+        "parent_file": "tests/test_tipo_de_post_bug.py"
+      }
+    },
+    {
+      "id": "function:tests/test_tipo_de_post_bug.py::test_migrate_tipo_de_post_aceita_somente_formatos_atuais",
+      "type": "function",
+      "name": "test_migrate_tipo_de_post_aceita_somente_formatos_atuais",
+      "path": "tests/test_tipo_de_post_bug.py",
+      "description": "Teste: migrate tipo de post aceita somente formatos atuais",
+      "tags": [
+        "python",
+        "test_function"
+      ],
+      "metadata": {
+        "startLine": 25,
+        "endLine": 30,
+        "params": [],
+        "parent_file": "tests/test_tipo_de_post_bug.py"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:tests/test_interview_heuristic.py",
+      "target": "function:tests/test_interview_heuristic.py::test_FR_007_deterministic_score_is_explainable",
+      "type": "contains",
+      "description": "test_interview_heuristic.py contém test_FR_007_deterministic_score_is_explainable"
+    },
+    {
+      "source": "file:tests/test_interview_heuristic.py",
+      "target": "file:src/content_engine/interview/state.py",
+      "type": "tested_by",
+      "description": "test_interview_heuristic.py testa state.py"
+    },
+    {
+      "source": "file:tests/test_interview_heuristic.py",
+      "target": "file:src/content_engine/interview/heuristic.py",
+      "type": "tested_by",
+      "description": "test_interview_heuristic.py testa heuristic.py"
+    },
+    {
+      "source": "file:tests/test_interview_persistence.py",
+      "target": "function:tests/test_interview_persistence.py::test_v4_interview_state_round_trip",
+      "type": "contains",
+      "description": "test_interview_persistence.py contém test_v4_interview_state_round_trip"
+    },
+    {
+      "source": "file:tests/test_interview_persistence.py",
+      "target": "function:tests/test_interview_persistence.py::test_v4_rejects_explicit_older_schema",
+      "type": "contains",
+      "description": "test_interview_persistence.py contém test_v4_rejects_explicit_older_schema"
+    },
+    {
+      "source": "file:tests/test_interview_persistence.py",
+      "target": "function:tests/test_interview_persistence.py::test_v4_missing_schema_is_treated_as_fresh_payload",
+      "type": "contains",
+      "description": "test_interview_persistence.py contém test_v4_missing_schema_is_treated_as_fresh_payload"
+    },
+    {
+      "source": "file:tests/test_interview_persistence.py",
+      "target": "file:src/tui/session_state.py",
+      "type": "tested_by",
+      "description": "test_interview_persistence.py testa session_state.py"
+    },
+    {
+      "source": "file:tests/test_interview_persistence.py",
+      "target": "file:src/content_engine/interview/persistence.py",
+      "type": "tested_by",
+      "description": "test_interview_persistence.py testa persistence.py"
+    },
+    {
+      "source": "file:tests/test_interview_quality.py",
+      "target": "function:tests/test_interview_quality.py::_corpus",
+      "type": "contains",
+      "description": "test_interview_quality.py contém _corpus"
+    },
+    {
+      "source": "file:tests/test_interview_quality.py",
+      "target": "function:tests/test_interview_quality.py::test_v4_quality_metrics_are_deterministic",
+      "type": "contains",
+      "description": "test_interview_quality.py contém test_v4_quality_metrics_are_deterministic"
+    },
+    {
+      "source": "file:tests/test_interview_quality.py",
+      "target": "function:tests/test_interview_quality.py::test_v4_quality_report_contains_named_metrics",
+      "type": "contains",
+      "description": "test_interview_quality.py contém test_v4_quality_report_contains_named_metrics"
+    },
+    {
+      "source": "file:tests/test_interview_quality.py",
+      "target": "function:tests/test_interview_quality.py::test_FR_019_induced_answer_rate_is_reported",
+      "type": "contains",
+      "description": "test_interview_quality.py contém test_FR_019_induced_answer_rate_is_reported"
+    },
+    {
+      "source": "file:tests/test_interview_quality.py",
+      "target": "function:tests/test_interview_quality.py::test_FR_020_original_language_preservation_is_reported",
+      "type": "contains",
+      "description": "test_interview_quality.py contém test_FR_020_original_language_preservation_is_reported"
+    },
+    {
+      "source": "file:tests/test_interview_quality.py",
+      "target": "file:src/content_engine/interview/quality.py",
+      "type": "tested_by",
+      "description": "test_interview_quality.py testa quality.py"
+    },
+    {
+      "source": "file:tests/test_interview_session_v4.py",
+      "target": "function:tests/test_interview_session_v4.py::test_v4_actions_persist_original_answer_and_projection",
+      "type": "contains",
+      "description": "test_interview_session_v4.py contém test_v4_actions_persist_original_answer_and_projection"
+    },
+    {
+      "source": "file:tests/test_interview_session_v4.py",
+      "target": "function:tests/test_interview_session_v4.py::test_start_persists_interview_when_first_question_llm_fails",
+      "type": "contains",
+      "description": "test_interview_session_v4.py contém test_start_persists_interview_when_first_question_llm_fails"
+    },
+    {
+      "source": "file:tests/test_interview_session_v4.py",
+      "target": "function:tests/test_interview_session_v4.py::test_generate_other_question_bootstraps_missing_interview",
+      "type": "contains",
+      "description": "test_interview_session_v4.py contém test_generate_other_question_bootstraps_missing_interview"
+    },
+    {
+      "source": "file:tests/test_interview_session_v4.py",
+      "target": "class:tests/test_interview_session_v4.py::V4Agent",
+      "type": "contains",
+      "description": "test_interview_session_v4.py contém V4Agent"
+    },
+    {
+      "source": "file:tests/test_interview_session_v4.py",
+      "target": "class:tests/test_interview_session_v4.py::FailingThenOkAgent",
+      "type": "contains",
+      "description": "test_interview_session_v4.py contém FailingThenOkAgent"
+    },
+    {
+      "source": "file:tests/test_interview_session_v4.py",
+      "target": "file:src/tui/app.py",
+      "type": "tested_by",
+      "description": "test_interview_session_v4.py testa app.py"
+    },
+    {
+      "source": "file:tests/test_interview_session.py",
+      "target": "function:tests/test_interview_session.py::test_FR_015_system_explains_question_and_closure",
+      "type": "contains",
+      "description": "test_interview_session.py contém test_FR_015_system_explains_question_and_closure"
+    },
+    {
+      "source": "file:tests/test_interview_session.py",
+      "target": "file:src/content_engine/interview/controller.py",
+      "type": "tested_by",
+      "description": "test_interview_session.py testa controller.py"
+    },
+    {
+      "source": "file:tests/test_interview_session.py",
+      "target": "file:src/content_engine/interview/state.py",
+      "type": "tested_by",
+      "description": "test_interview_session.py testa state.py"
+    },
+    {
+      "source": "file:tests/test_interview_session.py",
+      "target": "file:src/content_engine/interview/heuristic.py",
+      "type": "tested_by",
+      "description": "test_interview_session.py testa heuristic.py"
+    },
+    {
+      "source": "file:tests/test_interview_ui.py",
+      "target": "function:tests/test_interview_ui.py::test_v4_ui_exposes_the_same_flat_dimensions_for_chart_and_list",
+      "type": "contains",
+      "description": "test_interview_ui.py contém test_v4_ui_exposes_the_same_flat_dimensions_for_chart_and_list"
+    },
+    {
+      "source": "file:tests/test_interview_ui.py",
+      "target": "function:tests/test_interview_ui.py::test_FR_016_counter_uses_the_dimension_collection",
+      "type": "contains",
+      "description": "test_interview_ui.py contém test_FR_016_counter_uses_the_dimension_collection"
+    },
+    {
+      "source": "file:tests/test_interview_ui.py",
+      "target": "function:tests/test_interview_ui.py::test_FR_017_chart_and_list_ids_are_identical",
+      "type": "contains",
+      "description": "test_interview_ui.py contém test_FR_017_chart_and_list_ids_are_identical"
+    },
+    {
+      "source": "file:tests/test_interview_ui.py",
+      "target": "function:tests/test_interview_ui.py::test_FR_018_dimension_contains_explanation_fields",
+      "type": "contains",
+      "description": "test_interview_ui.py contém test_FR_018_dimension_contains_explanation_fields"
+    },
+    {
+      "source": "file:tests/test_interview_ui.py",
+      "target": "file:src/content_engine/interview/state.py",
+      "type": "tested_by",
+      "description": "test_interview_ui.py testa state.py"
+    },
+    {
+      "source": "file:tests/test_interview_ui.py",
+      "target": "file:src/tui/interview_ui.py",
+      "type": "tested_by",
+      "description": "test_interview_ui.py testa interview_ui.py"
+    },
+    {
+      "source": "file:tests/test_isolation_integration.py",
+      "target": "function:tests/test_isolation_integration.py::_ok",
+      "type": "contains",
+      "description": "test_isolation_integration.py contém _ok"
+    },
+    {
+      "source": "file:tests/test_isolation_integration.py",
+      "target": "function:tests/test_isolation_integration.py::test_agent_wrapper_workspace_is_not_project_root",
+      "type": "contains",
+      "description": "test_isolation_integration.py contém test_agent_wrapper_workspace_is_not_project_root"
+    },
+    {
+      "source": "file:tests/test_isolation_integration.py",
+      "target": "function:tests/test_isolation_integration.py::test_agent_wrapper_subprocess_receives_isolated_cwd",
+      "type": "contains",
+      "description": "test_isolation_integration.py contém test_agent_wrapper_subprocess_receives_isolated_cwd"
+    },
+    {
+      "source": "file:tests/test_isolation_integration.py",
+      "target": "function:tests/test_isolation_integration.py::test_codex_llm_client_creates_isolated_workspace",
+      "type": "contains",
+      "description": "test_isolation_integration.py contém test_codex_llm_client_creates_isolated_workspace"
+    },
+    {
+      "source": "file:tests/test_isolation_integration.py",
+      "target": "function:tests/test_isolation_integration.py::test_workspace_isolation_prevents_traversal_in_destination",
+      "type": "contains",
+      "description": "test_isolation_integration.py contém test_workspace_isolation_prevents_traversal_in_destination"
+    },
+    {
+      "source": "file:tests/test_isolation_integration.py",
+      "target": "function:tests/test_isolation_integration.py::test_full_isolation_chain",
+      "type": "contains",
+      "description": "test_isolation_integration.py contém test_full_isolation_chain"
+    },
+    {
+      "source": "file:tests/test_isolation_integration.py",
+      "target": "file:src/content_engine/llm/agent_wrapper.py",
+      "type": "tested_by",
+      "description": "test_isolation_integration.py testa agent_wrapper.py"
+    },
+    {
+      "source": "file:tests/test_isolation_integration.py",
+      "target": "file:src/content_engine/llm/codex_client.py",
+      "type": "tested_by",
+      "description": "test_isolation_integration.py testa codex_client.py"
+    },
+    {
+      "source": "file:tests/test_isolation_integration.py",
+      "target": "file:src/content_engine/llm/types.py",
+      "type": "tested_by",
+      "description": "test_isolation_integration.py testa types.py"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::isolated_config",
+      "type": "contains",
+      "description": "test_llm_config.py contém isolated_config"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_resolve_uses_defaults_without_files",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_resolve_uses_defaults_without_files"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_requested_operation_defaults",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_requested_operation_defaults"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_legacy_yaml_keys_map_to_interview_ops",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_legacy_yaml_keys_map_to_interview_ops"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_content_generate_migrates_to_post_generate",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_content_generate_migrates_to_post_generate"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_content_generate_no_longer_exists",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_content_generate_no_longer_exists"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_post_generate_default",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_post_generate_default"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_editorial_operations_have_independent_defaults",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_editorial_operations_have_independent_defaults"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_editorial_operations_resolve_independently",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_editorial_operations_resolve_independently"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_changing_storyboard_does_not_change_compose",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_changing_storyboard_does_not_change_compose"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_changing_block_draft_does_not_change_approaches",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_changing_block_draft_does_not_change_approaches"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_slidemark_export_operation_default",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_slidemark_export_operation_default"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_global_yaml_overrides_defaults",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_global_yaml_overrides_defaults"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_resolve_all_returns_all_operations",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_resolve_all_returns_all_operations"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "function:tests/test_llm_config.py::test_ensure_default_config_file_creates_yaml",
+      "type": "contains",
+      "description": "test_llm_config.py contém test_ensure_default_config_file_creates_yaml"
+    },
+    {
+      "source": "file:tests/test_llm_config.py",
+      "target": "file:src/content_engine/llm/config.py",
+      "type": "tested_by",
+      "description": "test_llm_config.py testa config.py"
+    },
+    {
+      "source": "file:tests/test_llm_json_parser.py",
+      "target": "function:tests/test_llm_json_parser.py::_opencode_ndjson_with_fenced_payload",
+      "type": "contains",
+      "description": "test_llm_json_parser.py contém _opencode_ndjson_with_fenced_payload"
+    },
+    {
+      "source": "file:tests/test_llm_json_parser.py",
+      "target": "function:tests/test_llm_json_parser.py::test_parser_opencode_part_text_markdown_fence_candidatas",
+      "type": "contains",
+      "description": "test_llm_json_parser.py contém test_parser_opencode_part_text_markdown_fence_candidatas"
+    },
+    {
+      "source": "file:tests/test_llm_json_parser.py",
+      "target": "function:tests/test_llm_json_parser.py::test_parser_codex_legacy_item_text_still_works",
+      "type": "contains",
+      "description": "test_llm_json_parser.py contém test_parser_codex_legacy_item_text_still_works"
+    },
+    {
+      "source": "file:tests/test_llm_json_parser.py",
+      "target": "function:tests/test_llm_json_parser.py::test_parser_opencode_prefers_payload_over_envelope",
+      "type": "contains",
+      "description": "test_llm_json_parser.py contém test_parser_opencode_prefers_payload_over_envelope"
+    },
+    {
+      "source": "file:tests/test_llm_json_parser.py",
+      "target": "function:tests/test_llm_json_parser.py::test_parser_real_session_opencode_stdout_excerpt",
+      "type": "contains",
+      "description": "test_llm_json_parser.py contém test_parser_real_session_opencode_stdout_excerpt"
+    },
+    {
+      "source": "file:tests/test_llm_json_parser.py",
+      "target": "file:src/content_engine/llm/json_parser.py",
+      "type": "tested_by",
+      "description": "test_llm_json_parser.py testa json_parser.py"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_create_creates_temp_directory",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_create_creates_temp_directory"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_destroy_removes_directory",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_destroy_removes_directory"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_destroy_persistent_keeps_directory",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_destroy_persistent_keeps_directory"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_copy_allowed_file",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_copy_allowed_file"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_copy_denied_file_raises",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_copy_denied_file_raises"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_copy_from_denied_directory_raises",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_copy_from_denied_directory_raises"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_symlink_rejected",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_symlink_rejected"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_nonexistent_file_raises",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_nonexistent_file_raises"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_isolated_workspace_context_manager",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_isolated_workspace_context_manager"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_isolated_workspace_cleanup_on_exception",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_isolated_workspace_cleanup_on_exception"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_manifest_to_log_dict",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_manifest_to_log_dict"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_workspace_to_log_dict",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_workspace_to_log_dict"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_workspace_persistent_log_mode",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_workspace_persistent_log_mode"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_allowed_files_for_operation_returns_empty_list",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_allowed_files_for_operation_returns_empty_list"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_destroy_idempotent",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_destroy_idempotent"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_copy_allowed_directory",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_copy_allowed_directory"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_copy_directory_ignores_denied_subdirs",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_copy_directory_ignores_denied_subdirs"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "function:tests/test_llm_workspace.py::test_no_project_files_leak_into_workspace",
+      "type": "contains",
+      "description": "test_llm_workspace.py contém test_no_project_files_leak_into_workspace"
+    },
+    {
+      "source": "file:tests/test_llm_workspace.py",
+      "target": "file:src/content_engine/llm/workspace.py",
+      "type": "tested_by",
+      "description": "test_llm_workspace.py testa workspace.py"
+    },
+    {
+      "source": "file:tests/test_parse_generation_payload.py",
+      "target": "function:tests/test_parse_generation_payload.py::_slidemark_minimo",
+      "type": "contains",
+      "description": "test_parse_generation_payload.py contém _slidemark_minimo"
+    },
+    {
+      "source": "file:tests/test_parse_generation_payload.py",
+      "target": "function:tests/test_parse_generation_payload.py::test_parse_conteudo_texto_simples",
+      "type": "contains",
+      "description": "test_parse_generation_payload.py contém test_parse_conteudo_texto_simples"
+    },
+    {
+      "source": "file:tests/test_parse_generation_payload.py",
+      "target": "function:tests/test_parse_generation_payload.py::test_parse_slidemark_deriva_conteudo",
+      "type": "contains",
+      "description": "test_parse_generation_payload.py contém test_parse_slidemark_deriva_conteudo"
+    },
+    {
+      "source": "file:tests/test_parse_generation_payload.py",
+      "target": "function:tests/test_parse_generation_payload.py::test_parse_slides_legacy",
+      "type": "contains",
+      "description": "test_parse_generation_payload.py contém test_parse_slides_legacy"
+    },
+    {
+      "source": "file:tests/test_parse_generation_payload.py",
+      "target": "function:tests/test_parse_generation_payload.py::test_parse_sugestoes_imagem",
+      "type": "contains",
+      "description": "test_parse_generation_payload.py contém test_parse_sugestoes_imagem"
+    },
+    {
+      "source": "file:tests/test_parse_generation_payload.py",
+      "target": "file:src/content_engine/generator/payload.py",
+      "type": "tested_by",
+      "description": "test_parse_generation_payload.py testa payload.py"
+    },
+    {
+      "source": "file:tests/test_parse_generation_payload.py",
+      "target": "file:src/content_engine/slidemark/validator.py",
+      "type": "tested_by",
+      "description": "test_parse_generation_payload.py testa validator.py"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_prompt.py",
+      "target": "function:tests/test_post_evaluation_prompt.py::test_prompt_short_carousel_existe",
+      "type": "contains",
+      "description": "test_post_evaluation_prompt.py contém test_prompt_short_carousel_existe"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_prompt.py",
+      "target": "function:tests/test_post_evaluation_prompt.py::test_prompt_short_carousel_contem_secoes_obrigatorias",
+      "type": "contains",
+      "description": "test_post_evaluation_prompt.py contém test_prompt_short_carousel_contem_secoes_obrigatorias"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_prompt.py",
+      "target": "file:src/content_engine/prompts/loader.py",
+      "type": "tested_by",
+      "description": "test_post_evaluation_prompt.py testa loader.py"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_022_personas_existem",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_022_personas_existem"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_022_personas_contem_yaml_resumo",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_022_personas_contem_yaml_resumo"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_022_aceita_somente_formatos_atuais",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_022_aceita_somente_formatos_atuais"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_023_rules_existem_para_quatro_trilhas",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_023_rules_existem_para_quatro_trilhas"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_023_rules_contem_secao_regras_conteudo",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_023_rules_contem_secao_regras_conteudo"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_023_prompt_builder_seleciona_apenas_arquivo_ativo",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_023_prompt_builder_seleciona_apenas_arquivo_ativo"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_049_estrutura_de_pastas",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_049_estrutura_de_pastas"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_049_prompts_root_aponta_para_prompts_do_projeto",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_049_prompts_root_aponta_para_prompts_do_projeto"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_049_data_dir_aponta_para_data_sessions_do_projeto",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_049_data_dir_aponta_para_data_sessions_do_projeto"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportar_markdown_salva_conteudo",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_057_exportar_markdown_salva_conteudo"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportar_txt_salva_conteudo",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_057_exportar_txt_salva_conteudo"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportacao_md_e_txt_consistentes",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_057_exportacao_md_e_txt_consistentes"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_057_sanitizacao_nome_arquivo",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_057_sanitizacao_nome_arquivo"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_057_nome_arquivo_base_composto",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_057_nome_arquivo_base_composto"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportacao_cria_diretorio",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_057_exportacao_cria_diretorio"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "function:tests/test_spec_022_023_049_057.py::test_spec_057_exportacao_nao_automatica_no_generator",
+      "type": "contains",
+      "description": "test_spec_022_023_049_057.py contém test_spec_057_exportacao_nao_automatica_no_generator"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "file:src/content_engine/export/utils.py",
+      "type": "tested_by",
+      "description": "test_spec_022_023_049_057.py testa utils.py"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "file:src/content_engine/export/markdown.py",
+      "type": "tested_by",
+      "description": "test_spec_022_023_049_057.py testa markdown.py"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "file:src/content_engine/generator/generator.py",
+      "type": "tested_by",
+      "description": "test_spec_022_023_049_057.py testa generator.py"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "file:src/content_engine/types.py",
+      "type": "tested_by",
+      "description": "test_spec_022_023_049_057.py testa types.py"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "file:src/content_engine/export/txt.py",
+      "type": "tested_by",
+      "description": "test_spec_022_023_049_057.py testa txt.py"
+    },
+    {
+      "source": "file:tests/test_spec_022_023_049_057.py",
+      "target": "file:src/content_engine/prompts/loader.py",
+      "type": "tested_by",
+      "description": "test_spec_022_023_049_057.py testa loader.py"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::_ok",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém _ok"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::_capture_runner",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém _capture_runner"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_codex_command_assembly_all_params",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_codex_command_assembly_all_params"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_codex_command_default_ephemeral_only",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_codex_command_default_ephemeral_only"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_codex_no_ephemeral_and_no_ignore_user_config",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_codex_no_ephemeral_and_no_ignore_user_config"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_opencode_command_assembly_all_params",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_opencode_command_assembly_all_params"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_opencode_command_minimal",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_opencode_command_minimal"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_opencode_command_uses_medium_variant",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_opencode_command_uses_medium_variant"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_opencode_command_ignores_codex_only_reasoning_levels",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_opencode_command_ignores_codex_only_reasoning_levels"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_both_include_workspace_in_cwd_and_kwarg",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_both_include_workspace_in_cwd_and_kwarg"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_prompt_preserved_as_last_element_both",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_prompt_preserved_as_last_element_both"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_run_dispatches_to_codex_and_opencode",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_run_dispatches_to_codex_and_opencode"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_run_raises_value_error_on_unknown_tool",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_run_raises_value_error_on_unknown_tool"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_workspace_path_resolved_in_init",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_workspace_path_resolved_in_init"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_env_merged_with_os_environ",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_env_merged_with_os_environ"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_instantiation_does_not_execute",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_instantiation_does_not_execute"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_jsonl_events_parsed_when_json_output",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_jsonl_events_parsed_when_json_output"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_jsonl_raw_fallback_for_invalid_lines",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_jsonl_raw_fallback_for_invalid_lines"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_jsonl_empty_lines_skipped",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_jsonl_empty_lines_skipped"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_jsonl_not_parsed_when_json_output_false",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_jsonl_not_parsed_when_json_output_false"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_subclass_overriding_run_subprocess",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_subclass_overriding_run_subprocess"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_filenotfound_returns_127_with_message",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_filenotfound_returns_127_with_message"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_permissionerror_returns_126_with_message",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_permissionerror_returns_126_with_message"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_timeoutexpired_returns_124_with_message",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_timeoutexpired_returns_124_with_message"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_nonzero_returncode_captured_in_result",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_nonzero_returncode_captured_in_result"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_empty_stdout_nonempty_stderr_sets_error",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_empty_stdout_nonempty_stderr_sets_error"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_success_with_both_streams_populated",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_success_with_both_streams_populated"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_jsonl_invalid_line_preserved_as_raw_event_in_subprocess_path",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_jsonl_invalid_line_preserved_as_raw_event_in_subprocess_path"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "function:tests/test_spec_028_029.py::test_no_real_codex_or_opencode_invocation",
+      "type": "contains",
+      "description": "test_spec_028_029.py contém test_no_real_codex_or_opencode_invocation"
+    },
+    {
+      "source": "file:tests/test_spec_028_029.py",
+      "target": "file:src/content_engine/llm/agent_wrapper.py",
+      "type": "tested_by",
+      "description": "test_spec_028_029.py testa agent_wrapper.py"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_prompts_root_aponta_para_diretorio_prompts",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_prompts_root_aponta_para_diretorio_prompts"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_load_prompt_generator_base_retorna_string_nao_vazia",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_load_prompt_generator_base_retorna_string_nao_vazia"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_load_prompt_avaliacao_autoria_v4",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_load_prompt_avaliacao_autoria_v4"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_load_prompt_desconhecido_levanta_file_not_found",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_load_prompt_desconhecido_levanta_file_not_found"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_load_prompt_caminho_relativo_direto",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_load_prompt_caminho_relativo_direto"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_prompt_exists_para_nomes_conhecidos",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_prompt_exists_para_nomes_conhecidos"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_prompt_exists_para_nomes_desconhecidos",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_prompt_exists_para_nomes_desconhecidos"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_load_prompt_todos_os_nomes_logicos_resolvem",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_load_prompt_todos_os_nomes_logicos_resolvem"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_substitui_placeholders_simples",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_substitui_placeholders_simples"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_substitui_placeholders_com_chaves_duplas_atomicamente",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_substitui_placeholders_com_chaves_duplas_atomicamente"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_chave_dupla_ausente_levanta_keyerror_sem_renderizar_a_chave_interna",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_chave_dupla_ausente_levanta_keyerror_sem_renderizar_a_chave_interna"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_chave_ausente_levanta_keyerror",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_chave_ausente_levanta_keyerror"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_preserva_json",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_preserva_json"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_preserva_acentos_e_quebras_de_linha",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_preserva_acentos_e_quebras_de_linha"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_nao_avalia_expressoes",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_nao_avalia_expressoes"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_nao_avalia_aritmetica_com_chave_valida",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_nao_avalia_aritmetica_com_chave_valida"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_converte_valores_nao_strings",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_converte_valores_nao_strings"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_sem_placeholders_retorna_original",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_sem_placeholders_retorna_original"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_padrao_regex_somente_identificadores",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_padrao_regex_somente_identificadores"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_chaves_repetidas_sao_substituidas",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_chaves_repetidas_sao_substituidas"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "function:tests/test_spec_050_051.py::test_render_template_chave_com_unicode_permanece_literal",
+      "type": "contains",
+      "description": "test_spec_050_051.py contém test_render_template_chave_com_unicode_permanece_literal"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "file:src/content_engine/prompts/loader.py",
+      "type": "tested_by",
+      "description": "test_spec_050_051.py testa loader.py"
+    },
+    {
+      "source": "file:tests/test_spec_050_051.py",
+      "target": "file:src/content_engine/prompts/template.py",
+      "type": "tested_by",
+      "description": "test_spec_050_051.py testa template.py"
+    },
+    {
+      "source": "file:tests/test_tipo_de_post_bug.py",
+      "target": "function:tests/test_tipo_de_post_bug.py::test_tipo_de_post_preservado_no_state_patch",
+      "type": "contains",
+      "description": "test_tipo_de_post_bug.py contém test_tipo_de_post_preservado_no_state_patch"
+    },
+    {
+      "source": "file:tests/test_tipo_de_post_bug.py",
+      "target": "function:tests/test_tipo_de_post_bug.py::test_tipo_de_post_snapshot_retorna_valor_correto",
+      "type": "contains",
+      "description": "test_tipo_de_post_bug.py contém test_tipo_de_post_snapshot_retorna_valor_correto"
+    },
+    {
+      "source": "file:tests/test_tipo_de_post_bug.py",
+      "target": "function:tests/test_tipo_de_post_bug.py::test_migrate_tipo_de_post_aceita_somente_formatos_atuais",
+      "type": "contains",
+      "description": "test_tipo_de_post_bug.py contém test_migrate_tipo_de_post_aceita_somente_formatos_atuais"
+    },
+    {
+      "source": "file:tests/test_tipo_de_post_bug.py",
+      "target": "file:src/tui/gui_controller.py",
+      "type": "tested_by",
+      "description": "test_tipo_de_post_bug.py testa gui_controller.py"
+    },
+    {
+      "source": "file:tests/test_tipo_de_post_bug.py",
+      "target": "file:src/content_engine/types.py",
+      "type": "tested_by",
+      "description": "test_tipo_de_post_bug.py testa types.py"
+    }
+  ]
+}

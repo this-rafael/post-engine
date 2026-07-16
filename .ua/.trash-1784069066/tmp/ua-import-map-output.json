@@ -1,0 +1,647 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 279,
+    "filesWithImports": 84,
+    "totalEdges": 274
+  },
+  "importMap": {
+    ".playwright-mcp/page-2026-07-10T15-06-42-162Z.yml": [],
+    ".playwright-mcp/page-2026-07-10T15-12-47-743Z.yml": [],
+    ".playwright-mcp/page-2026-07-10T15-13-04-460Z.yml": [],
+    ".playwright-mcp/page-2026-07-10T15-25-23-201Z.yml": [],
+    ".playwright-mcp/page-2026-07-10T15-25-38-696Z.yml": [],
+    ".playwright-mcp/page-2026-07-10T15-25-51-500Z.yml": [],
+    ".playwright-mcp/page-2026-07-10T15-26-05-815Z.yml": [],
+    ".playwright-mcp/page-2026-07-10T15-26-19-252Z.yml": [],
+    ".ua/.understandignore": [],
+    ".ua/intermediate/scan-result.json": [],
+    "docs/archive/BUG_FIX_PLAN.md": [],
+    "docs/archive/exportacao-md-json.md": [],
+    "docs/archive/fase2evo_change_log.md": [],
+    "docs/archive/fase2evo.md": [],
+    "docs/archive/PLAN_CONFORMIDADE_AVALIACAO.md": [],
+    "docs/archive/plano-de-inteligencia": [],
+    "docs/archive/QUESTIONARIO.md": [],
+    "docs/archive/RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md": [],
+    "docs/archive/TUI_DECREPATED.md": [],
+    "docs/LLM_execution.md": [],
+    "docs/LLM_USAGE.md": [],
+    "docs/PLAN_ISOLAMENTO_CONTEXTO_LLM.md": [],
+    "docs/PLAN_REMOVE_CONTENT_GENERATE.md": [],
+    "docs/PLAN_UPDATE_POST_ENGINE_OUTPUT.MD": [],
+    "docs/PRD.md": [],
+    "docs/prompts_inventory.json": [],
+    "docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md": [],
+    "docs/V3_EVO.md": [],
+    "frontend/e2e/composition.spec.ts": [],
+    "frontend/e2e/drafts.spec.ts": [],
+    "frontend/e2e/pipeline-regression.spec.ts": [],
+    "frontend/e2e/storyboard.spec.ts": [],
+    "frontend/index.html": [],
+    "frontend/package.json": [],
+    "frontend/playwright.config.ts": [],
+    "frontend/src/components/workstation/AmbientField.tsx": [
+      "frontend/src/lib/pe-store.tsx"
+    ],
+    "frontend/src/components/workstation/ContextBar.tsx": [
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/components/workstation/DevDrawer.tsx": [
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/FormattedText.tsx": [],
+    "frontend/src/components/workstation/GamePopup.tsx": [
+      "frontend/src/components/workstation/ModalShell.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/interview/AnalyzingState.tsx": [
+      "frontend/src/components/workstation/ui.tsx"
+    ],
+    "frontend/src/components/workstation/interview/AuthorContextCompact.tsx": [
+      "frontend/src/components/workstation/interview/motion.ts",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx": [
+      "frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "frontend/src/components/workstation/interview/motion.ts",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/mappers/interview.ts"
+    ],
+    "frontend/src/components/workstation/interview/AuthorialMap.tsx": [
+      "frontend/src/lib/mappers/interview.ts"
+    ],
+    "frontend/src/components/workstation/interview/AxisDetailPanel.tsx": [
+      "frontend/src/lib/mappers/interview.ts",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/interview/CoverageUpdated.tsx": [
+      "frontend/src/components/workstation/interview/motion.ts",
+      "frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "frontend/src/components/workstation/ui.tsx"
+    ],
+    "frontend/src/components/workstation/interview/CurrentReadMoment.tsx": [
+      "frontend/src/components/workstation/ui.tsx"
+    ],
+    "frontend/src/components/workstation/interview/motion.ts": [],
+    "frontend/src/components/workstation/interview/QuestionStage.tsx": [
+      "frontend/src/components/workstation/interview/motion.ts",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-types.ts",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/interview/RoundNavigator.tsx": [
+      "frontend/src/components/workstation/interview/motion.ts",
+      "frontend/src/lib/pe-types.ts",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/interview/RoundReview.tsx": [
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/components/workstation/interview/useInterviewUx.ts": [
+      "frontend/src/lib/mappers/interview.ts",
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/components/workstation/ModalShell.tsx": [
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/PipelineRail.tsx": [
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/pe-types.ts",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/ReadjustAllModal.tsx": [
+      "frontend/src/components/workstation/FormattedText.tsx",
+      "frontend/src/components/workstation/ModalShell.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/pe-types.ts",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/stages/AgentsStage.tsx": [
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/pe-types.ts",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/stages/BriefingStage.tsx": [
+      "frontend/src/components/workstation/FormattedText.tsx",
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx"
+    ],
+    "frontend/src/components/workstation/stages/common.tsx": [
+      "frontend/src/components/workstation/ui.tsx"
+    ],
+    "frontend/src/components/workstation/stages/CompositionStage.tsx": [
+      "frontend/src/components/workstation/FormattedText.tsx",
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx"
+    ],
+    "frontend/src/components/workstation/stages/DraftsStage.tsx": [
+      "frontend/src/components/workstation/FormattedText.tsx",
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/mappers/editorial.ts",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/components/workstation/stages/EntryStage.tsx": [
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx"
+    ],
+    "frontend/src/components/workstation/stages/EvaluationStage.tsx": [
+      "frontend/src/components/workstation/FormattedText.tsx",
+      "frontend/src/components/workstation/ReadjustAllModal.tsx",
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/pe-types.ts",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/stages/ExecutionStage.tsx": [
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/stages/ExportStage.tsx": [
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx"
+    ],
+    "frontend/src/components/workstation/stages/InterviewStage.tsx": [
+      "frontend/src/components/workstation/interview/AnalyzingState.tsx",
+      "frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+      "frontend/src/components/workstation/interview/QuestionStage.tsx",
+      "frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "frontend/src/components/workstation/interview/RoundReview.tsx",
+      "frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/stages/PromptStage.tsx": [
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/stages/SegmentationStage.tsx": [
+      "frontend/src/components/workstation/FormattedText.tsx",
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/components/workstation/stages/StoryboardStage.tsx": [
+      "frontend/src/components/workstation/stages/common.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx",
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/components/workstation/ui.tsx": [
+      "frontend/src/lib/utils.ts"
+    ],
+    "frontend/src/components/workstation/Workstation.tsx": [
+      "frontend/src/components/workstation/AmbientField.tsx",
+      "frontend/src/components/workstation/ContextBar.tsx",
+      "frontend/src/components/workstation/DevDrawer.tsx",
+      "frontend/src/components/workstation/GamePopup.tsx",
+      "frontend/src/components/workstation/PipelineRail.tsx",
+      "frontend/src/components/workstation/stages/AgentsStage.tsx",
+      "frontend/src/components/workstation/stages/BriefingStage.tsx",
+      "frontend/src/components/workstation/stages/CompositionStage.tsx",
+      "frontend/src/components/workstation/stages/DraftsStage.tsx",
+      "frontend/src/components/workstation/stages/EntryStage.tsx",
+      "frontend/src/components/workstation/stages/EvaluationStage.tsx",
+      "frontend/src/components/workstation/stages/ExportStage.tsx",
+      "frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "frontend/src/components/workstation/stages/SegmentationStage.tsx",
+      "frontend/src/components/workstation/stages/StoryboardStage.tsx",
+      "frontend/src/components/workstation/ui.tsx",
+      "frontend/src/lib/pe-store.tsx"
+    ],
+    "frontend/src/lib/mappers/editorial.ts": [
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/lib/mappers/interview.ts": [
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/lib/mappers/operations.ts": [],
+    "frontend/src/lib/mappers/phase.ts": [
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/lib/pe-api.ts": [
+      "frontend/src/lib/mappers/operations.ts",
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/lib/pe-store.tsx": [
+      "frontend/src/lib/mappers/editorial.ts",
+      "frontend/src/lib/mappers/interview.ts",
+      "frontend/src/lib/mappers/phase.ts",
+      "frontend/src/lib/pe-api.ts",
+      "frontend/src/lib/pe-types.ts"
+    ],
+    "frontend/src/lib/pe-types.ts": [],
+    "frontend/src/lib/utils.ts": [],
+    "frontend/src/main.tsx": [
+      "frontend/src/components/workstation/Workstation.tsx",
+      "frontend/src/styles.css"
+    ],
+    "frontend/src/styles.css": [],
+    "frontend/tsconfig.json": [],
+    "frontend/vite.config.ts": [],
+    "prompts/editorial/block_approaches.md": [],
+    "prompts/editorial/block_draft.md": [],
+    "prompts/editorial/compose.md": [],
+    "prompts/editorial/storyboard.md": [],
+    "prompts/generator/adjust-segment.md": [],
+    "prompts/generator/adjust-segments-bulk.md": [],
+    "prompts/generator/base-long-slide.md": [],
+    "prompts/generator/base-short-carousel.md": [],
+    "prompts/generator/base.md": [],
+    "prompts/generator/evaluate-post-article.md": [],
+    "prompts/generator/evaluate-post-long-slide.md": [],
+    "prompts/generator/evaluate-post-post.md": [],
+    "prompts/generator/evaluate-post-short-carousel.md": [],
+    "prompts/generator/export-slidemark.md": [],
+    "prompts/generator/personas/dev-interlocutor-article.md": [],
+    "prompts/generator/personas/dev-interlocutor-feed.md": [],
+    "prompts/generator/personas/dev-interlocutor-long-slide.md": [],
+    "prompts/generator/personas/dev-interlocutor-post.md": [],
+    "prompts/generator/personas/dev-interlocutor-short-carousel.md": [],
+    "prompts/generator/personas/dev-interlocutor-slide.md": [],
+    "prompts/generator/rules-article.md": [],
+    "prompts/generator/rules-feed.md": [],
+    "prompts/generator/rules-long-slide.md": [],
+    "prompts/generator/rules-post.md": [],
+    "prompts/generator/rules-short-carousel.md": [],
+    "prompts/generator/rules-slide.md": [],
+    "prompts/generator/segment-slides.md": [],
+    "prompts/generator/segment.md": [],
+    "prompts/interview/deepen.md": [],
+    "prompts/interview/evaluate-authorship.md": [],
+    "prompts/interview/explore.md": [],
+    "prompts/router/.gitkeep": [],
+    "pyproject.toml": [],
+    "README.md": [],
+    "scripts/gui.fish": [],
+    "scripts/reorganize_specs.py": [],
+    "scripts/run_interview_quality_eval.py": [],
+    "specs/archive/spec-001/spec_001.md": [],
+    "specs/archive/spec-002/spec_002.md": [],
+    "specs/archive/spec-003/spec_003.md": [],
+    "specs/archive/spec-004/spec_004.md": [],
+    "specs/archive/spec-005/spec_005.md": [],
+    "specs/archive/spec-006/spec_006.md": [],
+    "specs/archive/spec-007/spec_007.md": [],
+    "specs/archive/spec-008/spec_008.md": [],
+    "specs/archive/spec-009/spec_009.md": [],
+    "specs/archive/spec-010/spec_010.md": [],
+    "specs/archive/spec-011/spec_011.md": [],
+    "specs/archive/spec-012/spec_012.md": [],
+    "specs/archive/spec-013/spec_013.md": [],
+    "specs/archive/spec-014/spec_014.md": [],
+    "specs/archive/spec-015/spec_015.md": [],
+    "specs/archive/spec-016/spec_016.md": [],
+    "specs/archive/spec-017/spec_017.md": [],
+    "specs/archive/spec-018/spec_018.md": [],
+    "specs/archive/spec-019/spec_019.md": [],
+    "specs/archive/spec-020/spec_020.md": [],
+    "specs/archive/spec-021/spec_021.md": [],
+    "specs/archive/spec-022/spec_022.md": [],
+    "specs/archive/spec-023/spec_023.md": [],
+    "specs/archive/spec-024/spec_024.md": [],
+    "specs/archive/spec-025/spec_025.md": [],
+    "specs/archive/spec-026/spec_026.md": [],
+    "specs/archive/spec-027/spec_027.md": [],
+    "specs/archive/spec-028/spec_028.md": [],
+    "specs/archive/spec-029/spec_029.md": [],
+    "specs/archive/spec-030/spec_030.md": [],
+    "specs/archive/spec-031/spec_031.md": [],
+    "specs/archive/spec-032/spec_032.md": [],
+    "specs/archive/spec-033/spec_033.md": [],
+    "specs/archive/spec-034/spec_034.md": [],
+    "specs/archive/spec-035/spec_035.md": [],
+    "specs/archive/spec-036/spec_036.md": [],
+    "specs/archive/spec-037/spec_037.md": [],
+    "specs/archive/spec-038/spec_038.md": [],
+    "specs/archive/spec-039/spec_039.md": [],
+    "specs/archive/spec-040/spec_040.md": [],
+    "specs/archive/spec-041/spec_041.md": [],
+    "specs/archive/spec-042/spec_042.md": [],
+    "specs/archive/spec-043/spec_043.md": [],
+    "specs/archive/spec-044/spec_044.md": [],
+    "specs/archive/spec-045/spec_045.md": [],
+    "specs/archive/spec-046/spec_046.md": [],
+    "specs/archive/spec-047/spec_047.md": [],
+    "specs/archive/spec-048/spec_048.md": [],
+    "specs/archive/spec-049/spec_049.md": [],
+    "specs/archive/spec-050/spec_050.md": [],
+    "specs/archive/spec-051/spec_051.md": [],
+    "specs/archive/spec-052/spec_052.md": [],
+    "specs/archive/spec-053/spec_053.md": [],
+    "specs/archive/spec-054/spec_054.md": [],
+    "specs/archive/spec-055/spec_055.md": [],
+    "specs/archive/spec-056/spec_056.md": [],
+    "specs/archive/spec-057/spec_057.md": [],
+    "specs/archive/spec-058/spec_058.md": [],
+    "specs/archive/spec-059/spec_059.md": [],
+    "specs/archive/spec-060/spec_060.md": [],
+    "specs/checklist.md": [],
+    "specs/global.md": [],
+    "specs/spec-061/plan.md": [],
+    "specs/spec-061/research.md": [],
+    "specs/spec-061/spec_061.md": [],
+    "specs/spec-061/tasks.md": [],
+    "src/__init__.py": [],
+    "src/content_engine/__init__.py": [
+      "src/content_engine/interview/__init__.py",
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/__main__.py": [],
+    "src/content_engine/adjust_segment.py": [
+      "src/content_engine/agent_wrapper.py",
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/prompt_loader.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/template_renderer.py"
+    ],
+    "src/content_engine/adjust_segments_bulk.py": [
+      "src/content_engine/agent_wrapper.py",
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/prompt_loader.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/template_renderer.py"
+    ],
+    "src/content_engine/agent_wrapper.py": [
+      "src/content_engine/cursor_output.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/session_log.py"
+    ],
+    "src/content_engine/briefing.py": [
+      "src/content_engine/interview/briefing.py",
+      "src/content_engine/interview/schemas.py"
+    ],
+    "src/content_engine/codex_llm_client.py": [
+      "src/content_engine/schemas.py",
+      "src/content_engine/session_log.py"
+    ],
+    "src/content_engine/cursor_output.py": [],
+    "src/content_engine/editorial_actions.py": [
+      "src/content_engine/editorial_flow.py",
+      "src/content_engine/editorial_generation.py",
+      "src/content_engine/generator.py",
+      "src/content_engine/llm_config.py",
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/editorial_flow.py": [
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/editorial_generation.py": [
+      "src/content_engine/agent_wrapper.py",
+      "src/content_engine/editorial_flow.py",
+      "src/content_engine/editorial_preservation.py",
+      "src/content_engine/generator.py",
+      "src/content_engine/llm_config.py",
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/prompt_builder.py",
+      "src/content_engine/prompt_loader.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/template_renderer.py"
+    ],
+    "src/content_engine/editorial_preservation.py": [],
+    "src/content_engine/exporter.py": [
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/generator.py": [
+      "src/content_engine/agent_wrapper.py",
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/prompt_builder.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/slidemark_validator.py"
+    ],
+    "src/content_engine/interview/__init__.py": [
+      "src/content_engine/interview/briefing.py",
+      "src/content_engine/interview/controller.py",
+      "src/content_engine/interview/exploration.py",
+      "src/content_engine/interview/gaps.py",
+      "src/content_engine/interview/gateway.py",
+      "src/content_engine/interview/heuristic.py",
+      "src/content_engine/interview/schemas.py",
+      "src/content_engine/interview/ui.py"
+    ],
+    "src/content_engine/interview/briefing.py": [
+      "src/content_engine/interview/schemas.py"
+    ],
+    "src/content_engine/interview/controller.py": [
+      "src/content_engine/interview/exploration.py",
+      "src/content_engine/interview/extraction.py",
+      "src/content_engine/interview/gaps.py",
+      "src/content_engine/interview/gateway.py",
+      "src/content_engine/interview/heuristic.py",
+      "src/content_engine/interview/llm_evaluation.py",
+      "src/content_engine/interview/schemas.py"
+    ],
+    "src/content_engine/interview/exploration.py": [
+      "src/content_engine/interview/schemas.py",
+      "src/content_engine/interview/validation.py",
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/interview/extraction.py": [
+      "src/content_engine/interview/schemas.py"
+    ],
+    "src/content_engine/interview/gaps.py": [
+      "src/content_engine/interview/schemas.py"
+    ],
+    "src/content_engine/interview/gateway.py": [
+      "src/content_engine/interview/heuristic.py",
+      "src/content_engine/interview/schemas.py"
+    ],
+    "src/content_engine/interview/heuristic.py": [
+      "src/content_engine/interview/schemas.py"
+    ],
+    "src/content_engine/interview/llm_evaluation.py": [
+      "src/content_engine/interview/schemas.py",
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/interview/quality.py": [
+      "src/content_engine/interview/schemas.py"
+    ],
+    "src/content_engine/interview/schemas.py": [],
+    "src/content_engine/interview/ui.py": [
+      "src/content_engine/interview/heuristic.py",
+      "src/content_engine/interview/schemas.py"
+    ],
+    "src/content_engine/interview/validation.py": [
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/llm_config.py": [
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/llm_json_parser.py": [],
+    "src/content_engine/llm_workspace.py": [],
+    "src/content_engine/persistence.py": [
+      "src/content_engine/editorial_flow.py",
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/post_evaluation.py": [
+      "src/content_engine/agent_wrapper.py",
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/prompt_loader.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/template_renderer.py"
+    ],
+    "src/content_engine/prompt_builder.py": [
+      "src/content_engine/prompt_loader.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/slidemark_contract.py",
+      "src/content_engine/template_renderer.py"
+    ],
+    "src/content_engine/prompt_loader.py": [],
+    "src/content_engine/schemas.py": [],
+    "src/content_engine/segmentation.py": [
+      "src/content_engine/agent_wrapper.py",
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/prompt_loader.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/template_renderer.py",
+      "src/content_engine/trilhas.py"
+    ],
+    "src/content_engine/session_app.py": [
+      "src/content_engine/editorial_flow.py",
+      "src/content_engine/interview/briefing.py",
+      "src/content_engine/interview/controller.py",
+      "src/content_engine/interview/schemas.py",
+      "src/content_engine/interview/ui.py",
+      "src/content_engine/llm_config.py",
+      "src/content_engine/prompt_builder.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/trilhas.py",
+      "src/content_engine/tui_validation.py"
+    ],
+    "src/content_engine/session_controller.py": [
+      "src/content_engine/session_app.py"
+    ],
+    "src/content_engine/session_log.py": [],
+    "src/content_engine/slidemark_contract.py": [],
+    "src/content_engine/slidemark_converter.py": [
+      "src/content_engine/agent_wrapper.py",
+      "src/content_engine/generator.py",
+      "src/content_engine/llm_json_parser.py",
+      "src/content_engine/prompt_builder.py",
+      "src/content_engine/prompt_loader.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/slidemark_contract.py",
+      "src/content_engine/slidemark_validator.py",
+      "src/content_engine/template_renderer.py",
+      "src/content_engine/trilhas.py"
+    ],
+    "src/content_engine/slidemark_validator.py": [
+      "src/content_engine/slidemark_contract.py"
+    ],
+    "src/content_engine/template_renderer.py": [],
+    "src/content_engine/trilhas.py": [
+      "src/content_engine/schemas.py"
+    ],
+    "src/content_engine/tui_validation.py": [],
+    "src/gui/__init__.py": [
+      "src/gui/server.py"
+    ],
+    "src/gui/server.py": [
+      "src/content_engine/__init__.py",
+      "src/content_engine/editorial_flow.py",
+      "src/content_engine/interview/ui.py",
+      "src/content_engine/llm_config.py",
+      "src/content_engine/schemas.py",
+      "src/content_engine/session_controller.py",
+      "src/content_engine/trilhas.py"
+    ],
+    "src/gui/static/index.html": [],
+    "src/tui/__init__.py": [],
+    "tests/__init__.py": [],
+    "tests/fixtures/interview_corpus/corpus.json": [],
+    "tests/fixtures/interview_corpus/README.md": [],
+    "tests/fixtures/validate_and_render_slidemark.mts": [],
+    "tests/llm_fakes.py": [],
+    "tests/test_adjust_segments_bulk.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_agent_wrapper_cursor.py": [],
+    "tests/test_cli.py": [],
+    "tests/test_codex_llm_client.py": [],
+    "tests/test_editorial_composition.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_editorial_flow.py": [],
+    "tests/test_generation_v4_prompt.py": [],
+    "tests/test_generator_image_suggestions.py": [],
+    "tests/test_gui_avaliacao.py": [],
+    "tests/test_gui_bulk_adjust.py": [],
+    "tests/test_gui_editorial.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_gui_llm_config.py": [],
+    "tests/test_gui_slidemark_export.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_interview_exploration.py": [],
+    "tests/test_interview_extraction.py": [],
+    "tests/test_interview_gaps.py": [],
+    "tests/test_interview_gateway.py": [],
+    "tests/test_interview_heuristic.py": [],
+    "tests/test_interview_persistence.py": [],
+    "tests/test_interview_quality.py": [],
+    "tests/test_interview_session_v4.py": [],
+    "tests/test_interview_session.py": [],
+    "tests/test_interview_ui.py": [],
+    "tests/test_isolation_integration.py": [],
+    "tests/test_llm_config.py": [],
+    "tests/test_llm_json_parser.py": [],
+    "tests/test_llm_workspace.py": [],
+    "tests/test_parse_generation_payload.py": [],
+    "tests/test_post_evaluation_parser.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_post_evaluation_prompt.py": [],
+    "tests/test_session_log.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_slidemark_converter.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_slidemark_direct_integration.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_spec_022_023_049_057.py": [],
+    "tests/test_spec_028_029.py": [],
+    "tests/test_spec_030_037.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_spec_050_051.py": [],
+    "tests/test_spec_059_060.py": [
+      "tests/llm_fakes.py"
+    ],
+    "tests/test_tipo_de_post_bug.py": []
+  }
+}

@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:unit": "node --experimental-strip-types --test src/lib/mappers/interview.terminal.test.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",

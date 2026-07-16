@@ -1,0 +1,705 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "docs/archive/BUG_FIX_PLAN.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 36,
+      "sections": [
+        {
+          "heading": "Plano de Correção: Bug tipo_de_post sendo resetado para \"post\"",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Status: CORRIGIDO",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Causa Raiz Identificada",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "1. Backend: `_atualizar_estado_do_formulario` sobrescrevia `tipo_de_post` sem verificar widget",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "2. Frontend: `syncDraftFromSession` sobrescrevia `draftRef` com React state desatualizado",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "Correções Aplicadas",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Correção 1: Backend (principal)",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "Correção 2: Frontend",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "Testes",
+          "level": 2,
+          "line": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "docs/archive/PLAN_CONFORMIDADE_AVALIACAO.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 142,
+      "nonEmptyLines": 115,
+      "sections": [
+        {
+          "heading": "Plano de Conformidade — Avaliacao short_carousel",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Divergencia atual",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "2. Arquivos impactados",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "3. Etapas",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "3.1. Schema (`schemas.py`)",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "3.2. Parser (`post_evaluation.py`)",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "3.3. UI TUI (`app.py`)",
+          "level": 3,
+          "line": 81
+        },
+        {
+          "heading": "3.4. Persistencia e exportacao",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "3.5. Testes",
+          "level": 3,
+          "line": 104
+        },
+        {
+          "heading": "4. Riscos",
+          "level": 2,
+          "line": 120
+        },
+        {
+          "heading": "5. Ordem de execucao sugerida",
+          "level": 2,
+          "line": 126
+        },
+        {
+          "heading": "6. Checklist de aceite",
+          "level": 2,
+          "line": 135
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "docs/archive/QUESTIONARIO.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 123,
+      "nonEmptyLines": 79,
+      "sections": [
+        {
+          "heading": "Questionario - Diagnostico e correcao da geracao de perguntas",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Problema observado",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Causa raiz",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Fluxo afetado",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "Solucao aplicada",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "1. Usar a string correta do modelo dedicado por padrao",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "2. Migrar sessoes antigas com modelo obsoleto",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "3. Parar de mascarar falha do agente",
+          "level": 3,
+          "line": 79
+        },
+        {
+          "heading": "4. Cobertura de testes",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "Validacao",
+          "level": 2,
+          "line": 107
+        },
+        {
+          "heading": "Resultado esperado apos a correcao",
+          "level": 2,
+          "line": 121
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "docs/archive/RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 33,
+      "nonEmptyLines": 27,
+      "sections": [
+        {
+          "heading": "Resumo da Implementação",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Objetivo",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "O que foi feito",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Implementação técnica",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "Regressoes cobertas",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "Validação",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Resultado",
+          "level": 2,
+          "line": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "docs/archive/TUI_DECREPATED.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 174,
+      "nonEmptyLines": 132,
+      "sections": [
+        {
+          "heading": "Plano de Depreciação e Remoção Completa da TUI",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Motivação",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "2. Inventário de Acoplamentos",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "2.1 Código-fonte TUI",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "2.2 Módulos auxiliares acoplados",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "2.3 GUI — imports de `tui.app`",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "2.4 Testes com imports de `tui`",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "2.5 Scripts e configuração",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "2.6 Documentação com referências TUI",
+          "level": 3,
+          "line": 65
+        },
+        {
+          "heading": "3. Fases",
+          "level": 2,
+          "line": 76
+        },
+        {
+          "heading": "Fase 1 — Extração de Lógica Compartilhada",
+          "level": 3,
+          "line": 78
+        },
+        {
+          "heading": "Fase 2 — Migração do Entry Point",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "Fase 3 — Migração de Testes",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "Fase 4 — Remoção do Código TUI",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "Fase 5 — Remoção da Dependência `textual`",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "Fase 6 — Limpeza de Documentação",
+          "level": 3,
+          "line": 123
+        },
+        {
+          "heading": "Fase 7 — Validação Final",
+          "level": 3,
+          "line": 131
+        },
+        {
+          "heading": "4. Cronograma Sugerido",
+          "level": 2,
+          "line": 141
+        },
+        {
+          "heading": "5. Critérios de Conclusão",
+          "level": 2,
+          "line": 154
+        },
+        {
+          "heading": "6. Riscos e Mitigações",
+          "level": 2,
+          "line": 167
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    },
+    {
+      "path": "docs/archive/exportacao-md-json.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 72,
+      "nonEmptyLines": 61,
+      "sections": [
+        {
+          "heading": "Exportacao simultanea de Output para Markdown + JSON",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Resumo",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Mudancas de implementacao",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "APIs e contratos",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "Testes",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "Assumptions",
+          "level": 2,
+          "line": 67
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "docs/archive/fase2evo.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 389,
+      "nonEmptyLines": 312,
+      "sections": [
+        {
+          "heading": "Fase 2 Evo",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Objetivo",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Premissas inegociaveis",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Taxonomia Oficial",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "Humanos",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "Organizacionais",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "Regras de aplicacao por formato",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "Contrato Central",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "`AxisDefinition`",
+          "level": 3,
+          "line": 68
+        },
+        {
+          "heading": "`QuestionBatch`",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "`InterviewPack`",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "`QuestionGenerationError`",
+          "level": 3,
+          "line": 118
+        },
+        {
+          "heading": "Fase 2: Entrevista",
+          "level": 2,
+          "line": 134
+        },
+        {
+          "heading": "Task 1: Definir a estrutura dos lotes",
+          "level": 3,
+          "line": 136
+        },
+        {
+          "heading": "Task 2: Gerar perguntas por lote",
+          "level": 3,
+          "line": 152
+        },
+        {
+          "heading": "Task 3: Validar retorno da LLM",
+          "level": 3,
+          "line": 169
+        },
+        {
+          "heading": "Task 4: Persistir estado da entrevista",
+          "level": 3,
+          "line": 188
+        },
+        {
+          "heading": "Task 5: Exibir erro de forma alarmante na UI",
+          "level": 3,
+          "line": 203
+        },
+        {
+          "heading": "Task 6: Calcular cobertura",
+          "level": 3,
+          "line": 212
+        },
+        {
+          "heading": "Impacto nas Fases Subsequentes",
+          "level": 2,
+          "line": 220
+        },
+        {
+          "heading": "Briefing",
+          "level": 3,
+          "line": 222
+        },
+        {
+          "heading": "Prompt",
+          "level": 3,
+          "line": 241
+        },
+        {
+          "heading": "Execucao",
+          "level": 3,
+          "line": 257
+        },
+        {
+          "heading": "Segmentacao",
+          "level": 3,
+          "line": 273
+        },
+        {
+          "heading": "Ajuste",
+          "level": 3,
+          "line": 287
+        },
+        {
+          "heading": "Avaliacao",
+          "level": 3,
+          "line": 303
+        },
+        {
+          "heading": "Modulos Provaveis de Impacto",
+          "level": 2,
+          "line": 319
+        },
+        {
+          "heading": "Ordem Recomendada de Implementacao",
+          "level": 2,
+          "line": 334
+        },
+        {
+          "heading": "Safeguards Transversais",
+          "level": 2,
+          "line": 348
+        },
+        {
+          "heading": "Corretude de contrato",
+          "level": 3,
+          "line": 350
+        },
+        {
+          "heading": "Corretude de LLM",
+          "level": 3,
+          "line": 356
+        },
+        {
+          "heading": "Corretude de persistencia",
+          "level": 3,
+          "line": 363
+        },
+        {
+          "heading": "Corretude de avaliacao",
+          "level": 3,
+          "line": 369
+        },
+        {
+          "heading": "Corretude de UX",
+          "level": 3,
+          "line": 374
+        },
+        {
+          "heading": "Definicao de Pronto",
+          "level": 2,
+          "line": 380
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 35
+      }
+    },
+    {
+      "path": "docs/archive/fase2evo_change_log.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 198,
+      "nonEmptyLines": 151,
+      "sections": [
+        {
+          "heading": "Fase 2 Evo - Change Log",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Arquivos novos",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "`src/content_engine/taxonomy.py` (502 linhas)",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "`src/content_engine/batch_validation.py` (236 linhas)",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "`tests/test_fase2evo.py` (640 linhas, 62 testes)",
+          "level": 3,
+          "line": 65
+        },
+        {
+          "heading": "Arquivos modificados",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "`src/content_engine/schemas.py`",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "`src/content_engine/interview_state.py`",
+          "level": 3,
+          "line": 105
+        },
+        {
+          "heading": "`src/content_engine/questions.py`",
+          "level": 3,
+          "line": 120
+        },
+        {
+          "heading": "`src/content_engine/interview.py`",
+          "level": 3,
+          "line": 132
+        },
+        {
+          "heading": "`src/content_engine/persistence.py`",
+          "level": 3,
+          "line": 150
+        },
+        {
+          "heading": "`src/content_engine/__init__.py`",
+          "level": 3,
+          "line": 162
+        },
+        {
+          "heading": "Safeguards implementados",
+          "level": 2,
+          "line": 175
+        },
+        {
+          "heading": "Nao implementado (pendente)",
+          "level": 2,
+          "line": 190
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    }
+  ]
+}

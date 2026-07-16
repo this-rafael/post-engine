@@ -1,0 +1,1676 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "docs/LLM_USAGE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 538,
+      "nonEmptyLines": 404,
+      "sections": [
+        {
+          "heading": "Uso das configurações LLM",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Conclusão principal",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Como o endpoint `/api/llm-config` funciona",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Configuração efetiva atual",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Pipeline principal numerada",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "1. Início da entrevista — `interview_questions`",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "2. Resposta da entrevista — `interview_evaluate`",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "3. Gateway da entrevista",
+          "level": 3,
+          "line": 135
+        },
+        {
+          "heading": "4. Decisão de aprofundamento",
+          "level": 3,
+          "line": 159
+        },
+        {
+          "heading": "5. Encerramento da entrevista",
+          "level": 3,
+          "line": 178
+        },
+        {
+          "heading": "6. Geração principal — `post_generate`",
+          "level": 3,
+          "line": 192
+        },
+        {
+          "heading": "7. Segmentação — `segment`",
+          "level": 3,
+          "line": 239
+        },
+        {
+          "heading": "8. Ajuste de um segmento — `adjust_segment`",
+          "level": 3,
+          "line": 281
+        },
+        {
+          "heading": "9. Ajuste em lote — `adjust_segments_bulk`",
+          "level": 3,
+          "line": 304
+        },
+        {
+          "heading": "10. Avaliação do post — `post_evaluate`",
+          "level": 3,
+          "line": 328
+        },
+        {
+          "heading": "11. Exportação comum",
+          "level": 3,
+          "line": 361
+        },
+        {
+          "heading": "12. Exportação SlideMark — `slidemark_export`",
+          "level": 3,
+          "line": 367
+        },
+        {
+          "heading": "Ramo editorial alternativo",
+          "level": 2,
+          "line": 406
+        },
+        {
+          "heading": "13. `storyboard_generate`",
+          "level": 3,
+          "line": 410
+        },
+        {
+          "heading": "14. `block_approaches_generate`",
+          "level": 3,
+          "line": 427
+        },
+        {
+          "heading": "15. `block_draft_generate`",
+          "level": 3,
+          "line": 444
+        },
+        {
+          "heading": "16. `editorial_compose`",
+          "level": 3,
+          "line": 474
+        },
+        {
+          "heading": "Camada final dos providers",
+          "level": 2,
+          "line": 490
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 23
+      }
+    },
+    {
+      "path": "docs/LLM_execution.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 535,
+      "nonEmptyLines": 410,
+      "sections": [
+        {
+          "heading": "Execução de Prompts na LLM",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Arquitetura Geral",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "1. Carregamento de Prompts",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Exemplo de uso do loader:",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "2. Construção do Prompt Final",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Exemplo de construção:",
+          "level": 3,
+          "line": 68
+        },
+        {
+          "heading": "Template rendering:",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "3. Configuração de Provedores",
+          "level": 2,
+          "line": 113
+        },
+        {
+          "heading": "Operações suportadas:",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "Configuração padrão:",
+          "level": 3,
+          "line": 132
+        },
+        {
+          "heading": "Resolução de configuração:",
+          "level": 3,
+          "line": 154
+        },
+        {
+          "heading": "4. Execução via Agent Wrapper",
+          "level": 2,
+          "line": 181
+        },
+        {
+          "heading": "4.1 Codex (OpenAI)",
+          "level": 3,
+          "line": 185
+        },
+        {
+          "heading": "4.2 OpenCode",
+          "level": 3,
+          "line": 218
+        },
+        {
+          "heading": "4.3 Cursor (AK Agent)",
+          "level": 3,
+          "line": 247
+        },
+        {
+          "heading": "4.4 Método unificado `run()`",
+          "level": 3,
+          "line": 286
+        },
+        {
+          "heading": "5. Codex LLM Client (Protocolo Unificado)",
+          "level": 2,
+          "line": 298
+        },
+        {
+          "heading": "Execução com Popen (concorrente):",
+          "level": 3,
+          "line": 336
+        },
+        {
+          "heading": "6. Fluxo Completo de Geração",
+          "level": 2,
+          "line": 366
+        },
+        {
+          "heading": "7. Estrutura de Resposta",
+          "level": 2,
+          "line": 402
+        },
+        {
+          "heading": "8. Logging de Sessão",
+          "level": 2,
+          "line": 418
+        },
+        {
+          "heading": "9. Tratamento de Erros",
+          "level": 2,
+          "line": 441
+        },
+        {
+          "heading": "Timeout:",
+          "level": 3,
+          "line": 443
+        },
+        {
+          "heading": "CLI não encontrado:",
+          "level": 3,
+          "line": 453
+        },
+        {
+          "heading": "Erro de execução:",
+          "level": 3,
+          "line": 460
+        },
+        {
+          "heading": "10. Exemplos de Uso Real",
+          "level": 2,
+          "line": 468
+        },
+        {
+          "heading": "Geração de perguntas de entrevista:",
+          "level": 3,
+          "line": 470
+        },
+        {
+          "heading": "Geração de conteúdo:",
+          "level": 3,
+          "line": 488
+        },
+        {
+          "heading": "Avaliação de post:",
+          "level": 3,
+          "line": 505
+        },
+        {
+          "heading": "Resumo dos Provedores",
+          "level": 2,
+          "line": 520
+        },
+        {
+          "heading": "Referências",
+          "level": 2,
+          "line": 528
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 31
+      }
+    },
+    {
+      "path": "docs/PLAN_ISOLAMENTO_CONTEXTO_LLM.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 200,
+      "nonEmptyLines": 149,
+      "sections": [
+        {
+          "heading": "Plano de isolamento do contexto local nas execuções LLM",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Objetivo",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Situação atual",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "Decisão proposta",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "Fases de implementação",
+          "level": 2,
+          "line": 38
+        },
+        {
+          "heading": "1. Mapear e declarar dependências por operação",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "2. Criar o workspace isolado",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "3. Alterar o contrato do `AgentWrapper`",
+          "level": 3,
+          "line": 73
+        },
+        {
+          "heading": "4. Ajustar a criação dos agentes",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "5. Tratar provedores individualmente",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "6. Reduzir contexto implícito no prompt",
+          "level": 3,
+          "line": 119
+        },
+        {
+          "heading": "7. Corrigir observabilidade e diagnóstico",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "8. Testes de regressão",
+          "level": 3,
+          "line": 147
+        },
+        {
+          "heading": "Critérios de aceite",
+          "level": 2,
+          "line": 168
+        },
+        {
+          "heading": "Ordem recomendada de entrega",
+          "level": 2,
+          "line": 180
+        },
+        {
+          "heading": "Riscos e decisões em aberto",
+          "level": 2,
+          "line": 191
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "docs/PLAN_REMOVE_CONTENT_GENERATE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 282,
+      "nonEmptyLines": 215,
+      "sections": [
+        {
+          "heading": "Plano: remover `content_generate` como configuração genérica",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Objetivo",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Configurações finais",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Etapas de implementação",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "1. Atualizar o contrato de operações",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "2. Migrar o arquivo de configuração",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "3. Migrar o caminho tradicional",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "4. Tornar o ramo editorial independente",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "5. Atualizar o frontend",
+          "level": 3,
+          "line": 177
+        },
+        {
+          "heading": "6. Atualizar snapshots e API",
+          "level": 3,
+          "line": 196
+        },
+        {
+          "heading": "7. Atualizar testes",
+          "level": 3,
+          "line": 222
+        },
+        {
+          "heading": "8. Atualizar documentação",
+          "level": 3,
+          "line": 245
+        },
+        {
+          "heading": "Critérios de aceitação",
+          "level": 2,
+          "line": 256
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/PLAN_UPDATE_POST_ENGINE_OUTPUT.MD",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 376,
+      "nonEmptyLines": 287,
+      "sections": [
+        {
+          "heading": "Plano: alinhar output do post-engine ao SlideMark JSON v1",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Resumo executivo",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "1. Como o SlideMark funciona",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "1.1 Modelo de dados",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "1.2 Tipos de slide (templates)",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "1.3 Pipeline no SlideMark",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "1.4 MCP (Model Context Protocol)",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "2. Como o post-engine funcionava (antes)",
+          "level": 2,
+          "line": 77
+        },
+        {
+          "heading": "2.1 Fluxo editorial",
+          "level": 3,
+          "line": 79
+        },
+        {
+          "heading": "2.2 Formato de saída legado (trilhas visuais)",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "2.3 Código afetado",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "3. Formato de saída alvo (post-engine → SlideMark)",
+          "level": 2,
+          "line": 123
+        },
+        {
+          "heading": "3.1 Envelope da resposta LLM",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "3.2 Mapeamento editorial → SlideMark",
+          "level": 3,
+          "line": 147
+        },
+        {
+          "heading": "Carrossel curto (`short_carousel`, 4–8 slides)",
+          "level": 4,
+          "line": 149
+        },
+        {
+          "heading": "Slide longo (`long_slide`, 9–20 slides)",
+          "level": 4,
+          "line": 160
+        },
+        {
+          "heading": "3.3 Limites (overflow)",
+          "level": 3,
+          "line": 172
+        },
+        {
+          "heading": "4. Alterações já aplicadas",
+          "level": 2,
+          "line": 185
+        },
+        {
+          "heading": "4.1 Prompts",
+          "level": 3,
+          "line": 187
+        },
+        {
+          "heading": "4.2 Código Python",
+          "level": 3,
+          "line": 204
+        },
+        {
+          "heading": "5. Fases de implementação restantes",
+          "level": 2,
+          "line": 214
+        },
+        {
+          "heading": "Fase A — Validação de schema (prioridade alta)",
+          "level": 3,
+          "line": 216
+        },
+        {
+          "heading": "Fase B — Autor e metadados do documento",
+          "level": 3,
+          "line": 230
+        },
+        {
+          "heading": "Fase C — Segmentação SlideMark",
+          "level": 3,
+          "line": 238
+        },
+        {
+          "heading": "Fase D — Export e integração SlideMark",
+          "level": 3,
+          "line": 260
+        },
+        {
+          "heading": "Fase E — Integração MCP end-to-end",
+          "level": 3,
+          "line": 266
+        },
+        {
+          "heading": "Fase F — Testes",
+          "level": 3,
+          "line": 279
+        },
+        {
+          "heading": "Fase G — Sincronização de contrato",
+          "level": 3,
+          "line": 291
+        },
+        {
+          "heading": "6. Compatibilidade e migração",
+          "level": 2,
+          "line": 299
+        },
+        {
+          "heading": "7. Riscos",
+          "level": 2,
+          "line": 310
+        },
+        {
+          "heading": "8. Diagrama do fluxo alvo",
+          "level": 2,
+          "line": 322
+        },
+        {
+          "heading": "9. Checklist de conclusão",
+          "level": 2,
+          "line": 350
+        },
+        {
+          "heading": "10. Referências",
+          "level": 2,
+          "line": 366
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 33
+      }
+    },
+    {
+      "path": "docs/PRD.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 3690,
+      "nonEmptyLines": 2764,
+      "sections": [
+        {
+          "heading": "PRD — Engine de Entrevista Autoral para Geração de Conteúdo Humano",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "1. Visão geral",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "2. Problema",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "3. Objetivo do produto",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "4. Não objetivos",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "5. Usuários-alvo",
+          "level": 2,
+          "line": 93
+        },
+        {
+          "heading": "6. Entrada inicial da engine",
+          "level": 2,
+          "line": 108
+        },
+        {
+          "heading": "6.0 Quatro trilhas editoriais (PersoGenIA)",
+          "level": 2,
+          "line": 145
+        },
+        {
+          "heading": "6.1 Persona oficial para conteúdo do tipo `post`",
+          "level": 2,
+          "line": 162
+        },
+        {
+          "heading": "6.2 Persona oficial para conteúdo do tipo `article`",
+          "level": 2,
+          "line": 203
+        },
+        {
+          "heading": "6.3 Persona oficial para conteúdo do tipo `short_carousel`",
+          "level": 2,
+          "line": 248
+        },
+        {
+          "heading": "6.4 Persona oficial para conteúdo do tipo `long_slide`",
+          "level": 2,
+          "line": 256
+        },
+        {
+          "heading": "6.5 Legado `slide` (deprecado)",
+          "level": 2,
+          "line": 264
+        },
+        {
+          "heading": "7. Aspectos autorais avaliados",
+          "level": 2,
+          "line": 270
+        },
+        {
+          "heading": "7.1 Experiência",
+          "level": 3,
+          "line": 272
+        },
+        {
+          "heading": "7.2 Opinião",
+          "level": 3,
+          "line": 292
+        },
+        {
+          "heading": "7.3 Sentimento",
+          "level": 3,
+          "line": 313
+        },
+        {
+          "heading": "7.4 Aprendizado",
+          "level": 3,
+          "line": 335
+        },
+        {
+          "heading": "7.5 Personalidade",
+          "level": 3,
+          "line": 354
+        },
+        {
+          "heading": "8. Modelo de score",
+          "level": 2,
+          "line": 377
+        },
+        {
+          "heading": "8.1 Score bruto",
+          "level": 2,
+          "line": 406
+        },
+        {
+          "heading": "8.2 Score normalizado",
+          "level": 2,
+          "line": 428
+        },
+        {
+          "heading": "9. Avaliação de cada resposta",
+          "level": 2,
+          "line": 483
+        },
+        {
+          "heading": "10. Estrutura da avaliação autoral",
+          "level": 2,
+          "line": 521
+        },
+        {
+          "heading": "11. Prompt de avaliação de resposta",
+          "level": 2,
+          "line": 573
+        },
+        {
+          "heading": "12. Atualização dos scores",
+          "level": 2,
+          "line": 646
+        },
+        {
+          "heading": "13. Gateways de aprovação",
+          "level": 2,
+          "line": 705
+        },
+        {
+          "heading": "14. Gateway equilibrado",
+          "level": 2,
+          "line": 714
+        },
+        {
+          "heading": "15. Gateway desequilibrado",
+          "level": 2,
+          "line": 742
+        },
+        {
+          "heading": "16. Avaliação do gateway",
+          "level": 2,
+          "line": 812
+        },
+        {
+          "heading": "17. Classificação do tipo de autoria",
+          "level": 2,
+          "line": 882
+        },
+        {
+          "heading": "18. Restrições de geração",
+          "level": 2,
+          "line": 919
+        },
+        {
+          "heading": "19. Memory pack",
+          "level": 2,
+          "line": 975
+        },
+        {
+          "heading": "20. Prompt para atualizar o memory pack",
+          "level": 2,
+          "line": 1012
+        },
+        {
+          "heading": "21. Estratégia de perguntas",
+          "level": 2,
+          "line": 1059
+        },
+        {
+          "heading": "22. Decisão da próxima pergunta",
+          "level": 2,
+          "line": 1078
+        },
+        {
+          "heading": "23. Algoritmo principal da entrevista",
+          "level": 2,
+          "line": 1112
+        },
+        {
+          "heading": "24. Estado da entrevista",
+          "level": 2,
+          "line": 1195
+        },
+        {
+          "heading": "25. Meta-prompt para Experiência",
+          "level": 2,
+          "line": 1266
+        },
+        {
+          "heading": "26. Meta-prompt para Opinião",
+          "level": 2,
+          "line": 1334
+        },
+        {
+          "heading": "27. Meta-prompt para Sentimento",
+          "level": 2,
+          "line": 1404
+        },
+        {
+          "heading": "28. Meta-prompt para Aprendizado",
+          "level": 2,
+          "line": 1473
+        },
+        {
+          "heading": "29. Prompt para perguntas recursivas",
+          "level": 2,
+          "line": 1542
+        },
+        {
+          "heading": "30. Briefing autoral final",
+          "level": 2,
+          "line": 1591
+        },
+        {
+          "heading": "31. Prompt para geração do post",
+          "level": 2,
+          "line": 1638
+        },
+        {
+          "heading": "32. Score do post gerado",
+          "level": 2,
+          "line": 1695
+        },
+        {
+          "heading": "33. Segmentação do post",
+          "level": 2,
+          "line": 1779
+        },
+        {
+          "heading": "34. Ajuste por segmento",
+          "level": 2,
+          "line": 1824
+        },
+        {
+          "heading": "35. Fluxo completo da engine",
+          "level": 2,
+          "line": 1865
+        },
+        {
+          "heading": "36. Regras de honestidade narrativa",
+          "level": 2,
+          "line": 1924
+        },
+        {
+          "heading": "37. Critérios de sucesso do produto",
+          "level": 2,
+          "line": 1956
+        },
+        {
+          "heading": "ADENDO — PromptBuilder, renderização condicional e TUI com Textual",
+          "level": 1,
+          "line": 1974
+        },
+        {
+          "heading": "38. Decisão de produto: renderização condicional do prompt gerador",
+          "level": 2,
+          "line": 1980
+        },
+        {
+          "heading": "38.1 Justificativa",
+          "level": 2,
+          "line": 2016
+        },
+        {
+          "heading": "38.2 Regra obrigatória",
+          "level": 2,
+          "line": 2032
+        },
+        {
+          "heading": "39. Nova arquitetura operacional",
+          "level": 2,
+          "line": 2049
+        },
+        {
+          "heading": "39.1 Responsabilidades da Textual TUI",
+          "level": 2,
+          "line": 2080
+        },
+        {
+          "heading": "39.2 Responsabilidades do PromptBuilder",
+          "level": 2,
+          "line": 2101
+        },
+        {
+          "heading": "39.3 Responsabilidades do AgentWrapper",
+          "level": 2,
+          "line": 2115
+        },
+        {
+          "heading": "40. Estrutura de pastas sugerida",
+          "level": 2,
+          "line": 2133
+        },
+        {
+          "heading": "41. Prompt gerador atualizado",
+          "level": 2,
+          "line": 2194
+        },
+        {
+          "heading": "41.1 Template base",
+          "level": 2,
+          "line": 2212
+        },
+        {
+          "heading": "42. Regras condicionais do formato",
+          "level": 2,
+          "line": 2319
+        },
+        {
+          "heading": "42.1 Feed",
+          "level": 2,
+          "line": 2325
+        },
+        {
+          "heading": "42.2 Article",
+          "level": 2,
+          "line": 2342
+        },
+        {
+          "heading": "42.3 Slide",
+          "level": 2,
+          "line": 2359
+        },
+        {
+          "heading": "43. Modelo de dados da geração",
+          "level": 2,
+          "line": 2376
+        },
+        {
+          "heading": "43.1 Entrada do PromptBuilder",
+          "level": 3,
+          "line": 2378
+        },
+        {
+          "heading": "43.2 Resultado do AgentWrapper",
+          "level": 3,
+          "line": 2404
+        },
+        {
+          "heading": "44. PromptBuilder",
+          "level": 2,
+          "line": 2430
+        },
+        {
+          "heading": "44.1 Exemplo de implementação",
+          "level": 3,
+          "line": 2434
+        },
+        {
+          "heading": "44.2 Critérios de aceite do PromptBuilder",
+          "level": 3,
+          "line": 2523
+        },
+        {
+          "heading": "45. Código-base atual do AgentWrapper",
+          "level": 2,
+          "line": 2538
+        },
+        {
+          "heading": "45.1 Decisão sobre o AgentWrapper",
+          "level": 2,
+          "line": 2734
+        },
+        {
+          "heading": "46. TUI com Textual",
+          "level": 2,
+          "line": 2753
+        },
+        {
+          "heading": "46.1 Objetivo da TUI",
+          "level": 2,
+          "line": 2759
+        },
+        {
+          "heading": "46.2 Layout inicial",
+          "level": 2,
+          "line": 2780
+        },
+        {
+          "heading": "46.3 Campos da TUI",
+          "level": 2,
+          "line": 2804
+        },
+        {
+          "heading": "47. Fluxo da TUI",
+          "level": 2,
+          "line": 2840
+        },
+        {
+          "heading": "47.1 Gerar preview",
+          "level": 3,
+          "line": 2842
+        },
+        {
+          "heading": "47.2 Rodar LLM",
+          "level": 3,
+          "line": 2854
+        },
+        {
+          "heading": "47.3 Limpar saída",
+          "level": 3,
+          "line": 2870
+        },
+        {
+          "heading": "47.4 Persistência automática de sessão",
+          "level": 3,
+          "line": 2879
+        },
+        {
+          "heading": "47.5 Exportação",
+          "level": 3,
+          "line": 2941
+        },
+        {
+          "heading": "48. Requisitos funcionais adicionais",
+          "level": 2,
+          "line": 2964
+        },
+        {
+          "heading": "RF-011 — Renderizar prompt condicional",
+          "level": 3,
+          "line": 2966
+        },
+        {
+          "heading": "RF-012 — Exibir prompt na TUI",
+          "level": 3,
+          "line": 2970
+        },
+        {
+          "heading": "RF-013 — Executar LLM pela TUI",
+          "level": 3,
+          "line": 2974
+        },
+        {
+          "heading": "RF-014 — Exibir resultado da execução",
+          "level": 3,
+          "line": 2978
+        },
+        {
+          "heading": "RF-015 — Validar briefing JSON",
+          "level": 3,
+          "line": 2982
+        },
+        {
+          "heading": "RF-016 — Selecionar sandbox",
+          "level": 3,
+          "line": 2986
+        },
+        {
+          "heading": "RF-017 — Não anexar arquivos ao OpenCode no MVP",
+          "level": 3,
+          "line": 2990
+        },
+        {
+          "heading": "RF-018 — Persistir sessão automaticamente",
+          "level": 3,
+          "line": 2994
+        },
+        {
+          "heading": "RF-019 — Bloquear gerações concorrentes",
+          "level": 3,
+          "line": 2998
+        },
+        {
+          "heading": "RF-020 — Exportar conteúdo",
+          "level": 3,
+          "line": 3002
+        },
+        {
+          "heading": "RF-021 — Avaliar conteúdo após segmentação",
+          "level": 3,
+          "line": 3013
+        },
+        {
+          "heading": "RF-022 — Exibir JSON sem validação rígida por schema",
+          "level": 3,
+          "line": 3017
+        },
+        {
+          "heading": "49. Requisitos não funcionais adicionais",
+          "level": 2,
+          "line": 3023
+        },
+        {
+          "heading": "RNF-009 — Separação de responsabilidades",
+          "level": 3,
+          "line": 3025
+        },
+        {
+          "heading": "RNF-010 — Testabilidade",
+          "level": 3,
+          "line": 3029
+        },
+        {
+          "heading": "RNF-011 — Robustez",
+          "level": 3,
+          "line": 3033
+        },
+        {
+          "heading": "RNF-012 — Não bloqueio da interface",
+          "level": 3,
+          "line": 3037
+        },
+        {
+          "heading": "RNF-013 — Observabilidade local",
+          "level": 3,
+          "line": 3041
+        },
+        {
+          "heading": "RNF-014 — Baixo acoplamento",
+          "level": 3,
+          "line": 3045
+        },
+        {
+          "heading": "RNF-015 — Extensibilidade",
+          "level": 3,
+          "line": 3049
+        },
+        {
+          "heading": "RNF-016 — Persistência local simples",
+          "level": 3,
+          "line": 3053
+        },
+        {
+          "heading": "RNF-017 — Execução sequencial",
+          "level": 3,
+          "line": 3057
+        },
+        {
+          "heading": "50. Validações adicionais",
+          "level": 2,
+          "line": 3063
+        },
+        {
+          "heading": "50.1 Entrada da TUI",
+          "level": 3,
+          "line": 3065
+        },
+        {
+          "heading": "50.2 Prompt renderizado",
+          "level": 3,
+          "line": 3077
+        },
+        {
+          "heading": "50.3 Saída do gerador",
+          "level": 3,
+          "line": 3088
+        },
+        {
+          "heading": "50.4 Persistência de sessão",
+          "level": 3,
+          "line": 3103
+        },
+        {
+          "heading": "50.5 Exportação",
+          "level": 3,
+          "line": 3112
+        },
+        {
+          "heading": "51. Roadmap atualizado",
+          "level": 2,
+          "line": 3121
+        },
+        {
+          "heading": "51.1 MVP operacional",
+          "level": 3,
+          "line": 3123
+        },
+        {
+          "heading": "51.2 V1",
+          "level": 3,
+          "line": 3143
+        },
+        {
+          "heading": "51.3 V2",
+          "level": 3,
+          "line": 3156
+        },
+        {
+          "heading": "52. Critérios de sucesso atualizados",
+          "level": 2,
+          "line": 3169
+        },
+        {
+          "heading": "53. Decisões fechadas nesta revisão",
+          "level": 2,
+          "line": 3187
+        },
+        {
+          "heading": "54. Questões que continuam em aberto",
+          "level": 2,
+          "line": 3216
+        },
+        {
+          "heading": "55. Fluxo completo atualizado",
+          "level": 2,
+          "line": 3228
+        },
+        {
+          "heading": "Apêndice A — Contratos Python recomendados",
+          "level": 1,
+          "line": 3259
+        },
+        {
+          "heading": "Apêndice B — Funções Python recomendadas para scoring e gateway",
+          "level": 1,
+          "line": 3506
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 123
+      }
+    },
+    {
+      "path": "docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 517,
+      "nonEmptyLines": 382,
+      "sections": [
+        {
+          "heading": "Proposta de evolução — entrevista híbrida com núcleo autoral e gates de qualidade",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Decisão",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "O que a entrevista atual acerta — e deve ser preservado",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Diagnóstico do sistema atual",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "Princípios do meio-termo",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "Modelo proposto",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "1. Taxonomia preservada, com papéis diferentes",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "2. Núcleo autoral obrigatório",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "3. Profundidade técnica e editorial por formato",
+          "level": 3,
+          "line": 104
+        },
+        {
+          "heading": "4. Invariantes para todos os tipos de conteúdo",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "5. Ledger de evidências, não apenas respostas por eixo",
+          "level": 3,
+          "line": 140
+        },
+        {
+          "heading": "Gate 1 — qualidade da pergunta",
+          "level": 2,
+          "line": 166
+        },
+        {
+          "heading": "Gate 2 — qualidade da resposta",
+          "level": 2,
+          "line": 203
+        },
+        {
+          "heading": "Reparo, não punição",
+          "level": 3,
+          "line": 240
+        },
+        {
+          "heading": "Avaliação de traços humanos: preservar e elevar o padrão",
+          "level": 2,
+          "line": 254
+        },
+        {
+          "heading": "Como a próxima pergunta é escolhida",
+          "level": 2,
+          "line": 307
+        },
+        {
+          "heading": "Duração: mínimo, alvo de riqueza e saturação",
+          "level": 2,
+          "line": 340
+        },
+        {
+          "heading": "Critério de encerramento",
+          "level": 3,
+          "line": 359
+        },
+        {
+          "heading": "Exemplo aplicado à sessão de microsserviços",
+          "level": 2,
+          "line": 372
+        },
+        {
+          "heading": "Mudanças técnicas propostas",
+          "level": 2,
+          "line": 387
+        },
+        {
+          "heading": "Compatibilidade",
+          "level": 3,
+          "line": 401
+        },
+        {
+          "heading": "Plano de implementação",
+          "level": 2,
+          "line": 408
+        },
+        {
+          "heading": "PR 1 — contratos e preservação da taxonomia",
+          "level": 3,
+          "line": 410
+        },
+        {
+          "heading": "PR 2 — gate de pergunta e avaliador de qualidade",
+          "level": 3,
+          "line": 421
+        },
+        {
+          "heading": "PR 3 — núcleo autoral e controlador híbrido",
+          "level": 3,
+          "line": 436
+        },
+        {
+          "heading": "PR 4 — experiência de usuário e todos os formatos",
+          "level": 3,
+          "line": 451
+        },
+        {
+          "heading": "PR 5 — composição separada e retirada gradual do lote obrigatório",
+          "level": 3,
+          "line": 467
+        },
+        {
+          "heading": "Testes e critérios de aceite globais",
+          "level": 2,
+          "line": 478
+        },
+        {
+          "heading": "Perguntas",
+          "level": 3,
+          "line": 480
+        },
+        {
+          "heading": "Respostas e traços humanos",
+          "level": 3,
+          "line": 487
+        },
+        {
+          "heading": "Duração e encerramento",
+          "level": 3,
+          "line": 495
+        },
+        {
+          "heading": "Geração final",
+          "level": 3,
+          "line": 503
+        },
+        {
+          "heading": "Resultado esperado",
+          "level": 2,
+          "line": 509
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 33
+      }
+    },
+    {
+      "path": "docs/V3_EVO.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 673,
+      "nonEmptyLines": 525,
+      "sections": [
+        {
+          "heading": "Planejamento Técnico: Storyboard Narrativo, Rascunhador de Blocos e Composição Editorial",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Resumo executivo",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. Estado atual do Post Engine",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "3. Arquitetura atual relevante",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "4. Gaps entre o sistema atual e o novo fluxo",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "5. Estratégia arquitetural proposta",
+          "level": 2,
+          "line": 79
+        },
+        {
+          "heading": "6. Estratégia de compatibilidade",
+          "level": 2,
+          "line": 134
+        },
+        {
+          "heading": "7. Modelo de domínio e persistência",
+          "level": 2,
+          "line": 162
+        },
+        {
+          "heading": "8. Storyboard Narrativo",
+          "level": 2,
+          "line": 235
+        },
+        {
+          "heading": "9. Rascunhador de Blocos",
+          "level": 2,
+          "line": 263
+        },
+        {
+          "heading": "10. Composição Editorial",
+          "level": 2,
+          "line": 301
+        },
+        {
+          "heading": "11. Infraestrutura de LLM e prompts",
+          "level": 2,
+          "line": 326
+        },
+        {
+          "heading": "12. Ciclo de vida, edição e invalidação",
+          "level": 2,
+          "line": 389
+        },
+        {
+          "heading": "13. Alterações de backend",
+          "level": 2,
+          "line": 413
+        },
+        {
+          "heading": "14. Alterações de frontend",
+          "level": 2,
+          "line": 435
+        },
+        {
+          "heading": "15. APIs e contratos",
+          "level": 2,
+          "line": 459
+        },
+        {
+          "heading": "16. Estratégia de implementação incremental",
+          "level": 2,
+          "line": 480
+        },
+        {
+          "heading": "Fase 0 - Caracterização e preparação",
+          "level": 3,
+          "line": 482
+        },
+        {
+          "heading": "Fase 1 - Estado editorial inerte",
+          "level": 3,
+          "line": 492
+        },
+        {
+          "heading": "Fase 2 - Storyboard backend",
+          "level": 3,
+          "line": 502
+        },
+        {
+          "heading": "Fase 3 - Storyboard frontend",
+          "level": 3,
+          "line": 512
+        },
+        {
+          "heading": "Fase 4 - Rascunhador backend",
+          "level": 3,
+          "line": 522
+        },
+        {
+          "heading": "Fase 5 - Rascunhador frontend",
+          "level": 3,
+          "line": 532
+        },
+        {
+          "heading": "Fase 6 - Composição e convergência",
+          "level": 3,
+          "line": 542
+        },
+        {
+          "heading": "Fase 7 - Hardening, rollout e docs",
+          "level": 3,
+          "line": 552
+        },
+        {
+          "heading": "17. Estratégia de testes",
+          "level": 2,
+          "line": 562
+        },
+        {
+          "heading": "18. Observabilidade e operação",
+          "level": 2,
+          "line": 597
+        },
+        {
+          "heading": "19. Riscos e decisões em aberto",
+          "level": 2,
+          "line": 617
+        },
+        {
+          "heading": "20. Ordem recomendada de execução",
+          "level": 2,
+          "line": 645
+        },
+        {
+          "heading": "Checklist interno de compatibilidade",
+          "level": 2,
+          "line": 660
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 30
+      }
+    },
+    {
+      "path": "docs/prompts_inventory.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 324,
+      "nonEmptyLines": 324,
+      "sections": [
+        {
+          "heading": "metadata",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "prompts",
+          "level": 1,
+          "line": 32
+        },
+        {
+          "heading": "legados",
+          "level": 1,
+          "line": 286
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,690 @@
+{
+  "batchIndex": 17,
+  "nodes": [
+    {
+      "id": "document:specs/archive/spec-060",
+      "type": "document",
+      "label": "SPEC-060 — Testes de contrato da geração",
+      "file": "specs/archive/spec-060/spec_060.md",
+      "tags": [
+        "spec",
+        "testes",
+        "geracao",
+        "contrato"
+      ],
+      "properties": {
+        "description": "Especificação arquivada que define os testes de contrato para a geração de conteúdo, garantindo que a saída do LLM respeite o formato esperado"
+      }
+    },
+    {
+      "id": "document:specs/checklist",
+      "type": "document",
+      "label": "Checklist das specs",
+      "file": "specs/checklist.md",
+      "tags": [
+        "spec",
+        "checklist",
+        "indice",
+        "planejamento"
+      ],
+      "properties": {
+        "description": "Índice completo das 61 especificações do projeto (SPEC-001 a SPEC-061), cobrindo modelos de domínio, gateway autoral, interview loop, geração, segmentação, TUI, testes e persistência"
+      }
+    },
+    {
+      "id": "document:specs/global",
+      "type": "document",
+      "label": "Specs globais consolidadas",
+      "file": "specs/global.md",
+      "tags": [
+        "spec",
+        "global",
+        "dominio",
+        "gateway",
+        "entrevista",
+        "geracao",
+        "tui"
+      ],
+      "properties": {
+        "description": "Documento consolidado com todas as 61 especificações (SPEC-001 a SPEC-060) incluindo modelos de domínio, scoring autoral, gateway equilibrado/desequilibrado, loop de entrevista, PromptBuilder, geração de conteúdo, segmentação, avaliação, exportação, TUI, persistência e testes"
+      }
+    },
+    {
+      "id": "file:src/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "path": "src/__init__.py",
+      "description": "Marcador de pacote Python para o diretório src",
+      "tags": [
+        "python",
+        "init"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:src/content_engine/__main__.py",
+      "type": "file",
+      "name": "__main__.py",
+      "path": "src/content_engine/__main__.py",
+      "description": "Ponto de entrada CLI do content_engine; parseia argumentos e inicia o servidor GUI",
+      "tags": [
+        "python",
+        "cli",
+        "entry-point",
+        "gui"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "function:src/content_engine/__main__.py::main",
+      "type": "function",
+      "name": "main",
+      "path": "src/content_engine/__main__.py",
+      "description": "Função principal que configura argparse com flags --gui e inicia run_gui_server",
+      "tags": [
+        "exported",
+        "cli"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "src/content_engine/__main__.py"
+      }
+    },
+    {
+      "id": "file:src/content_engine/llm_workspace.py",
+      "type": "file",
+      "name": "llm_workspace.py",
+      "path": "src/content_engine/llm_workspace.py",
+      "description": "Isolamento de workspace para execução LLM segura — cria diretórios temporários controlados com validação de path e cópia restrita de arquivos permitidos",
+      "tags": [
+        "python",
+        "workspace",
+        "seguranca",
+        "sandbox",
+        "llm"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "function:src/content_engine/llm_workspace.py::WorkspaceIsolationError",
+      "type": "class",
+      "name": "WorkspaceIsolationError",
+      "path": "src/content_engine/llm_workspace.py",
+      "description": "Classe 'WorkspaceIsolationError' — Exceção lançada quando um arquivo viola as regras de isolamento do workspace",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "src/content_engine/llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:src/content_engine/llm_workspace.py::WorkspaceManifest",
+      "type": "class",
+      "name": "WorkspaceManifest",
+      "path": "src/content_engine/llm_workspace.py",
+      "description": "Classe 'WorkspaceManifest' — Manifesto descrevendo a operação e os arquivos permitidos no workspace isolado",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "src/content_engine/llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:src/content_engine/llm_workspace.py::LlmExecutionWorkspace",
+      "type": "class",
+      "name": "LlmExecutionWorkspace",
+      "path": "src/content_engine/llm_workspace.py",
+      "description": "Classe 'LlmExecutionWorkspace' — Context manager que cria e destrói um workspace temporário isolado para execução LLM",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "src/content_engine/llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:src/content_engine/llm_workspace.py::_validate_path",
+      "type": "function",
+      "name": "_validate_path",
+      "path": "src/content_engine/llm_workspace.py",
+      "description": "Função '_validate_path' em llm_workspace.py — Valida que um caminho candidato está dentro do base e não é symlink suspeito",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "src/content_engine/llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:src/content_engine/llm_workspace.py::_is_denied",
+      "type": "function",
+      "name": "_is_denied",
+      "path": "src/content_engine/llm_workspace.py",
+      "description": "Função '_is_denied' em llm_workspace.py — Verifica se um path está na lista de padrões negados do workspace",
+      "tags": [
+        "interno"
+      ],
+      "metadata": {
+        "exported": false,
+        "parent_file": "src/content_engine/llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:src/content_engine/llm_workspace.py::isolated_workspace",
+      "type": "function",
+      "name": "isolated_workspace",
+      "path": "src/content_engine/llm_workspace.py",
+      "description": "Função 'isolated_workspace' em llm_workspace.py — Context manager que cria um LlmExecutionWorkspace e garante destruição ao sair",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "src/content_engine/llm_workspace.py"
+      }
+    },
+    {
+      "id": "function:src/content_engine/llm_workspace.py::allowed_files_for_operation",
+      "type": "function",
+      "name": "allowed_files_for_operation",
+      "path": "src/content_engine/llm_workspace.py",
+      "description": "Função 'allowed_files_for_operation' em llm_workspace.py — Retorna a lista de arquivos permitidos para uma dada operação LLM",
+      "tags": [
+        "exported"
+      ],
+      "metadata": {
+        "exported": true,
+        "parent_file": "src/content_engine/llm_workspace.py"
+      }
+    },
+    {
+      "id": "file:src/gui/static/index.html",
+      "type": "file",
+      "name": "index.html",
+      "path": "src/gui/static/index.html",
+      "description": "Página HTML estática servida como entry-point da interface GUI do Post Engine",
+      "tags": [
+        "html",
+        "gui",
+        "static"
+      ],
+      "metadata": {
+        "language": "html"
+      }
+    },
+    {
+      "id": "file:src/tui/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "path": "src/tui/__init__.py",
+      "description": "Marcador de pacote Python para o módulo TUI (Terminal User Interface)",
+      "tags": [
+        "python",
+        "init",
+        "tui"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "path": "tests/__init__.py",
+      "description": "Marcador de pacote Python para o diretório de testes",
+      "tags": [
+        "python",
+        "init",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "config:tests/fixtures/interview_corpus/corpus",
+      "type": "config",
+      "label": "Corpus de entrevista (fixtures)",
+      "file": "tests/fixtures/interview_corpus/corpus.json",
+      "tags": [
+        "fixture",
+        "testes",
+        "entrevista",
+        "corpus",
+        "json"
+      ],
+      "properties": {
+        "description": "Fixture JSON com corpus de entrevista para testes — contém schema_version e casos de teste de extração de sinais autorais"
+      }
+    },
+    {
+      "id": "document:tests/fixtures/interview_corpus/README",
+      "type": "document",
+      "label": "Interview corpus README",
+      "file": "tests/fixtures/interview_corpus/README.md",
+      "tags": [
+        "fixture",
+        "documentacao",
+        "entrevista"
+      ],
+      "properties": {
+        "description": "Documentação do diretório de fixtures de corpus de entrevista"
+      }
+    },
+    {
+      "id": "file:tests/fixtures/validate_and_render_slidemark.mts",
+      "type": "file",
+      "name": "validate_and_render_slidemark.mts",
+      "path": "tests/fixtures/validate_and_render_slidemark.mts",
+      "description": "Fixture TypeScript (mts) com cenários de teste para validação e renderização de slidemark",
+      "tags": [
+        "fixture",
+        "testes",
+        "slidemark",
+        "typescript"
+      ],
+      "metadata": {
+        "language": "mts"
+      }
+    },
+    {
+      "id": "file:tests/test_agent_wrapper_cursor.py",
+      "type": "file",
+      "name": "test_agent_wrapper_cursor.py",
+      "path": "tests/test_agent_wrapper_cursor.py",
+      "description": "Testes do AgentWrapper para integração com Cursor — resolução de modelo, parsing de output e execução CLI",
+      "tags": [
+        "testes",
+        "agent-wrapper",
+        "cursor",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_cli.py",
+      "type": "file",
+      "name": "test_cli.py",
+      "path": "tests/test_cli.py",
+      "description": "Testes do CLI — verifica comportamento sem flag GUI e invocação do servidor GUI",
+      "tags": [
+        "testes",
+        "cli",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_codex_llm_client.py",
+      "type": "file",
+      "name": "test_codex_llm_client.py",
+      "path": "tests/test_codex_llm_client.py",
+      "description": "Testes do CodexLlmClient — montagem de comando Codex, parsing de resposta, tratamento de erros e passagem de modelo",
+      "tags": [
+        "testes",
+        "codex",
+        "llm-client",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_editorial_flow.py",
+      "type": "file",
+      "name": "test_editorial_flow.py",
+      "path": "tests/test_editorial_flow.py",
+      "description": "Testes do fluxo editorial — rejeição de sessão pré-v4, round-trip de estado e derivacao de status editorial",
+      "tags": [
+        "testes",
+        "editorial",
+        "fluxo",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_generation_v4_prompt.py",
+      "type": "file",
+      "name": "test_generation_v4_prompt.py",
+      "path": "tests/test_generation_v4_prompt.py",
+      "description": "Testes do prompt de geração V4 — verifica que o prompt usa apenas contexto autoral V4",
+      "tags": [
+        "testes",
+        "geracao",
+        "prompt",
+        "v4",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_generator_image_suggestions.py",
+      "type": "file",
+      "name": "test_generator_image_suggestions.py",
+      "path": "tests/test_generator_image_suggestions.py",
+      "description": "Testes de sugestões de imagem — parsing de sugestões, formato legado, links e propagação na segmentação slidemark",
+      "tags": [
+        "testes",
+        "imagem",
+        "slidemark",
+        "sugestoes",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_gui_avaliacao.py",
+      "type": "file",
+      "name": "test_gui_avaliacao.py",
+      "path": "tests/test_gui_avaliacao.py",
+      "description": "Testes da avaliação na GUI — scores de post com critérios novos, UI completa, score legado e reset de contexto",
+      "tags": [
+        "testes",
+        "gui",
+        "avaliacao",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_gui_bulk_adjust.py",
+      "type": "file",
+      "name": "test_gui_bulk_adjust.py",
+      "path": "tests/test_gui_bulk_adjust.py",
+      "description": "Testes de ajuste em massa na GUI — reescrita de segmentos bulk, aplicação de textos e cancelamento",
+      "tags": [
+        "testes",
+        "gui",
+        "bulk-adjust",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_gui_llm_config.py",
+      "type": "file",
+      "name": "test_gui_llm_config.py",
+      "path": "tests/test_gui_llm_config.py",
+      "description": "Testes de configuração LLM na GUI — snapshot de config, atualização e config efetiva na sessão",
+      "tags": [
+        "testes",
+        "gui",
+        "llm-config",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_interview_exploration.py",
+      "type": "file",
+      "name": "test_interview_exploration.py",
+      "path": "tests/test_interview_exploration.py",
+      "description": "Testes de exploração da entrevista — prompt inicial, seleção de perguntas, validação (FR-001 a FR-004) e erros LLM",
+      "tags": [
+        "testes",
+        "entrevista",
+        "exploracao",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_interview_extraction.py",
+      "type": "file",
+      "name": "test_interview_extraction.py",
+      "path": "tests/test_interview_extraction.py",
+      "description": "Testes de extração da entrevista — imutabilidade da resposta original (FR-005) e evidência para cada sinal (FR-006)",
+      "tags": [
+        "testes",
+        "entrevista",
+        "extracao",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_interview_gaps.py",
+      "type": "file",
+      "name": "test_interview_gaps.py",
+      "path": "tests/test_interview_gaps.py",
+      "description": "Testes de lacunas da entrevista — identificação de gaps, aprofundamento crítico, limite de perguntas e gateway (FR-014)",
+      "tags": [
+        "testes",
+        "entrevista",
+        "lacunas",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    },
+    {
+      "id": "file:tests/test_interview_gateway.py",
+      "type": "file",
+      "name": "test_interview_gateway.py",
+      "path": "tests/test_interview_gateway.py",
+      "description": "Testes do gateway da entrevista — avaliação dual (FR-008 a FR-013), dimensões essenciais, vetos e compensação",
+      "tags": [
+        "testes",
+        "entrevista",
+        "gateway",
+        "python",
+        "testes"
+      ],
+      "metadata": {
+        "language": "python"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:specs/checklist",
+      "target": "document:specs/global",
+      "type": "references",
+      "label": "indexa todas as specs"
+    },
+    {
+      "source": "document:specs/checklist",
+      "target": "document:specs/archive/spec-060",
+      "type": "references",
+      "label": "indexa SPEC-060"
+    },
+    {
+      "source": "file:src/content_engine/__main__.py",
+      "target": "function:src/content_engine/__main__.py::main",
+      "type": "contains",
+      "description": "__main__.py contém main"
+    },
+    {
+      "source": "file:src/content_engine/llm_workspace.py",
+      "target": "function:src/content_engine/llm_workspace.py::WorkspaceIsolationError",
+      "type": "contains",
+      "description": "llm_workspace.py contém WorkspaceIsolationError"
+    },
+    {
+      "source": "file:src/content_engine/llm_workspace.py",
+      "target": "function:src/content_engine/llm_workspace.py::WorkspaceManifest",
+      "type": "contains",
+      "description": "llm_workspace.py contém WorkspaceManifest"
+    },
+    {
+      "source": "file:src/content_engine/llm_workspace.py",
+      "target": "function:src/content_engine/llm_workspace.py::LlmExecutionWorkspace",
+      "type": "contains",
+      "description": "llm_workspace.py contém LlmExecutionWorkspace"
+    },
+    {
+      "source": "file:src/content_engine/llm_workspace.py",
+      "target": "function:src/content_engine/llm_workspace.py::_validate_path",
+      "type": "contains",
+      "description": "llm_workspace.py contém _validate_path"
+    },
+    {
+      "source": "file:src/content_engine/llm_workspace.py",
+      "target": "function:src/content_engine/llm_workspace.py::_is_denied",
+      "type": "contains",
+      "description": "llm_workspace.py contém _is_denied"
+    },
+    {
+      "source": "file:src/content_engine/llm_workspace.py",
+      "target": "function:src/content_engine/llm_workspace.py::isolated_workspace",
+      "type": "contains",
+      "description": "llm_workspace.py contém isolated_workspace"
+    },
+    {
+      "source": "file:src/content_engine/llm_workspace.py",
+      "target": "function:src/content_engine/llm_workspace.py::allowed_files_for_operation",
+      "type": "contains",
+      "description": "llm_workspace.py contém allowed_files_for_operation"
+    },
+    {
+      "source": "document:tests/fixtures/interview_corpus/README",
+      "target": "config:tests/fixtures/interview_corpus/corpus",
+      "type": "documents",
+      "label": "documenta o corpus de entrevista"
+    },
+    {
+      "source": "document:specs/global",
+      "target": "document:specs/archive/spec-060",
+      "type": "references",
+      "label": "contém SPEC-060"
+    },
+    {
+      "source": "document:specs/checklist",
+      "target": "document:specs/archive/spec-060",
+      "type": "references",
+      "label": "referencia SPEC-060"
+    },
+    {
+      "source": "config:tests/fixtures/interview_corpus/corpus",
+      "target": "file:tests/test_interview_extraction.py",
+      "type": "configures",
+      "label": "fornece dados de teste para extração"
+    },
+    {
+      "source": "config:tests/fixtures/interview_corpus/corpus",
+      "target": "file:tests/test_interview_exploration.py",
+      "type": "configures",
+      "label": "fornece dados de teste para exploração"
+    },
+    {
+      "source": "file:tests/test_cli.py",
+      "target": "file:src/content_engine/__main__.py",
+      "type": "tests",
+      "label": "testa o CLI"
+    },
+    {
+      "source": "file:tests/test_codex_llm_client.py",
+      "target": "file:src/content_engine/llm_workspace.py",
+      "type": "related",
+      "label": "usa workspace isolado do LLM"
+    },
+    {
+      "source": "file:src/content_engine/__main__.py",
+      "target": "file:src/content_engine/llm_workspace.py",
+      "type": "related",
+      "label": "módulos do content_engine"
+    },
+    {
+      "source": "file:tests/test_interview_gateway.py",
+      "target": "document:specs/global",
+      "type": "related",
+      "label": "testa regras do gateway (SPEC-004, SPEC-005, SPEC-008)"
+    },
+    {
+      "source": "file:tests/test_interview_gaps.py",
+      "target": "document:specs/global",
+      "type": "related",
+      "label": "testa identificação de lacunas (SPEC-009)"
+    },
+    {
+      "source": "file:tests/test_interview_exploration.py",
+      "target": "document:specs/global",
+      "type": "related",
+      "label": "testa exploração da entrevista (SPEC-014 a SPEC-019)"
+    },
+    {
+      "source": "file:tests/test_interview_extraction.py",
+      "target": "document:specs/global",
+      "type": "related",
+      "label": "testa extração de sinais (SPEC-010, SPEC-011)"
+    },
+    {
+      "source": "file:tests/test_generation_v4_prompt.py",
+      "target": "document:specs/global",
+      "type": "related",
+      "label": "testa prompt de geração V4 (SPEC-026, SPEC-027)"
+    },
+    {
+      "source": "file:tests/test_agent_wrapper_cursor.py",
+      "target": "document:specs/global",
+      "type": "related",
+      "label": "testa AgentWrapper (SPEC-028, SPEC-029)"
+    },
+    {
+      "source": "file:tests/test_gui_avaliacao.py",
+      "target": "document:specs/global",
+      "type": "related",
+      "label": "testa avaliação via GUI (SPEC-034, SPEC-035)"
+    },
+    {
+      "source": "file:tests/test_gui_bulk_adjust.py",
+      "target": "document:specs/global",
+      "type": "related",
+      "label": "testa ajuste bulk na GUI (SPEC-032, SPEC-033)"
+    },
+    {
+      "source": "file:tests/test_gui_llm_config.py",
+      "target": "document:specs/global",
+      "type": "related",
+      "label": "testa configuração LLM na GUI (SPEC-047)"
+    }
+  ]
+}

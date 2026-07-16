@@ -1,0 +1,3513 @@
+{
+  "batchIndex": 4,
+  "totalBatches": 19,
+  "filesAnalyzed": 11,
+  "nodes": [
+    {
+      "id": "file:tests/llm_fakes.py",
+      "type": "file",
+      "label": "llm_fakes.py",
+      "file": "tests/llm_fakes.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 79,
+        "nonEmptyLines": 73,
+        "description": "Fakes LLM compartilhados para testes de integracoes com agentes e sessoes"
+      }
+    },
+    {
+      "id": "class:tests/llm_fakes.py::AgentFakeRunMixin",
+      "type": "class",
+      "label": "AgentFakeRunMixin",
+      "file": "tests/llm_fakes.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 10,
+        "endLine": 41,
+        "methods": [
+          "run"
+        ],
+        "description": "Mixin que roteia chamadas run() para run_codex ou run_opencode conforme a ferramenta"
+      }
+    },
+    {
+      "id": "function:tests/llm_fakes.py::fake_v4_llm_run",
+      "type": "function",
+      "label": "fake_v4_llm_run",
+      "file": "tests/llm_fakes.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 44,
+        "endLine": 79,
+        "params": [
+          "tool",
+          "prompt"
+        ],
+        "description": "Fake deterministico para execucoes LLM de exploracao e revisao autoral"
+      }
+    },
+    {
+      "id": "file:tests/test_adjust_segments_bulk.py",
+      "type": "file",
+      "label": "test_adjust_segments_bulk.py",
+      "file": "tests/test_adjust_segments_bulk.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 107,
+        "nonEmptyLines": 88,
+        "description": "Testes do ajuste em lote de segmentos com SegmentBulkAdjuster"
+      }
+    },
+    {
+      "id": "class:tests/test_adjust_segments_bulk.py::FakeAgent",
+      "type": "class",
+      "label": "FakeAgent",
+      "file": "tests/test_adjust_segments_bulk.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 18,
+        "endLine": 34,
+        "methods": [
+          "__init__",
+          "run"
+        ],
+        "description": "Fake de agente para testes de ajuste de segmentos"
+      }
+    },
+    {
+      "id": "function:tests/test_adjust_segments_bulk.py::test_trecho_to_segment_index_one_based",
+      "type": "function",
+      "label": "test_trecho_to_segment_index_one_based",
+      "file": "tests/test_adjust_segments_bulk.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 37,
+        "endLine": 39,
+        "params": [],
+        "description": "Teste: test_trecho_to_segment_index_one_based"
+      }
+    },
+    {
+      "id": "function:tests/test_adjust_segments_bulk.py::test_trecho_to_segment_index_zero_based",
+      "type": "function",
+      "label": "test_trecho_to_segment_index_zero_based",
+      "file": "tests/test_adjust_segments_bulk.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 42,
+        "endLine": 43,
+        "params": [],
+        "description": "Teste: test_trecho_to_segment_index_zero_based"
+      }
+    },
+    {
+      "id": "function:tests/test_adjust_segments_bulk.py::test_trecho_to_segment_index_invalid",
+      "type": "function",
+      "label": "test_trecho_to_segment_index_invalid",
+      "file": "tests/test_adjust_segments_bulk.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 46,
+        "endLine": 49,
+        "params": [],
+        "description": "Teste: test_trecho_to_segment_index_invalid"
+      }
+    },
+    {
+      "id": "function:tests/test_adjust_segments_bulk.py::test_bulk_adjuster_returns_all_segments",
+      "type": "function",
+      "label": "test_bulk_adjuster_returns_all_segments",
+      "file": "tests/test_adjust_segments_bulk.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 52,
+        "endLine": 74,
+        "params": [],
+        "description": "Teste: test_bulk_adjuster_returns_all_segments"
+      }
+    },
+    {
+      "id": "function:tests/test_adjust_segments_bulk.py::test_bulk_adjuster_raises_on_incomplete_response",
+      "type": "function",
+      "label": "test_bulk_adjuster_raises_on_incomplete_response",
+      "file": "tests/test_adjust_segments_bulk.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 77,
+        "endLine": 96,
+        "params": [],
+        "description": "Teste: test_bulk_adjuster_raises_on_incomplete_response"
+      }
+    },
+    {
+      "id": "function:tests/test_adjust_segments_bulk.py::test_load_prompt_adjust_segments_bulk_contem_placeholders",
+      "type": "function",
+      "label": "test_load_prompt_adjust_segments_bulk_contem_placeholders",
+      "file": "tests/test_adjust_segments_bulk.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 99,
+        "endLine": 107,
+        "params": [],
+        "description": "Teste: test_load_prompt_adjust_segments_bulk_contem_placeholders"
+      }
+    },
+    {
+      "id": "file:tests/test_editorial_composition.py",
+      "type": "file",
+      "label": "test_editorial_composition.py",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 247,
+        "nonEmptyLines": 209,
+        "description": "Testes da composicao editorial com EditorialComposer e coleta de rascunhos selecionados"
+      }
+    },
+    {
+      "id": "class:tests/test_editorial_composition.py::RecordingAgent",
+      "type": "class",
+      "label": "RecordingAgent",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 11,
+        "endLine": 43,
+        "methods": [
+          "__init__",
+          "run_codex"
+        ],
+        "description": "Agente que grava prompts recebidos para verificacao nos testes"
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::_flow_for_selected",
+      "type": "function",
+      "label": "_flow_for_selected",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 46,
+        "endLine": 71,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::_compose",
+      "type": "function",
+      "label": "_compose",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 74,
+        "endLine": 111,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::_payload",
+      "type": "function",
+      "label": "_payload",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 114,
+        "endLine": 115,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::test_rejects_concrete_example_reduced_to_abstract_category",
+      "type": "function",
+      "label": "test_rejects_concrete_example_reduced_to_abstract_category",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 118,
+        "endLine": 125,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::test_rejects_causal_chain_reduced_to_label",
+      "type": "function",
+      "label": "test_rejects_causal_chain_reduced_to_label",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 128,
+        "endLine": 137,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::test_rejects_authorial_graph_method_reduced_to_metrics",
+      "type": "function",
+      "label": "test_rejects_authorial_graph_method_reduced_to_metrics",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 140,
+        "endLine": 146,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::test_rejects_ambiguous_logical_to_physical_extraction",
+      "type": "function",
+      "label": "test_rejects_ambiguous_logical_to_physical_extraction",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 149,
+        "endLine": 155,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+      "type": "function",
+      "label": "test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 158,
+        "endLine": 170,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::test_allows_cohesive_bridge_without_replacing_selected_material",
+      "type": "function",
+      "label": "test_allows_cohesive_bridge_without_replacing_selected_material",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 173,
+        "endLine": 189,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::test_compose_prompt_contains_full_source_contract_and_authorial_context",
+      "type": "function",
+      "label": "test_compose_prompt_contains_full_source_contract_and_authorial_context",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 192,
+        "endLine": 206,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::test_compose_prompt_contains_anti_ia_policies",
+      "type": "function",
+      "label": "test_compose_prompt_contains_anti_ia_policies",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 209,
+        "endLine": 223,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_editorial_composition.py::test_long_slide_anchor_can_survive_in_slidemark_without_plain_content",
+      "type": "function",
+      "label": "test_long_slide_anchor_can_survive_in_slidemark_without_plain_content",
+      "file": "tests/test_editorial_composition.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 226,
+        "endLine": 247,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "file:tests/test_gui_editorial.py",
+      "type": "file",
+      "label": "test_gui_editorial.py",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 423,
+        "nonEmptyLines": 367,
+        "description": "Testes do fluxo editorial V3 no backend da GUI com GuiController"
+      }
+    },
+    {
+      "id": "class:tests/test_gui_editorial.py::FakeAgent",
+      "type": "class",
+      "label": "FakeAgent",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 16,
+        "endLine": 46,
+        "methods": [
+          "__init__",
+          "run_codex"
+        ],
+        "description": "Fake de agente para testes do fluxo editorial na GUI"
+      }
+    },
+    {
+      "id": "class:tests/test_gui_editorial.py::PromptCapturingAgent",
+      "type": "class",
+      "label": "PromptCapturingAgent",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 268,
+        "endLine": 300,
+        "methods": [
+          "__init__",
+          "run_codex"
+        ],
+        "description": "Agente que captura prompts para verificar conteudo enviado ao LLM"
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::controller",
+      "type": "function",
+      "label": "controller",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 50,
+        "endLine": 54,
+        "params": [
+          "tmp_path",
+          "monkeypatch"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_parse_storyboard_blocks_rejects_invalid",
+      "type": "function",
+      "label": "test_parse_storyboard_blocks_rejects_invalid",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 57,
+        "endLine": 59,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_parse_approaches_requires_three",
+      "type": "function",
+      "label": "test_parse_approaches_requires_three",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 62,
+        "endLine": 64,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_assign_storyboard_increments_order",
+      "type": "function",
+      "label": "test_assign_storyboard_increments_order",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 67,
+        "endLine": 73,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_generate_storyboard_action",
+      "type": "function",
+      "label": "test_generate_storyboard_action",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 76,
+        "endLine": 97,
+        "params": [
+          "controller",
+          "monkeypatch"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_update_storyboard_invalidates_drafts",
+      "type": "function",
+      "label": "test_update_storyboard_invalidates_drafts",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 100,
+        "endLine": 122,
+        "params": [
+          "controller"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_generate_block_drafts_keeps_generated_options",
+      "type": "function",
+      "label": "test_generate_block_drafts_keeps_generated_options",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 125,
+        "endLine": 168,
+        "params": [
+          "controller",
+          "monkeypatch"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_snapshot_preserves_editorial_stage_across_restore",
+      "type": "function",
+      "label": "test_snapshot_preserves_editorial_stage_across_restore",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 171,
+        "endLine": 183,
+        "params": [
+          "controller"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_navigate_by_editorial_stage",
+      "type": "function",
+      "label": "test_navigate_by_editorial_stage",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 186,
+        "endLine": 195,
+        "params": [
+          "controller"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::_two_block_storyboard",
+      "type": "function",
+      "label": "_two_block_storyboard",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 198,
+        "endLine": 211,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_generate_block_drafts_requires_prior_selection",
+      "type": "function",
+      "label": "test_generate_block_drafts_requires_prior_selection",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 214,
+        "endLine": 218,
+        "params": [
+          "controller"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_generate_all_block_drafts_rejected",
+      "type": "function",
+      "label": "test_generate_all_block_drafts_rejected",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 221,
+        "endLine": 225,
+        "params": [
+          "controller"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_select_block_invalidates_downstream",
+      "type": "function",
+      "label": "test_select_block_invalidates_downstream",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 228,
+        "endLine": 265,
+        "params": [
+          "controller"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_previous_selected_drafts_in_prompt",
+      "type": "function",
+      "label": "test_previous_selected_drafts_in_prompt",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 303,
+        "endLine": 351,
+        "params": [
+          "controller",
+          "monkeypatch"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_block_draft_prompt_contains_anti_ia_policies",
+      "type": "function",
+      "label": "test_block_draft_prompt_contains_anti_ia_policies",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 354,
+        "endLine": 387,
+        "params": [
+          "controller",
+          "monkeypatch"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_editorial.py::test_selection_blocks_compose",
+      "type": "function",
+      "label": "test_selection_blocks_compose",
+      "file": "tests/test_gui_editorial.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 390,
+        "endLine": 423,
+        "params": [
+          "controller"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "file:tests/test_gui_slidemark_export.py",
+      "type": "file",
+      "label": "test_gui_slidemark_export.py",
+      "file": "tests/test_gui_slidemark_export.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 225,
+        "nonEmptyLines": 197,
+        "description": "Testes da exportacao SlideMark na GUI com validacao de rejeicao e gravacao"
+      }
+    },
+    {
+      "id": "class:tests/test_gui_slidemark_export.py::FakeAgent",
+      "type": "class",
+      "label": "FakeAgent",
+      "file": "tests/test_gui_slidemark_export.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 15,
+        "endLine": 56,
+        "methods": [
+          "__init__",
+          "run_codex",
+          "run_opencode"
+        ],
+        "description": "Fake de agente com suporte a codex e opencode para exportacao SlideMark"
+      }
+    },
+    {
+      "id": "function:tests/test_gui_slidemark_export.py::_slidemark_valido",
+      "type": "function",
+      "label": "_slidemark_valido",
+      "file": "tests/test_gui_slidemark_export.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 59,
+        "endLine": 103,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_slidemark_export.py::_avaliacao_payload",
+      "type": "function",
+      "label": "_avaliacao_payload",
+      "file": "tests/test_gui_slidemark_export.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 106,
+        "endLine": 121,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_slidemark_export.py::controller",
+      "type": "function",
+      "label": "controller",
+      "file": "tests/test_gui_slidemark_export.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 125,
+        "endLine": 130,
+        "params": [
+          "tmp_path",
+          "monkeypatch"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_slidemark_export.py::test_snapshot_is_trilha_visual",
+      "type": "function",
+      "label": "test_snapshot_is_trilha_visual",
+      "file": "tests/test_gui_slidemark_export.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 133,
+        "endLine": 140,
+        "params": [
+          "controller"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_slidemark_export.py::test_export_slidemark_atualiza_estado_e_grava_arquivo",
+      "type": "function",
+      "label": "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+      "file": "tests/test_gui_slidemark_export.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 143,
+        "endLine": 189,
+        "params": [
+          "controller",
+          "tmp_path",
+          "monkeypatch"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_slidemark_export.py::test_export_slidemark_rejeita_post",
+      "type": "function",
+      "label": "test_export_slidemark_rejeita_post",
+      "file": "tests/test_gui_slidemark_export.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 192,
+        "endLine": 203,
+        "params": [
+          "controller"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_gui_slidemark_export.py::test_export_slidemark_nao_grava_documento_rejeitado",
+      "type": "function",
+      "label": "test_export_slidemark_nao_grava_documento_rejeitado",
+      "file": "tests/test_gui_slidemark_export.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 206,
+        "endLine": 225,
+        "params": [
+          "controller",
+          "tmp_path"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "file:tests/test_post_evaluation_parser.py",
+      "type": "file",
+      "label": "test_post_evaluation_parser.py",
+      "file": "tests/test_post_evaluation_parser.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 122,
+        "nonEmptyLines": 104,
+        "description": "Testes do parser de avaliacao de post com coercao de severidade e calculo de totais"
+      }
+    },
+    {
+      "id": "class:tests/test_post_evaluation_parser.py::FakeAgent",
+      "type": "class",
+      "label": "FakeAgent",
+      "file": "tests/test_post_evaluation_parser.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 11,
+        "endLine": 24,
+        "methods": [
+          "__init__",
+          "run"
+        ],
+        "description": "Fake de agente para testes do parser de avaliacao"
+      }
+    },
+    {
+      "id": "function:tests/test_post_evaluation_parser.py::_payload_completo",
+      "type": "function",
+      "label": "_payload_completo",
+      "file": "tests/test_post_evaluation_parser.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 27,
+        "endLine": 55,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_post_evaluation_parser.py::test_parse_payload_com_todos_os_campos_novos",
+      "type": "function",
+      "label": "test_parse_payload_com_todos_os_campos_novos",
+      "file": "tests/test_post_evaluation_parser.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 58,
+        "endLine": 68,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_post_evaluation_parser.py::test_coerce_severidade_invalida_para_media",
+      "type": "function",
+      "label": "test_coerce_severidade_invalida_para_media",
+      "file": "tests/test_post_evaluation_parser.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 71,
+        "endLine": 74,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_post_evaluation_parser.py::test_total_ponderado_ignora_total_da_llm",
+      "type": "function",
+      "label": "test_total_ponderado_ignora_total_da_llm",
+      "file": "tests/test_post_evaluation_parser.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 77,
+        "endLine": 95,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_post_evaluation_parser.py::test_total_cap_quando_tese_alta_e_progressao_baixa",
+      "type": "function",
+      "label": "test_total_cap_quando_tese_alta_e_progressao_baixa",
+      "file": "tests/test_post_evaluation_parser.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 98,
+        "endLine": 110,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_post_evaluation_parser.py::test_campos_faltantes_viram_vazios_sem_excecao",
+      "type": "function",
+      "label": "test_campos_faltantes_viram_vazios_sem_excecao",
+      "file": "tests/test_post_evaluation_parser.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 113,
+        "endLine": 122,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "file:tests/test_session_log.py",
+      "type": "file",
+      "label": "test_session_log.py",
+      "file": "tests/test_session_log.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 105,
+        "nonEmptyLines": 82,
+        "description": "Testes do log de sessao com AgentWrapper, CodexLlmClient e PostEngineApp"
+      }
+    },
+    {
+      "id": "class:tests/test_session_log.py::V4Agent",
+      "type": "class",
+      "label": "V4Agent",
+      "file": "tests/test_session_log.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 28,
+        "endLine": 30,
+        "methods": [
+          "run"
+        ],
+        "description": "Agente V4 falso para testes de log de sessao"
+      }
+    },
+    {
+      "id": "function:tests/test_session_log.py::_records",
+      "type": "function",
+      "label": "_records",
+      "file": "tests/test_session_log.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 16,
+        "endLine": 21,
+        "params": [
+          "path"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_session_log.py::_ok",
+      "type": "function",
+      "label": "_ok",
+      "file": "tests/test_session_log.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 24,
+        "endLine": 25,
+        "params": [
+          "stdout",
+          "stderr",
+          "returncode"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_session_log.py::test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+      "type": "function",
+      "label": "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+      "file": "tests/test_session_log.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 33,
+        "endLine": 48,
+        "params": [
+          "tmp_path"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_session_log.py::test_agent_wrapper_loga_prompt_e_resposta_llm",
+      "type": "function",
+      "label": "test_agent_wrapper_loga_prompt_e_resposta_llm",
+      "file": "tests/test_session_log.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 51,
+        "endLine": 66,
+        "params": [
+          "tmp_path"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_session_log.py::test_codex_llm_client_loga_stdin_e_resposta",
+      "type": "function",
+      "label": "test_codex_llm_client_loga_stdin_e_resposta",
+      "file": "tests/test_session_log.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 69,
+        "endLine": 84,
+        "params": [
+          "tmp_path"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_session_log.py::test_session_app_logs_v4_interview_start",
+      "type": "function",
+      "label": "test_session_app_logs_v4_interview_start",
+      "file": "tests/test_session_log.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 87,
+        "endLine": 105,
+        "params": [
+          "tmp_path"
+        ],
+        "description": ""
+      }
+    },
+    {
+      "id": "file:tests/test_slidemark_converter.py",
+      "type": "file",
+      "label": "test_slidemark_converter.py",
+      "file": "tests/test_slidemark_converter.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 176,
+        "nonEmptyLines": 158,
+        "description": "Testes do conversor SlideMark com validacao de documento e rejeicao de tipos invalidos"
+      }
+    },
+    {
+      "id": "class:tests/test_slidemark_converter.py::FakeAgent",
+      "type": "class",
+      "label": "FakeAgent",
+      "file": "tests/test_slidemark_converter.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 15,
+        "endLine": 51,
+        "methods": [
+          "__init__",
+          "run_codex"
+        ],
+        "description": "Fake de agente para testes do conversor SlideMark"
+      }
+    },
+    {
+      "id": "function:tests/test_slidemark_converter.py::_slidemark_valido",
+      "type": "function",
+      "label": "_slidemark_valido",
+      "file": "tests/test_slidemark_converter.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 54,
+        "endLine": 100,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_slidemark_converter.py::test_converter_retorna_slidemark_valido",
+      "type": "function",
+      "label": "test_converter_retorna_slidemark_valido",
+      "file": "tests/test_slidemark_converter.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 103,
+        "endLine": 119,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_slidemark_converter.py::test_converter_aplica_defaults_autor_quando_ausentes",
+      "type": "function",
+      "label": "test_converter_aplica_defaults_autor_quando_ausentes",
+      "file": "tests/test_slidemark_converter.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 122,
+        "endLine": 137,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_slidemark_converter.py::test_converter_rejeita_tipo_nao_visual",
+      "type": "function",
+      "label": "test_converter_rejeita_tipo_nao_visual",
+      "file": "tests/test_slidemark_converter.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 140,
+        "endLine": 149,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_slidemark_converter.py::test_converter_json_invalido_levanta_value_error",
+      "type": "function",
+      "label": "test_converter_json_invalido_levanta_value_error",
+      "file": "tests/test_slidemark_converter.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 152,
+        "endLine": 161,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_slidemark_converter.py::test_converter_rejeita_documento_incompleto",
+      "type": "function",
+      "label": "test_converter_rejeita_documento_incompleto",
+      "file": "tests/test_slidemark_converter.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 164,
+        "endLine": 176,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "file:tests/test_slidemark_direct_integration.py",
+      "type": "file",
+      "label": "test_slidemark_direct_integration.py",
+      "file": "tests/test_slidemark_direct_integration.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 221,
+        "nonEmptyLines": 207,
+        "description": "Teste de integracao direta do SlideMark com schema atual e renderizador"
+      }
+    },
+    {
+      "id": "class:tests/test_slidemark_direct_integration.py::FakeAgent",
+      "type": "class",
+      "label": "FakeAgent",
+      "file": "tests/test_slidemark_direct_integration.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 18,
+        "endLine": 33,
+        "methods": [
+          "__init__",
+          "run_codex"
+        ],
+        "description": "Fake de agente para teste de integracao direta SlideMark"
+      }
+    },
+    {
+      "id": "function:tests/test_slidemark_direct_integration.py::_documento_llm_legado",
+      "type": "function",
+      "label": "_documento_llm_legado",
+      "file": "tests/test_slidemark_direct_integration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 36,
+        "endLine": 131,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_slidemark_direct_integration.py::_slidemark_root",
+      "type": "function",
+      "label": "_slidemark_root",
+      "file": "tests/test_slidemark_direct_integration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 134,
+        "endLine": 139,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_slidemark_direct_integration.py::test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+      "type": "function",
+      "label": "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+      "file": "tests/test_slidemark_direct_integration.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 143,
+        "endLine": 221,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "file:tests/test_spec_030_037.py",
+      "type": "file",
+      "label": "test_spec_030_037.py",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 578,
+        "nonEmptyLines": 490,
+        "description": "Testes das SPECs 030 a 037: segmentacao, ajuste, avaliacao e exportacao de conteudo"
+      }
+    },
+    {
+      "id": "class:tests/test_spec_030_037.py::FakeAgent",
+      "type": "class",
+      "label": "FakeAgent",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 25,
+        "endLine": 91,
+        "methods": [
+          "__init__",
+          "run_codex",
+          "run_opencode"
+        ],
+        "description": "Fake de agente com suporte a codex e opencode para testes de SPECs"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::_payload_segmentos_valido",
+      "type": "function",
+      "label": "_payload_segmentos_valido",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 94,
+        "endLine": 115,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::_payload_avaliacao_short_carousel",
+      "type": "function",
+      "label": "_payload_avaliacao_short_carousel",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 315,
+        "endLine": 344,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_valido_retorna_lista",
+      "type": "function",
+      "label": "test_spec_030_parse_segmentos_valido_retorna_lista",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 118,
+        "endLine": 128,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_aceita_id_ordem_texto_ausentes_com_erro",
+      "type": "function",
+      "label": "test_spec_030_parse_segmentos_aceita_id_ordem_texto_ausentes_com_erro",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 131,
+        "endLine": 138,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 141,
+        "endLine": 151,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 154,
+        "endLine": 163,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_segmentos_nao_lista_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_030_parse_segmentos_segmentos_nao_lista_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 166,
+        "endLine": 168,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_item_nao_dict_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_030_parse_segmentos_item_nao_dict_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 171,
+        "endLine": 173,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_ordem_zero_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_030_parse_segmentos_ordem_zero_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 176,
+        "endLine": 183,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+      "type": "function",
+      "label": "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 186,
+        "endLine": 195,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+      "type": "function",
+      "label": "test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 198,
+        "endLine": 203,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 206,
+        "endLine": 211,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_030_segmenter_com_opencode",
+      "type": "function",
+      "label": "test_spec_030_segmenter_com_opencode",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 214,
+        "endLine": 219,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_031_load_prompt_generator_segment_contem_placeholder",
+      "type": "function",
+      "label": "test_spec_031_load_prompt_generator_segment_contem_placeholder",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 222,
+        "endLine": 225,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+      "type": "function",
+      "label": "test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 228,
+        "endLine": 242,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 245,
+        "endLine": 249,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 252,
+        "endLine": 257,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 260,
+        "endLine": 265,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+      "type": "function",
+      "label": "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 268,
+        "endLine": 274,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 277,
+        "endLine": 282,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 285,
+        "endLine": 290,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+      "type": "function",
+      "label": "test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 293,
+        "endLine": 300,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_033_load_prompt_adjust_segment_contem_placeholders",
+      "type": "function",
+      "label": "test_spec_033_load_prompt_adjust_segment_contem_placeholders",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 303,
+        "endLine": 312,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+      "type": "function",
+      "label": "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 347,
+        "endLine": 372,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_calcula_total_quando_ausente",
+      "type": "function",
+      "label": "test_spec_034_post_evaluator_calcula_total_quando_ausente",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 375,
+        "endLine": 391,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+      "type": "function",
+      "label": "test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 394,
+        "endLine": 418,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+      "type": "function",
+      "label": "test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 421,
+        "endLine": 425,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 428,
+        "endLine": 432,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 435,
+        "endLine": 439,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_035_load_prompt_evaluate_post_contem_placeholders",
+      "type": "function",
+      "label": "test_spec_035_load_prompt_evaluate_post_contem_placeholders",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 442,
+        "endLine": 451,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_036_exportar_markdown_cria_arquivo_md",
+      "type": "function",
+      "label": "test_spec_036_exportar_markdown_cria_arquivo_md",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 454,
+        "endLine": 465,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+      "type": "function",
+      "label": "test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 468,
+        "endLine": 479,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_036_exportar_markdown_sanitiza_nome",
+      "type": "function",
+      "label": "test_spec_036_exportar_markdown_sanitiza_nome",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 482,
+        "endLine": 484,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+      "type": "function",
+      "label": "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 487,
+        "endLine": 502,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_037_exportar_txt_cria_arquivo_txt",
+      "type": "function",
+      "label": "test_spec_037_exportar_txt_cria_arquivo_txt",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 505,
+        "endLine": 514,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_spec_037_exportar_txt_reutiliza_sanitizacao",
+      "type": "function",
+      "label": "test_spec_037_exportar_txt_reutiliza_sanitizacao",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 517,
+        "endLine": 519,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_exportar_conteudo_gera_md_e_json_para_post",
+      "type": "function",
+      "label": "test_exportar_conteudo_gera_md_e_json_para_post",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 522,
+        "endLine": 546,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+      "type": "function",
+      "label": "test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 549,
+        "endLine": 569,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_030_037.py::test_sanitizar_nome_arquivo_basico",
+      "type": "function",
+      "label": "test_sanitizar_nome_arquivo_basico",
+      "file": "tests/test_spec_030_037.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 572,
+        "endLine": 578,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "file:tests/test_spec_059_060.py",
+      "type": "file",
+      "label": "test_spec_059_060.py",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "test"
+      ],
+      "properties": {
+        "language": "python",
+        "totalLines": 316,
+        "nonEmptyLines": 272,
+        "description": "Testes das SPECs 059 e 060: robustez de parse_segmentos e gerador de conteudo"
+      }
+    },
+    {
+      "id": "class:tests/test_spec_059_060.py::FakeAgent",
+      "type": "class",
+      "label": "FakeAgent",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "class"
+      ],
+      "properties": {
+        "startLine": 16,
+        "endLine": 69,
+        "methods": [
+          "__init__",
+          "run_codex",
+          "run_opencode"
+        ],
+        "description": "Fake de agente com suporte a codex e opencode para testes de SPECs 059/060"
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::_slidemark_valido",
+      "type": "function",
+      "label": "_slidemark_valido",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 72,
+        "endLine": 119,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_payload_sem_segmentos_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_059_parse_segmentos_payload_sem_segmentos_levanta_value_error",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 122,
+        "endLine": 124,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_segmentos_string_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_059_parse_segmentos_segmentos_string_levanta_value_error",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 127,
+        "endLine": 129,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_item_string_na_lista_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_059_parse_segmentos_item_string_na_lista_levanta_value_error",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 132,
+        "endLine": 134,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_campos_ausentes",
+      "type": "function",
+      "label": "test_spec_059_parse_segmentos_campos_ausentes",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 137,
+        "endLine": 143,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_ids_duplicados_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_059_parse_segmentos_ids_duplicados_levanta_value_error",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 146,
+        "endLine": 154,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_ordem_nao_sequencial_inicia_em_2",
+      "type": "function",
+      "label": "test_spec_059_parse_segmentos_ordem_nao_sequencial_inicia_em_2",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 157,
+        "endLine": 165,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_ordem_com_pulo",
+      "type": "function",
+      "label": "test_spec_059_parse_segmentos_ordem_com_pulo",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 168,
+        "endLine": 177,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_ordem_zero_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_059_parse_segmentos_ordem_zero_levanta_value_error",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 180,
+        "endLine": 187,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_id_vazio_levanta_value_error",
+      "type": "function",
+      "label": "test_spec_059_parse_segmentos_id_vazio_levanta_value_error",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 190,
+        "endLine": 197,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_060_content_generator_payload_completo",
+      "type": "function",
+      "label": "test_spec_060_content_generator_payload_completo",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 200,
+        "endLine": 220,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+      "type": "function",
+      "label": "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 223,
+        "endLine": 237,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+      "type": "function",
+      "label": "test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 240,
+        "endLine": 253,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_spec_060_content_generator_com_opencode",
+      "type": "function",
+      "label": "test_spec_060_content_generator_com_opencode",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 256,
+        "endLine": 269,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_slidemark_validator_aceita_documento_valido",
+      "type": "function",
+      "label": "test_slidemark_validator_aceita_documento_valido",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 272,
+        "endLine": 273,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_content_generator_parseia_slidemark_e_alerta_invalidos",
+      "type": "function",
+      "label": "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 276,
+        "endLine": 305,
+        "params": [],
+        "description": ""
+      }
+    },
+    {
+      "id": "function:tests/test_spec_059_060.py::test_segmentar_slidemark_usa_id_type_e_texto_do_slide",
+      "type": "function",
+      "label": "test_segmentar_slidemark_usa_id_type_e_texto_do_slide",
+      "file": "tests/test_spec_059_060.py",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "properties": {
+        "startLine": 308,
+        "endLine": 316,
+        "params": [],
+        "description": ""
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:tests/llm_fakes.py",
+      "target": "class:tests/llm_fakes.py::AgentFakeRunMixin",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/llm_fakes.py",
+      "target": "function:tests/llm_fakes.py::fake_v4_llm_run",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/llm_fakes.py::AgentFakeRunMixin",
+      "target": "function:tests/llm_fakes.py::AgentFakeRunMixin.run",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/llm_fakes.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "function:tests/test_adjust_segments_bulk.py::test_trecho_to_segment_index_one_based",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "function:tests/test_adjust_segments_bulk.py::test_trecho_to_segment_index_zero_based",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "function:tests/test_adjust_segments_bulk.py::test_trecho_to_segment_index_invalid",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "function:tests/test_adjust_segments_bulk.py::test_bulk_adjuster_returns_all_segments",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "function:tests/test_adjust_segments_bulk.py::test_bulk_adjuster_raises_on_incomplete_response",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "function:tests/test_adjust_segments_bulk.py::test_load_prompt_adjust_segments_bulk_contem_placeholders",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "class:tests/test_adjust_segments_bulk.py::FakeAgent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_adjust_segments_bulk.py::FakeAgent",
+      "target": "function:tests/test_adjust_segments_bulk.py::FakeAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_adjust_segments_bulk.py::FakeAgent",
+      "target": "function:tests/test_adjust_segments_bulk.py::FakeAgent.run",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "file:src/content_engine/adjust_segments_bulk.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "file:src/content_engine/prompt_loader.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_adjust_segments_bulk.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segments_bulk.py",
+      "target": "file:tests/test_adjust_segments_bulk.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/prompt_loader.py",
+      "target": "file:tests/test_adjust_segments_bulk.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::_flow_for_selected",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::_compose",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::_payload",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::test_rejects_concrete_example_reduced_to_abstract_category",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::test_rejects_causal_chain_reduced_to_label",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::test_rejects_authorial_graph_method_reduced_to_metrics",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::test_rejects_ambiguous_logical_to_physical_extraction",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::test_allows_cohesive_bridge_without_replacing_selected_material",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::test_compose_prompt_contains_full_source_contract_and_authorial_context",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::test_compose_prompt_contains_anti_ia_policies",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "function:tests/test_editorial_composition.py::test_long_slide_anchor_can_survive_in_slidemark_without_plain_content",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "class:tests/test_editorial_composition.py::RecordingAgent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_editorial_composition.py::RecordingAgent",
+      "target": "function:tests/test_editorial_composition.py::RecordingAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_editorial_composition.py::RecordingAgent",
+      "target": "function:tests/test_editorial_composition.py::RecordingAgent.run_codex",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "file:src/content_engine/editorial_generation.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_editorial_composition.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:tests/test_editorial_composition.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::controller",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_parse_storyboard_blocks_rejects_invalid",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_parse_approaches_requires_three",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_assign_storyboard_increments_order",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_generate_storyboard_action",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_update_storyboard_invalidates_drafts",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_generate_block_drafts_keeps_generated_options",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_snapshot_preserves_editorial_stage_across_restore",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_navigate_by_editorial_stage",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::_two_block_storyboard",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_generate_block_drafts_requires_prior_selection",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_generate_all_block_drafts_rejected",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_select_block_invalidates_downstream",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_previous_selected_drafts_in_prompt",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_block_draft_prompt_contains_anti_ia_policies",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "function:tests/test_gui_editorial.py::test_selection_blocks_compose",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "class:tests/test_gui_editorial.py::FakeAgent",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "class:tests/test_gui_editorial.py::PromptCapturingAgent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_gui_editorial.py::FakeAgent",
+      "target": "function:tests/test_gui_editorial.py::FakeAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_gui_editorial.py::FakeAgent",
+      "target": "function:tests/test_gui_editorial.py::FakeAgent.run_codex",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_gui_editorial.py::PromptCapturingAgent",
+      "target": "function:tests/test_gui_editorial.py::PromptCapturingAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_gui_editorial.py::PromptCapturingAgent",
+      "target": "function:tests/test_gui_editorial.py::PromptCapturingAgent.run_codex",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "file:src/content_engine/editorial_flow.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "file:src/content_engine/editorial_generation.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_gui_editorial.py",
+      "target": "file:src/gui/server.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/editorial_flow.py",
+      "target": "file:tests/test_gui_editorial.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/editorial_generation.py",
+      "target": "file:tests/test_gui_editorial.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/gui/server.py",
+      "target": "file:tests/test_gui_editorial.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "function:tests/test_gui_slidemark_export.py::_slidemark_valido",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "function:tests/test_gui_slidemark_export.py::_avaliacao_payload",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "function:tests/test_gui_slidemark_export.py::controller",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "function:tests/test_gui_slidemark_export.py::test_snapshot_is_trilha_visual",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "function:tests/test_gui_slidemark_export.py::test_export_slidemark_atualiza_estado_e_grava_arquivo",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "function:tests/test_gui_slidemark_export.py::test_export_slidemark_rejeita_post",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "function:tests/test_gui_slidemark_export.py::test_export_slidemark_nao_grava_documento_rejeitado",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "class:tests/test_gui_slidemark_export.py::FakeAgent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_gui_slidemark_export.py::FakeAgent",
+      "target": "function:tests/test_gui_slidemark_export.py::FakeAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_gui_slidemark_export.py::FakeAgent",
+      "target": "function:tests/test_gui_slidemark_export.py::FakeAgent.run_codex",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_gui_slidemark_export.py::FakeAgent",
+      "target": "function:tests/test_gui_slidemark_export.py::FakeAgent.run_opencode",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_gui_slidemark_export.py",
+      "target": "file:src/gui/server.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/gui/server.py",
+      "target": "file:tests/test_gui_slidemark_export.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "function:tests/test_post_evaluation_parser.py::_payload_completo",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "function:tests/test_post_evaluation_parser.py::test_parse_payload_com_todos_os_campos_novos",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "function:tests/test_post_evaluation_parser.py::test_coerce_severidade_invalida_para_media",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "function:tests/test_post_evaluation_parser.py::test_total_ponderado_ignora_total_da_llm",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "function:tests/test_post_evaluation_parser.py::test_total_cap_quando_tese_alta_e_progressao_baixa",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "function:tests/test_post_evaluation_parser.py::test_campos_faltantes_viram_vazios_sem_excecao",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "class:tests/test_post_evaluation_parser.py::FakeAgent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_post_evaluation_parser.py::FakeAgent",
+      "target": "function:tests/test_post_evaluation_parser.py::FakeAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_post_evaluation_parser.py::FakeAgent",
+      "target": "function:tests/test_post_evaluation_parser.py::FakeAgent.run",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "file:src/content_engine/post_evaluation.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_post_evaluation_parser.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "file:tests/test_post_evaluation_parser.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "function:tests/test_session_log.py::_records",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "function:tests/test_session_log.py::_ok",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "function:tests/test_session_log.py::test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "function:tests/test_session_log.py::test_agent_wrapper_loga_prompt_e_resposta_llm",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "function:tests/test_session_log.py::test_codex_llm_client_loga_stdin_e_resposta",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "function:tests/test_session_log.py::test_session_app_logs_v4_interview_start",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "class:tests/test_session_log.py::V4Agent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_session_log.py::V4Agent",
+      "target": "function:tests/test_session_log.py::V4Agent.run",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "file:src/content_engine/agent_wrapper.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "file:src/content_engine/codex_llm_client.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "file:src/content_engine/persistence.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "file:src/content_engine/session_log.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_session_log.py",
+      "target": "file:src/content_engine/session_controller.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/agent_wrapper.py",
+      "target": "file:tests/test_session_log.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/codex_llm_client.py",
+      "target": "file:tests/test_session_log.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/persistence.py",
+      "target": "file:tests/test_session_log.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/session_log.py",
+      "target": "file:tests/test_session_log.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/session_controller.py",
+      "target": "file:tests/test_session_log.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "function:tests/test_slidemark_converter.py::_slidemark_valido",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "function:tests/test_slidemark_converter.py::test_converter_retorna_slidemark_valido",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "function:tests/test_slidemark_converter.py::test_converter_aplica_defaults_autor_quando_ausentes",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "function:tests/test_slidemark_converter.py::test_converter_rejeita_tipo_nao_visual",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "function:tests/test_slidemark_converter.py::test_converter_json_invalido_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "function:tests/test_slidemark_converter.py::test_converter_rejeita_documento_incompleto",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "class:tests/test_slidemark_converter.py::FakeAgent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_slidemark_converter.py::FakeAgent",
+      "target": "function:tests/test_slidemark_converter.py::FakeAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_slidemark_converter.py::FakeAgent",
+      "target": "function:tests/test_slidemark_converter.py::FakeAgent.run_codex",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "file:src/content_engine/slidemark_converter.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "file:src/content_engine/slidemark_validator.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_slidemark_converter.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:tests/test_slidemark_converter.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_validator.py",
+      "target": "file:tests/test_slidemark_converter.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:tests/test_slidemark_direct_integration.py",
+      "target": "function:tests/test_slidemark_direct_integration.py::_documento_llm_legado",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_direct_integration.py",
+      "target": "function:tests/test_slidemark_direct_integration.py::_slidemark_root",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_direct_integration.py",
+      "target": "function:tests/test_slidemark_direct_integration.py::test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_direct_integration.py",
+      "target": "class:tests/test_slidemark_direct_integration.py::FakeAgent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_slidemark_direct_integration.py::FakeAgent",
+      "target": "function:tests/test_slidemark_direct_integration.py::FakeAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_slidemark_direct_integration.py::FakeAgent",
+      "target": "function:tests/test_slidemark_direct_integration.py::FakeAgent.run_codex",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_slidemark_direct_integration.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_slidemark_direct_integration.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_slidemark_direct_integration.py",
+      "target": "file:src/content_engine/slidemark_converter.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_slidemark_direct_integration.py",
+      "target": "file:src/content_engine/slidemark_validator.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_converter.py",
+      "target": "file:tests/test_slidemark_direct_integration.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_validator.py",
+      "target": "file:tests/test_slidemark_direct_integration.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::_payload_segmentos_valido",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::_payload_avaliacao_short_carousel",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_valido_retorna_lista",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_aceita_id_ordem_texto_ausentes_com_erro",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_segmentos_nao_lista_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_item_nao_dict_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_parse_segmentos_ordem_zero_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_030_segmenter_com_opencode",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_031_load_prompt_generator_segment_contem_placeholder",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_033_load_prompt_adjust_segment_contem_placeholders",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_calcula_total_quando_ausente",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_035_load_prompt_evaluate_post_contem_placeholders",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_036_exportar_markdown_cria_arquivo_md",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_036_exportar_markdown_sanitiza_nome",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_037_exportar_txt_cria_arquivo_txt",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_spec_037_exportar_txt_reutiliza_sanitizacao",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_exportar_conteudo_gera_md_e_json_para_post",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "function:tests/test_spec_030_037.py::test_sanitizar_nome_arquivo_basico",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "class:tests/test_spec_030_037.py::FakeAgent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_spec_030_037.py::FakeAgent",
+      "target": "function:tests/test_spec_030_037.py::FakeAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_spec_030_037.py::FakeAgent",
+      "target": "function:tests/test_spec_030_037.py::FakeAgent.run_codex",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_spec_030_037.py::FakeAgent",
+      "target": "function:tests/test_spec_030_037.py::FakeAgent.run_opencode",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "file:src/content_engine/adjust_segment.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "file:src/content_engine/exporter.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "file:src/content_engine/post_evaluation.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "file:src/content_engine/prompt_loader.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_030_037.py",
+      "target": "file:src/content_engine/segmentation.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/adjust_segment.py",
+      "target": "file:tests/test_spec_030_037.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/exporter.py",
+      "target": "file:tests/test_spec_030_037.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/post_evaluation.py",
+      "target": "file:tests/test_spec_030_037.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/prompt_loader.py",
+      "target": "file:tests/test_spec_030_037.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "file:tests/test_spec_030_037.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::_slidemark_valido",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_payload_sem_segmentos_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_segmentos_string_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_item_string_na_lista_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_campos_ausentes",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_ids_duplicados_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_ordem_nao_sequencial_inicia_em_2",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_ordem_com_pulo",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_ordem_zero_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_059_parse_segmentos_id_vazio_levanta_value_error",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_060_content_generator_payload_completo",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_spec_060_content_generator_com_opencode",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_slidemark_validator_aceita_documento_valido",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_content_generator_parseia_slidemark_e_alerta_invalidos",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "function:tests/test_spec_059_060.py::test_segmentar_slidemark_usa_id_type_e_texto_do_slide",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "class:tests/test_spec_059_060.py::FakeAgent",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_spec_059_060.py::FakeAgent",
+      "target": "function:tests/test_spec_059_060.py::FakeAgent.__init__",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_spec_059_060.py::FakeAgent",
+      "target": "function:tests/test_spec_059_060.py::FakeAgent.run_codex",
+      "type": "contains"
+    },
+    {
+      "source": "class:tests/test_spec_059_060.py::FakeAgent",
+      "target": "function:tests/test_spec_059_060.py::FakeAgent.run_opencode",
+      "type": "contains"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "file:tests/llm_fakes.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "file:src/content_engine/generator.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "file:src/content_engine/schemas.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "file:src/content_engine/segmentation.py",
+      "type": "import"
+    },
+    {
+      "source": "file:tests/test_spec_059_060.py",
+      "target": "file:src/content_engine/slidemark_validator.py",
+      "type": "import"
+    },
+    {
+      "source": "file:src/content_engine/generator.py",
+      "target": "file:tests/test_spec_059_060.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/segmentation.py",
+      "target": "file:tests/test_spec_059_060.py",
+      "type": "tested_by"
+    },
+    {
+      "source": "file:src/content_engine/slidemark_validator.py",
+      "target": "file:tests/test_spec_059_060.py",
+      "type": "tested_by"
+    }
+  ]
+}

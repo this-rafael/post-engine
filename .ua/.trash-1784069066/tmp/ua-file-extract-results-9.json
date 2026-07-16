@@ -1,0 +1,97 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "prompts/editorial/block_approaches.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 21,
+      "nonEmptyLines": 16,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "prompts/editorial/block_draft.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 37,
+      "nonEmptyLines": 27,
+      "sections": [
+        {
+          "heading": "Políticas anti-IA obrigatórias (hard — rascunho)",
+          "level": 2,
+          "line": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "prompts/editorial/compose.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 77,
+      "nonEmptyLines": 55,
+      "sections": [
+        {
+          "heading": "Contrato editorial",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Coesão global",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Hierarquia das fontes",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "Políticas anti-IA obrigatórias (hard — composição)",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "Autocheck obrigatório antes do JSON final",
+          "level": 3,
+          "line": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "prompts/editorial/storyboard.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 26,
+      "nonEmptyLines": 22,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    }
+  ]
+}

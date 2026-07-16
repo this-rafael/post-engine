@@ -39,7 +39,7 @@ export function ModalShell({
         exit={{ opacity: 0, scale: 0.96, y: 16 }}
         transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
-          "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 panel flex max-h-[85vh] w-full flex-col overflow-hidden",
+          "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 panel flex max-h-[min(85dvh,85vh)] w-[calc(100%-1.5rem)] flex-col overflow-hidden sm:w-full",
           maxWidth,
         )}
         data-testid={testId}

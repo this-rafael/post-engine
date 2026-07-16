@@ -1,0 +1,110 @@
+{
+  "batchIndex": 9,
+  "totalBatches": 19,
+  "filesAnalyzed": 4,
+  "nodes": [
+    {
+      "id": "document:prompts/editorial/block_approaches.md",
+      "type": "document",
+      "label": "block_approaches.md",
+      "file": "prompts/editorial/block_approaches.md",
+      "tags": ["markdown", "docs", "editorial", "prompt"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 21,
+        "nonEmptyLines": 16,
+        "description": "Prompt para gerar exatamente três abordagens editoriais distintas para um bloco narrativo, recebendo papel, foco, posição, blocos anteriores e storyboard, retornando JSON com title e description de cada abordagem."
+      }
+    },
+    {
+      "id": "document:prompts/editorial/block_draft.md",
+      "type": "document",
+      "label": "block_draft.md",
+      "file": "prompts/editorial/block_draft.md",
+      "tags": ["markdown", "docs", "editorial", "prompt"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 37,
+        "nonEmptyLines": 27,
+        "description": "Prompt para redigir o rascunho de um único bloco da publicação na voz da persona selecionada, aplicando políticas anti-IA obrigatórias (proibição de travessão, antítese-template, epigrama moral e tríades abstratas) e retornando JSON com o conteúdo do draft."
+      }
+    },
+    {
+      "id": "document:prompts/editorial/compose.md",
+      "type": "document",
+      "label": "compose.md",
+      "file": "prompts/editorial/compose.md",
+      "tags": ["markdown", "docs", "editorial", "prompt"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 77,
+        "nonEmptyLines": 55,
+        "sections": [
+          "Contrato editorial",
+          "Coesão global",
+          "Hierarquia das fontes",
+          "Políticas anti-IA obrigatórias (hard — composição)",
+          "Autocheck obrigatório antes do JSON final"
+        ],
+        "description": "Prompt do editor final que compõe a publicação a partir dos rascunhos selecionados, preservando anchors editoriais prioritários, aplicando políticas anti-IA com autocheck obrigatório e retornando JSON com conteúdo, metadados, alertas, slidemark e sugestões de imagem."
+      }
+    },
+    {
+      "id": "document:prompts/editorial/storyboard.md",
+      "type": "document",
+      "label": "storyboard.md",
+      "file": "prompts/editorial/storyboard.md",
+      "tags": ["markdown", "docs", "editorial", "prompt"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 26,
+        "nonEmptyLines": 22,
+        "description": "Prompt de editor narrativo que define o storyboard da publicação em blocos ordenados com role e focus, sem escrever texto final, usando briefing autoral, contexto de entrevista e parâmetros da publicação."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:prompts/editorial/storyboard.md",
+      "target": "document:prompts/editorial/block_approaches.md",
+      "type": "related",
+      "label": "pipeline editorial: storyboard gera entradas para abordagens"
+    },
+    {
+      "source": "document:prompts/editorial/block_approaches.md",
+      "target": "document:prompts/editorial/block_draft.md",
+      "type": "related",
+      "label": "pipeline editorial: abordagem selecionada alimenta o rascunho"
+    },
+    {
+      "source": "document:prompts/editorial/block_draft.md",
+      "target": "document:prompts/editorial/compose.md",
+      "type": "related",
+      "label": "pipeline editorial: rascunhos selecionados compõem a publicação final"
+    },
+    {
+      "source": "document:prompts/editorial/compose.md",
+      "target": "document:prompts/editorial/storyboard.md",
+      "type": "related",
+      "label": "referência: composição consulta storyboard como direção narrativa"
+    },
+    {
+      "source": "document:prompts/editorial/block_draft.md",
+      "target": "document:prompts/editorial/block_approaches.md",
+      "type": "related",
+      "label": "referência: rascunho depende das abordagens geradas"
+    },
+    {
+      "source": "document:prompts/editorial/block_draft.md",
+      "target": "document:prompts/editorial/storyboard.md",
+      "type": "related",
+      "label": "referência: rascunho consulta o storyboard para contexto"
+    },
+    {
+      "source": "document:prompts/editorial/compose.md",
+      "target": "document:prompts/editorial/block_draft.md",
+      "type": "related",
+      "label": "referência: composição usa rascunhos como fonte primária"
+    }
+  ]
+}

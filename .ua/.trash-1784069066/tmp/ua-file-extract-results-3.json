@@ -1,0 +1,2040 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 13,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "frontend/src/components/workstation/interview/AnalyzingState.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 100,
+      "nonEmptyLines": 95,
+      "functions": [
+        {
+          "name": "AnalyzingState",
+          "startLine": 10,
+          "endLine": 100,
+          "params": [
+            "{\n  roundNumber,\n  answerCount,\n  phase,\n  busy,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AnalyzingState",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AnalyzingState",
+          "callee": "String(roundNumber).padStart",
+          "lineNumber": 32
+        },
+        {
+          "caller": "AnalyzingState",
+          "callee": "String",
+          "lineNumber": 32
+        },
+        {
+          "caller": "AnalyzingState",
+          "callee": "STEPS.map",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 74,
+      "nonEmptyLines": 69,
+      "functions": [
+        {
+          "name": "AuthorContextCompact",
+          "startLine": 14,
+          "endLine": 74,
+          "params": [
+            "{\n  coveredTotal,\n  totalAxes,\n  axes,\n  onExploreMap,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorContextCompact",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AuthorContextCompact",
+          "callee": "useMotionSafe",
+          "lineNumber": 25
+        },
+        {
+          "caller": "AuthorContextCompact",
+          "callee": "axes.map",
+          "lineNumber": 36
+        },
+        {
+          "caller": "AuthorContextCompact",
+          "callee": "cn",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 73,
+      "functions": [
+        {
+          "name": "AuthorContextMapMode",
+          "startLine": 9,
+          "endLine": 77,
+          "params": [
+            "{\n  interviewUi,\n  coveredTotal,\n  totalAxes,\n  editorialFeedback,\n  onClose,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorContextMapMode",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AuthorContextMapMode",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "AuthorContextMapMode",
+          "callee": "Math.round",
+          "lineNumber": 25
+        },
+        {
+          "caller": "AuthorContextMapMode",
+          "callee": "useMotionSafe",
+          "lineNumber": 26
+        },
+        {
+          "caller": "AuthorContextMapMode",
+          "callee": "Math.min",
+          "lineNumber": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/AuthorialMap.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 95,
+      "nonEmptyLines": 90,
+      "functions": [
+        {
+          "name": "clampScore",
+          "startLine": 4,
+          "endLine": 6,
+          "params": [
+            "score"
+          ]
+        },
+        {
+          "name": "levelLabel",
+          "startLine": 8,
+          "endLine": 12,
+          "params": [
+            "score"
+          ]
+        },
+        {
+          "name": "AuthorialMap",
+          "startLine": 15,
+          "endLine": 95,
+          "params": [
+            "{\n  dimensions,\n  expanded = false,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorialMap",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "clampScore",
+          "callee": "Math.max",
+          "lineNumber": 5
+        },
+        {
+          "caller": "clampScore",
+          "callee": "Math.min",
+          "lineNumber": 5
+        },
+        {
+          "caller": "clampScore",
+          "callee": "Math.round",
+          "lineNumber": 5
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "dimensions\n    .map((item, index) => {\n      const angle = step * index;\n      const radius = (clampScore(item.score ?? 0) / 100) * maxRadius;\n      const x = cx + radius * Math.cos(angle - Math.PI / 2);\n      const y = cy + radius * Math.sin(angle - Math.PI / 2);\n      return `${x},${y}`;\n    })\n    .join",
+          "lineNumber": 29
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "dimensions\n    .map",
+          "lineNumber": 29
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "clampScore",
+          "lineNumber": 32
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "Math.cos",
+          "lineNumber": 33
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "Math.sin",
+          "lineNumber": 34
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "[25, 50, 75, 100].map",
+          "lineNumber": 50
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "dimensions.map",
+          "lineNumber": 53
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "Math.cos",
+          "lineNumber": 55
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "Math.sin",
+          "lineNumber": 56
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "dimensions.map",
+          "lineNumber": 60
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "Math.cos",
+          "lineNumber": 62
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "Math.sin",
+          "lineNumber": 63
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "dimensions.map",
+          "lineNumber": 73
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "clampScore",
+          "lineNumber": 74
+        },
+        {
+          "caller": "AuthorialMap",
+          "callee": "levelLabel",
+          "lineNumber": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 81,
+      "nonEmptyLines": 74,
+      "functions": [
+        {
+          "name": "clampScore",
+          "startLine": 5,
+          "endLine": 7,
+          "params": [
+            "score"
+          ]
+        },
+        {
+          "name": "levelLabel",
+          "startLine": 9,
+          "endLine": 13,
+          "params": [
+            "score"
+          ]
+        },
+        {
+          "name": "AxisDetailPanel",
+          "startLine": 15,
+          "endLine": 81,
+          "params": [
+            "{\n  dimensions,\n  selectedDimensionId,\n  onSelect,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AxisDetailPanel",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "clampScore",
+          "callee": "Math.max",
+          "lineNumber": 6
+        },
+        {
+          "caller": "clampScore",
+          "callee": "Math.min",
+          "lineNumber": 6
+        },
+        {
+          "caller": "clampScore",
+          "callee": "Math.round",
+          "lineNumber": 6
+        },
+        {
+          "caller": "AxisDetailPanel",
+          "callee": "dimensions.find",
+          "lineNumber": 24
+        },
+        {
+          "caller": "AxisDetailPanel",
+          "callee": "clampScore",
+          "lineNumber": 27
+        },
+        {
+          "caller": "AxisDetailPanel",
+          "callee": "levelLabel",
+          "lineNumber": 28
+        },
+        {
+          "caller": "AxisDetailPanel",
+          "callee": "dimensions.map",
+          "lineNumber": 34
+        },
+        {
+          "caller": "AxisDetailPanel",
+          "callee": "onSelect",
+          "lineNumber": 40
+        },
+        {
+          "caller": "AxisDetailPanel",
+          "callee": "cn",
+          "lineNumber": 41
+        },
+        {
+          "caller": "AxisDetailPanel",
+          "callee": "dimension.rules_triggered.join",
+          "lineNumber": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "CoverageUpdated",
+          "startLine": 6,
+          "endLine": 72,
+          "params": [
+            "{\n  newAxes,\n  coveredTotal,\n  totalAxes,\n  prevCovered,\n  onContinue,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CoverageUpdated",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CoverageUpdated",
+          "callee": "useMotionSafe",
+          "lineNumber": 19
+        },
+        {
+          "caller": "CoverageUpdated",
+          "callee": "newAxes.map",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 29,
+      "functions": [
+        {
+          "name": "CurrentReadMoment",
+          "startLine": 4,
+          "endLine": 30,
+          "params": [
+            "{\n  text,\n  onContinue,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CurrentReadMoment",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/RoundNavigator.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "itemState",
+          "startLine": 8,
+          "endLine": 12,
+          "params": [
+            "index",
+            "currentIndex",
+            "answer"
+          ]
+        },
+        {
+          "name": "RoundNavigator",
+          "startLine": 14,
+          "endLine": 79,
+          "params": [
+            "{\n  round,\n  currentIndex,\n  roundNumber,\n  onSelect,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoundNavigator",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "itemState",
+          "callee": "answer.trim",
+          "lineNumber": 10
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "useMotionSafe",
+          "lineNumber": 25
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "round.filter",
+          "lineNumber": 26
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "q.answer.trim",
+          "lineNumber": 26
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "String(roundNumber).padStart",
+          "lineNumber": 30
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "String",
+          "lineNumber": 30
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "round.map",
+          "lineNumber": 32
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "itemState",
+          "lineNumber": 33
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "onSelect",
+          "lineNumber": 38
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "cn",
+          "lineNumber": 39
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "String(i + 1).padStart",
+          "lineNumber": 52
+        },
+        {
+          "caller": "RoundNavigator",
+          "callee": "String",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/RoundReview.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "excerpt",
+          "startLine": 5,
+          "endLine": 9,
+          "params": [
+            "text",
+            "max"
+          ]
+        },
+        {
+          "name": "RoundReview",
+          "startLine": 11,
+          "endLine": 84,
+          "params": [
+            "{\n  round,\n  roundNumber,\n  onEdit,\n  onBack,\n  onAnalyze,\n  loading,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoundReview",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "excerpt",
+          "callee": "text.trim",
+          "lineNumber": 6
+        },
+        {
+          "caller": "excerpt",
+          "callee": "t.slice",
+          "lineNumber": 8
+        },
+        {
+          "caller": "RoundReview",
+          "callee": "String(roundNumber).padStart",
+          "lineNumber": 32
+        },
+        {
+          "caller": "RoundReview",
+          "callee": "String",
+          "lineNumber": 32
+        },
+        {
+          "caller": "RoundReview",
+          "callee": "round.map",
+          "lineNumber": 41
+        },
+        {
+          "caller": "RoundReview",
+          "callee": "String(i + 1).padStart",
+          "lineNumber": 53
+        },
+        {
+          "caller": "RoundReview",
+          "callee": "String",
+          "lineNumber": 53
+        },
+        {
+          "caller": "RoundReview",
+          "callee": "excerpt",
+          "lineNumber": 59
+        },
+        {
+          "caller": "RoundReview",
+          "callee": "onEdit",
+          "lineNumber": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/motion.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 28,
+      "functions": [
+        {
+          "name": "useMotionSafe",
+          "startLine": 5,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "questionExit",
+          "startLine": 20,
+          "endLine": 23,
+          "params": [
+            "reduced"
+          ]
+        },
+        {
+          "name": "questionEnter",
+          "startLine": 25,
+          "endLine": 28,
+          "params": [
+            "reduced"
+          ]
+        },
+        {
+          "name": "questionInitial",
+          "startLine": 30,
+          "endLine": 33,
+          "params": [
+            "reduced"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useMotionSafe",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "questionExit",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "questionEnter",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "questionInitial",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useMotionSafe",
+          "callee": "useReducedMotion",
+          "lineNumber": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/interview/useInterviewUx.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 201,
+      "nonEmptyLines": 179,
+      "functions": [
+        {
+          "name": "snapshotCoverage",
+          "startLine": 21,
+          "endLine": 32,
+          "params": [
+            "axes",
+            "coveredTotal",
+            "totalAxes",
+            "interviewUi"
+          ]
+        },
+        {
+          "name": "deriveNewAxes",
+          "startLine": 40,
+          "endLine": 57,
+          "params": [
+            "before",
+            "after",
+            "interviewUi"
+          ]
+        },
+        {
+          "name": "useInterviewUx",
+          "startLine": 59,
+          "endLine": 201,
+          "params": [
+            "{\n  round,\n  axes,\n  coveredTotal,\n  totalAxes,\n  interviewUi,\n  busy,\n  phase,\n  editorialFeedback,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "deriveNewAxes",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "useInterviewUx",
+          "line": 59,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "snapshotCoverage",
+          "callee": "ids.add",
+          "lineNumber": 29
+        },
+        {
+          "caller": "snapshotCoverage",
+          "callee": "axes.map",
+          "lineNumber": 31
+        },
+        {
+          "caller": "deriveNewAxes",
+          "callee": "before.coveredAxisIds.has",
+          "lineNumber": 48
+        },
+        {
+          "caller": "deriveNewAxes",
+          "callee": "added.push",
+          "lineNumber": 49
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useState",
+          "lineNumber": 78
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useState",
+          "lineNumber": 79
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useState",
+          "lineNumber": 80
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useState",
+          "lineNumber": 81
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useRef",
+          "lineNumber": 83
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useState",
+          "lineNumber": 84
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useRef",
+          "lineNumber": 85
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "round.filter",
+          "lineNumber": 87
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "q.answer.trim",
+          "lineNumber": 87
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 90
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "Math.max",
+          "lineNumber": 93
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "Math.min",
+          "lineNumber": 93
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setCurrentIndex",
+          "lineNumber": 94
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 96
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 102
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setCurrentIndex",
+          "lineNumber": 104
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 106
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 110
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setCurrentIndex",
+          "lineNumber": 111
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 114
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 115
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 118
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 119
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 122
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "snapshotCoverage",
+          "lineNumber": 123
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 124
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 128
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 128
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 129
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 129
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 131
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 132
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 135
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 136
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useCallback",
+          "lineNumber": 139
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setCurrentIndex",
+          "lineNumber": 140
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 141
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setNewAxes",
+          "lineNumber": 142
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useEffect",
+          "lineNumber": 147
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "snapshotCoverage",
+          "lineNumber": 150
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "deriveNewAxes",
+          "lineNumber": 151
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setNewAxes",
+          "lineNumber": 152
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 154
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 156
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 158
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useEffect",
+          "lineNumber": 163
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setUxPhase",
+          "lineNumber": 166
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "useEffect",
+          "lineNumber": 170
+        },
+        {
+          "caller": "useInterviewUx",
+          "callee": "setCurrentIndex",
+          "lineNumber": 172
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 362,
+      "nonEmptyLines": 345,
+      "functions": [
+        {
+          "name": "InterviewStage",
+          "startLine": 17,
+          "endLine": 317,
+          "params": []
+        },
+        {
+          "name": "NextRoundReady",
+          "startLine": 319,
+          "endLine": 362,
+          "params": [
+            "{\n  roundNumber,\n  editorialFeedback,\n  coveredTotal,\n  totalAxes,\n  onContinue,\n  onBriefing,\n  busy,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "InterviewStage",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "InterviewStage",
+          "callee": "usePE",
+          "lineNumber": 31
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "axes.reduce",
+          "lineNumber": 33
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "axes.reduce",
+          "lineNumber": 34
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "useInterviewUx",
+          "lineNumber": 36
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "useEffect",
+          "lineNumber": 47
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "setInterviewFocus",
+          "lineNumber": 48
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "setInterviewFocus",
+          "lineNumber": 49
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "useEffect",
+          "lineNumber": 52
+        },
+        {
+          "caller": "onKey",
+          "callee": "e.preventDefault",
+          "lineNumber": 55
+        },
+        {
+          "caller": "onKey",
+          "callee": "ux.setFocusMode",
+          "lineNumber": 56
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "window.addEventListener",
+          "lineNumber": 59
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "window.removeEventListener",
+          "lineNumber": 60
+        },
+        {
+          "caller": "handleAnalyze",
+          "callee": "ux.beginAnalysis",
+          "lineNumber": 64
+        },
+        {
+          "caller": "handleAnalyze",
+          "callee": "submitRound",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleNewRound",
+          "callee": "nextInterviewQuestion",
+          "lineNumber": 69
+        },
+        {
+          "caller": "handleNewRound",
+          "callee": "ux.resetAfterNewRound",
+          "lineNumber": 70
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "ux.newAxes.map",
+          "lineNumber": 73
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "[\"analyzing\", \"coverage_updated\", \"current_read\"].includes",
+          "lineNumber": 78
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "ux.setFocusMode",
+          "lineNumber": 102
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "cn",
+          "lineNumber": 103
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "ux.setContextCollapsed",
+          "lineNumber": 116
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "axes.map",
+          "lineNumber": 138
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "highlightKeys.has",
+          "lineNumber": 140
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "cn",
+          "lineNumber": 165
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "cn",
+          "lineNumber": 170
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "buildBriefing",
+          "lineNumber": 222
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "answerQuestion",
+          "lineNumber": 247
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "axes.map",
+          "lineNumber": 283
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "highlightKeys.has",
+          "lineNumber": 285
+        },
+        {
+          "caller": "InterviewStage",
+          "callee": "buildBriefing",
+          "lineNumber": 297
+        },
+        {
+          "caller": "NextRoundReady",
+          "callee": "String(roundNumber).padStart",
+          "lineNumber": 342
+        },
+        {
+          "caller": "NextRoundReady",
+          "callee": "String",
+          "lineNumber": 342
+        }
+      ],
+      "metrics": {
+        "importCount": 13,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/lib/mappers/interview.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 334,
+      "nonEmptyLines": 306,
+      "functions": [
+        {
+          "name": "asRecord",
+          "startLine": 49,
+          "endLine": 53,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "asRecords",
+          "startLine": 55,
+          "endLine": 57,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "normalizeDimension",
+          "startLine": 59,
+          "endLine": 79,
+          "params": [
+            "value",
+            "index"
+          ]
+        },
+        {
+          "name": "mapInterview",
+          "startLine": 82,
+          "endLine": 109,
+          "params": [
+            "raw"
+          ]
+        },
+        {
+          "name": "axesFromInterviewUi",
+          "startLine": 111,
+          "endLine": 120,
+          "params": [
+            "interviewUi"
+          ]
+        },
+        {
+          "name": "questionsFromInterview",
+          "startLine": 122,
+          "endLine": 155,
+          "params": [
+            "ui"
+          ]
+        },
+        {
+          "name": "buildEditorialFeedback",
+          "startLine": 157,
+          "endLine": 164,
+          "params": [
+            "interviewUi"
+          ]
+        },
+        {
+          "name": "segmentsFromState",
+          "startLine": 166,
+          "endLine": 200,
+          "params": [
+            "segmentos",
+            "segmentoReescrito",
+            "segmentIndex",
+            "pendingByIndex"
+          ]
+        },
+        {
+          "name": "parseScoreValue",
+          "startLine": 214,
+          "endLine": 219,
+          "params": [
+            "raw"
+          ]
+        },
+        {
+          "name": "evaluationFromUi",
+          "startLine": 221,
+          "endLine": 255,
+          "params": [
+            "avaliacaoUi",
+            "avaliacaoPost"
+          ]
+        },
+        {
+          "name": "trechoToSegmentIndex",
+          "startLine": 257,
+          "endLine": 263,
+          "params": [
+            "trechoRaw",
+            "segmentCount"
+          ]
+        },
+        {
+          "name": "weakSegmentsFromEvaluation",
+          "startLine": 265,
+          "endLine": 304,
+          "params": [
+            "avaliacaoUi",
+            "segments"
+          ]
+        },
+        {
+          "name": "briefingCardsFromState",
+          "startLine": 306,
+          "endLine": 334,
+          "params": [
+            "briefing",
+            "serialized"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "mapInterview",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "axesFromInterviewUi",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "questionsFromInterview",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "buildEditorialFeedback",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "segmentsFromState",
+          "line": 166,
+          "isDefault": false
+        },
+        {
+          "name": "evaluationFromUi",
+          "line": 221,
+          "isDefault": false
+        },
+        {
+          "name": "trechoToSegmentIndex",
+          "line": 257,
+          "isDefault": false
+        },
+        {
+          "name": "weakSegmentsFromEvaluation",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "briefingCardsFromState",
+          "line": 306,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "asRecord",
+          "callee": "Array.isArray",
+          "lineNumber": 50
+        },
+        {
+          "caller": "asRecords",
+          "callee": "Array.isArray",
+          "lineNumber": 56
+        },
+        {
+          "caller": "asRecords",
+          "callee": "value.map(asRecord).filter",
+          "lineNumber": 56
+        },
+        {
+          "caller": "asRecords",
+          "callee": "value.map",
+          "lineNumber": 56
+        },
+        {
+          "caller": "asRecords",
+          "callee": "Object.keys",
+          "lineNumber": 56
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "asRecord",
+          "lineNumber": 60
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "String",
+          "lineNumber": 61
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "String",
+          "lineNumber": 62
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "String",
+          "lineNumber": 65
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "String",
+          "lineNumber": 66
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "Number",
+          "lineNumber": 67
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "Boolean",
+          "lineNumber": 69
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "[\"NAO_OBSERVADA\", \"NAO_APLICAVEL\"].includes",
+          "lineNumber": 69
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "Boolean",
+          "lineNumber": 70
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "Boolean",
+          "lineNumber": 71
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "Array.isArray",
+          "lineNumber": 72
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "item.evidence_ids.map",
+          "lineNumber": 72
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "asRecords",
+          "lineNumber": 73
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "asRecords",
+          "lineNumber": 74
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "Array.isArray",
+          "lineNumber": 75
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "item.rules_triggered.map",
+          "lineNumber": 75
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "String",
+          "lineNumber": 76
+        },
+        {
+          "caller": "normalizeDimension",
+          "callee": "asRecords",
+          "lineNumber": 77
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "asRecord",
+          "lineNumber": 83
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "Array.isArray",
+          "lineNumber": 84
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "Object.entries(asRecord(source.dimensions)).map",
+          "lineNumber": 86
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "Object.entries",
+          "lineNumber": 86
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "asRecord",
+          "lineNumber": 86
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "asRecord",
+          "lineNumber": 86
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "rawDimensions.map",
+          "lineNumber": 87
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "dimensions.filter",
+          "lineNumber": 88
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "applicable.filter",
+          "lineNumber": 89
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "Math.round",
+          "lineNumber": 95
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "String",
+          "lineNumber": 99
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "String",
+          "lineNumber": 100
+        },
+        {
+          "caller": "mapInterview",
+          "callee": "dimensions.map",
+          "lineNumber": 102
+        },
+        {
+          "caller": "axesFromInterviewUi",
+          "callee": "dimensions.map",
+          "lineNumber": 113
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String(current.question ?? current.text ?? \"\").trim",
+          "lineNumber": 125
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String",
+          "lineNumber": 125
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String",
+          "lineNumber": 128
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String",
+          "lineNumber": 132
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "history.forEach",
+          "lineNumber": 140
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String(item.question ?? \"\").trim",
+          "lineNumber": 141
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String",
+          "lineNumber": 141
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "questions.push",
+          "lineNumber": 143
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String",
+          "lineNumber": 144
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String",
+          "lineNumber": 149
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "Boolean",
+          "lineNumber": 150
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String(item.answer ?? \"\").trim",
+          "lineNumber": 150
+        },
+        {
+          "caller": "questionsFromInterview",
+          "callee": "String",
+          "lineNumber": 150
+        },
+        {
+          "caller": "buildEditorialFeedback",
+          "callee": "asRecord",
+          "lineNumber": 158
+        },
+        {
+          "caller": "buildEditorialFeedback",
+          "callee": "String(gateway.justification ?? \"\").trim",
+          "lineNumber": 159
+        },
+        {
+          "caller": "buildEditorialFeedback",
+          "callee": "String",
+          "lineNumber": 159
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "segmentos.map",
+          "lineNumber": 172
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "String(s.descricao || \"\").trim",
+          "lineNumber": 179
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "String",
+          "lineNumber": 179
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "String",
+          "lineNumber": 182
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "String",
+          "lineNumber": 184
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "String",
+          "lineNumber": 185
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "String",
+          "lineNumber": 190
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "String",
+          "lineNumber": 192
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "String",
+          "lineNumber": 193
+        },
+        {
+          "caller": "segmentsFromState",
+          "callee": "String",
+          "lineNumber": 196
+        },
+        {
+          "caller": "parseScoreValue",
+          "callee": "raw.match",
+          "lineNumber": 215
+        },
+        {
+          "caller": "parseScoreValue",
+          "callee": "Number",
+          "lineNumber": 217
+        },
+        {
+          "caller": "parseScoreValue",
+          "callee": "Math.round",
+          "lineNumber": 218
+        },
+        {
+          "caller": "parseScoreValue",
+          "callee": "Math.round",
+          "lineNumber": 218
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "EVAL_KEYS.map",
+          "lineNumber": 231
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "trechos.find",
+          "lineNumber": 232
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "String",
+          "lineNumber": 232
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "String",
+          "lineNumber": 232
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "EVAL_KEYS.findIndex",
+          "lineNumber": 233
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "Math.round",
+          "lineNumber": 236
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "parseScoreValue",
+          "lineNumber": 236
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "String",
+          "lineNumber": 237
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "String",
+          "lineNumber": 242
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "String",
+          "lineNumber": 243
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "String",
+          "lineNumber": 244
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "Number",
+          "lineNumber": 245
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "parseScoreValue",
+          "lineNumber": 249
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "String",
+          "lineNumber": 249
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "Math.round",
+          "lineNumber": 251
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "parseScoreValue",
+          "lineNumber": 252
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "String",
+          "lineNumber": 252
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "Math.round",
+          "lineNumber": 254
+        },
+        {
+          "caller": "evaluationFromUi",
+          "callee": "Number",
+          "lineNumber": 254
+        },
+        {
+          "caller": "trechoToSegmentIndex",
+          "callee": "Number",
+          "lineNumber": 258
+        },
+        {
+          "caller": "trechoToSegmentIndex",
+          "callee": "Number.isFinite",
+          "lineNumber": 259
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "trechoToSegmentIndex",
+          "lineNumber": 274
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "String(entry.problema ?? \"\").trim",
+          "lineNumber": 279
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "String",
+          "lineNumber": 279
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "String(entry.motivo ?? \"\").trim",
+          "lineNumber": 280
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "String",
+          "lineNumber": 280
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "String(entry.severidade ?? \"\").trim",
+          "lineNumber": 281
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "String",
+          "lineNumber": 281
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "merged.get",
+          "lineNumber": 282
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "merged.set",
+          "lineNumber": 285
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "merged.set",
+          "lineNumber": 296
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "[existing.problem, problema].filter(Boolean).join",
+          "lineNumber": 298
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "[existing.problem, problema].filter",
+          "lineNumber": 298
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "[existing.direction, motivo].filter(Boolean).join",
+          "lineNumber": 299
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "[existing.direction, motivo].filter",
+          "lineNumber": 299
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "Array.from(merged.values()).sort",
+          "lineNumber": 303
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "Array.from",
+          "lineNumber": 303
+        },
+        {
+          "caller": "weakSegmentsFromEvaluation",
+          "callee": "merged.values",
+          "lineNumber": 303
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "Object.keys",
+          "lineNumber": 310
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "serialized?.trim",
+          "lineNumber": 311
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "serialized.slice",
+          "lineNumber": 312
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "String(briefing.theme ?? \"\").trim",
+          "lineNumber": 318
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "String",
+          "lineNumber": 318
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "String(briefing.objective ?? \"\").trim",
+          "lineNumber": 319
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "String",
+          "lineNumber": 319
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "Array.isArray",
+          "lineNumber": 320
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "Array.isArray",
+          "lineNumber": 321
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "asRecord",
+          "lineNumber": 322
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "cards.push",
+          "lineNumber": 324
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "cards.push",
+          "lineNumber": 325
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "cards.push",
+          "lineNumber": 326
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "cards.push",
+          "lineNumber": 327
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "cards.push",
+          "lineNumber": 328
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "String",
+          "lineNumber": 328
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "cards.push",
+          "lineNumber": 331
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "JSON.stringify(briefing, null, 2).slice",
+          "lineNumber": 331
+        },
+        {
+          "caller": "briefingCardsFromState",
+          "callee": "JSON.stringify",
+          "lineNumber": 331
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 9,
+        "functionCount": 13,
+        "classCount": 0
+      }
+    }
+  ]
+}

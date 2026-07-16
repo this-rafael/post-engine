@@ -125,6 +125,9 @@ def build_interview_ui(raw: object) -> dict[str, Any]:
             "heuristic_approved": state.deterministic_assessment.approved if state.deterministic_assessment else False,
         },
         "closure_reason": state.closure_reason,
+        "gap_diagnosis": state.gap_diagnosis,
+        "extension_batches_completed": state.extension_batches_completed,
+        "pending_batch": [item.to_dict() for item in state.pending_batch],
     }
 
 

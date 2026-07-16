@@ -1,0 +1,255 @@
+{
+  "batchIndex": 5,
+  "totalBatches": 19,
+  "filesAnalyzed": 8,
+  "nodes": [
+    {
+      "id": "config:.playwright-mcp/page-2026-07-10T15-06-42-162Z.yml",
+      "type": "file",
+      "label": "page-2026-07-10T15-06-42-162Z.yml",
+      "file": ".playwright-mcp/page-2026-07-10T15-06-42-162Z.yml",
+      "tags": ["yaml", "config", "playwright-mcp"],
+      "properties": {
+        "language": "yaml",
+        "totalLines": 120,
+        "nonEmptyLines": 120,
+        "description": "Snapshot da arvore de acessibilidade da etapa 00 — Central de inteligencias, estado inicial sem sessao ativa"
+      }
+    },
+    {
+      "id": "config:.playwright-mcp/page-2026-07-10T15-12-47-743Z.yml",
+      "type": "file",
+      "label": "page-2026-07-10T15-12-47-743Z.yml",
+      "file": ".playwright-mcp/page-2026-07-10T15-12-47-743Z.yml",
+      "tags": ["yaml", "config", "playwright-mcp"],
+      "properties": {
+        "language": "yaml",
+        "totalLines": 120,
+        "nonEmptyLines": 120,
+        "description": "Snapshot da arvore de acessibilidade da etapa 00 — Central de inteligencias, estado inicial duplicado"
+      }
+    },
+    {
+      "id": "config:.playwright-mcp/page-2026-07-10T15-13-04-460Z.yml",
+      "type": "file",
+      "label": "page-2026-07-10T15-13-04-460Z.yml",
+      "file": ".playwright-mcp/page-2026-07-10T15-13-04-460Z.yml",
+      "tags": ["yaml", "config", "playwright-mcp"],
+      "properties": {
+        "language": "yaml",
+        "totalLines": 147,
+        "nonEmptyLines": 147,
+        "description": "Snapshot da arvore de acessibilidade da etapa 05 — Rascunhador de blocos, com sessao ativa e rascunhos do bloco Caso real"
+      }
+    },
+    {
+      "id": "config:.playwright-mcp/page-2026-07-10T15-25-23-201Z.yml",
+      "type": "file",
+      "label": "page-2026-07-10T15-25-23-201Z.yml",
+      "file": ".playwright-mcp/page-2026-07-10T15-25-23-201Z.yml",
+      "tags": ["yaml", "config", "playwright-mcp"],
+      "properties": {
+        "language": "yaml",
+        "totalLines": 104,
+        "nonEmptyLines": 104,
+        "description": "Snapshot da arvore de acessibilidade da etapa 00 — Central de inteligencias, layout alternativo sem tema definido"
+      }
+    },
+    {
+      "id": "config:.playwright-mcp/page-2026-07-10T15-25-38-696Z.yml",
+      "type": "file",
+      "label": "page-2026-07-10T15-25-38-696Z.yml",
+      "file": ".playwright-mcp/page-2026-07-10T15-25-38-696Z.yml",
+      "tags": ["yaml", "config", "playwright-mcp"],
+      "properties": {
+        "language": "yaml",
+        "totalLines": 132,
+        "nonEmptyLines": 132,
+        "description": "Snapshot da arvore de acessibilidade da etapa 05 — Rascunhador de blocos, com blocos selecionados (Gancho, Diagnostico, Tese, Anti-padrao, Caso real)"
+      }
+    },
+    {
+      "id": "config:.playwright-mcp/page-2026-07-10T15-25-51-500Z.yml",
+      "type": "file",
+      "label": "page-2026-07-10T15-25-51-500Z.yml",
+      "file": ".playwright-mcp/page-2026-07-10T15-25-51-500Z.yml",
+      "tags": ["yaml", "config", "playwright-mcp"],
+      "properties": {
+        "language": "yaml",
+        "totalLines": 152,
+        "nonEmptyLines": 152,
+        "description": "Snapshot da arvore de acessibilidade da etapa 05 — Rascunhador de blocos, visualizando rascunho Gancho (1 de 5)"
+      }
+    },
+    {
+      "id": "config:.playwright-mcp/page-2026-07-10T15-26-05-815Z.yml",
+      "type": "file",
+      "label": "page-2026-07-10T15-26-05-815Z.yml",
+      "file": ".playwright-mcp/page-2026-07-10T15-26-05-815Z.yml",
+      "tags": ["yaml", "config", "playwright-mcp"],
+      "properties": {
+        "language": "yaml",
+        "totalLines": 152,
+        "nonEmptyLines": 152,
+        "description": "Snapshot da arvore de acessibilidade da etapa 05 — Rascunhador de blocos, visualizando rascunho Diagnostico (2 de 5)"
+      }
+    },
+    {
+      "id": "config:.playwright-mcp/page-2026-07-10T15-26-19-252Z.yml",
+      "type": "file",
+      "label": "page-2026-07-10T15-26-19-252Z.yml",
+      "file": ".playwright-mcp/page-2026-07-10T15-26-19-252Z.yml",
+      "tags": ["yaml", "config", "playwright-mcp"],
+      "properties": {
+        "language": "yaml",
+        "totalLines": 132,
+        "nonEmptyLines": 132,
+        "description": "Snapshot da arvore de acessibilidade da etapa 05 — Rascunhador de blocos, painel de rascunhos colapsado"
+      }
+    },
+    {
+      "id": "document:.playwright-mcp/ui-central-inteligencias",
+      "type": "document",
+      "label": "Central de inteligencias",
+      "file": ".playwright-mcp/",
+      "tags": ["ui", "etapa-00", "roteamento"],
+      "properties": {
+        "description": "Pagina da etapa 00 do pipeline editorial — roteamento de agentes (Codex, OpenCode, Cursor) com status online/offline e inicio de sessao"
+      }
+    },
+    {
+      "id": "document:.playwright-mcp/ui-rascunhador-blocos",
+      "type": "document",
+      "label": "Rascunhador de blocos",
+      "file": ".playwright-mcp/",
+      "tags": ["ui", "etapa-05", "rascunhos"],
+      "properties": {
+        "description": "Pagina da etapa 05 do pipeline editorial — geracao e selecao de rascunhos por bloco (Gancho, Diagnostico, Tese, Anti-padrao, Caso real, Virada, etc.)"
+      }
+    },
+    {
+      "id": "config:.playwright-mcp/ui-navigation-pipeline",
+      "type": "config",
+      "label": "Navegacao do pipeline editorial",
+      "file": ".playwright-mcp/",
+      "tags": ["ui", "navigation", "pipeline"],
+      "properties": {
+        "description": "Barra de navegacao lateral com 10 etapas do pipeline: Agentes, Entrada, Entrevista, Briefing, Storyboard, Rascunhos, Composicao, Segmentacao, Avaliacao, Exportacao"
+      }
+    },
+    {
+      "id": "config:.playwright-mcp/ui-session-banner",
+      "type": "config",
+      "label": "Banner de sessao ativa",
+      "file": ".playwright-mcp/",
+      "tags": ["ui", "banner", "sessao"],
+      "properties": {
+        "description": "Banner superior com metadados da sessao: tema, persona, plataforma, formato, tom e acoes (Salvar, Resetar, Inspector)"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-06-42-162Z.yml",
+      "target": "document:.playwright-mcp/ui-central-inteligencias",
+      "type": "captures",
+      "label": "captura etapa 00"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-12-47-743Z.yml",
+      "target": "document:.playwright-mcp/ui-central-inteligencias",
+      "type": "captures",
+      "label": "captura etapa 00"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-25-23-201Z.yml",
+      "target": "document:.playwright-mcp/ui-central-inteligencias",
+      "type": "captures",
+      "label": "captura etapa 00 (layout alternativo)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-13-04-460Z.yml",
+      "target": "document:.playwright-mcp/ui-rascunhador-blocos",
+      "type": "captures",
+      "label": "captura etapa 05"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-25-38-696Z.yml",
+      "target": "document:.playwright-mcp/ui-rascunhador-blocos",
+      "type": "captures",
+      "label": "captura etapa 05 (blocos selecionados)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-25-51-500Z.yml",
+      "target": "document:.playwright-mcp/ui-rascunhador-blocos",
+      "type": "captures",
+      "label": "captura etapa 05 (rascunho Gancho)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-26-05-815Z.yml",
+      "target": "document:.playwright-mcp/ui-rascunhador-blocos",
+      "type": "captures",
+      "label": "captura etapa 05 (rascunho Diagnostico)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-26-19-252Z.yml",
+      "target": "document:.playwright-mcp/ui-rascunhador-blocos",
+      "type": "captures",
+      "label": "captura etapa 05 (painel colapsado)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-06-42-162Z.yml",
+      "target": "config:.playwright-mcp/ui-navigation-pipeline",
+      "type": "contains",
+      "label": "contem navegacao"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-06-42-162Z.yml",
+      "target": "config:.playwright-mcp/ui-session-banner",
+      "type": "contains",
+      "label": "contem banner"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-06-42-162Z.yml",
+      "target": "config:.playwright-mcp/page-2026-07-10T15-12-47-743Z.yml",
+      "type": "sequence",
+      "label": "proximo snapshot (mesmo estado)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-12-47-743Z.yml",
+      "target": "config:.playwright-mcp/page-2026-07-10T15-13-04-460Z.yml",
+      "type": "sequence",
+      "label": "proximo snapshot (etapa 05)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-13-04-460Z.yml",
+      "target": "config:.playwright-mcp/page-2026-07-10T15-25-23-201Z.yml",
+      "type": "sequence",
+      "label": "proximo snapshot (sessao resetada)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-25-23-201Z.yml",
+      "target": "config:.playwright-mcp/page-2026-07-10T15-25-38-696Z.yml",
+      "type": "sequence",
+      "label": "proximo snapshot (etapa 05)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-25-38-696Z.yml",
+      "target": "config:.playwright-mcp/page-2026-07-10T15-25-51-500Z.yml",
+      "type": "sequence",
+      "label": "proximo snapshot (visualizar Gancho)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-25-51-500Z.yml",
+      "target": "config:.playwright-mcp/page-2026-07-10T15-26-05-815Z.yml",
+      "type": "sequence",
+      "label": "proximo snapshot (visualizar Diagnostico)"
+    },
+    {
+      "source": "config:.playwright-mcp/page-2026-07-10T15-26-05-815Z.yml",
+      "target": "config:.playwright-mcp/page-2026-07-10T15-26-19-252Z.yml",
+      "type": "sequence",
+      "label": "proximo snapshot (painel colapsado)"
+    }
+  ]
+}

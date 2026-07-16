@@ -13,7 +13,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import RLock
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 from content_engine import adjust_segment as _adjust_segment
 from content_engine import adjust_segments_bulk as _adjust_segments_bulk
@@ -32,6 +32,9 @@ from content_engine.llm_config import (
     resolve_all,
     save_global_config,
 )
+from content_engine.prompt_registry.api import PromptRegistryApi
+from content_engine.prompt_registry.repository import PromptRegistryError
+from content_engine.prompt_registry.resolver import PromptResolutionError
 from content_engine.schemas import (
     FERRAMENTAS_VALIDAS,
     SANDBOXES_VALIDOS,
@@ -39,6 +42,8 @@ from content_engine.schemas import (
 )
 from content_engine.editorial_flow import derive_editorial_status, normalize_editorial_flow
 from content_engine.interview.ui import build_interview_ui
+from content_engine.phase_progress import PHASE_TO_STAGE as PROGRESS_PHASE_TO_STAGE
+from content_engine.phase_progress import phase_progress, released_phases
 from content_engine.trilhas import SELECT_OPCOES, is_trilha_visual
 from content_engine.session_controller import (
     PHASE_AVALIACAO,
@@ -181,6 +186,7 @@ class GuiController:
                     "active_status_text": f"Fase ativa: {active_label}.",
                     "phase_order": list(PHASES),
                     "phase_labels": dict(PHASE_LABELS),
+                    "phase_progress": phase_progress(state, PHASE_LABELS),
                     "jornada": app._render_jornada(),
                     "persona_ativa": app._render_persona_ativa(),
                     "interview": build_interview_ui(getattr(state, "interview_state", None)),
@@ -355,6 +361,21 @@ class GuiController:
             self._set_active_stage("interview")
         elif name == "close_v4_interview":
             self.app.action_close_interview_v4()
+            self._set_active_stage("interview")
+        elif name == "diagnose_interview_gaps":
+            self.app.action_diagnose_interview_gaps(
+                force=bool(payload.get("force", False)),
+            )
+            self._set_active_stage("interview")
+        elif name == "start_extension_batch":
+            count = payload.get("count", 5)
+            self.app.action_start_extension_batch(int(count) if count is not None else 5)
+            self._set_active_stage("interview")
+        elif name == "submit_extension_batch":
+            responses = payload.get("responses", payload.get("answers", []))
+            if not isinstance(responses, list):
+                responses = []
+            self.app.action_submit_extension_batch(responses)
             self._set_active_stage("interview")
         elif name == "clear_phase1":
             self.app.action_clear_phase1()
@@ -776,13 +797,19 @@ class GuiController:
     def _navigate(self, payload: dict[str, Any]) -> None:
         stage = str(payload.get("stage", ""))
         if stage in STAGE_LABELS:
+            target_phase = next(
+                (phase for phase, mapped_stage in PROGRESS_PHASE_TO_STAGE.items() if mapped_stage == stage),
+                None,
+            )
+            if target_phase is not None and target_phase not in released_phases(self.app.state):
+                raise ValueError("Esta fase ainda aguarda liberacao da etapa anterior.")
             self._set_active_stage(stage)
             return
         phase = str(payload.get("phase", ""))
         if phase not in PHASE_LABELS:
             raise ValueError(f"fase ou etapa invalida: {phase or stage}")
-        self.app.state.current_phase = phase
-        self.app.state.fase_atual = PHASE_LABELS[phase].lower()
+        if phase not in released_phases(self.app.state):
+            raise ValueError("Esta fase ainda aguarda liberacao da etapa anterior.")
         self._set_active_stage(PHASE_TO_STAGE.get(phase, "entry"))
 
     def _set_segment_index(self, payload: dict[str, Any]) -> None:
@@ -800,14 +827,21 @@ def _coerce_index(value: object, total: int) -> int:
     return max(0, min(index, total - 1))
 
 
+_CLIENT_GONE = (BrokenPipeError, ConnectionResetError, ConnectionAbortedError)
+
+
 def _json_response(handler: BaseHTTPRequestHandler, payload: Any, status: int = 200) -> None:
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    handler.send_response(status)
-    handler.send_header("Content-Type", "application/json; charset=utf-8")
-    handler.send_header("Content-Length", str(len(body)))
-    handler.send_header("Cache-Control", "no-store")
-    handler.end_headers()
-    handler.wfile.write(body)
+    try:
+        handler.send_response(status)
+        handler.send_header("Content-Type", "application/json; charset=utf-8")
+        handler.send_header("Content-Length", str(len(body)))
+        handler.send_header("Cache-Control", "no-store")
+        handler.end_headers()
+        handler.wfile.write(body)
+    except _CLIENT_GONE:
+        # Browser closed/aborted the request before the response finished.
+        return
 
 
 def _read_json(handler: BaseHTTPRequestHandler) -> dict[str, Any]:
@@ -822,6 +856,8 @@ def _read_json(handler: BaseHTTPRequestHandler) -> dict[str, Any]:
 
 
 def make_handler(controller: GuiController) -> type[BaseHTTPRequestHandler]:
+    prompt_registry = PromptRegistryApi()
+
     class GuiRequestHandler(BaseHTTPRequestHandler):
         server_version = "PostEngineGUI/0.1"
 
@@ -842,6 +878,25 @@ def make_handler(controller: GuiController) -> type[BaseHTTPRequestHandler]:
                 return
             if parsed.path == "/api/llm-config":
                 _json_response(self, controller.llm_config_snapshot())
+                return
+            if parsed.path == "/api/prompt-registry":
+                _json_response(self, prompt_registry.catalog())
+                return
+            if parsed.path == "/api/prompt-registry/diagnostics":
+                _json_response(self, prompt_registry.diagnostics())
+                return
+            if parsed.path == "/api/prompt-registry/executions":
+                query = parse_qs(parsed.query)
+                limit = int(query.get("limit", ["100"])[0])
+                _json_response(self, prompt_registry.executions(query.get("operation", [None])[0], limit))
+                return
+            if parsed.path.startswith("/api/prompt-registry/operations/"):
+                payload = prompt_registry.operation(parsed.path.rsplit("/", 1)[-1])
+                _json_response(self, payload or {"error": "operation_not_found"}, 200 if payload else 404)
+                return
+            if parsed.path.startswith("/api/prompt-registry/artifacts/"):
+                payload = prompt_registry.artifact(parsed.path.rsplit("/", 1)[-1])
+                _json_response(self, payload or {"error": "artifact_not_found"}, 200 if payload else 404)
                 return
             if parsed.path == "/":
                 dist_index = DIST_DIR / "index.html"
@@ -872,6 +927,8 @@ def make_handler(controller: GuiController) -> type[BaseHTTPRequestHandler]:
             if parsed.path == "/api/llm-config":
                 try:
                     _json_response(self, controller.update_llm_config(_read_json(self)))
+                except _CLIENT_GONE:
+                    return
                 except Exception as exc:  # noqa: BLE001
                     _json_response(self, {"error": str(exc)}, 400)
                 return
@@ -883,6 +940,8 @@ def make_handler(controller: GuiController) -> type[BaseHTTPRequestHandler]:
                 return
             try:
                 _json_response(self, controller.update(_read_json(self)))
+            except _CLIENT_GONE:
+                return
             except Exception as exc:  # noqa: BLE001
                 _json_response(self, {"error": str(exc)}, 400)
 
@@ -900,7 +959,41 @@ def make_handler(controller: GuiController) -> type[BaseHTTPRequestHandler]:
                         raise ValueError("state precisa ser um objeto")
                     _json_response(self, controller.restore(restore_payload))
                     return
+                if parsed.path == "/api/prompt-registry/preview":
+                    operation = payload.get("operation")
+                    context = payload.get("context", {})
+                    overrides = payload.get("version_overrides")
+                    if not isinstance(operation, str) or not isinstance(context, dict):
+                        raise ValueError("operation e context sao obrigatorios")
+                    if not isinstance(overrides, dict):
+                        overrides = None
+                    _json_response(self, prompt_registry.preview(
+                        operation, context, provider=payload.get("provider"), model=payload.get("model"),
+                        version_overrides={str(key): int(value) for key, value in overrides.items()} if overrides else None,
+                    ))
+                    return
+                prefix = "/api/prompt-registry/artifacts/"
+                if parsed.path.startswith(prefix):
+                    tail = parsed.path[len(prefix):].split("/")
+                    if len(tail) == 2 and tail[1] == "versions":
+                        _json_response(self, prompt_registry.create_version(tail[0], payload), 201)
+                        return
+                    if len(tail) == 4 and tail[1] == "versions" and tail[3] == "activate":
+                        _json_response(self, prompt_registry.activate_version(tail[0], int(tail[2]), payload))
+                        return
+                    if len(tail) == 4 and tail[1] == "versions" and tail[3] == "rollback":
+                        _json_response(self, prompt_registry.rollback(tail[0], int(tail[2])))
+                        return
                 self.send_error(HTTPStatus.NOT_FOUND)
+            except _CLIENT_GONE:
+                return
+            except PromptResolutionError as exc:
+                _json_response(self, {"error": str(exc), "code": "resolution_failed"}, 422)
+            except PromptRegistryError as exc:
+                status = 409 if str(exc).startswith("Conflito:") else 422
+                _json_response(self, {"error": str(exc)}, status)
+            except KeyError as exc:
+                _json_response(self, {"error": str(exc)}, 404)
             except Exception as exc:  # noqa: BLE001
                 _json_response(self, {"error": str(exc)}, 400)
 
@@ -910,11 +1003,14 @@ def make_handler(controller: GuiController) -> type[BaseHTTPRequestHandler]:
                 return
             content_type = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
             body = path.read_bytes()
-            self.send_response(200)
-            self.send_header("Content-Type", content_type)
-            self.send_header("Content-Length", str(len(body)))
-            self.end_headers()
-            self.wfile.write(body)
+            try:
+                self.send_response(200)
+                self.send_header("Content-Type", content_type)
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+            except _CLIENT_GONE:
+                return
 
     return GuiRequestHandler
 

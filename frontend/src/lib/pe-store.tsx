@@ -13,6 +13,7 @@ import type {
   EvalDimension,
   OperationConfig,
   Phase,
+  PhaseProgress,
   ProviderId,
   Question,
   RunEvent,
@@ -70,6 +71,7 @@ interface Store {
   statusText: string;
   stage: StageId;
   reachable: Record<StageId, boolean>;
+  phaseProgress: PhaseProgress;
   phase: Phase;
   ops: OperationConfig[];
   providers: Array<{ id: ProviderId; label: string; available: boolean }>;
@@ -135,6 +137,13 @@ interface Store {
   answerQuestion: (id: string, text: string) => void;
   submitRound: () => Promise<void>;
   nextInterviewQuestion: () => Promise<void>;
+  diagnoseGaps: () => Promise<void>;
+  startExtensionBatch: (count?: number) => Promise<void>;
+  submitExtensionBatch: (
+    responses: Array<{ question: string; answer: string }>,
+  ) => Promise<void>;
+  forceFinishInterview: () => Promise<void>;
+  restartInterview: () => Promise<void>;
   buildBriefing: () => Promise<void>;
   renderPrompt: () => Promise<void>;
   runGeneration: () => Promise<void>;
@@ -174,6 +183,13 @@ const BASE_REACHABLE: Record<StageId, boolean> = {
   export: false,
 };
 
+const EMPTY_PHASE_PROGRESS: PhaseProgress = {
+  released: ["entrada_inicial"],
+  pending: [],
+  latest_released: "entrada_inicial",
+  phases: [],
+};
+
 function isStageId(value: unknown): value is StageId {
   return typeof value === "string" && [
     "agents",
@@ -196,24 +212,27 @@ function computeReachable(
   derived: Record<string, unknown>,
   briefingReady: boolean,
 ): Record<StageId, boolean> {
+  const progress = derived.phase_progress as { released?: unknown } | undefined;
+  const released = new Set(
+    Array.isArray(progress?.released) ? progress.released.filter((item): item is string => typeof item === "string") : [],
+  );
   const editorial = editorialStatusFromDerived(derived);
   const hasContent = Boolean(String(state.conteudo_gerado ?? "").trim());
   const hasSegments = Array.isArray(state.segmentos) && state.segmentos.length > 0;
   const hasEval = Boolean(state.avaliacao_post && Object.keys(state.avaliacao_post as object).length > 0);
-  const phase = String(state.current_phase ?? "");
   return {
     agents: true,
     entry: true,
-    interview: phase !== "entrada_inicial" || briefingReady,
-    briefing: briefingReady || ["briefing_autoral", "prompt_renderizado", "execucao_llm", "segmentacao_editavel", "avaliacao_conteudo", "exportacao_final"].includes(phase),
-    storyboard: briefingReady,
+    interview: released.has("entrevista_gateway"),
+    briefing: released.has("briefing_autoral"),
+    storyboard: released.has("briefing_autoral") && briefingReady,
     drafts: editorial.storyboard_available,
     composition: editorial.drafts_available || editorial.selection_complete,
-    prompt: false,
-    execution: false,
-    segmentation: hasContent,
-    evaluation: hasSegments,
-    export: hasEval || hasContent,
+    prompt: released.has("prompt_renderizado"),
+    execution: released.has("execucao_llm"),
+    segmentation: released.has("segmentacao_editavel") && hasContent,
+    evaluation: released.has("avaliacao_conteudo") && hasSegments,
+    export: released.has("exportacao_final") && (hasEval || hasContent),
   };
 }
 
@@ -269,6 +288,7 @@ export function PostEngineProvider({ children }: { children: ReactNode }) {
   const [restoreText, setRestoreText] = useState("");
   const [interviewFocus, setInterviewFocus] = useState(false);
   const [reachable, setReachable] = useState(BASE_REACHABLE);
+  const [phaseProgress, setPhaseProgress] = useState<PhaseProgress>(EMPTY_PHASE_PROGRESS);
   const [editorialFlow, setEditorialFlow] = useState<EditorialFlow>({});
   const [editorialStatus, setEditorialStatus] = useState<EditorialStatus>(editorialStatusFromDerived({}));
   const [storyboardBlocks, setStoryboardBlocks] = useState<EditorialBlock[]>([]);
@@ -332,6 +352,13 @@ export function PostEngineProvider({ children }: { children: ReactNode }) {
     setEditorialStatus(edStatus);
     setStoryboardBlocks(blocksFromFlow(flow));
     setDraftByBlock(flow.drafts?.by_block ?? {});
+    const progress = derived.phase_progress as Partial<PhaseProgress> | undefined;
+    setPhaseProgress({
+      released: Array.isArray(progress?.released) ? progress.released : ["entrada_inicial"],
+      pending: Array.isArray(progress?.pending) ? progress.pending : [],
+      latest_released: String(progress?.latest_released ?? currentPhase ?? "entrada_inicial"),
+      phases: Array.isArray(progress?.phases) ? progress.phases as PhaseProgress["phases"] : [],
+    });
     setReachable(computeReachable(state, derived, Boolean(briefing && Object.keys(briefing).length > 0)));
 
     const prompt = String(state.prompt_renderizado ?? "");
@@ -458,6 +485,7 @@ export function PostEngineProvider({ children }: { children: ReactNode }) {
   }, [phase]);
 
   const goto = useCallback(async (s: StageId) => {
+    if (!reachable[s]) return;
     if (s === "agents") {
       setStage("agents");
       return;
@@ -466,7 +494,7 @@ export function PostEngineProvider({ children }: { children: ReactNode }) {
     const targetPhase = phaseFromStage(s);
     const body = targetPhase ? { phase: targetPhase } : { stage: s };
     await withAction("navigate", body, undefined, s);
-  }, [withAction]);
+  }, [reachable, withAction]);
 
   const updateOp = useCallback((id: string, patch: Partial<OperationConfig>) => {
     setOps((o) => o.map((op) => (op.id === id ? { ...op, ...patch } : op)));
@@ -569,6 +597,30 @@ export function PostEngineProvider({ children }: { children: ReactNode }) {
     await withAction("generate_other_question", {}, "interviewing");
   }, [withAction]);
 
+  const diagnoseGaps = useCallback(async () => {
+    await withAction("diagnose_interview_gaps", {}, "interviewing");
+  }, [withAction]);
+
+  const startExtensionBatch = useCallback(async (count = 5) => {
+    await withAction("start_extension_batch", { count }, "interviewing");
+  }, [withAction]);
+
+  const submitExtensionBatch = useCallback(async (
+    responses: Array<{ question: string; answer: string }>,
+  ) => {
+    await withAction("submit_extension_batch", { responses }, "interviewing");
+  }, [withAction]);
+
+  const forceFinishInterview = useCallback(async () => {
+    await withAction("close_v4_interview", {}, "compiling");
+    setStage("briefing");
+  }, [withAction]);
+
+  const restartInterview = useCallback(async () => {
+    await withAction("reset_phase", {}, "compiling");
+    setStage("entry");
+  }, [withAction]);
+
   const buildBriefing = useCallback(async () => {
     await withAction("continue_phase2", {}, "compiling");
     setStage("briefing");
@@ -600,8 +652,7 @@ export function PostEngineProvider({ children }: { children: ReactNode }) {
   }, [withAction]);
 
   const composeEditorial = useCallback(async () => {
-    await withAction("compose_editorial", {}, "generating");
-    setStage("segmentation");
+    await withAction("compose_editorial", {}, "generating", "composition");
   }, [withAction]);
 
   const renderPrompt = useCallback(async () => {
@@ -727,14 +778,16 @@ export function PostEngineProvider({ children }: { children: ReactNode }) {
   }, [applySnapshot, restoreText]);
 
   const value: Store = {
-    busy, error, statusText, stage, reachable, phase, ops, providers, session,
+    busy, error, statusText, stage, reachable, phaseProgress, phase, ops, providers, session,
     axes, interviewUi, editorialFeedback, round, rounds, briefingReady, briefingCards,
     promptRendered, promptText, events, runState, returnCode, rawOutput, segments,
     weakSegments, bulkRewrites, evaluation, evalScore, exportState, exportPath, isTrilhaVisual, focusSegment,
     snapshot, actionState: draftRef.current, serialized, restoreText, interviewFocus,
     editorialFlow, editorialStatus, storyboardBlocks, draftByBlock,
     goto, setPhase, setInterviewFocus, updateOp, saveOps, setSession, saveSession, reload,
-    continueToInterview, answerQuestion, submitRound, nextInterviewQuestion, buildBriefing,
+    continueToInterview, answerQuestion, submitRound, nextInterviewQuestion,
+    diagnoseGaps, startExtensionBatch, submitExtensionBatch, forceFinishInterview, restartInterview,
+    buildBriefing,
     generateStoryboard, updateStoryboard, generateBlockDrafts, generateAllBlockDrafts,
     retryBlockDraft, selectBlockDraft, composeEditorial,
     renderPrompt, runGeneration, clearOutput, segment, requestAdjust, applyAdjust,

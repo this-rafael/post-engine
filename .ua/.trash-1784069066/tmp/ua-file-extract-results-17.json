@@ -1,0 +1,3657 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "specs/archive/spec-060/spec_060.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "SPEC-060 — Testes de contrato da geração",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of contents",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Executive resume",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Plan",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Tasks",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "specs/checklist.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 492,
+      "nonEmptyLines": 430,
+      "sections": [
+        {
+          "heading": "Checklist das specs",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "SPEC-001 — Modelos de domínio e contratos Python",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "SPEC-002 — Inicialização do estado da entrevista",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "SPEC-003 — Scoring autoral",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "SPEC-004 — Gateway equilibrado",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "SPEC-005 — Gateway desequilibrado",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "SPEC-006 — Classificação do tipo de autoria",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "SPEC-007 — Restrições de geração",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "SPEC-008 — Avaliação consolidada do gateway",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "SPEC-009 — Identificação de lacunas autorais",
+          "level": 2,
+          "line": 69
+        },
+        {
+          "heading": "SPEC-010 — Prompt de avaliação de resposta",
+          "level": 2,
+          "line": 77
+        },
+        {
+          "heading": "SPEC-011 — Cliente de avaliação autoral",
+          "level": 2,
+          "line": 85
+        },
+        {
+          "heading": "SPEC-012 — Atualização do memory pack",
+          "level": 2,
+          "line": 93
+        },
+        {
+          "heading": "SPEC-013 — Prompt de atualização do memory pack",
+          "level": 2,
+          "line": 101
+        },
+        {
+          "heading": "SPEC-014 — Geração de perguntas iniciais",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "SPEC-015 — Meta-prompt de experiência",
+          "level": 2,
+          "line": 117
+        },
+        {
+          "heading": "SPEC-016 — Meta-prompt de opinião",
+          "level": 2,
+          "line": 125
+        },
+        {
+          "heading": "SPEC-017 — Meta-prompt de sentimento",
+          "level": 2,
+          "line": 133
+        },
+        {
+          "heading": "SPEC-018 — Meta-prompt de aprendizado",
+          "level": 2,
+          "line": 141
+        },
+        {
+          "heading": "SPEC-019 — Perguntas recursivas",
+          "level": 2,
+          "line": 149
+        },
+        {
+          "heading": "SPEC-020 — Loop principal da entrevista",
+          "level": 2,
+          "line": 157
+        },
+        {
+          "heading": "SPEC-021 — Montagem do briefing autoral",
+          "level": 2,
+          "line": 165
+        },
+        {
+          "heading": "SPEC-022 — Personas oficiais",
+          "level": 2,
+          "line": 173
+        },
+        {
+          "heading": "SPEC-023 — Regras por tipo de post",
+          "level": 2,
+          "line": 181
+        },
+        {
+          "heading": "SPEC-024 — PromptBuilder",
+          "level": 2,
+          "line": 189
+        },
+        {
+          "heading": "SPEC-025 — Contrato do PromptBuilder",
+          "level": 2,
+          "line": 197
+        },
+        {
+          "heading": "SPEC-026 — Prompt gerador base",
+          "level": 2,
+          "line": 205
+        },
+        {
+          "heading": "SPEC-027 — Geração de conteúdo",
+          "level": 2,
+          "line": 213
+        },
+        {
+          "heading": "SPEC-028 — AgentWrapper genérico",
+          "level": 2,
+          "line": 221
+        },
+        {
+          "heading": "SPEC-029 — Robustez do AgentWrapper",
+          "level": 2,
+          "line": 229
+        },
+        {
+          "heading": "SPEC-030 — Segmentação do post",
+          "level": 2,
+          "line": 237
+        },
+        {
+          "heading": "SPEC-031 — Prompt de segmentação",
+          "level": 2,
+          "line": 245
+        },
+        {
+          "heading": "SPEC-032 — Ajuste por segmento",
+          "level": 2,
+          "line": 253
+        },
+        {
+          "heading": "SPEC-033 — Prompt de ajuste por segmento",
+          "level": 2,
+          "line": 261
+        },
+        {
+          "heading": "SPEC-034 — Avaliação do conteúdo gerado",
+          "level": 2,
+          "line": 269
+        },
+        {
+          "heading": "SPEC-035 — Prompt de avaliação do post",
+          "level": 2,
+          "line": 277
+        },
+        {
+          "heading": "SPEC-036 — Exportação Markdown",
+          "level": 2,
+          "line": 285
+        },
+        {
+          "heading": "SPEC-037 — Exportação TXT",
+          "level": 2,
+          "line": 293
+        },
+        {
+          "heading": "SPEC-038 — Persistência de sessão",
+          "level": 2,
+          "line": 301
+        },
+        {
+          "heading": "SPEC-039 — Restauração de sessão",
+          "level": 2,
+          "line": 309
+        },
+        {
+          "heading": "SPEC-040 — Validação de entrada da TUI",
+          "level": 2,
+          "line": 317
+        },
+        {
+          "heading": "SPEC-041 — Tela única da TUI MVP",
+          "level": 2,
+          "line": 325
+        },
+        {
+          "heading": "SPEC-042 — Preview do prompt na TUI",
+          "level": 2,
+          "line": 333
+        },
+        {
+          "heading": "SPEC-043 — Execução LLM pela TUI",
+          "level": 2,
+          "line": 341
+        },
+        {
+          "heading": "SPEC-044 — Bloqueio de gerações concorrentes",
+          "level": 2,
+          "line": 349
+        },
+        {
+          "heading": "SPEC-045 — Exibição de resultado bruto e JSON parseado",
+          "level": 2,
+          "line": 357
+        },
+        {
+          "heading": "SPEC-046 — Limpeza de saída",
+          "level": 2,
+          "line": 365
+        },
+        {
+          "heading": "SPEC-047 — Seleção de executor LLM",
+          "level": 2,
+          "line": 373
+        },
+        {
+          "heading": "SPEC-048 — Seleção de sandbox",
+          "level": 2,
+          "line": 381
+        },
+        {
+          "heading": "SPEC-049 — Estrutura de pastas do projeto",
+          "level": 2,
+          "line": 389
+        },
+        {
+          "heading": "SPEC-050 — Loader de prompts Markdown",
+          "level": 2,
+          "line": 397
+        },
+        {
+          "heading": "SPEC-051 — Renderização de templates",
+          "level": 2,
+          "line": 405
+        },
+        {
+          "heading": "SPEC-052 — Testes do PromptBuilder",
+          "level": 2,
+          "line": 413
+        },
+        {
+          "heading": "SPEC-053 — Testes de gateway",
+          "level": 2,
+          "line": 421
+        },
+        {
+          "heading": "SPEC-054 — Testes de scoring",
+          "level": 2,
+          "line": 429
+        },
+        {
+          "heading": "SPEC-055 — Testes do AgentWrapper",
+          "level": 2,
+          "line": 437
+        },
+        {
+          "heading": "SPEC-056 — Testes de persistência",
+          "level": 2,
+          "line": 445
+        },
+        {
+          "heading": "SPEC-057 — Testes do exporter",
+          "level": 2,
+          "line": 453
+        },
+        {
+          "heading": "SPEC-058 — Testes da TUI de preview",
+          "level": 2,
+          "line": 461
+        },
+        {
+          "heading": "SPEC-059 — Testes de segmentação",
+          "level": 2,
+          "line": 469
+        },
+        {
+          "heading": "SPEC-060 — Testes de contrato da geração",
+          "level": 2,
+          "line": 477
+        },
+        {
+          "heading": "SPEC-061 — Post Engine V4: entrevista autoral",
+          "level": 2,
+          "line": 485
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 62
+      }
+    },
+    {
+      "path": "specs/global.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 789,
+      "nonEmptyLines": 402,
+      "sections": [
+        {
+          "heading": "SPEC-001 — Modelos de domínio e contratos Python",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "SPEC-002 — Inicialização do estado da entrevista",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "SPEC-003 — Scoring autoral",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "SPEC-004 — Gateway equilibrado",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "SPEC-005 — Gateway desequilibrado",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "SPEC-006 — Classificação do tipo de autoria",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "SPEC-007 — Restrições de geração",
+          "level": 2,
+          "line": 87
+        },
+        {
+          "heading": "SPEC-008 — Avaliação consolidada do gateway",
+          "level": 2,
+          "line": 101
+        },
+        {
+          "heading": "SPEC-009 — Identificação de lacunas autorais",
+          "level": 2,
+          "line": 115
+        },
+        {
+          "heading": "SPEC-010 — Prompt de avaliação de resposta",
+          "level": 2,
+          "line": 129
+        },
+        {
+          "heading": "SPEC-011 — Cliente de avaliação autoral",
+          "level": 2,
+          "line": 145
+        },
+        {
+          "heading": "SPEC-012 — Atualização do memory pack",
+          "level": 2,
+          "line": 157
+        },
+        {
+          "heading": "SPEC-013 — Prompt de atualização do memory pack",
+          "level": 2,
+          "line": 173
+        },
+        {
+          "heading": "SPEC-014 — Geração de perguntas iniciais",
+          "level": 2,
+          "line": 183
+        },
+        {
+          "heading": "SPEC-015 — Meta-prompt de experiência",
+          "level": 2,
+          "line": 195
+        },
+        {
+          "heading": "SPEC-016 — Meta-prompt de opinião",
+          "level": 2,
+          "line": 205
+        },
+        {
+          "heading": "SPEC-017 — Meta-prompt de sentimento",
+          "level": 2,
+          "line": 215
+        },
+        {
+          "heading": "SPEC-018 — Meta-prompt de aprendizado",
+          "level": 2,
+          "line": 225
+        },
+        {
+          "heading": "SPEC-019 — Perguntas recursivas",
+          "level": 2,
+          "line": 235
+        },
+        {
+          "heading": "SPEC-020 — Loop principal da entrevista",
+          "level": 2,
+          "line": 247
+        },
+        {
+          "heading": "SPEC-021 — Montagem do briefing autoral",
+          "level": 2,
+          "line": 259
+        },
+        {
+          "heading": "SPEC-022 — Personas oficiais",
+          "level": 2,
+          "line": 273
+        },
+        {
+          "heading": "SPEC-023 — Regras por tipo de post",
+          "level": 2,
+          "line": 289
+        },
+        {
+          "heading": "SPEC-024 — PromptBuilder",
+          "level": 2,
+          "line": 305
+        },
+        {
+          "heading": "SPEC-025 — Contrato do PromptBuilder",
+          "level": 2,
+          "line": 325
+        },
+        {
+          "heading": "SPEC-026 — Prompt gerador base",
+          "level": 2,
+          "line": 341
+        },
+        {
+          "heading": "SPEC-027 — Geração de conteúdo",
+          "level": 2,
+          "line": 355
+        },
+        {
+          "heading": "SPEC-028 — AgentWrapper genérico",
+          "level": 2,
+          "line": 367
+        },
+        {
+          "heading": "SPEC-029 — Robustez do AgentWrapper",
+          "level": 2,
+          "line": 379
+        },
+        {
+          "heading": "SPEC-030 — Segmentação do post",
+          "level": 2,
+          "line": 391
+        },
+        {
+          "heading": "SPEC-031 — Prompt de segmentação",
+          "level": 2,
+          "line": 411
+        },
+        {
+          "heading": "SPEC-032 — Ajuste por segmento",
+          "level": 2,
+          "line": 425
+        },
+        {
+          "heading": "SPEC-033 — Prompt de ajuste por segmento",
+          "level": 2,
+          "line": 441
+        },
+        {
+          "heading": "SPEC-034 — Avaliação do conteúdo gerado",
+          "level": 2,
+          "line": 455
+        },
+        {
+          "heading": "SPEC-035 — Prompt de avaliação do post",
+          "level": 2,
+          "line": 467
+        },
+        {
+          "heading": "SPEC-036 — Exportação Markdown",
+          "level": 2,
+          "line": 481
+        },
+        {
+          "heading": "SPEC-037 — Exportação TXT",
+          "level": 2,
+          "line": 491
+        },
+        {
+          "heading": "SPEC-038 — Persistência de sessão",
+          "level": 2,
+          "line": 499
+        },
+        {
+          "heading": "SPEC-039 — Restauração de sessão",
+          "level": 2,
+          "line": 513
+        },
+        {
+          "heading": "SPEC-040 — Validação de entrada da TUI",
+          "level": 2,
+          "line": 523
+        },
+        {
+          "heading": "SPEC-041 — Tela única da TUI MVP",
+          "level": 2,
+          "line": 537
+        },
+        {
+          "heading": "SPEC-042 — Preview do prompt na TUI",
+          "level": 2,
+          "line": 551
+        },
+        {
+          "heading": "SPEC-043 — Execução LLM pela TUI",
+          "level": 2,
+          "line": 563
+        },
+        {
+          "heading": "SPEC-044 — Bloqueio de gerações concorrentes",
+          "level": 2,
+          "line": 575
+        },
+        {
+          "heading": "SPEC-045 — Exibição de resultado bruto e JSON parseado",
+          "level": 2,
+          "line": 585
+        },
+        {
+          "heading": "SPEC-046 — Limpeza de saída",
+          "level": 2,
+          "line": 597
+        },
+        {
+          "heading": "SPEC-047 — Seleção de executor LLM",
+          "level": 2,
+          "line": 609
+        },
+        {
+          "heading": "SPEC-048 — Seleção de sandbox",
+          "level": 2,
+          "line": 623
+        },
+        {
+          "heading": "SPEC-049 — Estrutura de pastas do projeto",
+          "level": 2,
+          "line": 635
+        },
+        {
+          "heading": "SPEC-050 — Loader de prompts Markdown",
+          "level": 2,
+          "line": 647
+        },
+        {
+          "heading": "SPEC-051 — Renderização de templates",
+          "level": 2,
+          "line": 657
+        },
+        {
+          "heading": "SPEC-052 — Testes do PromptBuilder",
+          "level": 2,
+          "line": 667
+        },
+        {
+          "heading": "SPEC-053 — Testes de gateway",
+          "level": 2,
+          "line": 685
+        },
+        {
+          "heading": "SPEC-054 — Testes de scoring",
+          "level": 2,
+          "line": 695
+        },
+        {
+          "heading": "SPEC-055 — Testes do AgentWrapper",
+          "level": 2,
+          "line": 705
+        },
+        {
+          "heading": "SPEC-056 — Testes de persistência",
+          "level": 2,
+          "line": 715
+        },
+        {
+          "heading": "SPEC-057 — Testes do exporter",
+          "level": 2,
+          "line": 725
+        },
+        {
+          "heading": "SPEC-058 — Testes da TUI de preview",
+          "level": 2,
+          "line": 735
+        },
+        {
+          "heading": "SPEC-059 — Testes de segmentação",
+          "level": 2,
+          "line": 745
+        },
+        {
+          "heading": "SPEC-060 — Testes de contrato da geração",
+          "level": 2,
+          "line": 755
+        },
+        {
+          "heading": "Ordem sugerida de implementação",
+          "level": 2,
+          "line": 769
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 61
+      }
+    },
+    {
+      "path": "src/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/content_engine/__main__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 7,
+          "endLine": 22,
+          "params": [
+            "argv"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 8
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 9
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 14
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 15
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 16
+        },
+        {
+          "caller": "main",
+          "callee": "run_gui_server",
+          "lineNumber": 20
+        },
+        {
+          "caller": "main",
+          "callee": "SystemExit",
+          "lineNumber": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/content_engine/llm_workspace.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 223,
+      "nonEmptyLines": 194,
+      "functions": [
+        {
+          "name": "_validate_path",
+          "startLine": 52,
+          "endLine": 70,
+          "params": [
+            "candidate",
+            "base"
+          ]
+        },
+        {
+          "name": "_is_denied",
+          "startLine": 73,
+          "endLine": 79,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "isolated_workspace",
+          "startLine": 175,
+          "endLine": 193,
+          "params": [
+            "operation",
+            "allowed_files",
+            "project_root",
+            "persistent",
+            "base_tmp_dir"
+          ]
+        },
+        {
+          "name": "allowed_files_for_operation",
+          "startLine": 212,
+          "endLine": 213,
+          "params": [
+            "operation"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "WorkspaceIsolationError",
+          "startLine": 34,
+          "endLine": 35,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "WorkspaceManifest",
+          "startLine": 39,
+          "endLine": 49,
+          "methods": [
+            "to_log_dict"
+          ],
+          "properties": [
+            "operation",
+            "allowed_files",
+            "extra_metadata"
+          ]
+        },
+        {
+          "name": "LlmExecutionWorkspace",
+          "startLine": 83,
+          "endLine": 171,
+          "methods": [
+            "create",
+            "destroy",
+            "_copy_allowed",
+            "to_log_dict"
+          ],
+          "properties": [
+            "path",
+            "operation",
+            "manifest",
+            "project_root",
+            "_persistent"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "WorkspaceIsolationError",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "WorkspaceManifest",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "_validate_path",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "_is_denied",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "LlmExecutionWorkspace",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "isolated_workspace",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "allowed_files_for_operation",
+          "line": 212,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "to_log_dict",
+          "callee": "str",
+          "lineNumber": 47
+        },
+        {
+          "caller": "to_log_dict",
+          "callee": "dict",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_validate_path",
+          "callee": "candidate.resolve",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_validate_path",
+          "callee": "resolved.relative_to",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_validate_path",
+          "callee": "WorkspaceIsolationError",
+          "lineNumber": 57
+        },
+        {
+          "caller": "_validate_path",
+          "callee": "candidate.is_symlink",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_validate_path",
+          "callee": "WorkspaceIsolationError",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_validate_path",
+          "callee": "WorkspaceIsolationError",
+          "lineNumber": 67
+        },
+        {
+          "caller": "create",
+          "callee": "list",
+          "lineNumber": 106
+        },
+        {
+          "caller": "create",
+          "callee": "WorkspaceManifest",
+          "lineNumber": 107
+        },
+        {
+          "caller": "create",
+          "callee": "tuple",
+          "lineNumber": 109
+        },
+        {
+          "caller": "create",
+          "callee": "str",
+          "lineNumber": 111
+        },
+        {
+          "caller": "create",
+          "callee": "Path",
+          "lineNumber": 112
+        },
+        {
+          "caller": "create",
+          "callee": "tempfile.mkdtemp",
+          "lineNumber": 112
+        },
+        {
+          "caller": "create",
+          "callee": "cls",
+          "lineNumber": 113
+        },
+        {
+          "caller": "create",
+          "callee": "ws._copy_allowed",
+          "lineNumber": 121
+        },
+        {
+          "caller": "destroy",
+          "callee": "self.path.exists",
+          "lineNumber": 127
+        },
+        {
+          "caller": "destroy",
+          "callee": "shutil.rmtree",
+          "lineNumber": 128
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "Path",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "source.exists",
+          "lineNumber": 132
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "WorkspaceIsolationError",
+          "lineNumber": 133
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "_is_denied",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "WorkspaceIsolationError",
+          "lineNumber": 137
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "source.is_symlink",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "WorkspaceIsolationError",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "dest.resolve",
+          "lineNumber": 145
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "dest_resolved.relative_to",
+          "lineNumber": 147
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "self.path.resolve",
+          "lineNumber": 147
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "WorkspaceIsolationError",
+          "lineNumber": 149
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "source.is_file",
+          "lineNumber": 152
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "shutil.copy2",
+          "lineNumber": 153
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "str",
+          "lineNumber": 153
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "str",
+          "lineNumber": 153
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "source.is_dir",
+          "lineNumber": 154
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "shutil.copytree",
+          "lineNumber": 155
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "str",
+          "lineNumber": 156
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "str",
+          "lineNumber": 157
+        },
+        {
+          "caller": "_copy_allowed",
+          "callee": "shutil.ignore_patterns",
+          "lineNumber": 159
+        },
+        {
+          "caller": "to_log_dict",
+          "callee": "str",
+          "lineNumber": 165
+        },
+        {
+          "caller": "to_log_dict",
+          "callee": "result.update",
+          "lineNumber": 168
+        },
+        {
+          "caller": "to_log_dict",
+          "callee": "self.manifest.to_log_dict",
+          "lineNumber": 168
+        },
+        {
+          "caller": "to_log_dict",
+          "callee": "str",
+          "lineNumber": 170
+        },
+        {
+          "caller": "isolated_workspace",
+          "callee": "LlmExecutionWorkspace.create",
+          "lineNumber": 183
+        },
+        {
+          "caller": "isolated_workspace",
+          "callee": "ws.destroy",
+          "lineNumber": 193
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 4,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "src/gui/static/index.html",
+      "language": "html",
+      "fileCategory": "markup",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "metrics": {}
+    },
+    {
+      "path": "src/tui/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/fixtures/interview_corpus/corpus.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 62,
+      "nonEmptyLines": 62,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "cases",
+          "level": 1,
+          "line": 3
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "tests/fixtures/interview_corpus/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 6,
+      "nonEmptyLines": 5,
+      "sections": [
+        {
+          "heading": "Interview corpus",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "tests/fixtures/validate_and_render_slidemark.mts",
+      "language": "mts",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 44,
+      "metrics": {}
+    },
+    {
+      "path": "tests/test_agent_wrapper_cursor.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 128,
+      "nonEmptyLines": 105,
+      "functions": [
+        {
+          "name": "test_resolve_cursor_model_auto_omits_flag",
+          "startLine": 14,
+          "endLine": 15,
+          "params": []
+        },
+        {
+          "name": "test_resolve_cursor_model_with_effort",
+          "startLine": 18,
+          "endLine": 19,
+          "params": []
+        },
+        {
+          "name": "test_resolve_cursor_model_effort_only",
+          "startLine": 22,
+          "endLine": 23,
+          "params": []
+        },
+        {
+          "name": "test_parse_cursor_output_success",
+          "startLine": 26,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "test_parse_cursor_output_assistant_fallback",
+          "startLine": 40,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "test_parse_cursor_output_error",
+          "startLine": 54,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "test_run_cursor_builds_cli_command",
+          "startLine": 67,
+          "endLine": 105,
+          "params": []
+        },
+        {
+          "name": "test_run_dispatches_cursor",
+          "startLine": 108,
+          "endLine": 128,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_resolve_cursor_model_auto_omits_flag",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "test_resolve_cursor_model_with_effort",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "test_resolve_cursor_model_effort_only",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "test_parse_cursor_output_success",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "test_parse_cursor_output_assistant_fallback",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "test_parse_cursor_output_error",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_cursor_builds_cli_command",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_dispatches_cursor",
+          "line": 108,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_resolve_cursor_model_auto_omits_flag",
+          "callee": "resolve_cursor_model",
+          "lineNumber": 15
+        },
+        {
+          "caller": "test_resolve_cursor_model_with_effort",
+          "callee": "resolve_cursor_model",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_resolve_cursor_model_effort_only",
+          "callee": "resolve_cursor_model",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_parse_cursor_output_success",
+          "callee": "json.dumps",
+          "lineNumber": 27
+        },
+        {
+          "caller": "test_parse_cursor_output_success",
+          "callee": "parse_cursor_output",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_parse_cursor_output_assistant_fallback",
+          "callee": "json.dumps",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_parse_cursor_output_assistant_fallback",
+          "callee": "parse_cursor_output",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_parse_cursor_output_error",
+          "callee": "json.dumps",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_parse_cursor_output_error",
+          "callee": "parse_cursor_output",
+          "lineNumber": 63
+        },
+        {
+          "caller": "runner",
+          "callee": "SimpleNamespace",
+          "lineNumber": 72
+        },
+        {
+          "caller": "runner",
+          "callee": "json.dumps",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_run_cursor_builds_cli_command",
+          "callee": "AgentWrapper",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_run_cursor_builds_cli_command",
+          "callee": "wrapper.run_cursor",
+          "lineNumber": 86
+        },
+        {
+          "caller": "runner",
+          "callee": "SimpleNamespace",
+          "lineNumber": 113
+        },
+        {
+          "caller": "runner",
+          "callee": "json.dumps",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_run_dispatches_cursor",
+          "callee": "AgentWrapper",
+          "lineNumber": 125
+        },
+        {
+          "caller": "test_run_dispatches_cursor",
+          "callee": "wrapper.run",
+          "lineNumber": 126
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_cli.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 15,
+      "functions": [
+        {
+          "name": "test_cli_without_gui_exits",
+          "startLine": 9,
+          "endLine": 11,
+          "params": []
+        },
+        {
+          "name": "test_cli_gui_invokes_server",
+          "startLine": 14,
+          "endLine": 24,
+          "params": [
+            "monkeypatch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_cli_without_gui_exits",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "test_cli_gui_invokes_server",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_cli_without_gui_exits",
+          "callee": "pytest.raises",
+          "lineNumber": 10
+        },
+        {
+          "caller": "test_cli_without_gui_exits",
+          "callee": "ce_main.main",
+          "lineNumber": 11
+        },
+        {
+          "caller": "fake_run",
+          "callee": "called.append",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_cli_gui_invokes_server",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 22
+        },
+        {
+          "caller": "test_cli_gui_invokes_server",
+          "callee": "ce_main.main",
+          "lineNumber": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_codex_llm_client.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 200,
+      "nonEmptyLines": 154,
+      "functions": [
+        {
+          "name": "_ok",
+          "startLine": 18,
+          "endLine": 19,
+          "params": [
+            "stdout",
+            "stderr",
+            "returncode"
+          ]
+        },
+        {
+          "name": "_capture_runner",
+          "startLine": 22,
+          "endLine": 28,
+          "params": [
+            "captured"
+          ]
+        },
+        {
+          "name": "test_llm_request_defaults",
+          "startLine": 31,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "test_llm_response_from_json",
+          "startLine": 40,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "test_llm_response_from_text",
+          "startLine": 46,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "test_build_prompt_concatena_system_e_user",
+          "startLine": 52,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "test_build_prompt_ignora_vazios",
+          "startLine": 58,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "test_execute_codex_monta_comando_com_skip_git_e_stdin",
+          "startLine": 64,
+          "endLine": 83,
+          "params": []
+        },
+        {
+          "name": "test_execute_codex_sem_model_nao_adiciona_flag_m",
+          "startLine": 86,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "test_execute_codex_inclui_cd_workspace",
+          "startLine": 95,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "test_execute_codex_sem_workspace_cria_workspace_isolado",
+          "startLine": 105,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "test_complete_retorna_json_quando_valido",
+          "startLine": 121,
+          "endLine": 127,
+          "params": []
+        },
+        {
+          "name": "test_complete_retorna_texto_quando_json_invalido",
+          "startLine": 130,
+          "endLine": 135,
+          "params": []
+        },
+        {
+          "name": "test_execute_codex_erro_exit_code_nao_zero_levanta_runtime_error",
+          "startLine": 138,
+          "endLine": 142,
+          "params": []
+        },
+        {
+          "name": "test_execute_codex_filenotfound_levanta_runtime_error",
+          "startLine": 145,
+          "endLine": 151,
+          "params": []
+        },
+        {
+          "name": "test_execute_codex_timeout_levanta_runtime_error",
+          "startLine": 154,
+          "endLine": 160,
+          "params": []
+        },
+        {
+          "name": "test_run_retorna_agent_result_ok_em_sucesso",
+          "startLine": 163,
+          "endLine": 171,
+          "params": []
+        },
+        {
+          "name": "test_run_retorna_agent_result_erro_em_falha",
+          "startLine": 174,
+          "endLine": 180,
+          "params": []
+        },
+        {
+          "name": "test_run_passa_model_do_kwargs_para_o_comando",
+          "startLine": 183,
+          "endLine": 190,
+          "params": []
+        },
+        {
+          "name": "test_run_sem_model_herde_do_cli",
+          "startLine": 193,
+          "endLine": 200,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_ok",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "_capture_runner",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_request_defaults",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_response_from_json",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_response_from_text",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "test_build_prompt_concatena_system_e_user",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "test_build_prompt_ignora_vazios",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "test_execute_codex_monta_comando_com_skip_git_e_stdin",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "test_execute_codex_sem_model_nao_adiciona_flag_m",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "test_execute_codex_inclui_cd_workspace",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "test_execute_codex_sem_workspace_cria_workspace_isolado",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "test_complete_retorna_json_quando_valido",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "test_complete_retorna_texto_quando_json_invalido",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "test_execute_codex_erro_exit_code_nao_zero_levanta_runtime_error",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "test_execute_codex_filenotfound_levanta_runtime_error",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "test_execute_codex_timeout_levanta_runtime_error",
+          "line": 154,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_retorna_agent_result_ok_em_sucesso",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_retorna_agent_result_erro_em_falha",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_passa_model_do_kwargs_para_o_comando",
+          "line": 183,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_sem_model_herde_do_cli",
+          "line": 193,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_ok",
+          "callee": "SimpleNamespace",
+          "lineNumber": 19
+        },
+        {
+          "caller": "_runner",
+          "callee": "_ok",
+          "lineNumber": 26
+        },
+        {
+          "caller": "test_llm_request_defaults",
+          "callee": "LlmRequest",
+          "lineNumber": 32
+        },
+        {
+          "caller": "test_llm_response_from_json",
+          "callee": "LlmResponse.from_json",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_llm_response_from_text",
+          "callee": "LlmResponse.from_text",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_build_prompt_concatena_system_e_user",
+          "callee": "CodexLlmClient",
+          "lineNumber": 53
+        },
+        {
+          "caller": "test_build_prompt_concatena_system_e_user",
+          "callee": "LlmRequest",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_build_prompt_concatena_system_e_user",
+          "callee": "client._build_prompt",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_build_prompt_ignora_vazios",
+          "callee": "CodexLlmClient",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_build_prompt_ignora_vazios",
+          "callee": "LlmRequest",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_build_prompt_ignora_vazios",
+          "callee": "client._build_prompt",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_execute_codex_monta_comando_com_skip_git_e_stdin",
+          "callee": "CodexLlmClient",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_execute_codex_monta_comando_com_skip_git_e_stdin",
+          "callee": "_capture_runner",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_execute_codex_monta_comando_com_skip_git_e_stdin",
+          "callee": "client._execute_codex",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_execute_codex_monta_comando_com_skip_git_e_stdin",
+          "callee": "cmd.index",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_execute_codex_monta_comando_com_skip_git_e_stdin",
+          "callee": "cmd.index",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_execute_codex_sem_model_nao_adiciona_flag_m",
+          "callee": "CodexLlmClient",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_execute_codex_sem_model_nao_adiciona_flag_m",
+          "callee": "_capture_runner",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_execute_codex_sem_model_nao_adiciona_flag_m",
+          "callee": "client._execute_codex",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_execute_codex_inclui_cd_workspace",
+          "callee": "CodexLlmClient",
+          "lineNumber": 97
+        },
+        {
+          "caller": "test_execute_codex_inclui_cd_workspace",
+          "callee": "_capture_runner",
+          "lineNumber": 97
+        },
+        {
+          "caller": "test_execute_codex_inclui_cd_workspace",
+          "callee": "client._execute_codex",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_execute_codex_inclui_cd_workspace",
+          "callee": "cmd.index",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_execute_codex_sem_workspace_cria_workspace_isolado",
+          "callee": "CodexLlmClient",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_execute_codex_sem_workspace_cria_workspace_isolado",
+          "callee": "_capture_runner",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_execute_codex_sem_workspace_cria_workspace_isolado",
+          "callee": "client._execute_codex",
+          "lineNumber": 109
+        },
+        {
+          "caller": "test_execute_codex_sem_workspace_cria_workspace_isolado",
+          "callee": "cmd.index",
+          "lineNumber": 112
+        },
+        {
+          "caller": "test_execute_codex_sem_workspace_cria_workspace_isolado",
+          "callee": "str",
+          "lineNumber": 116
+        },
+        {
+          "caller": "test_execute_codex_sem_workspace_cria_workspace_isolado",
+          "callee": "client.close",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_complete_retorna_json_quando_valido",
+          "callee": "_ok",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_complete_retorna_json_quando_valido",
+          "callee": "CodexLlmClient",
+          "lineNumber": 124
+        },
+        {
+          "caller": "test_complete_retorna_json_quando_valido",
+          "callee": "client.complete",
+          "lineNumber": 125
+        },
+        {
+          "caller": "test_complete_retorna_json_quando_valido",
+          "callee": "LlmRequest",
+          "lineNumber": 125
+        },
+        {
+          "caller": "test_complete_retorna_json_quando_valido",
+          "callee": "json.loads",
+          "lineNumber": 126
+        },
+        {
+          "caller": "test_complete_retorna_texto_quando_json_invalido",
+          "callee": "_ok",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_complete_retorna_texto_quando_json_invalido",
+          "callee": "CodexLlmClient",
+          "lineNumber": 132
+        },
+        {
+          "caller": "test_complete_retorna_texto_quando_json_invalido",
+          "callee": "client.complete",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_complete_retorna_texto_quando_json_invalido",
+          "callee": "LlmRequest",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_execute_codex_erro_exit_code_nao_zero_levanta_runtime_error",
+          "callee": "_ok",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_execute_codex_erro_exit_code_nao_zero_levanta_runtime_error",
+          "callee": "CodexLlmClient",
+          "lineNumber": 140
+        },
+        {
+          "caller": "test_execute_codex_erro_exit_code_nao_zero_levanta_runtime_error",
+          "callee": "pytest.raises",
+          "lineNumber": 141
+        },
+        {
+          "caller": "test_execute_codex_erro_exit_code_nao_zero_levanta_runtime_error",
+          "callee": "client._execute_codex",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_raise_fnf",
+          "callee": "FileNotFoundError",
+          "lineNumber": 147
+        },
+        {
+          "caller": "test_execute_codex_filenotfound_levanta_runtime_error",
+          "callee": "CodexLlmClient",
+          "lineNumber": 149
+        },
+        {
+          "caller": "test_execute_codex_filenotfound_levanta_runtime_error",
+          "callee": "pytest.raises",
+          "lineNumber": 150
+        },
+        {
+          "caller": "test_execute_codex_filenotfound_levanta_runtime_error",
+          "callee": "client._execute_codex",
+          "lineNumber": 151
+        },
+        {
+          "caller": "_raise_timeout",
+          "callee": "subprocess.TimeoutExpired",
+          "lineNumber": 156
+        },
+        {
+          "caller": "test_execute_codex_timeout_levanta_runtime_error",
+          "callee": "CodexLlmClient",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_execute_codex_timeout_levanta_runtime_error",
+          "callee": "pytest.raises",
+          "lineNumber": 159
+        },
+        {
+          "caller": "test_execute_codex_timeout_levanta_runtime_error",
+          "callee": "client._execute_codex",
+          "lineNumber": 160
+        },
+        {
+          "caller": "test_run_retorna_agent_result_ok_em_sucesso",
+          "callee": "_ok",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_run_retorna_agent_result_ok_em_sucesso",
+          "callee": "CodexLlmClient",
+          "lineNumber": 166
+        },
+        {
+          "caller": "test_run_retorna_agent_result_ok_em_sucesso",
+          "callee": "client.run",
+          "lineNumber": 167
+        },
+        {
+          "caller": "test_run_retorna_agent_result_ok_em_sucesso",
+          "callee": "isinstance",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_run_retorna_agent_result_erro_em_falha",
+          "callee": "_ok",
+          "lineNumber": 175
+        },
+        {
+          "caller": "test_run_retorna_agent_result_erro_em_falha",
+          "callee": "CodexLlmClient",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_run_retorna_agent_result_erro_em_falha",
+          "callee": "client.run",
+          "lineNumber": 177
+        },
+        {
+          "caller": "test_run_passa_model_do_kwargs_para_o_comando",
+          "callee": "_capture_runner",
+          "lineNumber": 185
+        },
+        {
+          "caller": "test_run_passa_model_do_kwargs_para_o_comando",
+          "callee": "CodexLlmClient",
+          "lineNumber": 186
+        },
+        {
+          "caller": "test_run_passa_model_do_kwargs_para_o_comando",
+          "callee": "client.run",
+          "lineNumber": 187
+        },
+        {
+          "caller": "test_run_passa_model_do_kwargs_para_o_comando",
+          "callee": "cmd.index",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_run_sem_model_herde_do_cli",
+          "callee": "_capture_runner",
+          "lineNumber": 195
+        },
+        {
+          "caller": "test_run_sem_model_herde_do_cli",
+          "callee": "CodexLlmClient",
+          "lineNumber": 196
+        },
+        {
+          "caller": "test_run_sem_model_herde_do_cli",
+          "callee": "client.run",
+          "lineNumber": 197
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 20,
+        "functionCount": 20,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_editorial_flow.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "test_pre_v4_session_is_rejected_before_editorial_flow_is_opened",
+          "startLine": 12,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "test_editorial_flow_round_trip",
+          "startLine": 23,
+          "endLine": 31,
+          "params": []
+        },
+        {
+          "name": "test_derive_editorial_status_defaults",
+          "startLine": 34,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "test_gui_snapshot_includes_editorial_derived",
+          "startLine": 40,
+          "endLine": 44,
+          "params": [
+            "tmp_path"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_pre_v4_session_is_rejected_before_editorial_flow_is_opened",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "test_editorial_flow_round_trip",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "test_derive_editorial_status_defaults",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "test_gui_snapshot_includes_editorial_derived",
+          "line": 40,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_pre_v4_session_is_rejected_before_editorial_flow_is_opened",
+          "callee": "pytest.raises",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_pre_v4_session_is_rejected_before_editorial_flow_is_opened",
+          "callee": "_dict_to_state",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_editorial_flow_round_trip",
+          "callee": "TuiSessionState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_editorial_flow_round_trip",
+          "callee": "_dict_to_state",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_editorial_flow_round_trip",
+          "callee": "_state_to_dict",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_derive_editorial_status_defaults",
+          "callee": "derive_editorial_status",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_gui_snapshot_includes_editorial_derived",
+          "callee": "GuiController",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_gui_snapshot_includes_editorial_derived",
+          "callee": "controller.snapshot",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_gui_snapshot_includes_editorial_derived",
+          "callee": "isinstance",
+          "lineNumber": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_generation_v4_prompt.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "test_generation_prompt_uses_only_v4_authorial_context",
+          "startLine": 10,
+          "endLine": 32,
+          "params": [
+            "tipo_de_post"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_generation_prompt_uses_only_v4_authorial_context",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_generation_prompt_uses_only_v4_authorial_context",
+          "callee": "build_generation_prompt",
+          "lineNumber": 11
+        },
+        {
+          "caller": "test_generation_prompt_uses_only_v4_authorial_context",
+          "callee": "GenerationPromptInput",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_generator_image_suggestions.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 192,
+      "nonEmptyLines": 169,
+      "functions": [
+        {
+          "name": "_slidemark_minimo",
+          "startLine": 26,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "_input",
+          "startLine": 67,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "test_parse_sugestoes_imagem_descricao",
+          "startLine": 77,
+          "endLine": 113,
+          "params": []
+        },
+        {
+          "name": "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+          "startLine": 116,
+          "endLine": 152,
+          "params": []
+        },
+        {
+          "name": "test_parse_sugestoes_imagem_link",
+          "startLine": 155,
+          "endLine": 164,
+          "params": []
+        },
+        {
+          "name": "test_segmentar_slidemark_propaga_sugestao",
+          "startLine": 167,
+          "endLine": 178,
+          "params": []
+        },
+        {
+          "name": "test_segmentar_slidemark_aceita_formato_legado_slide_e_sugestao",
+          "startLine": 181,
+          "endLine": 192,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeAgent",
+          "startLine": 14,
+          "endLine": 23,
+          "methods": [
+            "__init__",
+            "run_codex",
+            "run_opencode"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeAgent",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "_slidemark_minimo",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "_input",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "test_parse_sugestoes_imagem_descricao",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "test_parse_sugestoes_imagem_link",
+          "line": 155,
+          "isDefault": false
+        },
+        {
+          "name": "test_segmentar_slidemark_propaga_sugestao",
+          "line": 167,
+          "isDefault": false
+        },
+        {
+          "name": "test_segmentar_slidemark_aceita_formato_legado_slide_e_sugestao",
+          "line": 181,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 16
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 16
+        },
+        {
+          "caller": "__init__",
+          "callee": "Path",
+          "lineNumber": 16
+        },
+        {
+          "caller": "_input",
+          "callee": "GenerationPromptInput",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_descricao",
+          "callee": "_slidemark_minimo",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_descricao",
+          "callee": "FakeAgent",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_descricao",
+          "callee": "AgentResult",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_descricao",
+          "callee": "json.dumps",
+          "lineNumber": 103
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_descricao",
+          "callee": "ContentGenerator(agent=fake, tool=\"codex\").generate",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_descricao",
+          "callee": "ContentGenerator",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_descricao",
+          "callee": "_input",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_descricao",
+          "callee": "len",
+          "lineNumber": 109
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_descricao",
+          "callee": "len",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+          "callee": "_slidemark_minimo",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+          "callee": "FakeAgent",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+          "callee": "AgentResult",
+          "lineNumber": 130
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+          "callee": "json.dumps",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+          "callee": "ContentGenerator(agent=fake, tool=\"codex\").generate",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+          "callee": "ContentGenerator",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+          "callee": "_input",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_link",
+          "callee": "SugestaoImagem",
+          "lineNumber": 156
+        },
+        {
+          "caller": "test_parse_sugestoes_imagem_link",
+          "callee": "_formatar_sugestao_imagem",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_segmentar_slidemark_propaga_sugestao",
+          "callee": "_slidemark_minimo",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_segmentar_slidemark_propaga_sugestao",
+          "callee": "segmentar_slidemark",
+          "lineNumber": 177
+        },
+        {
+          "caller": "test_segmentar_slidemark_aceita_formato_legado_slide_e_sugestao",
+          "callee": "segmentar_slidemark",
+          "lineNumber": 182
+        },
+        {
+          "caller": "test_segmentar_slidemark_aceita_formato_legado_slide_e_sugestao",
+          "callee": "_slidemark_minimo",
+          "lineNumber": 183
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_gui_avaliacao.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 99,
+      "functions": [
+        {
+          "name": "controller",
+          "startLine": 13,
+          "endLine": 18,
+          "params": [
+            "tmp_path",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "_avaliacao_payload",
+          "startLine": 21,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "test_snapshot_post_scores_usa_criterios_novos",
+          "startLine": 53,
+          "endLine": 59,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_snapshot_avaliacao_ui_completo",
+          "startLine": 62,
+          "endLine": 80,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_snapshot_avaliacao_ui_invalida_sem_score",
+          "startLine": 83,
+          "endLine": 88,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_snapshot_avaliacao_ui_retrocompat_score_legado",
+          "startLine": 91,
+          "endLine": 94,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_reset_context_clears_session",
+          "startLine": 97,
+          "endLine": 118,
+          "params": [
+            "controller"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "controller",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "_avaliacao_payload",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "test_snapshot_post_scores_usa_criterios_novos",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "test_snapshot_avaliacao_ui_completo",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "test_snapshot_avaliacao_ui_invalida_sem_score",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "test_snapshot_avaliacao_ui_retrocompat_score_legado",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "test_reset_context_clears_session",
+          "line": 97,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 16
+        },
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 17
+        },
+        {
+          "caller": "controller",
+          "callee": "GuiController",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_snapshot_post_scores_usa_criterios_novos",
+          "callee": "_avaliacao_payload",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_snapshot_post_scores_usa_criterios_novos",
+          "callee": "controller.snapshot",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_snapshot_post_scores_usa_criterios_novos",
+          "callee": "set",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_snapshot_post_scores_usa_criterios_novos",
+          "callee": "post_scores.keys",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_snapshot_post_scores_usa_criterios_novos",
+          "callee": "set",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_snapshot_avaliacao_ui_completo",
+          "callee": "_avaliacao_payload",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_snapshot_avaliacao_ui_completo",
+          "callee": "controller.snapshot",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_snapshot_avaliacao_ui_completo",
+          "callee": "set",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_snapshot_avaliacao_ui_completo",
+          "callee": "ui[\"scores\"].keys",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_snapshot_avaliacao_ui_completo",
+          "callee": "set",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_snapshot_avaliacao_ui_invalida_sem_score",
+          "callee": "controller.snapshot",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_snapshot_avaliacao_ui_retrocompat_score_legado",
+          "callee": "controller.snapshot",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_reset_context_clears_session",
+          "callee": "controller.action",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_reset_context_clears_session",
+          "callee": "state[\"status_operacional\"].lower",
+          "lineNumber": 118
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_gui_bulk_adjust.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 122,
+      "nonEmptyLines": 95,
+      "functions": [
+        {
+          "name": "controller",
+          "startLine": 13,
+          "endLine": 18,
+          "params": [
+            "tmp_path",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "_seed_segments",
+          "startLine": 21,
+          "endLine": 43,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_rewrite_segments_bulk_populates_snapshot",
+          "startLine": 46,
+          "endLine": 85,
+          "params": [
+            "controller",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_apply_segments_bulk_updates_segment_text",
+          "startLine": 88,
+          "endLine": 102,
+          "params": [
+            "controller",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_apply_segments_bulk_accepts_textos_payload",
+          "startLine": 105,
+          "endLine": 113,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_cancel_bulk_adjust_clears_pending",
+          "startLine": 116,
+          "endLine": 122,
+          "params": [
+            "controller"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "controller",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "_seed_segments",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "test_rewrite_segments_bulk_populates_snapshot",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "test_apply_segments_bulk_updates_segment_text",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "test_apply_segments_bulk_accepts_textos_payload",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "test_cancel_bulk_adjust_clears_pending",
+          "line": 116,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 16
+        },
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 17
+        },
+        {
+          "caller": "controller",
+          "callee": "GuiController",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_rewrite_segments_bulk_populates_snapshot",
+          "callee": "_seed_segments",
+          "lineNumber": 50
+        },
+        {
+          "caller": "run",
+          "callee": "AgentResult",
+          "lineNumber": 63
+        },
+        {
+          "caller": "run",
+          "callee": "json.dumps",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_rewrite_segments_bulk_populates_snapshot",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_rewrite_segments_bulk_populates_snapshot",
+          "callee": "FakeAgent",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_rewrite_segments_bulk_populates_snapshot",
+          "callee": "controller.action",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_apply_segments_bulk_updates_segment_text",
+          "callee": "_seed_segments",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_apply_segments_bulk_updates_segment_text",
+          "callee": "controller.action",
+          "lineNumber": 95
+        },
+        {
+          "caller": "test_apply_segments_bulk_accepts_textos_payload",
+          "callee": "_seed_segments",
+          "lineNumber": 106
+        },
+        {
+          "caller": "test_apply_segments_bulk_accepts_textos_payload",
+          "callee": "controller.action",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_cancel_bulk_adjust_clears_pending",
+          "callee": "_seed_segments",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_cancel_bulk_adjust_clears_pending",
+          "callee": "controller.action",
+          "lineNumber": 120
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_gui_llm_config.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 59,
+      "functions": [
+        {
+          "name": "controller",
+          "startLine": 12,
+          "endLine": 17,
+          "params": [
+            "tmp_path",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_llm_config_snapshot",
+          "startLine": 20,
+          "endLine": 33,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_update_llm_config",
+          "startLine": 36,
+          "endLine": 58,
+          "params": [
+            "controller"
+          ]
+        },
+        {
+          "name": "test_session_snapshot_includes_effective_config",
+          "startLine": 61,
+          "endLine": 70,
+          "params": [
+            "controller"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "controller",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_config_snapshot",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "test_update_llm_config",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "test_session_snapshot_includes_effective_config",
+          "line": 61,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 15
+        },
+        {
+          "caller": "controller",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 16
+        },
+        {
+          "caller": "controller",
+          "callee": "GuiController",
+          "lineNumber": 17
+        },
+        {
+          "caller": "test_llm_config_snapshot",
+          "callee": "controller.llm_config_snapshot",
+          "lineNumber": 21
+        },
+        {
+          "caller": "test_update_llm_config",
+          "callee": "controller.update_llm_config",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_session_snapshot_includes_effective_config",
+          "callee": "controller.snapshot",
+          "lineNumber": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_interview_exploration.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 181,
+      "nonEmptyLines": 157,
+      "functions": [
+        {
+          "name": "_make_runner",
+          "startLine": 25,
+          "endLine": 46,
+          "params": [
+            "accepted",
+            "issues",
+            "induction",
+            "repetition",
+            "compound",
+            "relation",
+            "answerability"
+          ]
+        },
+        {
+          "name": "test_FR_001_initial_prompt_excludes_editorial_structure",
+          "startLine": 49,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "test_select_question_picks_best_of_two_even_if_not_accepted",
+          "startLine": 61,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "test_FR_002_question_does_not_presuppose_answer",
+          "startLine": 85,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "test_FR_003_compound_question_blocked",
+          "startLine": 100,
+          "endLine": 112,
+          "params": []
+        },
+        {
+          "name": "test_FR_004_best_ranked_candidate_is_displayed",
+          "startLine": 115,
+          "endLine": 136,
+          "params": []
+        },
+        {
+          "name": "test_validate_question_empty_returns_empty_issue",
+          "startLine": 139,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "test_validate_question_llm_error_returns_llm_error_issue",
+          "startLine": 146,
+          "endLine": 160,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "_MockValidationRunner",
+          "startLine": 11,
+          "endLine": 22,
+          "methods": [
+            "__init__",
+            "run"
+          ],
+          "properties": []
+        },
+        {
+          "name": "_QuestionRunner",
+          "startLine": 163,
+          "endLine": 181,
+          "methods": [
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_MockValidationRunner",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "_make_runner",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_001_initial_prompt_excludes_editorial_structure",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "test_select_question_picks_best_of_two_even_if_not_accepted",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_002_question_does_not_presuppose_answer",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_003_compound_question_blocked",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_004_best_ranked_candidate_is_displayed",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "test_validate_question_empty_returns_empty_issue",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "test_validate_question_llm_error_returns_llm_error_issue",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "_QuestionRunner",
+          "line": 163,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "AgentResult",
+          "lineNumber": 16
+        },
+        {
+          "caller": "run",
+          "callee": "json.dumps",
+          "lineNumber": 20
+        },
+        {
+          "caller": "_make_runner",
+          "callee": "_MockValidationRunner",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_FR_001_initial_prompt_excludes_editorial_structure",
+          "callee": "build_exploration_prompt",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_FR_001_initial_prompt_excludes_editorial_structure",
+          "callee": "ThemeContext",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_FR_001_initial_prompt_excludes_editorial_structure",
+          "callee": "prompt.lower",
+          "lineNumber": 53
+        },
+        {
+          "caller": "test_select_question_picks_best_of_two_even_if_not_accepted",
+          "callee": "QuestionCandidate",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_select_question_picks_best_of_two_even_if_not_accepted",
+          "callee": "QuestionCandidate",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_select_question_picks_best_of_two_even_if_not_accepted",
+          "callee": "select_question",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_select_question_picks_best_of_two_even_if_not_accepted",
+          "callee": "_make_runner",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_select_question_picks_best_of_two_even_if_not_accepted",
+          "callee": "selected.question.upper",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_FR_002_question_does_not_presuppose_answer",
+          "callee": "_make_runner",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_FR_002_question_does_not_presuppose_answer",
+          "callee": "validate_question",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_FR_003_compound_question_blocked",
+          "callee": "_make_runner",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_FR_003_compound_question_blocked",
+          "callee": "validate_question",
+          "lineNumber": 106
+        },
+        {
+          "caller": "test_FR_004_best_ranked_candidate_is_displayed",
+          "callee": "QuestionCandidate",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_FR_004_best_ranked_candidate_is_displayed",
+          "callee": "QuestionCandidate",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_FR_004_best_ranked_candidate_is_displayed",
+          "callee": "_make_runner",
+          "lineNumber": 132
+        },
+        {
+          "caller": "test_FR_004_best_ranked_candidate_is_displayed",
+          "callee": "select_question",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_FR_004_best_ranked_candidate_is_displayed",
+          "callee": "selected.question.upper",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_validate_question_empty_returns_empty_issue",
+          "callee": "_make_runner",
+          "lineNumber": 140
+        },
+        {
+          "caller": "test_validate_question_empty_returns_empty_issue",
+          "callee": "validate_question",
+          "lineNumber": 141
+        },
+        {
+          "caller": "run",
+          "callee": "AgentResult",
+          "lineNumber": 149
+        },
+        {
+          "caller": "test_validate_question_llm_error_returns_llm_error_issue",
+          "callee": "validate_question",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_validate_question_llm_error_returns_llm_error_issue",
+          "callee": "_FailingRunner",
+          "lineNumber": 158
+        },
+        {
+          "caller": "run",
+          "callee": "AgentResult",
+          "lineNumber": 165
+        },
+        {
+          "caller": "run",
+          "callee": "json.dumps",
+          "lineNumber": 169
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 8,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "tests/test_interview_extraction.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 30,
+      "functions": [
+        {
+          "name": "test_FR_005_original_answer_immutable",
+          "startLine": 11,
+          "endLine": 24,
+          "params": []
+        },
+        {
+          "name": "test_FR_006_every_signal_has_evidence",
+          "startLine": 27,
+          "endLine": 39,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_FR_005_original_answer_immutable",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_006_every_signal_has_evidence",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_FR_005_original_answer_immutable",
+          "callee": "criar_estado_inicial",
+          "lineNumber": 12
+        },
+        {
+          "caller": "test_FR_005_original_answer_immutable",
+          "callee": "SelectedQuestion",
+          "lineNumber": 13
+        },
+        {
+          "caller": "test_FR_005_original_answer_immutable",
+          "callee": "append_answer",
+          "lineNumber": 15
+        },
+        {
+          "caller": "test_FR_005_original_answer_immutable",
+          "callee": "extract_signals",
+          "lineNumber": 16
+        },
+        {
+          "caller": "test_FR_005_original_answer_immutable",
+          "callee": "append_extraction",
+          "lineNumber": 17
+        },
+        {
+          "caller": "test_FR_005_original_answer_immutable",
+          "callee": "all",
+          "lineNumber": 22
+        },
+        {
+          "caller": "test_FR_005_original_answer_immutable",
+          "callee": "evidence.text.strip",
+          "lineNumber": 22
+        },
+        {
+          "caller": "test_FR_005_original_answer_immutable",
+          "callee": "pytest.raises",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_FR_006_every_signal_has_evidence",
+          "callee": "criar_estado_inicial",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_FR_006_every_signal_has_evidence",
+          "callee": "append_answer",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_FR_006_every_signal_has_evidence",
+          "callee": "SelectedQuestion",
+          "lineNumber": 31
+        },
+        {
+          "caller": "test_FR_006_every_signal_has_evidence",
+          "callee": "extract_signals",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_FR_006_every_signal_has_evidence",
+          "callee": "append_extraction",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_FR_006_every_signal_has_evidence",
+          "callee": "signals_have_evidence",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_FR_006_every_signal_has_evidence",
+          "callee": "all",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_interview_gaps.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 75,
+      "nonEmptyLines": 64,
+      "functions": [
+        {
+          "name": "test_identify_gaps_only_from_observed_signals",
+          "startLine": 7,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "test_FR_014_optional_gaps_do_not_extend_approved_interview",
+          "startLine": 23,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "test_critical_gap_can_request_deepening",
+          "startLine": 40,
+          "endLine": 54,
+          "params": []
+        },
+        {
+          "name": "test_decision_respects_question_limit",
+          "startLine": 57,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "test_unapproved_gateway_keeps_exploring_without_high_gaps",
+          "startLine": 67,
+          "endLine": 75,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_identify_gaps_only_from_observed_signals",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_014_optional_gaps_do_not_extend_approved_interview",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "test_critical_gap_can_request_deepening",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "test_decision_respects_question_limit",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "test_unapproved_gateway_keeps_exploring_without_high_gaps",
+          "line": 67,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_identify_gaps_only_from_observed_signals",
+          "callee": "identify_gaps",
+          "lineNumber": 8
+        },
+        {
+          "caller": "test_identify_gaps_only_from_observed_signals",
+          "callee": "any",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_FR_014_optional_gaps_do_not_extend_approved_interview",
+          "callee": "decide_deepening",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_FR_014_optional_gaps_do_not_extend_approved_interview",
+          "callee": "Gap",
+          "lineNumber": 26
+        },
+        {
+          "caller": "test_FR_014_optional_gaps_do_not_extend_approved_interview",
+          "callee": "GatewayResult",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_critical_gap_can_request_deepening",
+          "callee": "decide_deepening",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_critical_gap_can_request_deepening",
+          "callee": "Gap",
+          "lineNumber": 43
+        },
+        {
+          "caller": "test_critical_gap_can_request_deepening",
+          "callee": "GatewayResult",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_decision_respects_question_limit",
+          "callee": "decide_deepening",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_decision_respects_question_limit",
+          "callee": "Gap",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_unapproved_gateway_keeps_exploring_without_high_gaps",
+          "callee": "decide_deepening",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_unapproved_gateway_keeps_exploring_without_high_gaps",
+          "callee": "GatewayResult",
+          "lineNumber": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_interview_gateway.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 104,
+      "nonEmptyLines": 89,
+      "functions": [
+        {
+          "name": "_assessment",
+          "startLine": 11,
+          "endLine": 43,
+          "params": [
+            "strong",
+            "vetos"
+          ]
+        },
+        {
+          "name": "test_FR_008_llm_alone_cannot_approve_gateway",
+          "startLine": 46,
+          "endLine": 52,
+          "params": []
+        },
+        {
+          "name": "test_FR_009_heuristic_alone_cannot_approve_gateway",
+          "startLine": 55,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "test_FR_010_balanced_gateway_requires_essential_dimensions",
+          "startLine": 61,
+          "endLine": 81,
+          "params": []
+        },
+        {
+          "name": "test_FR_011_strong_imbalanced_gateway_rules",
+          "startLine": 84,
+          "endLine": 88,
+          "params": []
+        },
+        {
+          "name": "test_FR_012_absolute_vetoes_block_approval",
+          "startLine": 91,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "test_FR_013_exceptional_story_compensates_weak_secondary",
+          "startLine": 100,
+          "endLine": 104,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_assessment",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_008_llm_alone_cannot_approve_gateway",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_009_heuristic_alone_cannot_approve_gateway",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_010_balanced_gateway_requires_essential_dimensions",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_011_strong_imbalanced_gateway_rules",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_012_absolute_vetoes_block_approval",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "test_FR_013_exceptional_story_compensates_weak_secondary",
+          "line": 100,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_assessment",
+          "callee": "DimensionScore",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_assessment",
+          "callee": "scores.items",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_assessment",
+          "callee": "DeterministicAssessment",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_FR_008_llm_alone_cannot_approve_gateway",
+          "callee": "evaluate_gateway",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_FR_008_llm_alone_cannot_approve_gateway",
+          "callee": "_assessment",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_FR_008_llm_alone_cannot_approve_gateway",
+          "callee": "LlmAssessment",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_FR_009_heuristic_alone_cannot_approve_gateway",
+          "callee": "evaluate_gateway",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_FR_009_heuristic_alone_cannot_approve_gateway",
+          "callee": "_assessment",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_FR_009_heuristic_alone_cannot_approve_gateway",
+          "callee": "LlmAssessment",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_FR_010_balanced_gateway_requires_essential_dimensions",
+          "callee": "_assessment",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_FR_010_balanced_gateway_requires_essential_dimensions",
+          "callee": "DeterministicAssessment",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_FR_010_balanced_gateway_requires_essential_dimensions",
+          "callee": "DimensionScore",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_FR_010_balanced_gateway_requires_essential_dimensions",
+          "callee": "evaluate_gateway",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_FR_010_balanced_gateway_requires_essential_dimensions",
+          "callee": "LlmAssessment",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_FR_011_strong_imbalanced_gateway_rules",
+          "callee": "evaluate_gateway",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_FR_011_strong_imbalanced_gateway_rules",
+          "callee": "_assessment",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_FR_011_strong_imbalanced_gateway_rules",
+          "callee": "LlmAssessment",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_FR_012_absolute_vetoes_block_approval",
+          "callee": "evaluate_gateway",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_FR_012_absolute_vetoes_block_approval",
+          "callee": "_assessment",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_FR_012_absolute_vetoes_block_approval",
+          "callee": "LlmAssessment",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_FR_013_exceptional_story_compensates_weak_secondary",
+          "callee": "evaluate_gateway",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_FR_013_exceptional_story_compensates_weak_secondary",
+          "callee": "_assessment",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_FR_013_exceptional_story_compensates_weak_secondary",
+          "callee": "LlmAssessment",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_FR_013_exceptional_story_compensates_weak_secondary",
+          "callee": "set",
+          "lineNumber": 103
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    }
+  ]
+}

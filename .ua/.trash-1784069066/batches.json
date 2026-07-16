@@ -1,0 +1,4342 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 279,
+  "totalBatches": 19,
+  "exportsByPath": {
+    ".ua/.understandignore": [],
+    "docs/archive/plano-de-inteligencia": [],
+    "frontend/e2e/composition.spec.ts": [],
+    "frontend/e2e/drafts.spec.ts": [],
+    "frontend/e2e/pipeline-regression.spec.ts": [],
+    "frontend/e2e/storyboard.spec.ts": [],
+    "frontend/playwright.config.ts": [],
+    "frontend/src/components/workstation/AmbientField.tsx": [
+      "AmbientField"
+    ],
+    "frontend/src/components/workstation/ContextBar.tsx": [
+      "ContextBar"
+    ],
+    "frontend/src/components/workstation/DevDrawer.tsx": [
+      "DevDrawer"
+    ],
+    "frontend/src/components/workstation/FormattedText.tsx": [
+      "FormattedText"
+    ],
+    "frontend/src/components/workstation/GamePopup.tsx": [
+      "GamePopup"
+    ],
+    "frontend/src/components/workstation/interview/AnalyzingState.tsx": [
+      "AnalyzingState"
+    ],
+    "frontend/src/components/workstation/interview/AuthorContextCompact.tsx": [
+      "AuthorContextCompact"
+    ],
+    "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx": [
+      "AuthorContextMapMode"
+    ],
+    "frontend/src/components/workstation/interview/AuthorialMap.tsx": [
+      "AuthorialMap"
+    ],
+    "frontend/src/components/workstation/interview/AxisDetailPanel.tsx": [
+      "AxisDetailPanel"
+    ],
+    "frontend/src/components/workstation/interview/CoverageUpdated.tsx": [
+      "CoverageUpdated"
+    ],
+    "frontend/src/components/workstation/interview/CurrentReadMoment.tsx": [
+      "CurrentReadMoment"
+    ],
+    "frontend/src/components/workstation/interview/motion.ts": [
+      "useMotionSafe",
+      "questionExit",
+      "questionEnter",
+      "questionInitial"
+    ],
+    "frontend/src/components/workstation/interview/QuestionStage.tsx": [
+      "QuestionStage"
+    ],
+    "frontend/src/components/workstation/interview/RoundNavigator.tsx": [
+      "RoundNavigator"
+    ],
+    "frontend/src/components/workstation/interview/RoundReview.tsx": [
+      "RoundReview"
+    ],
+    "frontend/src/components/workstation/interview/useInterviewUx.ts": [
+      "deriveNewAxes",
+      "useInterviewUx"
+    ],
+    "frontend/src/components/workstation/ModalShell.tsx": [
+      "ModalShell",
+      "ModalHeader",
+      "ModalFooter"
+    ],
+    "frontend/src/components/workstation/PipelineRail.tsx": [
+      "PipelineRail"
+    ],
+    "frontend/src/components/workstation/ReadjustAllModal.tsx": [
+      "ReadjustAllModal"
+    ],
+    "frontend/src/components/workstation/stages/AgentsStage.tsx": [
+      "AgentsStage"
+    ],
+    "frontend/src/components/workstation/stages/BriefingStage.tsx": [
+      "BriefingStage"
+    ],
+    "frontend/src/components/workstation/stages/common.tsx": [
+      "StageHeader",
+      "StageScroll"
+    ],
+    "frontend/src/components/workstation/stages/CompositionStage.tsx": [
+      "CompositionStage"
+    ],
+    "frontend/src/components/workstation/stages/DraftsStage.tsx": [
+      "DraftsStage"
+    ],
+    "frontend/src/components/workstation/stages/EntryStage.tsx": [
+      "EntryStage"
+    ],
+    "frontend/src/components/workstation/stages/EvaluationStage.tsx": [
+      "EvaluationStage"
+    ],
+    "frontend/src/components/workstation/stages/ExecutionStage.tsx": [
+      "ExecutionStage"
+    ],
+    "frontend/src/components/workstation/stages/ExportStage.tsx": [
+      "ExportStage"
+    ],
+    "frontend/src/components/workstation/stages/InterviewStage.tsx": [
+      "InterviewStage"
+    ],
+    "frontend/src/components/workstation/stages/PromptStage.tsx": [
+      "PromptStage"
+    ],
+    "frontend/src/components/workstation/stages/SegmentationStage.tsx": [
+      "SegmentationStage"
+    ],
+    "frontend/src/components/workstation/stages/StoryboardStage.tsx": [
+      "StoryboardStage"
+    ],
+    "frontend/src/components/workstation/ui.tsx": [
+      "AnimatedNumber",
+      "PeButton",
+      "Reveal",
+      "Eyebrow",
+      "Field",
+      "ActivityGlyph",
+      "ErrorAccordion"
+    ],
+    "frontend/src/components/workstation/Workstation.tsx": [
+      "Workstation"
+    ],
+    "frontend/src/lib/mappers/editorial.ts": [
+      "editorialFlowFromState",
+      "editorialStatusFromDerived",
+      "storyboardBlocks",
+      "isBlockUnlocked",
+      "frontierBlockId"
+    ],
+    "frontend/src/lib/mappers/interview.ts": [
+      "mapInterview",
+      "axesFromInterviewUi",
+      "questionsFromInterview",
+      "buildEditorialFeedback",
+      "segmentsFromState",
+      "evaluationFromUi",
+      "trechoToSegmentIndex",
+      "weakSegmentsFromEvaluation",
+      "briefingCardsFromState"
+    ],
+    "frontend/src/lib/mappers/operations.ts": [
+      "OP_UI_TO_BACKEND",
+      "OP_BACKEND_TO_UI",
+      "OP_LABELS",
+      "OP_ORDER"
+    ],
+    "frontend/src/lib/mappers/phase.ts": [
+      "PHASE_TO_STAGE",
+      "STAGE_TO_PHASE",
+      "stageFromPhase",
+      "phaseFromStage"
+    ],
+    "frontend/src/lib/pe-api.ts": [
+      "fetchSession",
+      "patchSession",
+      "runAction",
+      "restoreSession",
+      "fetchLlmConfig",
+      "saveLlmConfig",
+      "opsFromConfig",
+      "llmConfigPayloadFromOps",
+      "eventsFromState",
+      "tipoLabel",
+      "providersFromStatus"
+    ],
+    "frontend/src/lib/pe-store.tsx": [
+      "PROVIDERS",
+      "PostEngineProvider",
+      "usePE"
+    ],
+    "frontend/src/lib/pe-types.ts": [],
+    "frontend/src/lib/utils.ts": [
+      "cn"
+    ],
+    "frontend/src/main.tsx": [],
+    "frontend/vite.config.ts": [],
+    "prompts/router/.gitkeep": [],
+    "scripts/gui.fish": [],
+    "scripts/reorganize_specs.py": [
+      "main",
+      "rewrite_checklist",
+      "rewrite_global"
+    ],
+    "scripts/run_interview_quality_eval.py": [
+      "main"
+    ],
+    "src/__init__.py": [],
+    "src/content_engine/__init__.py": [],
+    "src/content_engine/__main__.py": [
+      "main"
+    ],
+    "src/content_engine/adjust_segment.py": [
+      "SegmentAdjuster"
+    ],
+    "src/content_engine/adjust_segments_bulk.py": [
+      "SegmentAdjustRequest",
+      "trecho_to_segment_index",
+      "SegmentBulkAdjuster"
+    ],
+    "src/content_engine/agent_wrapper.py": [
+      "_failure_message_from_output",
+      "AgentWrapper"
+    ],
+    "src/content_engine/briefing.py": [
+      "montar_briefing_autoral"
+    ],
+    "src/content_engine/codex_llm_client.py": [
+      "LlmRequest",
+      "LlmResponse",
+      "CodexLlmClient"
+    ],
+    "src/content_engine/cursor_output.py": [
+      "extract_json_lines",
+      "_extract_assistant_text",
+      "_stringify_error",
+      "parse_cursor_output",
+      "resolve_cursor_model"
+    ],
+    "src/content_engine/editorial_actions.py": [
+      "EditorialHost",
+      "_ensure_flow",
+      "_sync_briefing_fingerprint",
+      "action_generate_storyboard",
+      "action_update_storyboard",
+      "action_clear_storyboard",
+      "_block_entry",
+      "_find_block",
+      "_assert_prior_blocks_selected",
+      "_invalidate_downstream_drafts",
+      "_generate_block_drafts_internal",
+      "action_generate_block_drafts",
+      "action_generate_all_block_drafts",
+      "action_retry_block_draft",
+      "action_select_block_draft",
+      "action_compose_editorial",
+      "_apply_composition_result"
+    ],
+    "src/content_engine/editorial_flow.py": [
+      "empty_editorial_flow",
+      "normalize_editorial_flow",
+      "compute_briefing_fingerprint",
+      "compute_selection_fingerprint",
+      "derive_editorial_status",
+      "new_block_id",
+      "new_option_id",
+      "assign_storyboard_blocks",
+      "invalidate_drafts_and_composition",
+      "clear_downstream_if_editorial_origin",
+      "persona_by_id"
+    ],
+    "src/content_engine/editorial_generation.py": [
+      "EditorialParseError",
+      "EditorialRunResult",
+      "_run_json_llm",
+      "parse_storyboard_blocks",
+      "parse_approaches",
+      "parse_draft_content",
+      "_json_dumps",
+      "_storyboard_context",
+      "_composition_context",
+      "_composition_briefing",
+      "_composition_authorial_evidence",
+      "_composition_interview_context",
+      "_composition_format_rules",
+      "StoryboardGenerator",
+      "BlockDraftGenerator",
+      "EditorialComposer",
+      "_preservation_retry_prompt",
+      "build_draft_options",
+      "_selected_draft_for_block",
+      "collect_previous_selected_drafts",
+      "collect_selected_drafts"
+    ],
+    "src/content_engine/editorial_preservation.py": [
+      "EditorialAnchor",
+      "EditorialPreservationIssue",
+      "extract_editorial_anchors",
+      "validate_composition_preservation",
+      "editorial_anchors_for_prompt",
+      "format_preservation_issues",
+      "_anchors_for_draft",
+      "_arrow_chain_anchors",
+      "_ordinal_sequence_anchors",
+      "_graph_method_anchors",
+      "_concrete_scenario_anchors",
+      "_causal_consequence_anchors",
+      "_unique_anchor_kinds",
+      "_payload_editorial_text",
+      "_slide_text",
+      "_strings_from_value",
+      "_clean_text",
+      "_normalized_text",
+      "_token_set",
+      "_keywords",
+      "_matches_term",
+      "_sentences",
+      "_sentence_containing",
+      "_surrounding_excerpt",
+      "_sequence_excerpt",
+      "_first_clause"
+    ],
+    "src/content_engine/exporter.py": [
+      "sanitizar_nome_arquivo",
+      "nome_arquivo_base",
+      "_resolver_dir",
+      "_resolver_markdown_path",
+      "_write_text",
+      "_write_json",
+      "montar_payload_json_exportacao",
+      "exportar_markdown",
+      "exportar_json",
+      "exportar_conteudo",
+      "exportar_txt"
+    ],
+    "src/content_engine/generator.py": [
+      "_extrair_bullets_de_slide",
+      "_formatar_sugestao_imagem",
+      "_parse_sugestao_imagem_item",
+      "_indexar_sugestoes_imagem",
+      "_resolver_sugestao_imagem",
+      "_aplicar_sugestoes_em_slides",
+      "_serializar_sugestoes_imagem",
+      "_sugestoes_imagem_de_media",
+      "_slidemark_para_slide_content",
+      "_slidemark_para_conteudo",
+      "_parse_slidemark",
+      "_parse_slides",
+      "_slides_para_conteudo",
+      "ConteudoGerado",
+      "parse_generation_payload",
+      "ContentGenerator"
+    ],
+    "src/content_engine/interview/__init__.py": [],
+    "src/content_engine/interview/briefing.py": [
+      "build_briefing"
+    ],
+    "src/content_engine/interview/controller.py": [
+      "InterviewController"
+    ],
+    "src/content_engine/interview/exploration.py": [
+      "QuestionGenerationError",
+      "_context",
+      "_as_signal_summary",
+      "build_exploration_prompt",
+      "_invoke_runner",
+      "_candidate_items",
+      "generate_candidates",
+      "_candidate_rank",
+      "select_question",
+      "generate_next_question"
+    ],
+    "src/content_engine/interview/extraction.py": [
+      "ExtractionResult",
+      "_answer_id",
+      "append_answer",
+      "_sentence_spans",
+      "_evidence_id",
+      "_signal_id",
+      "_status_for_sentence",
+      "extract_signals",
+      "append_extraction",
+      "signals_have_evidence"
+    ],
+    "src/content_engine/interview/gaps.py": [
+      "_signal",
+      "_dimension",
+      "identify_gaps",
+      "decide_deepening",
+      "explain_decision"
+    ],
+    "src/content_engine/interview/gateway.py": [
+      "_coerce_heuristic",
+      "_coerce_llm",
+      "_coerce_gaps",
+      "_profile",
+      "_essential",
+      "_critical",
+      "_balanced_gateway",
+      "_strong_imbalanced_gateway",
+      "evaluate_gateway",
+      "gateway_equilibrado",
+      "gateway_desequilibrado_forte"
+    ],
+    "src/content_engine/interview/heuristic.py": [
+      "DimensionDefinition",
+      "_profile",
+      "_as_signal",
+      "_as_evidence",
+      "_as_answer",
+      "_state_inputs",
+      "_state_for_score",
+      "_score_dimension",
+      "_question_echo",
+      "detect_absolute_vetos",
+      "assess_dimensions"
+    ],
+    "src/content_engine/interview/llm_evaluation.py": [
+      "_text_items",
+      "build_authorship_prompt",
+      "_invoke",
+      "evaluate_authorship_llm"
+    ],
+    "src/content_engine/interview/quality.py": [
+      "QualityMetric",
+      "_record",
+      "_words",
+      "_is_induced",
+      "measure_induced_answer_rate",
+      "measure_original_language_preservation",
+      "evaluate_corpus"
+    ],
+    "src/content_engine/interview/schemas.py": [
+      "_clean",
+      "_normalise",
+      "_strings",
+      "_dict",
+      "_clamp_score",
+      "ThemeContext",
+      "QuestionCandidate",
+      "SelectedQuestion",
+      "UserAnswer",
+      "Evidence",
+      "AuthorialSignal",
+      "DimensionScore",
+      "DeterministicAssessment",
+      "LlmAssessment",
+      "Gap",
+      "DeepeningDecision",
+      "GatewayResult",
+      "InterviewState",
+      "criar_estado_inicial"
+    ],
+    "src/content_engine/interview/ui.py": [
+      "_as_state",
+      "build_interview_ui"
+    ],
+    "src/content_engine/interview/validation.py": [
+      "QuestionValidation",
+      "build_validation_prompt",
+      "_invoke",
+      "_parse_validation",
+      "validate_question",
+      "validar_pergunta"
+    ],
+    "src/content_engine/llm_config.py": [
+      "LlmOperationConfig",
+      "_optional_str",
+      "_merge_config",
+      "_default_for_operation",
+      "list_operations",
+      "list_providers",
+      "check_provider_available",
+      "provider_status",
+      "_ensure_data_dir",
+      "_load_yaml_file",
+      "_dump_yaml_file",
+      "_normalize_operations_raw",
+      "_config_file_needs_migration",
+      "migrate_config_file_if_needed",
+      "load_global_config",
+      "save_global_config",
+      "ensure_default_config_file",
+      "resolve",
+      "resolve_all"
+    ],
+    "src/content_engine/llm_json_parser.py": [
+      "ParsedLLMJson",
+      "_try_loads",
+      "_iter_jsonl_objects",
+      "_unwrap_text_payload",
+      "_collect_event_text_fields",
+      "_extract_nested_text_json",
+      "_iter_balanced_objects",
+      "_iter_codex_text_json",
+      "_score_evaluation_payload",
+      "_score_content_payload",
+      "_score_router_payload",
+      "_score_preferred_keys",
+      "_looks_like_codex_event",
+      "_is_codex_error_event",
+      "_extract_codex_error_message",
+      "_pick_best_evaluation",
+      "extract_json_object_from_llm_output"
+    ],
+    "src/content_engine/llm_workspace.py": [
+      "WorkspaceIsolationError",
+      "WorkspaceManifest",
+      "_validate_path",
+      "_is_denied",
+      "LlmExecutionWorkspace",
+      "isolated_workspace",
+      "allowed_files_for_operation"
+    ],
+    "src/content_engine/persistence.py": [
+      "_ensure_dir",
+      "_as_str",
+      "_as_dict",
+      "_as_list",
+      "_as_bool",
+      "_as_int_or_none",
+      "_state_to_dict",
+      "_validate_schema",
+      "_dict_to_state",
+      "salvar_sessao",
+      "carregar_sessao",
+      "carregar_sessao_de_payload"
+    ],
+    "src/content_engine/post_evaluation.py": [
+      "_clamp",
+      "_coerce_score",
+      "_coerce_list_str",
+      "_coerce_severidade",
+      "_coerce_trecho_fraco",
+      "_coerce_trechos_fracos",
+      "_empty_avaliacao",
+      "PostEvaluator"
+    ],
+    "src/content_engine/prompt_builder.py": [
+      "_serialize",
+      "_authorial_projection",
+      "build_generation_prompt"
+    ],
+    "src/content_engine/prompt_loader.py": [
+      "_resolve_path",
+      "load_prompt",
+      "prompt_exists"
+    ],
+    "src/content_engine/schemas.py": [
+      "migrate_tipo_de_post",
+      "is_tipo_de_post",
+      "is_tool",
+      "is_sandbox",
+      "ScoreDoPost",
+      "TrechoFraco",
+      "AvaliacaoSlideMark",
+      "SegmentoPost",
+      "SugestaoImagem",
+      "SlideContent",
+      "GenerationPromptInput",
+      "AgentResult",
+      "TuiSessionState"
+    ],
+    "src/content_engine/segmentation.py": [
+      "_texto_slide_slidemark",
+      "_papel_slidemark",
+      "_papeis_esperados_por_formato",
+      "_serializar_sugestao_imagem",
+      "_indexar_sugestoes_segmentacao",
+      "segmentar_slidemark",
+      "parse_segmentos",
+      "Segmenter"
+    ],
+    "src/content_engine/session_app.py": [
+      "_safe_query",
+      "_text",
+      "_set_text",
+      "_select_value",
+      "_json",
+      "PostEngineApp"
+    ],
+    "src/content_engine/session_controller.py": [
+      "SessionController"
+    ],
+    "src/content_engine/session_log.py": [
+      "new_session_id",
+      "_safe_session_id",
+      "default_log_path",
+      "SessionLogger",
+      "ensure_session_logger"
+    ],
+    "src/content_engine/slidemark_contract.py": [],
+    "src/content_engine/slidemark_converter.py": [
+      "_regras_para_tipo",
+      "_serializar_json",
+      "_extrair_slidemark",
+      "_conteudo_tem_codigo",
+      "_aplicar_defaults_autor",
+      "_combinar_sugestoes_imagem",
+      "SlideMarkConvertido",
+      "SlideMarkConverter"
+    ],
+    "src/content_engine/slidemark_validator.py": [
+      "_is_number",
+      "_is_positive_int",
+      "_text",
+      "_dict",
+      "_list",
+      "_optional_text",
+      "_supported_media_source",
+      "_clean_image",
+      "_clean_decorations",
+      "_clean_annotations",
+      "_clean_bullets",
+      "_clean_compare_column",
+      "_clean_suggestion",
+      "_index_suggestions",
+      "_apply_suggestion_media",
+      "_clean_slide",
+      "normalize_slidemark_document",
+      "_expect_exact_keys",
+      "_require_text",
+      "_optional_text_error",
+      "_validate_image",
+      "_validate_decorations",
+      "_validate_base_slide",
+      "_validate_annotations",
+      "_validate_slide",
+      "validate_slidemark_document",
+      "validate_slidemark_export_document",
+      "is_valid_slidemark_document"
+    ],
+    "src/content_engine/template_renderer.py": [
+      "render_template"
+    ],
+    "src/content_engine/trilhas.py": [
+      "is_trilha_visual"
+    ],
+    "src/content_engine/tui_validation.py": [
+      "TuiValidationError",
+      "_is_real",
+      "_validar_scores",
+      "_validar_restricoes",
+      "validar_preview",
+      "validar_sandbox",
+      "validar_modelo"
+    ],
+    "src/gui/__init__.py": [],
+    "src/gui/server.py": [
+      "_coerce_trechos_fracos",
+      "_build_avaliacao_ui",
+      "GuiController",
+      "_coerce_index",
+      "_json_response",
+      "_read_json",
+      "make_handler",
+      "run_gui_server"
+    ],
+    "src/tui/__init__.py": [],
+    "tests/__init__.py": [],
+    "tests/fixtures/validate_and_render_slidemark.mts": [],
+    "tests/llm_fakes.py": [
+      "AgentFakeRunMixin",
+      "fake_v4_llm_run"
+    ],
+    "tests/test_adjust_segments_bulk.py": [
+      "FakeAgent",
+      "test_trecho_to_segment_index_one_based",
+      "test_trecho_to_segment_index_zero_based",
+      "test_trecho_to_segment_index_invalid",
+      "test_bulk_adjuster_returns_all_segments",
+      "test_bulk_adjuster_raises_on_incomplete_response",
+      "test_load_prompt_adjust_segments_bulk_contem_placeholders"
+    ],
+    "tests/test_agent_wrapper_cursor.py": [
+      "test_resolve_cursor_model_auto_omits_flag",
+      "test_resolve_cursor_model_with_effort",
+      "test_resolve_cursor_model_effort_only",
+      "test_parse_cursor_output_success",
+      "test_parse_cursor_output_assistant_fallback",
+      "test_parse_cursor_output_error",
+      "test_run_cursor_builds_cli_command",
+      "test_run_dispatches_cursor"
+    ],
+    "tests/test_cli.py": [
+      "test_cli_without_gui_exits",
+      "test_cli_gui_invokes_server"
+    ],
+    "tests/test_codex_llm_client.py": [
+      "_ok",
+      "_capture_runner",
+      "test_llm_request_defaults",
+      "test_llm_response_from_json",
+      "test_llm_response_from_text",
+      "test_build_prompt_concatena_system_e_user",
+      "test_build_prompt_ignora_vazios",
+      "test_execute_codex_monta_comando_com_skip_git_e_stdin",
+      "test_execute_codex_sem_model_nao_adiciona_flag_m",
+      "test_execute_codex_inclui_cd_workspace",
+      "test_execute_codex_sem_workspace_cria_workspace_isolado",
+      "test_complete_retorna_json_quando_valido",
+      "test_complete_retorna_texto_quando_json_invalido",
+      "test_execute_codex_erro_exit_code_nao_zero_levanta_runtime_error",
+      "test_execute_codex_filenotfound_levanta_runtime_error",
+      "test_execute_codex_timeout_levanta_runtime_error",
+      "test_run_retorna_agent_result_ok_em_sucesso",
+      "test_run_retorna_agent_result_erro_em_falha",
+      "test_run_passa_model_do_kwargs_para_o_comando",
+      "test_run_sem_model_herde_do_cli"
+    ],
+    "tests/test_editorial_composition.py": [
+      "RecordingAgent",
+      "_flow_for_selected",
+      "_compose",
+      "_payload",
+      "test_rejects_concrete_example_reduced_to_abstract_category",
+      "test_rejects_causal_chain_reduced_to_label",
+      "test_rejects_authorial_graph_method_reduced_to_metrics",
+      "test_rejects_ambiguous_logical_to_physical_extraction",
+      "test_allows_removing_literal_repetition_when_concrete_anchor_survives",
+      "test_allows_cohesive_bridge_without_replacing_selected_material",
+      "test_compose_prompt_contains_full_source_contract_and_authorial_context",
+      "test_compose_prompt_contains_anti_ia_policies",
+      "test_long_slide_anchor_can_survive_in_slidemark_without_plain_content"
+    ],
+    "tests/test_editorial_flow.py": [
+      "test_pre_v4_session_is_rejected_before_editorial_flow_is_opened",
+      "test_editorial_flow_round_trip",
+      "test_derive_editorial_status_defaults",
+      "test_gui_snapshot_includes_editorial_derived"
+    ],
+    "tests/test_generation_v4_prompt.py": [
+      "test_generation_prompt_uses_only_v4_authorial_context"
+    ],
+    "tests/test_generator_image_suggestions.py": [
+      "FakeAgent",
+      "_slidemark_minimo",
+      "_input",
+      "test_parse_sugestoes_imagem_descricao",
+      "test_parse_sugestoes_imagem_aceita_formato_legado_slide_e_sugestao",
+      "test_parse_sugestoes_imagem_link",
+      "test_segmentar_slidemark_propaga_sugestao",
+      "test_segmentar_slidemark_aceita_formato_legado_slide_e_sugestao"
+    ],
+    "tests/test_gui_avaliacao.py": [
+      "controller",
+      "_avaliacao_payload",
+      "test_snapshot_post_scores_usa_criterios_novos",
+      "test_snapshot_avaliacao_ui_completo",
+      "test_snapshot_avaliacao_ui_invalida_sem_score",
+      "test_snapshot_avaliacao_ui_retrocompat_score_legado",
+      "test_reset_context_clears_session"
+    ],
+    "tests/test_gui_bulk_adjust.py": [
+      "controller",
+      "_seed_segments",
+      "test_rewrite_segments_bulk_populates_snapshot",
+      "test_apply_segments_bulk_updates_segment_text",
+      "test_apply_segments_bulk_accepts_textos_payload",
+      "test_cancel_bulk_adjust_clears_pending"
+    ],
+    "tests/test_gui_editorial.py": [
+      "FakeAgent",
+      "controller",
+      "test_parse_storyboard_blocks_rejects_invalid",
+      "test_parse_approaches_requires_three",
+      "test_assign_storyboard_increments_order",
+      "test_generate_storyboard_action",
+      "test_update_storyboard_invalidates_drafts",
+      "test_generate_block_drafts_keeps_generated_options",
+      "test_snapshot_preserves_editorial_stage_across_restore",
+      "test_navigate_by_editorial_stage",
+      "_two_block_storyboard",
+      "test_generate_block_drafts_requires_prior_selection",
+      "test_generate_all_block_drafts_rejected",
+      "test_select_block_invalidates_downstream",
+      "PromptCapturingAgent",
+      "test_previous_selected_drafts_in_prompt",
+      "test_block_draft_prompt_contains_anti_ia_policies",
+      "test_selection_blocks_compose"
+    ],
+    "tests/test_gui_llm_config.py": [
+      "controller",
+      "test_llm_config_snapshot",
+      "test_update_llm_config",
+      "test_session_snapshot_includes_effective_config"
+    ],
+    "tests/test_gui_slidemark_export.py": [
+      "FakeAgent",
+      "_slidemark_valido",
+      "_avaliacao_payload",
+      "controller",
+      "test_snapshot_is_trilha_visual",
+      "test_export_slidemark_atualiza_estado_e_grava_arquivo",
+      "test_export_slidemark_rejeita_post",
+      "test_export_slidemark_nao_grava_documento_rejeitado"
+    ],
+    "tests/test_interview_exploration.py": [
+      "_MockValidationRunner",
+      "_make_runner",
+      "test_FR_001_initial_prompt_excludes_editorial_structure",
+      "test_select_question_picks_best_of_two_even_if_not_accepted",
+      "test_FR_002_question_does_not_presuppose_answer",
+      "test_FR_003_compound_question_blocked",
+      "test_FR_004_best_ranked_candidate_is_displayed",
+      "test_validate_question_empty_returns_empty_issue",
+      "test_validate_question_llm_error_returns_llm_error_issue",
+      "_QuestionRunner"
+    ],
+    "tests/test_interview_extraction.py": [
+      "test_FR_005_original_answer_immutable",
+      "test_FR_006_every_signal_has_evidence"
+    ],
+    "tests/test_interview_gaps.py": [
+      "test_identify_gaps_only_from_observed_signals",
+      "test_FR_014_optional_gaps_do_not_extend_approved_interview",
+      "test_critical_gap_can_request_deepening",
+      "test_decision_respects_question_limit",
+      "test_unapproved_gateway_keeps_exploring_without_high_gaps"
+    ],
+    "tests/test_interview_gateway.py": [
+      "_assessment",
+      "test_FR_008_llm_alone_cannot_approve_gateway",
+      "test_FR_009_heuristic_alone_cannot_approve_gateway",
+      "test_FR_010_balanced_gateway_requires_essential_dimensions",
+      "test_FR_011_strong_imbalanced_gateway_rules",
+      "test_FR_012_absolute_vetoes_block_approval",
+      "test_FR_013_exceptional_story_compensates_weak_secondary"
+    ],
+    "tests/test_interview_heuristic.py": [
+      "test_FR_007_deterministic_score_is_explainable"
+    ],
+    "tests/test_interview_persistence.py": [
+      "test_v4_interview_state_round_trip",
+      "test_v4_rejects_explicit_older_schema",
+      "test_v4_missing_schema_is_treated_as_fresh_payload"
+    ],
+    "tests/test_interview_quality.py": [
+      "_corpus",
+      "test_v4_quality_metrics_are_deterministic",
+      "test_v4_quality_report_contains_named_metrics",
+      "test_FR_019_induced_answer_rate_is_reported",
+      "test_FR_020_original_language_preservation_is_reported"
+    ],
+    "tests/test_interview_session_v4.py": [
+      "V4Agent",
+      "test_v4_actions_persist_original_answer_and_projection",
+      "FailingThenOkAgent",
+      "test_start_persists_interview_when_first_question_llm_fails",
+      "test_generate_other_question_bootstraps_missing_interview"
+    ],
+    "tests/test_interview_session.py": [
+      "test_FR_015_system_explains_question_and_closure"
+    ],
+    "tests/test_interview_ui.py": [
+      "test_v4_ui_exposes_the_same_flat_dimensions_for_chart_and_list",
+      "test_FR_016_counter_uses_the_dimension_collection",
+      "test_FR_017_chart_and_list_ids_are_identical",
+      "test_FR_018_dimension_contains_explanation_fields"
+    ],
+    "tests/test_isolation_integration.py": [
+      "_ok",
+      "test_agent_wrapper_workspace_is_not_project_root",
+      "test_agent_wrapper_subprocess_receives_isolated_cwd",
+      "test_codex_llm_client_creates_isolated_workspace",
+      "test_workspace_isolation_prevents_traversal_in_destination",
+      "test_full_isolation_chain"
+    ],
+    "tests/test_llm_config.py": [
+      "isolated_config",
+      "test_resolve_uses_defaults_without_files",
+      "test_requested_operation_defaults",
+      "test_legacy_yaml_keys_map_to_interview_ops",
+      "test_content_generate_migrates_to_post_generate",
+      "test_content_generate_no_longer_exists",
+      "test_post_generate_default",
+      "test_editorial_operations_have_independent_defaults",
+      "test_editorial_operations_resolve_independently",
+      "test_changing_storyboard_does_not_change_compose",
+      "test_changing_block_draft_does_not_change_approaches",
+      "test_slidemark_export_operation_default",
+      "test_global_yaml_overrides_defaults",
+      "test_resolve_all_returns_all_operations",
+      "test_ensure_default_config_file_creates_yaml"
+    ],
+    "tests/test_llm_json_parser.py": [
+      "_opencode_ndjson_with_fenced_payload",
+      "test_parser_opencode_part_text_markdown_fence_candidatas",
+      "test_parser_codex_legacy_item_text_still_works",
+      "test_parser_opencode_prefers_payload_over_envelope",
+      "test_parser_real_session_opencode_stdout_excerpt"
+    ],
+    "tests/test_llm_workspace.py": [
+      "test_create_creates_temp_directory",
+      "test_destroy_removes_directory",
+      "test_destroy_persistent_keeps_directory",
+      "test_copy_allowed_file",
+      "test_copy_denied_file_raises",
+      "test_copy_from_denied_directory_raises",
+      "test_symlink_rejected",
+      "test_nonexistent_file_raises",
+      "test_isolated_workspace_context_manager",
+      "test_isolated_workspace_cleanup_on_exception",
+      "test_manifest_to_log_dict",
+      "test_workspace_to_log_dict",
+      "test_workspace_persistent_log_mode",
+      "test_allowed_files_for_operation_returns_empty_list",
+      "test_destroy_idempotent",
+      "test_copy_allowed_directory",
+      "test_copy_directory_ignores_denied_subdirs",
+      "test_no_project_files_leak_into_workspace"
+    ],
+    "tests/test_parse_generation_payload.py": [
+      "_slidemark_minimo",
+      "test_parse_conteudo_texto_simples",
+      "test_parse_slidemark_deriva_conteudo",
+      "test_parse_slides_legacy",
+      "test_parse_sugestoes_imagem"
+    ],
+    "tests/test_post_evaluation_parser.py": [
+      "FakeAgent",
+      "_payload_completo",
+      "test_parse_payload_com_todos_os_campos_novos",
+      "test_coerce_severidade_invalida_para_media",
+      "test_total_ponderado_ignora_total_da_llm",
+      "test_total_cap_quando_tese_alta_e_progressao_baixa",
+      "test_campos_faltantes_viram_vazios_sem_excecao"
+    ],
+    "tests/test_post_evaluation_prompt.py": [
+      "test_prompt_short_carousel_existe",
+      "test_prompt_short_carousel_contem_secoes_obrigatorias"
+    ],
+    "tests/test_session_log.py": [
+      "_records",
+      "_ok",
+      "V4Agent",
+      "test_session_logger_cria_arquivo_jsonl_e_persiste_id",
+      "test_agent_wrapper_loga_prompt_e_resposta_llm",
+      "test_codex_llm_client_loga_stdin_e_resposta",
+      "test_session_app_logs_v4_interview_start"
+    ],
+    "tests/test_slidemark_converter.py": [
+      "FakeAgent",
+      "_slidemark_valido",
+      "test_converter_retorna_slidemark_valido",
+      "test_converter_aplica_defaults_autor_quando_ausentes",
+      "test_converter_rejeita_tipo_nao_visual",
+      "test_converter_json_invalido_levanta_value_error",
+      "test_converter_rejeita_documento_incompleto"
+    ],
+    "tests/test_slidemark_direct_integration.py": [
+      "FakeAgent",
+      "_documento_llm_legado",
+      "_slidemark_root",
+      "test_exportacao_gera_json_importavel_e_renderizavel_no_slidemark"
+    ],
+    "tests/test_spec_022_023_049_057.py": [
+      "test_spec_022_personas_existem",
+      "test_spec_022_personas_contem_yaml_resumo",
+      "test_spec_022_aceita_somente_formatos_atuais",
+      "test_spec_023_rules_existem_para_quatro_trilhas",
+      "test_spec_023_rules_contem_secao_regras_conteudo",
+      "test_spec_023_prompt_builder_seleciona_apenas_arquivo_ativo",
+      "test_spec_049_estrutura_de_pastas",
+      "test_spec_049_prompts_root_aponta_para_prompts_do_projeto",
+      "test_spec_049_data_dir_aponta_para_data_sessions_do_projeto",
+      "test_spec_057_exportar_markdown_salva_conteudo",
+      "test_spec_057_exportar_txt_salva_conteudo",
+      "test_spec_057_exportacao_md_e_txt_consistentes",
+      "test_spec_057_sanitizacao_nome_arquivo",
+      "test_spec_057_nome_arquivo_base_composto",
+      "test_spec_057_exportacao_cria_diretorio",
+      "test_spec_057_exportacao_nao_automatica_no_generator"
+    ],
+    "tests/test_spec_028_029.py": [
+      "_ok",
+      "_capture_runner",
+      "test_codex_command_assembly_all_params",
+      "test_codex_command_default_ephemeral_only",
+      "test_codex_no_ephemeral_and_no_ignore_user_config",
+      "test_opencode_command_assembly_all_params",
+      "test_opencode_command_minimal",
+      "test_opencode_command_uses_medium_variant",
+      "test_opencode_command_ignores_codex_only_reasoning_levels",
+      "test_both_include_workspace_in_cwd_and_kwarg",
+      "test_prompt_preserved_as_last_element_both",
+      "test_run_dispatches_to_codex_and_opencode",
+      "test_run_raises_value_error_on_unknown_tool",
+      "test_workspace_path_resolved_in_init",
+      "test_env_merged_with_os_environ",
+      "test_instantiation_does_not_execute",
+      "test_jsonl_events_parsed_when_json_output",
+      "test_jsonl_raw_fallback_for_invalid_lines",
+      "test_jsonl_empty_lines_skipped",
+      "test_jsonl_not_parsed_when_json_output_false",
+      "test_subclass_overriding_run_subprocess",
+      "test_filenotfound_returns_127_with_message",
+      "test_permissionerror_returns_126_with_message",
+      "test_timeoutexpired_returns_124_with_message",
+      "test_nonzero_returncode_captured_in_result",
+      "test_empty_stdout_nonempty_stderr_sets_error",
+      "test_success_with_both_streams_populated",
+      "test_jsonl_invalid_line_preserved_as_raw_event_in_subprocess_path",
+      "test_no_real_codex_or_opencode_invocation"
+    ],
+    "tests/test_spec_030_037.py": [
+      "FakeAgent",
+      "_payload_segmentos_valido",
+      "test_spec_030_parse_segmentos_valido_retorna_lista",
+      "test_spec_030_parse_segmentos_aceita_id_ordem_texto_ausentes_com_erro",
+      "test_spec_030_parse_segmentos_ids_duplicados_levanta_value_error",
+      "test_spec_030_parse_segmentos_ordem_nao_sequencial_levanta_value_error",
+      "test_spec_030_parse_segmentos_segmentos_nao_lista_levanta_value_error",
+      "test_spec_030_parse_segmentos_item_nao_dict_levanta_value_error",
+      "test_spec_030_parse_segmentos_ordem_zero_levanta_value_error",
+      "test_spec_030_segmenter_segmentar_retorna_lista_segmentos",
+      "test_spec_030_segmenter_segmentar_erro_do_agent_levanta_runtime_error",
+      "test_spec_030_segmenter_segmentar_json_invalido_levanta_value_error",
+      "test_spec_030_segmenter_com_opencode",
+      "test_spec_031_load_prompt_generator_segment_contem_placeholder",
+      "test_spec_032_segment_adjuster_ajustar_retorna_string_reescrita",
+      "test_spec_032_segment_adjuster_segmento_none_levanta_value_error",
+      "test_spec_032_segment_adjuster_segmento_invalido_sem_id_levanta_value_error",
+      "test_spec_032_segment_adjuster_segmento_texto_vazio_levanta_value_error",
+      "test_spec_032_segment_adjuster_erro_agent_levanta_runtime_error",
+      "test_spec_032_segment_adjuster_json_invalido_levanta_value_error",
+      "test_spec_032_segment_adjuster_payload_sem_segmento_reescrito_levanta_value_error",
+      "test_spec_032_segment_adjuster_retorna_apenas_segmento_reescrito_nao_conteudo",
+      "test_spec_033_load_prompt_adjust_segment_contem_placeholders",
+      "_payload_avaliacao_short_carousel",
+      "test_spec_034_post_evaluator_avaliar_retorna_score_e_listas",
+      "test_spec_034_post_evaluator_calcula_total_quando_ausente",
+      "test_spec_034_post_evaluator_clamp_scores_fora_do_intervalo",
+      "test_spec_034_post_evaluator_erro_agent_levanta_runtime_error",
+      "test_spec_034_post_evaluator_json_invalido_levanta_value_error",
+      "test_spec_034_post_evaluator_score_nao_dict_levanta_value_error",
+      "test_spec_035_load_prompt_evaluate_post_contem_placeholders",
+      "test_spec_036_exportar_markdown_cria_arquivo_md",
+      "test_spec_036_exportar_markdown_cria_diretorio_se_nao_existe",
+      "test_spec_036_exportar_markdown_sanitiza_nome",
+      "test_spec_036_exportar_markdown_usa_dir_padrao_se_nao_informado",
+      "test_spec_037_exportar_txt_cria_arquivo_txt",
+      "test_spec_037_exportar_txt_reutiliza_sanitizacao",
+      "test_exportar_conteudo_gera_md_e_json_para_post",
+      "test_exportar_conteudo_slidemark_gera_json_puro_com_sufixo",
+      "test_sanitizar_nome_arquivo_basico"
+    ],
+    "tests/test_spec_050_051.py": [
+      "test_prompts_root_aponta_para_diretorio_prompts",
+      "test_load_prompt_generator_base_retorna_string_nao_vazia",
+      "test_load_prompt_avaliacao_autoria_v4",
+      "test_load_prompt_desconhecido_levanta_file_not_found",
+      "test_load_prompt_caminho_relativo_direto",
+      "test_prompt_exists_para_nomes_conhecidos",
+      "test_prompt_exists_para_nomes_desconhecidos",
+      "test_load_prompt_todos_os_nomes_logicos_resolvem",
+      "test_render_template_substitui_placeholders_simples",
+      "test_render_template_substitui_placeholders_com_chaves_duplas_atomicamente",
+      "test_render_template_chave_dupla_ausente_levanta_keyerror_sem_renderizar_a_chave_interna",
+      "test_render_template_chave_ausente_levanta_keyerror",
+      "test_render_template_preserva_json",
+      "test_render_template_preserva_acentos_e_quebras_de_linha",
+      "test_render_template_nao_avalia_expressoes",
+      "test_render_template_nao_avalia_aritmetica_com_chave_valida",
+      "test_render_template_converte_valores_nao_strings",
+      "test_render_template_sem_placeholders_retorna_original",
+      "test_render_template_padrao_regex_somente_identificadores",
+      "test_render_template_chaves_repetidas_sao_substituidas",
+      "test_render_template_chave_com_unicode_permanece_literal"
+    ],
+    "tests/test_spec_059_060.py": [
+      "FakeAgent",
+      "_slidemark_valido",
+      "test_spec_059_parse_segmentos_payload_sem_segmentos_levanta_value_error",
+      "test_spec_059_parse_segmentos_segmentos_string_levanta_value_error",
+      "test_spec_059_parse_segmentos_item_string_na_lista_levanta_value_error",
+      "test_spec_059_parse_segmentos_campos_ausentes",
+      "test_spec_059_parse_segmentos_ids_duplicados_levanta_value_error",
+      "test_spec_059_parse_segmentos_ordem_nao_sequencial_inicia_em_2",
+      "test_spec_059_parse_segmentos_ordem_com_pulo",
+      "test_spec_059_parse_segmentos_ordem_zero_levanta_value_error",
+      "test_spec_059_parse_segmentos_id_vazio_levanta_value_error",
+      "test_spec_060_content_generator_payload_completo",
+      "test_spec_060_content_generator_fallback_stdout_quando_json_invalido",
+      "test_spec_060_content_generator_erro_agent_retorna_vazio_com_alerta",
+      "test_spec_060_content_generator_com_opencode",
+      "test_slidemark_validator_aceita_documento_valido",
+      "test_content_generator_parseia_slidemark_e_alerta_invalidos",
+      "test_segmentar_slidemark_usa_id_type_e_texto_do_slide"
+    ],
+    "tests/test_tipo_de_post_bug.py": [
+      "test_tipo_de_post_preservado_no_state_patch",
+      "test_tipo_de_post_snapshot_retorna_valor_correto",
+      "test_migrate_tipo_de_post_aceita_somente_formatos_atuais"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "frontend/src/components/workstation/AmbientField.tsx",
+          "language": "typescript",
+          "sizeLines": 97,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/ContextBar.tsx",
+          "language": "typescript",
+          "sizeLines": 339,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/DevDrawer.tsx",
+          "language": "typescript",
+          "sizeLines": 207,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/FormattedText.tsx",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/GamePopup.tsx",
+          "language": "typescript",
+          "sizeLines": 316,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/ModalShell.tsx",
+          "language": "typescript",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/PipelineRail.tsx",
+          "language": "typescript",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/ReadjustAllModal.tsx",
+          "language": "typescript",
+          "sizeLines": 315,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/Workstation.tsx",
+          "language": "typescript",
+          "sizeLines": 140,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/QuestionStage.tsx",
+          "language": "typescript",
+          "sizeLines": 134,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/AgentsStage.tsx",
+          "language": "typescript",
+          "sizeLines": 216,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/BriefingStage.tsx",
+          "language": "typescript",
+          "sizeLines": 77,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/CompositionStage.tsx",
+          "language": "typescript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/DraftsStage.tsx",
+          "language": "typescript",
+          "sizeLines": 272,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/EntryStage.tsx",
+          "language": "typescript",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/EvaluationStage.tsx",
+          "language": "typescript",
+          "sizeLines": 203,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/ExecutionStage.tsx",
+          "language": "typescript",
+          "sizeLines": 188,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/ExportStage.tsx",
+          "language": "typescript",
+          "sizeLines": 148,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/PromptStage.tsx",
+          "language": "typescript",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/SegmentationStage.tsx",
+          "language": "typescript",
+          "sizeLines": 236,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/StoryboardStage.tsx",
+          "language": "typescript",
+          "sizeLines": 128,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/common.tsx",
+          "language": "typescript",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/ui.tsx",
+          "language": "typescript",
+          "sizeLines": 282,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/lib/mappers/editorial.ts",
+          "language": "typescript",
+          "sizeLines": 87,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/lib/mappers/operations.ts",
+          "language": "typescript",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/lib/mappers/phase.ts",
+          "language": "typescript",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/lib/pe-api.ts",
+          "language": "typescript",
+          "sizeLines": 140,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/lib/pe-store.tsx",
+          "language": "typescript",
+          "sizeLines": 753,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/lib/pe-types.ts",
+          "language": "typescript",
+          "sizeLines": 174,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/lib/utils.ts",
+          "language": "typescript",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "frontend/src/components/workstation/AmbientField.tsx": [
+          "frontend/src/lib/pe-store.tsx"
+        ],
+        "frontend/src/components/workstation/ContextBar.tsx": [
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/components/workstation/DevDrawer.tsx": [
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/FormattedText.tsx": [],
+        "frontend/src/components/workstation/GamePopup.tsx": [
+          "frontend/src/components/workstation/ModalShell.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/ModalShell.tsx": [
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/PipelineRail.tsx": [
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/pe-types.ts",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/ReadjustAllModal.tsx": [
+          "frontend/src/components/workstation/FormattedText.tsx",
+          "frontend/src/components/workstation/ModalShell.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/pe-types.ts",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/Workstation.tsx": [
+          "frontend/src/components/workstation/AmbientField.tsx",
+          "frontend/src/components/workstation/ContextBar.tsx",
+          "frontend/src/components/workstation/DevDrawer.tsx",
+          "frontend/src/components/workstation/GamePopup.tsx",
+          "frontend/src/components/workstation/PipelineRail.tsx",
+          "frontend/src/components/workstation/stages/AgentsStage.tsx",
+          "frontend/src/components/workstation/stages/BriefingStage.tsx",
+          "frontend/src/components/workstation/stages/CompositionStage.tsx",
+          "frontend/src/components/workstation/stages/DraftsStage.tsx",
+          "frontend/src/components/workstation/stages/EntryStage.tsx",
+          "frontend/src/components/workstation/stages/EvaluationStage.tsx",
+          "frontend/src/components/workstation/stages/ExportStage.tsx",
+          "frontend/src/components/workstation/stages/InterviewStage.tsx",
+          "frontend/src/components/workstation/stages/SegmentationStage.tsx",
+          "frontend/src/components/workstation/stages/StoryboardStage.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx"
+        ],
+        "frontend/src/components/workstation/interview/QuestionStage.tsx": [
+          "frontend/src/components/workstation/interview/motion.ts",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-types.ts",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/stages/AgentsStage.tsx": [
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/pe-types.ts",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/stages/BriefingStage.tsx": [
+          "frontend/src/components/workstation/FormattedText.tsx",
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx"
+        ],
+        "frontend/src/components/workstation/stages/CompositionStage.tsx": [
+          "frontend/src/components/workstation/FormattedText.tsx",
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx"
+        ],
+        "frontend/src/components/workstation/stages/DraftsStage.tsx": [
+          "frontend/src/components/workstation/FormattedText.tsx",
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/mappers/editorial.ts",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/components/workstation/stages/EntryStage.tsx": [
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx"
+        ],
+        "frontend/src/components/workstation/stages/EvaluationStage.tsx": [
+          "frontend/src/components/workstation/FormattedText.tsx",
+          "frontend/src/components/workstation/ReadjustAllModal.tsx",
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/pe-types.ts",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/stages/ExecutionStage.tsx": [
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/stages/ExportStage.tsx": [
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx"
+        ],
+        "frontend/src/components/workstation/stages/PromptStage.tsx": [
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/stages/SegmentationStage.tsx": [
+          "frontend/src/components/workstation/FormattedText.tsx",
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/components/workstation/stages/StoryboardStage.tsx": [
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/components/workstation/stages/common.tsx": [
+          "frontend/src/components/workstation/ui.tsx"
+        ],
+        "frontend/src/components/workstation/ui.tsx": [
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/lib/mappers/editorial.ts": [
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/lib/mappers/operations.ts": [],
+        "frontend/src/lib/mappers/phase.ts": [
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/lib/pe-api.ts": [
+          "frontend/src/lib/mappers/operations.ts",
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/lib/pe-store.tsx": [
+          "frontend/src/lib/mappers/editorial.ts",
+          "frontend/src/lib/mappers/interview.ts",
+          "frontend/src/lib/mappers/phase.ts",
+          "frontend/src/lib/pe-api.ts",
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/lib/pe-types.ts": [],
+        "frontend/src/lib/utils.ts": [],
+        "frontend/src/main.tsx": [
+          "frontend/src/components/workstation/Workstation.tsx",
+          "frontend/src/styles.css"
+        ]
+      },
+      "neighborMap": {
+        "frontend/src/components/workstation/Workstation.tsx": [
+          {
+            "path": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "InterviewStage"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/interview/QuestionStage.tsx": [
+          {
+            "path": "frontend/src/components/workstation/interview/motion.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "useMotionSafe",
+              "questionExit",
+              "questionEnter",
+              "questionInitial"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "InterviewStage"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/stages/common.tsx": [
+          {
+            "path": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "InterviewStage"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/ui.tsx": [
+          {
+            "path": "frontend/src/components/workstation/interview/AnalyzingState.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "AnalyzingState"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "AuthorContextCompact"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "AuthorContextMapMode"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "CoverageUpdated"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "CurrentReadMoment"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/interview/RoundReview.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "RoundReview"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "InterviewStage"
+            ]
+          }
+        ],
+        "frontend/src/lib/pe-store.tsx": [
+          {
+            "path": "frontend/src/lib/mappers/interview.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "mapInterview",
+              "axesFromInterviewUi",
+              "questionsFromInterview",
+              "buildEditorialFeedback",
+              "segmentsFromState",
+              "evaluationFromUi",
+              "trechoToSegmentIndex",
+              "weakSegmentsFromEvaluation",
+              "briefingCardsFromState"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "InterviewStage"
+            ]
+          }
+        ],
+        "frontend/src/lib/pe-types.ts": [
+          {
+            "path": "frontend/src/components/workstation/interview/RoundNavigator.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "RoundNavigator"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/interview/RoundReview.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "RoundReview"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/interview/useInterviewUx.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "deriveNewAxes",
+              "useInterviewUx"
+            ]
+          },
+          {
+            "path": "frontend/src/lib/mappers/interview.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "mapInterview",
+              "axesFromInterviewUi",
+              "questionsFromInterview",
+              "buildEditorialFeedback",
+              "segmentsFromState",
+              "evaluationFromUi",
+              "trechoToSegmentIndex",
+              "weakSegmentsFromEvaluation",
+              "briefingCardsFromState"
+            ]
+          }
+        ],
+        "frontend/src/lib/utils.ts": [
+          {
+            "path": "frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "AuthorContextCompact"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "AxisDetailPanel"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/interview/RoundNavigator.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "RoundNavigator"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "InterviewStage"
+            ]
+          }
+        ],
+        "frontend/src/main.tsx": [
+          {
+            "path": "frontend/src/styles.css",
+            "batchIndex": 15,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "src/content_engine/__init__.py",
+          "language": "python",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/adjust_segment.py",
+          "language": "python",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/adjust_segments_bulk.py",
+          "language": "python",
+          "sizeLines": 152,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/agent_wrapper.py",
+          "language": "python",
+          "sizeLines": 410,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/codex_llm_client.py",
+          "language": "python",
+          "sizeLines": 401,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/cursor_output.py",
+          "language": "python",
+          "sizeLines": 112,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/editorial_actions.py",
+          "language": "python",
+          "sizeLines": 488,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/editorial_flow.py",
+          "language": "python",
+          "sizeLines": 270,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/editorial_generation.py",
+          "language": "python",
+          "sizeLines": 518,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/editorial_preservation.py",
+          "language": "python",
+          "sizeLines": 455,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/exporter.py",
+          "language": "python",
+          "sizeLines": 193,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/generator.py",
+          "language": "python",
+          "sizeLines": 489,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/validation.py",
+          "language": "python",
+          "sizeLines": 218,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/llm_config.py",
+          "language": "python",
+          "sizeLines": 400,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/llm_json_parser.py",
+          "language": "python",
+          "sizeLines": 417,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/persistence.py",
+          "language": "python",
+          "sizeLines": 227,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/post_evaluation.py",
+          "language": "python",
+          "sizeLines": 224,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/prompt_builder.py",
+          "language": "python",
+          "sizeLines": 201,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/prompt_loader.py",
+          "language": "python",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/schemas.py",
+          "language": "python",
+          "sizeLines": 270,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/segmentation.py",
+          "language": "python",
+          "sizeLines": 284,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/session_controller.py",
+          "language": "python",
+          "sizeLines": 55,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/session_log.py",
+          "language": "python",
+          "sizeLines": 95,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/slidemark_contract.py",
+          "language": "python",
+          "sizeLines": 115,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/slidemark_converter.py",
+          "language": "python",
+          "sizeLines": 243,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/slidemark_validator.py",
+          "language": "python",
+          "sizeLines": 714,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/template_renderer.py",
+          "language": "python",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/trilhas.py",
+          "language": "python",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/gui/__init__.py",
+          "language": "python",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/gui/server.py",
+          "language": "python",
+          "sizeLines": 938,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/content_engine/__init__.py": [
+          "src/content_engine/interview/__init__.py",
+          "src/content_engine/schemas.py"
+        ],
+        "src/content_engine/adjust_segment.py": [
+          "src/content_engine/agent_wrapper.py",
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/prompt_loader.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/template_renderer.py"
+        ],
+        "src/content_engine/adjust_segments_bulk.py": [
+          "src/content_engine/agent_wrapper.py",
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/prompt_loader.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/template_renderer.py"
+        ],
+        "src/content_engine/agent_wrapper.py": [
+          "src/content_engine/cursor_output.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/session_log.py"
+        ],
+        "src/content_engine/codex_llm_client.py": [
+          "src/content_engine/schemas.py",
+          "src/content_engine/session_log.py"
+        ],
+        "src/content_engine/cursor_output.py": [],
+        "src/content_engine/editorial_actions.py": [
+          "src/content_engine/editorial_flow.py",
+          "src/content_engine/editorial_generation.py",
+          "src/content_engine/generator.py",
+          "src/content_engine/llm_config.py",
+          "src/content_engine/schemas.py"
+        ],
+        "src/content_engine/editorial_flow.py": [
+          "src/content_engine/schemas.py"
+        ],
+        "src/content_engine/editorial_generation.py": [
+          "src/content_engine/agent_wrapper.py",
+          "src/content_engine/editorial_flow.py",
+          "src/content_engine/editorial_preservation.py",
+          "src/content_engine/generator.py",
+          "src/content_engine/llm_config.py",
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/prompt_builder.py",
+          "src/content_engine/prompt_loader.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/template_renderer.py"
+        ],
+        "src/content_engine/editorial_preservation.py": [],
+        "src/content_engine/exporter.py": [
+          "src/content_engine/schemas.py"
+        ],
+        "src/content_engine/generator.py": [
+          "src/content_engine/agent_wrapper.py",
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/prompt_builder.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/slidemark_validator.py"
+        ],
+        "src/content_engine/interview/validation.py": [
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/schemas.py"
+        ],
+        "src/content_engine/llm_config.py": [
+          "src/content_engine/schemas.py"
+        ],
+        "src/content_engine/llm_json_parser.py": [],
+        "src/content_engine/persistence.py": [
+          "src/content_engine/editorial_flow.py",
+          "src/content_engine/schemas.py"
+        ],
+        "src/content_engine/post_evaluation.py": [
+          "src/content_engine/agent_wrapper.py",
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/prompt_loader.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/template_renderer.py"
+        ],
+        "src/content_engine/prompt_builder.py": [
+          "src/content_engine/prompt_loader.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/slidemark_contract.py",
+          "src/content_engine/template_renderer.py"
+        ],
+        "src/content_engine/prompt_loader.py": [],
+        "src/content_engine/schemas.py": [],
+        "src/content_engine/segmentation.py": [
+          "src/content_engine/agent_wrapper.py",
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/prompt_loader.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/template_renderer.py",
+          "src/content_engine/trilhas.py"
+        ],
+        "src/content_engine/session_controller.py": [
+          "src/content_engine/session_app.py"
+        ],
+        "src/content_engine/session_log.py": [],
+        "src/content_engine/slidemark_contract.py": [],
+        "src/content_engine/slidemark_converter.py": [
+          "src/content_engine/agent_wrapper.py",
+          "src/content_engine/generator.py",
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/prompt_builder.py",
+          "src/content_engine/prompt_loader.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/slidemark_contract.py",
+          "src/content_engine/slidemark_validator.py",
+          "src/content_engine/template_renderer.py",
+          "src/content_engine/trilhas.py"
+        ],
+        "src/content_engine/slidemark_validator.py": [
+          "src/content_engine/slidemark_contract.py"
+        ],
+        "src/content_engine/template_renderer.py": [],
+        "src/content_engine/trilhas.py": [
+          "src/content_engine/schemas.py"
+        ],
+        "src/gui/__init__.py": [
+          "src/gui/server.py"
+        ],
+        "src/gui/server.py": [
+          "src/content_engine/__init__.py",
+          "src/content_engine/editorial_flow.py",
+          "src/content_engine/interview/ui.py",
+          "src/content_engine/llm_config.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/session_controller.py",
+          "src/content_engine/trilhas.py"
+        ]
+      },
+      "neighborMap": {
+        "src/content_engine/__init__.py": [
+          {
+            "path": "src/content_engine/interview/__init__.py",
+            "batchIndex": 3,
+            "symbols": []
+          }
+        ],
+        "src/content_engine/editorial_flow.py": [
+          {
+            "path": "src/content_engine/session_app.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_safe_query",
+              "_text",
+              "_set_text",
+              "_select_value",
+              "_json",
+              "PostEngineApp"
+            ]
+          }
+        ],
+        "src/content_engine/interview/validation.py": [
+          {
+            "path": "src/content_engine/interview/exploration.py",
+            "batchIndex": 3,
+            "symbols": [
+              "QuestionGenerationError",
+              "_context",
+              "_as_signal_summary",
+              "build_exploration_prompt",
+              "_invoke_runner",
+              "_candidate_items",
+              "generate_candidates",
+              "_candidate_rank",
+              "select_question",
+              "generate_next_question"
+            ]
+          }
+        ],
+        "src/content_engine/llm_config.py": [
+          {
+            "path": "src/content_engine/session_app.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_safe_query",
+              "_text",
+              "_set_text",
+              "_select_value",
+              "_json",
+              "PostEngineApp"
+            ]
+          }
+        ],
+        "src/content_engine/llm_json_parser.py": [
+          {
+            "path": "src/content_engine/interview/exploration.py",
+            "batchIndex": 3,
+            "symbols": [
+              "QuestionGenerationError",
+              "_context",
+              "_as_signal_summary",
+              "build_exploration_prompt",
+              "_invoke_runner",
+              "_candidate_items",
+              "generate_candidates",
+              "_candidate_rank",
+              "select_question",
+              "generate_next_question"
+            ]
+          },
+          {
+            "path": "src/content_engine/interview/llm_evaluation.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_text_items",
+              "build_authorship_prompt",
+              "_invoke",
+              "evaluate_authorship_llm"
+            ]
+          }
+        ],
+        "src/content_engine/prompt_builder.py": [
+          {
+            "path": "src/content_engine/session_app.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_safe_query",
+              "_text",
+              "_set_text",
+              "_select_value",
+              "_json",
+              "PostEngineApp"
+            ]
+          }
+        ],
+        "src/content_engine/schemas.py": [
+          {
+            "path": "src/content_engine/interview/exploration.py",
+            "batchIndex": 3,
+            "symbols": [
+              "QuestionGenerationError",
+              "_context",
+              "_as_signal_summary",
+              "build_exploration_prompt",
+              "_invoke_runner",
+              "_candidate_items",
+              "generate_candidates",
+              "_candidate_rank",
+              "select_question",
+              "generate_next_question"
+            ]
+          },
+          {
+            "path": "src/content_engine/interview/llm_evaluation.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_text_items",
+              "build_authorship_prompt",
+              "_invoke",
+              "evaluate_authorship_llm"
+            ]
+          },
+          {
+            "path": "src/content_engine/session_app.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_safe_query",
+              "_text",
+              "_set_text",
+              "_select_value",
+              "_json",
+              "PostEngineApp"
+            ]
+          }
+        ],
+        "src/content_engine/session_controller.py": [
+          {
+            "path": "src/content_engine/session_app.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_safe_query",
+              "_text",
+              "_set_text",
+              "_select_value",
+              "_json",
+              "PostEngineApp"
+            ]
+          }
+        ],
+        "src/content_engine/trilhas.py": [
+          {
+            "path": "src/content_engine/session_app.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_safe_query",
+              "_text",
+              "_set_text",
+              "_select_value",
+              "_json",
+              "PostEngineApp"
+            ]
+          }
+        ],
+        "src/gui/server.py": [
+          {
+            "path": "src/content_engine/interview/ui.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_as_state",
+              "build_interview_ui"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "src/content_engine/briefing.py",
+          "language": "python",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/__init__.py",
+          "language": "python",
+          "sizeLines": 70,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/briefing.py",
+          "language": "python",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/controller.py",
+          "language": "python",
+          "sizeLines": 161,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/exploration.py",
+          "language": "python",
+          "sizeLines": 289,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/extraction.py",
+          "language": "python",
+          "sizeLines": 210,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/gaps.py",
+          "language": "python",
+          "sizeLines": 207,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/gateway.py",
+          "language": "python",
+          "sizeLines": 146,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/heuristic.py",
+          "language": "python",
+          "sizeLines": 329,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/llm_evaluation.py",
+          "language": "python",
+          "sizeLines": 146,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/quality.py",
+          "language": "python",
+          "sizeLines": 106,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/schemas.py",
+          "language": "python",
+          "sizeLines": 831,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/interview/ui.py",
+          "language": "python",
+          "sizeLines": 131,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/session_app.py",
+          "language": "python",
+          "sizeLines": 1055,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/tui_validation.py",
+          "language": "python",
+          "sizeLines": 132,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/content_engine/briefing.py": [
+          "src/content_engine/interview/briefing.py",
+          "src/content_engine/interview/schemas.py"
+        ],
+        "src/content_engine/interview/__init__.py": [
+          "src/content_engine/interview/briefing.py",
+          "src/content_engine/interview/controller.py",
+          "src/content_engine/interview/exploration.py",
+          "src/content_engine/interview/gaps.py",
+          "src/content_engine/interview/gateway.py",
+          "src/content_engine/interview/heuristic.py",
+          "src/content_engine/interview/schemas.py",
+          "src/content_engine/interview/ui.py"
+        ],
+        "src/content_engine/interview/briefing.py": [
+          "src/content_engine/interview/schemas.py"
+        ],
+        "src/content_engine/interview/controller.py": [
+          "src/content_engine/interview/exploration.py",
+          "src/content_engine/interview/extraction.py",
+          "src/content_engine/interview/gaps.py",
+          "src/content_engine/interview/gateway.py",
+          "src/content_engine/interview/heuristic.py",
+          "src/content_engine/interview/llm_evaluation.py",
+          "src/content_engine/interview/schemas.py"
+        ],
+        "src/content_engine/interview/exploration.py": [
+          "src/content_engine/interview/schemas.py",
+          "src/content_engine/interview/validation.py",
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/schemas.py"
+        ],
+        "src/content_engine/interview/extraction.py": [
+          "src/content_engine/interview/schemas.py"
+        ],
+        "src/content_engine/interview/gaps.py": [
+          "src/content_engine/interview/schemas.py"
+        ],
+        "src/content_engine/interview/gateway.py": [
+          "src/content_engine/interview/heuristic.py",
+          "src/content_engine/interview/schemas.py"
+        ],
+        "src/content_engine/interview/heuristic.py": [
+          "src/content_engine/interview/schemas.py"
+        ],
+        "src/content_engine/interview/llm_evaluation.py": [
+          "src/content_engine/interview/schemas.py",
+          "src/content_engine/llm_json_parser.py",
+          "src/content_engine/schemas.py"
+        ],
+        "src/content_engine/interview/quality.py": [
+          "src/content_engine/interview/schemas.py"
+        ],
+        "src/content_engine/interview/schemas.py": [],
+        "src/content_engine/interview/ui.py": [
+          "src/content_engine/interview/heuristic.py",
+          "src/content_engine/interview/schemas.py"
+        ],
+        "src/content_engine/session_app.py": [
+          "src/content_engine/editorial_flow.py",
+          "src/content_engine/interview/briefing.py",
+          "src/content_engine/interview/controller.py",
+          "src/content_engine/interview/schemas.py",
+          "src/content_engine/interview/ui.py",
+          "src/content_engine/llm_config.py",
+          "src/content_engine/prompt_builder.py",
+          "src/content_engine/schemas.py",
+          "src/content_engine/trilhas.py",
+          "src/content_engine/tui_validation.py"
+        ],
+        "src/content_engine/tui_validation.py": []
+      },
+      "neighborMap": {
+        "src/content_engine/interview/__init__.py": [
+          {
+            "path": "src/content_engine/__init__.py",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ],
+        "src/content_engine/interview/exploration.py": [
+          {
+            "path": "src/content_engine/interview/validation.py",
+            "batchIndex": 2,
+            "symbols": [
+              "QuestionValidation",
+              "build_validation_prompt",
+              "_invoke",
+              "_parse_validation",
+              "validate_question",
+              "validar_pergunta"
+            ]
+          },
+          {
+            "path": "src/content_engine/llm_json_parser.py",
+            "batchIndex": 2,
+            "symbols": [
+              "ParsedLLMJson",
+              "_try_loads",
+              "_iter_jsonl_objects",
+              "_unwrap_text_payload",
+              "_collect_event_text_fields",
+              "_extract_nested_text_json",
+              "_iter_balanced_objects",
+              "_iter_codex_text_json",
+              "_score_evaluation_payload",
+              "_score_content_payload",
+              "_score_router_payload",
+              "_score_preferred_keys",
+              "_looks_like_codex_event",
+              "_is_codex_error_event",
+              "_extract_codex_error_message",
+              "_pick_best_evaluation",
+              "extract_json_object_from_llm_output"
+            ]
+          },
+          {
+            "path": "src/content_engine/schemas.py",
+            "batchIndex": 2,
+            "symbols": [
+              "migrate_tipo_de_post",
+              "is_tipo_de_post",
+              "is_tool",
+              "is_sandbox",
+              "ScoreDoPost",
+              "TrechoFraco",
+              "AvaliacaoSlideMark",
+              "SegmentoPost",
+              "SugestaoImagem",
+              "SlideContent",
+              "GenerationPromptInput",
+              "AgentResult",
+              "TuiSessionState"
+            ]
+          }
+        ],
+        "src/content_engine/interview/llm_evaluation.py": [
+          {
+            "path": "src/content_engine/llm_json_parser.py",
+            "batchIndex": 2,
+            "symbols": [
+              "ParsedLLMJson",
+              "_try_loads",
+              "_iter_jsonl_objects",
+              "_unwrap_text_payload",
+              "_collect_event_text_fields",
+              "_extract_nested_text_json",
+              "_iter_balanced_objects",
+              "_iter_codex_text_json",
+              "_score_evaluation_payload",
+              "_score_content_payload",
+              "_score_router_payload",
+              "_score_preferred_keys",
+              "_looks_like_codex_event",
+              "_is_codex_error_event",
+              "_extract_codex_error_message",
+              "_pick_best_evaluation",
+              "extract_json_object_from_llm_output"
+            ]
+          },
+          {
+            "path": "src/content_engine/schemas.py",
+            "batchIndex": 2,
+            "symbols": [
+              "migrate_tipo_de_post",
+              "is_tipo_de_post",
+              "is_tool",
+              "is_sandbox",
+              "ScoreDoPost",
+              "TrechoFraco",
+              "AvaliacaoSlideMark",
+              "SegmentoPost",
+              "SugestaoImagem",
+              "SlideContent",
+              "GenerationPromptInput",
+              "AgentResult",
+              "TuiSessionState"
+            ]
+          }
+        ],
+        "src/content_engine/interview/ui.py": [
+          {
+            "path": "src/gui/server.py",
+            "batchIndex": 2,
+            "symbols": [
+              "_coerce_trechos_fracos",
+              "_build_avaliacao_ui",
+              "GuiController",
+              "_coerce_index",
+              "_json_response",
+              "_read_json",
+              "make_handler",
+              "run_gui_server"
+            ]
+          }
+        ],
+        "src/content_engine/session_app.py": [
+          {
+            "path": "src/content_engine/editorial_flow.py",
+            "batchIndex": 2,
+            "symbols": [
+              "empty_editorial_flow",
+              "normalize_editorial_flow",
+              "compute_briefing_fingerprint",
+              "compute_selection_fingerprint",
+              "derive_editorial_status",
+              "new_block_id",
+              "new_option_id",
+              "assign_storyboard_blocks",
+              "invalidate_drafts_and_composition",
+              "clear_downstream_if_editorial_origin",
+              "persona_by_id"
+            ]
+          },
+          {
+            "path": "src/content_engine/llm_config.py",
+            "batchIndex": 2,
+            "symbols": [
+              "LlmOperationConfig",
+              "_optional_str",
+              "_merge_config",
+              "_default_for_operation",
+              "list_operations",
+              "list_providers",
+              "check_provider_available",
+              "provider_status",
+              "_ensure_data_dir",
+              "_load_yaml_file",
+              "_dump_yaml_file",
+              "_normalize_operations_raw",
+              "_config_file_needs_migration",
+              "migrate_config_file_if_needed",
+              "load_global_config",
+              "save_global_config",
+              "ensure_default_config_file",
+              "resolve",
+              "resolve_all"
+            ]
+          },
+          {
+            "path": "src/content_engine/prompt_builder.py",
+            "batchIndex": 2,
+            "symbols": [
+              "_serialize",
+              "_authorial_projection",
+              "build_generation_prompt"
+            ]
+          },
+          {
+            "path": "src/content_engine/schemas.py",
+            "batchIndex": 2,
+            "symbols": [
+              "migrate_tipo_de_post",
+              "is_tipo_de_post",
+              "is_tool",
+              "is_sandbox",
+              "ScoreDoPost",
+              "TrechoFraco",
+              "AvaliacaoSlideMark",
+              "SegmentoPost",
+              "SugestaoImagem",
+              "SlideContent",
+              "GenerationPromptInput",
+              "AgentResult",
+              "TuiSessionState"
+            ]
+          },
+          {
+            "path": "src/content_engine/trilhas.py",
+            "batchIndex": 2,
+            "symbols": [
+              "is_trilha_visual"
+            ]
+          },
+          {
+            "path": "src/content_engine/session_controller.py",
+            "batchIndex": 2,
+            "symbols": [
+              "SessionController"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "frontend/src/components/workstation/interview/AnalyzingState.tsx",
+          "language": "typescript",
+          "sizeLines": 100,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+          "language": "typescript",
+          "sizeLines": 74,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+          "language": "typescript",
+          "sizeLines": 77,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/AuthorialMap.tsx",
+          "language": "typescript",
+          "sizeLines": 95,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+          "language": "typescript",
+          "sizeLines": 81,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+          "language": "typescript",
+          "sizeLines": 72,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+          "language": "typescript",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/RoundNavigator.tsx",
+          "language": "typescript",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/RoundReview.tsx",
+          "language": "typescript",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/motion.ts",
+          "language": "typescript",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/interview/useInterviewUx.ts",
+          "language": "typescript",
+          "sizeLines": 201,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/components/workstation/stages/InterviewStage.tsx",
+          "language": "typescript",
+          "sizeLines": 362,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/lib/mappers/interview.ts",
+          "language": "typescript",
+          "sizeLines": 334,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "frontend/src/components/workstation/interview/AnalyzingState.tsx": [
+          "frontend/src/components/workstation/ui.tsx"
+        ],
+        "frontend/src/components/workstation/interview/AuthorContextCompact.tsx": [
+          "frontend/src/components/workstation/interview/motion.ts",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx": [
+          "frontend/src/components/workstation/interview/AuthorialMap.tsx",
+          "frontend/src/components/workstation/interview/AxisDetailPanel.tsx",
+          "frontend/src/components/workstation/interview/motion.ts",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/mappers/interview.ts"
+        ],
+        "frontend/src/components/workstation/interview/AuthorialMap.tsx": [
+          "frontend/src/lib/mappers/interview.ts"
+        ],
+        "frontend/src/components/workstation/interview/AxisDetailPanel.tsx": [
+          "frontend/src/lib/mappers/interview.ts",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/interview/CoverageUpdated.tsx": [
+          "frontend/src/components/workstation/interview/motion.ts",
+          "frontend/src/components/workstation/interview/useInterviewUx.ts",
+          "frontend/src/components/workstation/ui.tsx"
+        ],
+        "frontend/src/components/workstation/interview/CurrentReadMoment.tsx": [
+          "frontend/src/components/workstation/ui.tsx"
+        ],
+        "frontend/src/components/workstation/interview/RoundNavigator.tsx": [
+          "frontend/src/components/workstation/interview/motion.ts",
+          "frontend/src/lib/pe-types.ts",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/components/workstation/interview/RoundReview.tsx": [
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/components/workstation/interview/motion.ts": [],
+        "frontend/src/components/workstation/interview/useInterviewUx.ts": [
+          "frontend/src/lib/mappers/interview.ts",
+          "frontend/src/lib/pe-types.ts"
+        ],
+        "frontend/src/components/workstation/stages/InterviewStage.tsx": [
+          "frontend/src/components/workstation/interview/AnalyzingState.tsx",
+          "frontend/src/components/workstation/interview/AuthorContextCompact.tsx",
+          "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx",
+          "frontend/src/components/workstation/interview/CoverageUpdated.tsx",
+          "frontend/src/components/workstation/interview/CurrentReadMoment.tsx",
+          "frontend/src/components/workstation/interview/QuestionStage.tsx",
+          "frontend/src/components/workstation/interview/RoundNavigator.tsx",
+          "frontend/src/components/workstation/interview/RoundReview.tsx",
+          "frontend/src/components/workstation/interview/useInterviewUx.ts",
+          "frontend/src/components/workstation/stages/common.tsx",
+          "frontend/src/components/workstation/ui.tsx",
+          "frontend/src/lib/pe-store.tsx",
+          "frontend/src/lib/utils.ts"
+        ],
+        "frontend/src/lib/mappers/interview.ts": [
+          "frontend/src/lib/pe-types.ts"
+        ]
+      },
+      "neighborMap": {
+        "frontend/src/components/workstation/interview/AnalyzingState.tsx": [
+          {
+            "path": "frontend/src/components/workstation/ui.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AnimatedNumber",
+              "PeButton",
+              "Reveal",
+              "Eyebrow",
+              "Field",
+              "ActivityGlyph",
+              "ErrorAccordion"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/interview/AuthorContextCompact.tsx": [
+          {
+            "path": "frontend/src/components/workstation/ui.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AnimatedNumber",
+              "PeButton",
+              "Reveal",
+              "Eyebrow",
+              "Field",
+              "ActivityGlyph",
+              "ErrorAccordion"
+            ]
+          },
+          {
+            "path": "frontend/src/lib/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "cn"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/interview/AuthorContextMapMode.tsx": [
+          {
+            "path": "frontend/src/components/workstation/ui.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AnimatedNumber",
+              "PeButton",
+              "Reveal",
+              "Eyebrow",
+              "Field",
+              "ActivityGlyph",
+              "ErrorAccordion"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/interview/AxisDetailPanel.tsx": [
+          {
+            "path": "frontend/src/lib/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "cn"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/interview/CoverageUpdated.tsx": [
+          {
+            "path": "frontend/src/components/workstation/ui.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AnimatedNumber",
+              "PeButton",
+              "Reveal",
+              "Eyebrow",
+              "Field",
+              "ActivityGlyph",
+              "ErrorAccordion"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/interview/CurrentReadMoment.tsx": [
+          {
+            "path": "frontend/src/components/workstation/ui.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AnimatedNumber",
+              "PeButton",
+              "Reveal",
+              "Eyebrow",
+              "Field",
+              "ActivityGlyph",
+              "ErrorAccordion"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/interview/RoundNavigator.tsx": [
+          {
+            "path": "frontend/src/lib/pe-types.ts",
+            "batchIndex": 1,
+            "symbols": []
+          },
+          {
+            "path": "frontend/src/lib/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "cn"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/interview/RoundReview.tsx": [
+          {
+            "path": "frontend/src/components/workstation/ui.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AnimatedNumber",
+              "PeButton",
+              "Reveal",
+              "Eyebrow",
+              "Field",
+              "ActivityGlyph",
+              "ErrorAccordion"
+            ]
+          },
+          {
+            "path": "frontend/src/lib/pe-types.ts",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ],
+        "frontend/src/components/workstation/interview/motion.ts": [
+          {
+            "path": "frontend/src/components/workstation/interview/QuestionStage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "QuestionStage"
+            ]
+          }
+        ],
+        "frontend/src/components/workstation/interview/useInterviewUx.ts": [
+          {
+            "path": "frontend/src/lib/pe-types.ts",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ],
+        "frontend/src/components/workstation/stages/InterviewStage.tsx": [
+          {
+            "path": "frontend/src/components/workstation/interview/QuestionStage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "QuestionStage"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/stages/common.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "StageHeader",
+              "StageScroll"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/ui.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AnimatedNumber",
+              "PeButton",
+              "Reveal",
+              "Eyebrow",
+              "Field",
+              "ActivityGlyph",
+              "ErrorAccordion"
+            ]
+          },
+          {
+            "path": "frontend/src/lib/pe-store.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "PROVIDERS",
+              "PostEngineProvider",
+              "usePE"
+            ]
+          },
+          {
+            "path": "frontend/src/lib/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "cn"
+            ]
+          },
+          {
+            "path": "frontend/src/components/workstation/Workstation.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Workstation"
+            ]
+          }
+        ],
+        "frontend/src/lib/mappers/interview.ts": [
+          {
+            "path": "frontend/src/lib/pe-types.ts",
+            "batchIndex": 1,
+            "symbols": []
+          },
+          {
+            "path": "frontend/src/lib/pe-store.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "PROVIDERS",
+              "PostEngineProvider",
+              "usePE"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "tests/llm_fakes.py",
+          "language": "python",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_adjust_segments_bulk.py",
+          "language": "python",
+          "sizeLines": 107,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_editorial_composition.py",
+          "language": "python",
+          "sizeLines": 247,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_gui_editorial.py",
+          "language": "python",
+          "sizeLines": 423,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_gui_slidemark_export.py",
+          "language": "python",
+          "sizeLines": 225,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_post_evaluation_parser.py",
+          "language": "python",
+          "sizeLines": 122,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_session_log.py",
+          "language": "python",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_slidemark_converter.py",
+          "language": "python",
+          "sizeLines": 176,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_slidemark_direct_integration.py",
+          "language": "python",
+          "sizeLines": 221,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_spec_030_037.py",
+          "language": "python",
+          "sizeLines": 578,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_spec_059_060.py",
+          "language": "python",
+          "sizeLines": 316,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "tests/llm_fakes.py": [],
+        "tests/test_adjust_segments_bulk.py": [
+          "tests/llm_fakes.py"
+        ],
+        "tests/test_editorial_composition.py": [
+          "tests/llm_fakes.py"
+        ],
+        "tests/test_gui_editorial.py": [
+          "tests/llm_fakes.py"
+        ],
+        "tests/test_gui_slidemark_export.py": [
+          "tests/llm_fakes.py"
+        ],
+        "tests/test_post_evaluation_parser.py": [
+          "tests/llm_fakes.py"
+        ],
+        "tests/test_session_log.py": [
+          "tests/llm_fakes.py"
+        ],
+        "tests/test_slidemark_converter.py": [
+          "tests/llm_fakes.py"
+        ],
+        "tests/test_slidemark_direct_integration.py": [
+          "tests/llm_fakes.py"
+        ],
+        "tests/test_spec_030_037.py": [
+          "tests/llm_fakes.py"
+        ],
+        "tests/test_spec_059_060.py": [
+          "tests/llm_fakes.py"
+        ]
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": ".playwright-mcp/page-2026-07-10T15-06-42-162Z.yml",
+          "language": "yaml",
+          "sizeLines": 119,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".playwright-mcp/page-2026-07-10T15-12-47-743Z.yml",
+          "language": "yaml",
+          "sizeLines": 119,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".playwright-mcp/page-2026-07-10T15-13-04-460Z.yml",
+          "language": "yaml",
+          "sizeLines": 146,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".playwright-mcp/page-2026-07-10T15-25-23-201Z.yml",
+          "language": "yaml",
+          "sizeLines": 103,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".playwright-mcp/page-2026-07-10T15-25-38-696Z.yml",
+          "language": "yaml",
+          "sizeLines": 131,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".playwright-mcp/page-2026-07-10T15-25-51-500Z.yml",
+          "language": "yaml",
+          "sizeLines": 151,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".playwright-mcp/page-2026-07-10T15-26-05-815Z.yml",
+          "language": "yaml",
+          "sizeLines": 151,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".playwright-mcp/page-2026-07-10T15-26-19-252Z.yml",
+          "language": "yaml",
+          "sizeLines": 131,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".playwright-mcp/page-2026-07-10T15-06-42-162Z.yml": [],
+        ".playwright-mcp/page-2026-07-10T15-12-47-743Z.yml": [],
+        ".playwright-mcp/page-2026-07-10T15-13-04-460Z.yml": [],
+        ".playwright-mcp/page-2026-07-10T15-25-23-201Z.yml": [],
+        ".playwright-mcp/page-2026-07-10T15-25-38-696Z.yml": [],
+        ".playwright-mcp/page-2026-07-10T15-25-51-500Z.yml": [],
+        ".playwright-mcp/page-2026-07-10T15-26-05-815Z.yml": [],
+        ".playwright-mcp/page-2026-07-10T15-26-19-252Z.yml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "docs/LLM_USAGE.md",
+          "language": "markdown",
+          "sizeLines": 538,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/LLM_execution.md",
+          "language": "markdown",
+          "sizeLines": 535,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/PLAN_ISOLAMENTO_CONTEXTO_LLM.md",
+          "language": "markdown",
+          "sizeLines": 200,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/PLAN_REMOVE_CONTENT_GENERATE.md",
+          "language": "markdown",
+          "sizeLines": 282,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/PLAN_UPDATE_POST_ENGINE_OUTPUT.MD",
+          "language": "markdown",
+          "sizeLines": 376,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/PRD.md",
+          "language": "markdown",
+          "sizeLines": 3690,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+          "language": "markdown",
+          "sizeLines": 517,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/V3_EVO.md",
+          "language": "markdown",
+          "sizeLines": 673,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/prompts_inventory.json",
+          "language": "json",
+          "sizeLines": 323,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "docs/LLM_USAGE.md": [],
+        "docs/LLM_execution.md": [],
+        "docs/PLAN_ISOLAMENTO_CONTEXTO_LLM.md": [],
+        "docs/PLAN_REMOVE_CONTENT_GENERATE.md": [],
+        "docs/PLAN_UPDATE_POST_ENGINE_OUTPUT.MD": [],
+        "docs/PRD.md": [],
+        "docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md": [],
+        "docs/V3_EVO.md": [],
+        "docs/prompts_inventory.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "docs/archive/BUG_FIX_PLAN.md",
+          "language": "markdown",
+          "sizeLines": 53,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/archive/PLAN_CONFORMIDADE_AVALIACAO.md",
+          "language": "markdown",
+          "sizeLines": 142,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/archive/QUESTIONARIO.md",
+          "language": "markdown",
+          "sizeLines": 123,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/archive/RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md",
+          "language": "markdown",
+          "sizeLines": 33,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/archive/TUI_DECREPATED.md",
+          "language": "markdown",
+          "sizeLines": 174,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/archive/exportacao-md-json.md",
+          "language": "markdown",
+          "sizeLines": 72,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/archive/fase2evo.md",
+          "language": "markdown",
+          "sizeLines": 389,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/archive/fase2evo_change_log.md",
+          "language": "markdown",
+          "sizeLines": 198,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "docs/archive/BUG_FIX_PLAN.md": [],
+        "docs/archive/PLAN_CONFORMIDADE_AVALIACAO.md": [],
+        "docs/archive/QUESTIONARIO.md": [],
+        "docs/archive/RESUMO_IMPLEMENTACAO_PERGUNTAS_LLM.md": [],
+        "docs/archive/TUI_DECREPATED.md": [],
+        "docs/archive/exportacao-md-json.md": [],
+        "docs/archive/fase2evo.md": [],
+        "docs/archive/fase2evo_change_log.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "frontend/index.html",
+          "language": "html",
+          "sizeLines": 18,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "frontend/package.json",
+          "language": "json",
+          "sizeLines": 31,
+          "fileCategory": "config"
+        },
+        {
+          "path": "frontend/tsconfig.json",
+          "language": "json",
+          "sizeLines": 21,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "frontend/index.html": [],
+        "frontend/package.json": [],
+        "frontend/tsconfig.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "prompts/editorial/block_approaches.md",
+          "language": "markdown",
+          "sizeLines": 21,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/editorial/block_draft.md",
+          "language": "markdown",
+          "sizeLines": 37,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/editorial/compose.md",
+          "language": "markdown",
+          "sizeLines": 77,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/editorial/storyboard.md",
+          "language": "markdown",
+          "sizeLines": 26,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "prompts/editorial/block_approaches.md": [],
+        "prompts/editorial/block_draft.md": [],
+        "prompts/editorial/compose.md": [],
+        "prompts/editorial/storyboard.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "prompts/generator/adjust-segment.md",
+          "language": "markdown",
+          "sizeLines": 12,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/adjust-segments-bulk.md",
+          "language": "markdown",
+          "sizeLines": 19,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/base-long-slide.md",
+          "language": "markdown",
+          "sizeLines": 86,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/base-short-carousel.md",
+          "language": "markdown",
+          "sizeLines": 86,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/base.md",
+          "language": "markdown",
+          "sizeLines": 124,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/evaluate-post-article.md",
+          "language": "markdown",
+          "sizeLines": 247,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/evaluate-post-long-slide.md",
+          "language": "markdown",
+          "sizeLines": 252,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/evaluate-post-post.md",
+          "language": "markdown",
+          "sizeLines": 237,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/evaluate-post-short-carousel.md",
+          "language": "markdown",
+          "sizeLines": 239,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/export-slidemark.md",
+          "language": "markdown",
+          "sizeLines": 70,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/rules-article.md",
+          "language": "markdown",
+          "sizeLines": 14,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/rules-feed.md",
+          "language": "markdown",
+          "sizeLines": 12,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/rules-long-slide.md",
+          "language": "markdown",
+          "sizeLines": 21,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/rules-post.md",
+          "language": "markdown",
+          "sizeLines": 14,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/rules-short-carousel.md",
+          "language": "markdown",
+          "sizeLines": 20,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/rules-slide.md",
+          "language": "markdown",
+          "sizeLines": 12,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/segment-slides.md",
+          "language": "markdown",
+          "sizeLines": 25,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/segment.md",
+          "language": "markdown",
+          "sizeLines": 7,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "prompts/generator/adjust-segment.md": [],
+        "prompts/generator/adjust-segments-bulk.md": [],
+        "prompts/generator/base-long-slide.md": [],
+        "prompts/generator/base-short-carousel.md": [],
+        "prompts/generator/base.md": [],
+        "prompts/generator/evaluate-post-article.md": [],
+        "prompts/generator/evaluate-post-long-slide.md": [],
+        "prompts/generator/evaluate-post-post.md": [],
+        "prompts/generator/evaluate-post-short-carousel.md": [],
+        "prompts/generator/export-slidemark.md": [],
+        "prompts/generator/rules-article.md": [],
+        "prompts/generator/rules-feed.md": [],
+        "prompts/generator/rules-long-slide.md": [],
+        "prompts/generator/rules-post.md": [],
+        "prompts/generator/rules-short-carousel.md": [],
+        "prompts/generator/rules-slide.md": [],
+        "prompts/generator/segment-slides.md": [],
+        "prompts/generator/segment.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": "prompts/generator/personas/dev-interlocutor-article.md",
+          "language": "markdown",
+          "sizeLines": 32,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/personas/dev-interlocutor-feed.md",
+          "language": "markdown",
+          "sizeLines": 39,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/personas/dev-interlocutor-long-slide.md",
+          "language": "markdown",
+          "sizeLines": 47,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/personas/dev-interlocutor-post.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/personas/dev-interlocutor-short-carousel.md",
+          "language": "markdown",
+          "sizeLines": 49,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/generator/personas/dev-interlocutor-slide.md",
+          "language": "markdown",
+          "sizeLines": 45,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "prompts/generator/personas/dev-interlocutor-article.md": [],
+        "prompts/generator/personas/dev-interlocutor-feed.md": [],
+        "prompts/generator/personas/dev-interlocutor-long-slide.md": [],
+        "prompts/generator/personas/dev-interlocutor-post.md": [],
+        "prompts/generator/personas/dev-interlocutor-short-carousel.md": [],
+        "prompts/generator/personas/dev-interlocutor-slide.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 13,
+      "files": [
+        {
+          "path": "prompts/interview/deepen.md",
+          "language": "markdown",
+          "sizeLines": 6,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/interview/evaluate-authorship.md",
+          "language": "markdown",
+          "sizeLines": 8,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "prompts/interview/explore.md",
+          "language": "markdown",
+          "sizeLines": 12,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "prompts/interview/deepen.md": [],
+        "prompts/interview/evaluate-authorship.md": [],
+        "prompts/interview/explore.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 14,
+      "files": [
+        {
+          "path": "specs/spec-061/plan.md",
+          "language": "markdown",
+          "sizeLines": 337,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/spec-061/research.md",
+          "language": "markdown",
+          "sizeLines": 665,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/spec-061/spec_061.md",
+          "language": "markdown",
+          "sizeLines": 955,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/spec-061/tasks.md",
+          "language": "markdown",
+          "sizeLines": 208,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "specs/spec-061/plan.md": [],
+        "specs/spec-061/research.md": [],
+        "specs/spec-061/spec_061.md": [],
+        "specs/spec-061/tasks.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 15,
+      "files": [
+        {
+          "path": ".ua/.understandignore",
+          "language": "unknown",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".ua/intermediate/scan-result.json",
+          "language": "json",
+          "sizeLines": 150,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/archive/plano-de-inteligencia",
+          "language": "unknown",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/e2e/composition.spec.ts",
+          "language": "typescript",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/e2e/drafts.spec.ts",
+          "language": "typescript",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/e2e/pipeline-regression.spec.ts",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/e2e/storyboard.spec.ts",
+          "language": "typescript",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/playwright.config.ts",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "frontend/src/styles.css",
+          "language": "css",
+          "sizeLines": 362,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "frontend/vite.config.ts",
+          "language": "typescript",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "prompts/router/.gitkeep",
+          "language": "unknown",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "pyproject.toml",
+          "language": "toml",
+          "sizeLines": 30,
+          "fileCategory": "config"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 238,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "scripts/gui.fish",
+          "language": "fish",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/reorganize_specs.py",
+          "language": "python",
+          "sizeLines": 75,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/run_interview_quality_eval.py",
+          "language": "python",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "specs/archive/spec-001/spec_001.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-002/spec_002.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-003/spec_003.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-004/spec_004.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-005/spec_005.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-006/spec_006.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-007/spec_007.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-008/spec_008.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-009/spec_009.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        ".ua/.understandignore": [],
+        ".ua/intermediate/scan-result.json": [],
+        "docs/archive/plano-de-inteligencia": [],
+        "frontend/e2e/composition.spec.ts": [],
+        "frontend/e2e/drafts.spec.ts": [],
+        "frontend/e2e/pipeline-regression.spec.ts": [],
+        "frontend/e2e/storyboard.spec.ts": [],
+        "frontend/playwright.config.ts": [],
+        "frontend/src/styles.css": [],
+        "frontend/vite.config.ts": [],
+        "prompts/router/.gitkeep": [],
+        "pyproject.toml": [],
+        "README.md": [],
+        "scripts/gui.fish": [],
+        "scripts/reorganize_specs.py": [],
+        "scripts/run_interview_quality_eval.py": [],
+        "specs/archive/spec-001/spec_001.md": [],
+        "specs/archive/spec-002/spec_002.md": [],
+        "specs/archive/spec-003/spec_003.md": [],
+        "specs/archive/spec-004/spec_004.md": [],
+        "specs/archive/spec-005/spec_005.md": [],
+        "specs/archive/spec-006/spec_006.md": [],
+        "specs/archive/spec-007/spec_007.md": [],
+        "specs/archive/spec-008/spec_008.md": [],
+        "specs/archive/spec-009/spec_009.md": []
+      },
+      "neighborMap": {
+        "frontend/src/styles.css": [
+          {
+            "path": "frontend/src/main.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 16,
+      "files": [
+        {
+          "path": "specs/archive/spec-010/spec_010.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-011/spec_011.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-012/spec_012.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-013/spec_013.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-014/spec_014.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-015/spec_015.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-016/spec_016.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-017/spec_017.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-018/spec_018.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-019/spec_019.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-020/spec_020.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-021/spec_021.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-022/spec_022.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-023/spec_023.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-024/spec_024.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-025/spec_025.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-026/spec_026.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-027/spec_027.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-028/spec_028.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-029/spec_029.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-030/spec_030.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-031/spec_031.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-032/spec_032.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-033/spec_033.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-034/spec_034.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "specs/archive/spec-010/spec_010.md": [],
+        "specs/archive/spec-011/spec_011.md": [],
+        "specs/archive/spec-012/spec_012.md": [],
+        "specs/archive/spec-013/spec_013.md": [],
+        "specs/archive/spec-014/spec_014.md": [],
+        "specs/archive/spec-015/spec_015.md": [],
+        "specs/archive/spec-016/spec_016.md": [],
+        "specs/archive/spec-017/spec_017.md": [],
+        "specs/archive/spec-018/spec_018.md": [],
+        "specs/archive/spec-019/spec_019.md": [],
+        "specs/archive/spec-020/spec_020.md": [],
+        "specs/archive/spec-021/spec_021.md": [],
+        "specs/archive/spec-022/spec_022.md": [],
+        "specs/archive/spec-023/spec_023.md": [],
+        "specs/archive/spec-024/spec_024.md": [],
+        "specs/archive/spec-025/spec_025.md": [],
+        "specs/archive/spec-026/spec_026.md": [],
+        "specs/archive/spec-027/spec_027.md": [],
+        "specs/archive/spec-028/spec_028.md": [],
+        "specs/archive/spec-029/spec_029.md": [],
+        "specs/archive/spec-030/spec_030.md": [],
+        "specs/archive/spec-031/spec_031.md": [],
+        "specs/archive/spec-032/spec_032.md": [],
+        "specs/archive/spec-033/spec_033.md": [],
+        "specs/archive/spec-034/spec_034.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 17,
+      "files": [
+        {
+          "path": "specs/archive/spec-035/spec_035.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-036/spec_036.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-037/spec_037.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-038/spec_038.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-039/spec_039.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-040/spec_040.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-041/spec_041.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-042/spec_042.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-043/spec_043.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-044/spec_044.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-045/spec_045.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-046/spec_046.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-047/spec_047.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-048/spec_048.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-049/spec_049.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-050/spec_050.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-051/spec_051.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-052/spec_052.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-053/spec_053.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-054/spec_054.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-055/spec_055.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-056/spec_056.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-057/spec_057.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-058/spec_058.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/archive/spec-059/spec_059.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "specs/archive/spec-035/spec_035.md": [],
+        "specs/archive/spec-036/spec_036.md": [],
+        "specs/archive/spec-037/spec_037.md": [],
+        "specs/archive/spec-038/spec_038.md": [],
+        "specs/archive/spec-039/spec_039.md": [],
+        "specs/archive/spec-040/spec_040.md": [],
+        "specs/archive/spec-041/spec_041.md": [],
+        "specs/archive/spec-042/spec_042.md": [],
+        "specs/archive/spec-043/spec_043.md": [],
+        "specs/archive/spec-044/spec_044.md": [],
+        "specs/archive/spec-045/spec_045.md": [],
+        "specs/archive/spec-046/spec_046.md": [],
+        "specs/archive/spec-047/spec_047.md": [],
+        "specs/archive/spec-048/spec_048.md": [],
+        "specs/archive/spec-049/spec_049.md": [],
+        "specs/archive/spec-050/spec_050.md": [],
+        "specs/archive/spec-051/spec_051.md": [],
+        "specs/archive/spec-052/spec_052.md": [],
+        "specs/archive/spec-053/spec_053.md": [],
+        "specs/archive/spec-054/spec_054.md": [],
+        "specs/archive/spec-055/spec_055.md": [],
+        "specs/archive/spec-056/spec_056.md": [],
+        "specs/archive/spec-057/spec_057.md": [],
+        "specs/archive/spec-058/spec_058.md": [],
+        "specs/archive/spec-059/spec_059.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 18,
+      "files": [
+        {
+          "path": "specs/archive/spec-060/spec_060.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/checklist.md",
+          "language": "markdown",
+          "sizeLines": 492,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "specs/global.md",
+          "language": "markdown",
+          "sizeLines": 789,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "src/__init__.py",
+          "language": "python",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/__main__.py",
+          "language": "python",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/content_engine/llm_workspace.py",
+          "language": "python",
+          "sizeLines": 223,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/gui/static/index.html",
+          "language": "html",
+          "sizeLines": 14,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/tui/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/__init__.py",
+          "language": "python",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/fixtures/interview_corpus/corpus.json",
+          "language": "json",
+          "sizeLines": 62,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tests/fixtures/interview_corpus/README.md",
+          "language": "markdown",
+          "sizeLines": 6,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "tests/fixtures/validate_and_render_slidemark.mts",
+          "language": "mts",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_agent_wrapper_cursor.py",
+          "language": "python",
+          "sizeLines": 128,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_cli.py",
+          "language": "python",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_codex_llm_client.py",
+          "language": "python",
+          "sizeLines": 200,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_editorial_flow.py",
+          "language": "python",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_generation_v4_prompt.py",
+          "language": "python",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_generator_image_suggestions.py",
+          "language": "python",
+          "sizeLines": 192,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_gui_avaliacao.py",
+          "language": "python",
+          "sizeLines": 118,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_gui_bulk_adjust.py",
+          "language": "python",
+          "sizeLines": 122,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_gui_llm_config.py",
+          "language": "python",
+          "sizeLines": 70,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_interview_exploration.py",
+          "language": "python",
+          "sizeLines": 181,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_interview_extraction.py",
+          "language": "python",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_interview_gaps.py",
+          "language": "python",
+          "sizeLines": 75,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_interview_gateway.py",
+          "language": "python",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "specs/archive/spec-060/spec_060.md": [],
+        "specs/checklist.md": [],
+        "specs/global.md": [],
+        "src/__init__.py": [],
+        "src/content_engine/__main__.py": [],
+        "src/content_engine/llm_workspace.py": [],
+        "src/gui/static/index.html": [],
+        "src/tui/__init__.py": [],
+        "tests/__init__.py": [],
+        "tests/fixtures/interview_corpus/corpus.json": [],
+        "tests/fixtures/interview_corpus/README.md": [],
+        "tests/fixtures/validate_and_render_slidemark.mts": [],
+        "tests/test_agent_wrapper_cursor.py": [],
+        "tests/test_cli.py": [],
+        "tests/test_codex_llm_client.py": [],
+        "tests/test_editorial_flow.py": [],
+        "tests/test_generation_v4_prompt.py": [],
+        "tests/test_generator_image_suggestions.py": [],
+        "tests/test_gui_avaliacao.py": [],
+        "tests/test_gui_bulk_adjust.py": [],
+        "tests/test_gui_llm_config.py": [],
+        "tests/test_interview_exploration.py": [],
+        "tests/test_interview_extraction.py": [],
+        "tests/test_interview_gaps.py": [],
+        "tests/test_interview_gateway.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 19,
+      "files": [
+        {
+          "path": "tests/test_interview_heuristic.py",
+          "language": "python",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_interview_persistence.py",
+          "language": "python",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_interview_quality.py",
+          "language": "python",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_interview_session_v4.py",
+          "language": "python",
+          "sizeLines": 170,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_interview_session.py",
+          "language": "python",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_interview_ui.py",
+          "language": "python",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_isolation_integration.py",
+          "language": "python",
+          "sizeLines": 163,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_llm_config.py",
+          "language": "python",
+          "sizeLines": 239,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_llm_json_parser.py",
+          "language": "python",
+          "sizeLines": 134,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_llm_workspace.py",
+          "language": "python",
+          "sizeLines": 237,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_parse_generation_payload.py",
+          "language": "python",
+          "sizeLines": 100,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_post_evaluation_prompt.py",
+          "language": "python",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_spec_022_023_049_057.py",
+          "language": "python",
+          "sizeLines": 250,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_spec_028_029.py",
+          "language": "python",
+          "sizeLines": 413,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_spec_050_051.py",
+          "language": "python",
+          "sizeLines": 178,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_tipo_de_post_bug.py",
+          "language": "python",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "tests/test_interview_heuristic.py": [],
+        "tests/test_interview_persistence.py": [],
+        "tests/test_interview_quality.py": [],
+        "tests/test_interview_session_v4.py": [],
+        "tests/test_interview_session.py": [],
+        "tests/test_interview_ui.py": [],
+        "tests/test_isolation_integration.py": [],
+        "tests/test_llm_config.py": [],
+        "tests/test_llm_json_parser.py": [],
+        "tests/test_llm_workspace.py": [],
+        "tests/test_parse_generation_payload.py": [],
+        "tests/test_post_evaluation_prompt.py": [],
+        "tests/test_spec_022_023_049_057.py": [],
+        "tests/test_spec_028_029.py": [],
+        "tests/test_spec_050_051.py": [],
+        "tests/test_tipo_de_post_bug.py": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

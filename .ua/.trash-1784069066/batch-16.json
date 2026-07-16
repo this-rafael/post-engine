@@ -1,0 +1,743 @@
+{
+  "batchIndex": 16,
+  "nodes": [
+    {
+      "id": "document:specs/archive/spec-035/spec_035.md",
+      "type": "document",
+      "label": "SPEC-035 — Prompt de avaliação do post",
+      "file": "specs/archive/spec-035/spec_035.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "avaliação",
+        "prompt",
+        "scoring"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Define o template que avalia o post contra o briefing autoral — identifica se o conteúdo respeitou vivências, opinião, sentimento, aprendizado, personalidade, fidelidade e naturalidade, com score numérico por critério e contrato JSON de saída"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-036/spec_036.md",
+      "type": "document",
+      "label": "SPEC-036 — Exportação Markdown",
+      "file": "specs/archive/spec-036/spec_036.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "exportação",
+        "markdown"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa exportação manual do conteúdo final para .md — sanitização de nome de arquivo, criação automática do diretório exports/ e salvamento apenas por ação explícita do usuário"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-037/spec_037.md",
+      "type": "document",
+      "label": "SPEC-037 — Exportação TXT",
+      "file": "specs/archive/spec-037/spec_037.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "exportação",
+        "txt"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa exportação manual do conteúdo final para .txt, reutilizando a sanitização e criação de diretório da exportação Markdown — saída local simples para o MVP"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-038/spec_038.md",
+      "type": "document",
+      "label": "SPEC-038 — Persistência de sessão",
+      "file": "specs/archive/spec-038/spec_038.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "persistência",
+        "sessão",
+        "tui"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Persistência automática da sessão da TUI em JSON local (.data/sessions/current-session.json) — salva entrada, prompt, briefing, scores, restrições, execução, conteúdo e segmentos para retomada operacional"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-039/spec_039.md",
+      "type": "document",
+      "label": "SPEC-039 — Restauração de sessão",
+      "file": "specs/archive/spec-039/spec_039.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "restauração",
+        "sessão",
+        "tui"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Restaura a sessão da TUI ao abrir a aplicação — trata arquivo ausente, JSON corrompido e schema parcial com defaults, sem bloquear o uso da interface"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-040/spec_040.md",
+      "type": "document",
+      "label": "SPEC-040 — Validação de entrada da TUI",
+      "file": "specs/archive/spec-040/spec_040.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "validação",
+        "entrada",
+        "tui"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Valida campos operacionais da TUI antes de preview, execução e persistência — verifica tema, plataforma, objetivo, tipo de post, briefing JSON, scores, restrições, tool, modelo e sandbox"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-041/spec_041.md",
+      "type": "document",
+      "label": "SPEC-041 — Tela única da TUI MVP",
+      "file": "specs/archive/spec-041/spec_041.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "tui",
+        "textual",
+        "interface"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa a primeira interface Textual em tela única — layout com entrada, prompt renderizado, resultados e ações (Preview, Rodar, Limpar, Segmentar, Avaliar, Exportar MD/TXT)"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-042/spec_042.md",
+      "type": "document",
+      "label": "SPEC-042 — Preview do prompt na TUI",
+      "file": "specs/archive/spec-042/spec_042.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "preview",
+        "prompt",
+        "tui"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa a ação de preview do prompt final — valida campos, monta GenerationPromptInput, chama PromptBuilder, exibe prompt renderizado e persiste sessão"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-043/spec_043.md",
+      "type": "document",
+      "label": "SPEC-043 — Execução LLM pela TUI",
+      "file": "specs/archive/spec-043/spec_043.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "execução",
+        "llm",
+        "tui",
+        "agent"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Executa o LLM pela TUI usando o prompt renderizado e o AgentWrapper em worker/thread para preservar responsividade — exibe stdout, stderr, returncode, eventos e JSON parseado"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-044/spec_044.md",
+      "type": "document",
+      "label": "SPEC-044 — Bloqueio de gerações concorrentes",
+      "file": "specs/archive/spec-044/spec_044.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "concorrência",
+        "bloqueio",
+        "tui"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Impede múltiplas gerações concorrentes no MVP — flag de execução ativa, bloqueio do botão Rodar durante execução e liberação em sucesso, erro ou cancelamento"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-045/spec_045.md",
+      "type": "document",
+      "label": "SPEC-045 — Exibição de resultado bruto e JSON parseado",
+      "file": "specs/archive/spec-045/spec_045.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "resultado",
+        "json",
+        "parse",
+        "tui"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Exibe resultado bruto da execução (stdout, stderr, returncode) e tenta parsear JSON final sem validação rígida — JSON inválido não oculta o resultado bruto"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-046/spec_046.md",
+      "type": "document",
+      "label": "SPEC-046 — Limpeza de saída",
+      "file": "specs/archive/spec-046/spec_046.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "limpeza",
+        "saida",
+        "tui"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa a ação Limpar para limpar resultados de execução (stdout, stderr, eventos, returncode, JSON) sem apagar o prompt renderizado — persiste sessão após limpeza"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-047/spec_047.md",
+      "type": "document",
+      "label": "SPEC-047 — Seleção de executor LLM",
+      "file": "specs/archive/spec-047/spec_047.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "executor",
+        "codex",
+        "opencode",
+        "tui"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Permite selecionar codex ou opencode na TUI — configuração de modelo e parâmetros compatíveis, condicionamento de campos (sandbox para codex), anexos do OpenCode fora do MVP"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-048/spec_048.md",
+      "type": "document",
+      "label": "SPEC-048 — Seleção de sandbox",
+      "file": "specs/archive/spec-048/spec_048.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "sandbox",
+        "codex",
+        "tui"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa seletor de sandbox para execuções via codex — suporta read-only, workspace-write e danger-full-access, visível apenas quando tool for codex"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-049/spec_049.md",
+      "type": "document",
+      "label": "SPEC-049 — Estrutura de pastas do projeto",
+      "file": "specs/archive/spec-049/spec_049.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "estrutura",
+        "diretórios",
+        "organização"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Cria a estrutura base do projeto separando domínio (src/content_engine), TUI (src/tui), prompts, dados locais (.data), exportações (exports) e testes — reduz acoplamento entre engine, interface e infraestrutura"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-050/spec_050.md",
+      "type": "document",
+      "label": "SPEC-050 — Loader de prompts Markdown",
+      "file": "specs/archive/spec-050/spec_050.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "loader",
+        "prompts",
+        "templates"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa carregamento de prompts Markdown versionados — serve templates de entrevista, avaliação, memory pack, segmentação, geração, regras e personas com tratamento de erro claro"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-051/spec_051.md",
+      "type": "document",
+      "label": "SPEC-051 — Renderização de templates",
+      "file": "specs/archive/spec-051/spec_051.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "template",
+        "renderização",
+        "placeholders"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Implementa renderização genérica de templates Markdown — sintaxe de placeholders segura (sem execução de código), preservação de JSON serializado e detecção de placeholders ausentes"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-052/spec_052.md",
+      "type": "document",
+      "label": "SPEC-052 — Testes do PromptBuilder",
+      "file": "specs/archive/spec-052/spec_052.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "testes",
+        "promptbuilder",
+        "renderização"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Testes automatizados para o PromptBuilder — valida renderização por tipo de post (feed, article, slide), presença da persona correta, briefing serializado, scores, restrições e erro para tipo inválido"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-053/spec_053.md",
+      "type": "document",
+      "label": "SPEC-053 — Testes de gateway",
+      "file": "specs/archive/spec-053/spec_053.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "testes",
+        "gateway",
+        "completude"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Testes para gateway equilibrado, desequilibrado e reprovado — protege critérios autorais que determinam quando a geração pode acontecer, incluindo total bruto, personalidade e categoria dominante"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-054/spec_054.md",
+      "type": "document",
+      "label": "SPEC-054 — Testes de scoring",
+      "file": "specs/archive/spec-054/spec_054.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "testes",
+        "scoring",
+        "scores"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Testes para atualização de scores autorais — garante acumulação correta, normalização em 100, totais bruto/normalizado e proteção contra deltas inválidos"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-055/spec_055.md",
+      "type": "document",
+      "label": "SPEC-055 — Testes do AgentWrapper",
+      "file": "specs/archive/spec-055/spec_055.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "testes",
+        "agentwrapper",
+        "mock"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Testes unitários para montagem de comandos, execução mockada e parse de JSONL do AgentWrapper — nenhum teste invoca codex ou opencode reais"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-056/spec_056.md",
+      "type": "document",
+      "label": "SPEC-056 — Testes de persistência",
+      "file": "specs/archive/spec-056/spec_056.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "testes",
+        "persistência",
+        "sessão"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Testes para salvar e restaurar sessão da TUI — cobre escrita do estado mínimo, restauração bem-sucedida, defaults para schema parcial e falhas não bloqueantes"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-057/spec_057.md",
+      "type": "document",
+      "label": "SPEC-057 — Testes do exporter",
+      "file": "specs/archive/spec-057/spec_057.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "testes",
+        "exportação",
+        "markdown",
+        "txt"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Testes para exportação .md e .txt — garante que exportação seja explícita, salve conteúdo correto, use nomes seguros e crie diretório automaticamente"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-058/spec_058.md",
+      "type": "document",
+      "label": "SPEC-058 — Testes da TUI de preview",
+      "file": "specs/archive/spec-058/spec_058.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "testes",
+        "tui",
+        "preview"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Testes para o fluxo de preview da TUI — valida campos obrigatórios, rejeita briefing JSON inválido, testa renderização do prompt e persistência automática após preview"
+      }
+    },
+    {
+      "id": "document:specs/archive/spec-059/spec_059.md",
+      "type": "document",
+      "label": "SPEC-059 — Testes de segmentação",
+      "file": "specs/archive/spec-059/spec_059.md",
+      "tags": [
+        "markdown",
+        "spec",
+        "archive",
+        "testes",
+        "segmentação",
+        "parse"
+      ],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 23,
+        "nonEmptyLines": 18,
+        "description": "Testes para parsear e validar segmentos retornados pelo LLM — cobre JSON válido, JSON inválido, campos ausentes, ids duplicados e ordem não sequencial"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:specs/archive/spec-035/spec_035.md",
+      "target": "document:specs/archive/spec-036/spec_036.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-037/spec_037.md",
+      "target": "document:specs/archive/spec-038/spec_038.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-038/spec_038.md",
+      "target": "document:specs/archive/spec-039/spec_039.md",
+      "type": "related",
+      "label": "persistência e restauração de sessão formam par complementar"
+    },
+    {
+      "source": "document:specs/archive/spec-039/spec_039.md",
+      "target": "document:specs/archive/spec-040/spec_040.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-040/spec_040.md",
+      "target": "document:specs/archive/spec-041/spec_041.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-041/spec_041.md",
+      "target": "document:specs/archive/spec-042/spec_042.md",
+      "type": "related",
+      "label": "tela única da TUI hospeda o preview"
+    },
+    {
+      "source": "document:specs/archive/spec-042/spec_042.md",
+      "target": "document:specs/archive/spec-043/spec_043.md",
+      "type": "related",
+      "label": "preview precede execução LLM"
+    },
+    {
+      "source": "document:specs/archive/spec-043/spec_043.md",
+      "target": "document:specs/archive/spec-044/spec_044.md",
+      "type": "related",
+      "label": "execução LLM requer bloqueio de concorrência"
+    },
+    {
+      "source": "document:specs/archive/spec-044/spec_044.md",
+      "target": "document:specs/archive/spec-045/spec_045.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-045/spec_045.md",
+      "target": "document:specs/archive/spec-046/spec_046.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-046/spec_046.md",
+      "target": "document:specs/archive/spec-047/spec_047.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-047/spec_047.md",
+      "target": "document:specs/archive/spec-048/spec_048.md",
+      "type": "related",
+      "label": "sandbox é condicional ao executor codex"
+    },
+    {
+      "source": "document:specs/archive/spec-048/spec_048.md",
+      "target": "document:specs/archive/spec-049/spec_049.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-049/spec_049.md",
+      "target": "document:specs/archive/spec-050/spec_050.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-050/spec_050.md",
+      "target": "document:specs/archive/spec-051/spec_051.md",
+      "type": "related",
+      "label": "loader de prompts alimenta renderização de templates"
+    },
+    {
+      "source": "document:specs/archive/spec-051/spec_051.md",
+      "target": "document:specs/archive/spec-052/spec_052.md",
+      "type": "related",
+      "label": "renderização de templates é testada pelos testes do PromptBuilder"
+    },
+    {
+      "source": "document:specs/archive/spec-052/spec_052.md",
+      "target": "document:specs/archive/spec-053/spec_053.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-053/spec_053.md",
+      "target": "document:specs/archive/spec-054/spec_054.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-054/spec_054.md",
+      "target": "document:specs/archive/spec-055/spec_055.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-055/spec_055.md",
+      "target": "document:specs/archive/spec-056/spec_056.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-056/spec_056.md",
+      "target": "document:specs/archive/spec-057/spec_057.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-057/spec_057.md",
+      "target": "document:specs/archive/spec-058/spec_058.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-058/spec_058.md",
+      "target": "document:specs/archive/spec-059/spec_059.md",
+      "type": "related",
+      "label": "sequência de especificações"
+    },
+    {
+      "source": "document:specs/archive/spec-036/spec_036.md",
+      "target": "document:specs/archive/spec-037/spec_037.md",
+      "type": "related",
+      "label": "exportação Markdown e TXT compartilham sanitização e diretório"
+    },
+    {
+      "source": "document:specs/archive/spec-040/spec_040.md",
+      "target": "document:specs/archive/spec-042/spec_042.md",
+      "type": "related",
+      "label": "validação de entrada é pré-requisito do preview"
+    },
+    {
+      "source": "document:specs/archive/spec-041/spec_041.md",
+      "target": "document:specs/archive/spec-043/spec_043.md",
+      "type": "related",
+      "label": "tela única da TUI hospeda a execução LLM"
+    },
+    {
+      "source": "document:specs/archive/spec-043/spec_043.md",
+      "target": "document:specs/archive/spec-045/spec_045.md",
+      "type": "related",
+      "label": "execução LLM produz resultado bruto e JSON parseado"
+    },
+    {
+      "source": "document:specs/archive/spec-043/spec_043.md",
+      "target": "document:specs/archive/spec-046/spec_046.md",
+      "type": "related",
+      "label": "limpeza opera sobre resultados da execução LLM"
+    },
+    {
+      "source": "document:specs/archive/spec-047/spec_047.md",
+      "target": "document:specs/archive/spec-043/spec_043.md",
+      "type": "related",
+      "label": "executor selecionado configura AgentWrapper"
+    },
+    {
+      "source": "document:specs/archive/spec-051/spec_051.md",
+      "target": "document:specs/archive/spec-042/spec_042.md",
+      "type": "related",
+      "label": "renderização de templates é usada pelo preview"
+    },
+    {
+      "source": "document:specs/archive/spec-035/spec_035.md",
+      "target": "document:specs/archive/spec-054/spec_054.md",
+      "type": "related",
+      "label": "prompt de avaliação é validado pelos testes de scoring"
+    },
+    {
+      "source": "document:specs/archive/spec-036/spec_036.md",
+      "target": "document:specs/archive/spec-057/spec_057.md",
+      "type": "related",
+      "label": "exportação Markdown é validada pelos testes do exporter"
+    },
+    {
+      "source": "document:specs/archive/spec-037/spec_037.md",
+      "target": "document:specs/archive/spec-057/spec_057.md",
+      "type": "related",
+      "label": "exportação TXT é validada pelos testes do exporter"
+    },
+    {
+      "source": "document:specs/archive/spec-038/spec_038.md",
+      "target": "document:specs/archive/spec-056/spec_056.md",
+      "type": "related",
+      "label": "persistência de sessão é validada pelos testes de persistência"
+    },
+    {
+      "source": "document:specs/archive/spec-039/spec_039.md",
+      "target": "document:specs/archive/spec-056/spec_056.md",
+      "type": "related",
+      "label": "restauração de sessão é validada pelos testes de persistência"
+    },
+    {
+      "source": "document:specs/archive/spec-040/spec_040.md",
+      "target": "document:specs/archive/spec-058/spec_058.md",
+      "type": "related",
+      "label": "validação de entrada é testada pelos testes da TUI de preview"
+    },
+    {
+      "source": "document:specs/archive/spec-042/spec_042.md",
+      "target": "document:specs/archive/spec-058/spec_058.md",
+      "type": "related",
+      "label": "preview da TUI é validado pelos testes de preview"
+    },
+    {
+      "source": "document:specs/archive/spec-043/spec_043.md",
+      "target": "document:specs/archive/spec-055/spec_055.md",
+      "type": "related",
+      "label": "execução LLM é testada pelos testes do AgentWrapper"
+    },
+    {
+      "source": "document:specs/archive/spec-050/spec_050.md",
+      "target": "document:specs/archive/spec-052/spec_052.md",
+      "type": "related",
+      "label": "loader de prompts é testado pelos testes do PromptBuilder"
+    }
+  ]
+}

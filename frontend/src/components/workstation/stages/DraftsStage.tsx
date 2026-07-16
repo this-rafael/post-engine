@@ -169,8 +169,10 @@ export function DraftsStage() {
           exit={{ scale: 0, opacity: 0 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium shadow-lg"
+          className="fixed z-40 flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium shadow-lg"
           style={{
+            bottom: "calc(1.5rem + env(safe-area-inset-bottom, 0px))",
+            right: "calc(1.5rem + env(safe-area-inset-right, 0px))",
             background: "linear-gradient(180deg, color-mix(in oklab, var(--flux) 36%, var(--surface-2)), color-mix(in oklab, var(--flux) 18%, var(--surface)))",
             border: "1px solid color-mix(in oklab, var(--flux) 50%, transparent)",
             color: "var(--ink)",
@@ -192,7 +194,7 @@ export function DraftsStage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-6"
+            className="fixed inset-0 z-50 flex items-end justify-center p-3 sm:items-center sm:p-6"
             style={{ background: "color-mix(in oklab, var(--bg) 85%, transparent)", backdropFilter: "blur(8px)" }}
             onClick={closeReader}
             data-testid="reader-overlay"
@@ -202,7 +204,7 @@ export function DraftsStage() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
               transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-              className="panel relative flex max-h-[80vh] w-full max-w-2xl flex-col overflow-hidden"
+              className="panel relative flex max-h-[min(80dvh,80vh)] w-full max-w-2xl flex-col overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               <button

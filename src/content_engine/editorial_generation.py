@@ -21,10 +21,8 @@ from .editorial_preservation import (
 from .generator import ConteudoGerado, parse_generation_payload
 from .llm_config import resolve
 from .llm_json_parser import extract_json_object_from_llm_output
-from .prompt_builder import ANTI_IA_POLICIES
-from .prompt_loader import load_prompt
+from .prompt_registry.resolver import resolve_prompt
 from .schemas import AgentResult, ToolName, TuiSessionState
-from .template_renderer import render_template
 
 
 class EditorialParseError(Exception):
@@ -125,6 +123,13 @@ def _json_dumps(value: object) -> str:
     return json.dumps(value, ensure_ascii=False, indent=2)
 
 
+def _resolve_editorial_prompt(operation: str, context: dict[str, object]) -> str:
+    cfg = resolve(operation)
+    return resolve_prompt(
+        operation, context, provider=cfg.provider, model=cfg.model
+    ).resolved_content
+
+
 def _storyboard_context(state: TuiSessionState, flow: dict[str, Any]) -> dict[str, object]:
     storyboard = flow.get("storyboard", {})
     blocks = storyboard.get("blocks", []) if isinstance(storyboard, dict) else []
@@ -137,6 +142,8 @@ def _storyboard_context(state: TuiSessionState, flow: dict[str, Any]) -> dict[st
         "tipoDePost": state.tipo_de_post,
         "personalidade": state.personalidade,
         "storyboardJson": _json_dumps(blocks),
+        "content_type": state.tipo_de_post,
+        "is_visual_track": state.tipo_de_post in {"short_carousel", "long_slide"},
     }
 
 
@@ -161,10 +168,10 @@ def _composition_context(
         "compositionBriefingJson": _json_dumps(_composition_briefing(state)),
         "authorialEvidenceJson": _json_dumps(_composition_authorial_evidence(state)),
         "interviewContextJson": _json_dumps(_composition_interview_context(state)),
-        "formatRules": _composition_format_rules(state.tipo_de_post),
         "selectedDraftsJson": _json_dumps(selected_drafts),
         "editorialAnchorsJson": _json_dumps(editorial_anchors_for_prompt(anchors)),
-        "politicasAntiIa": _json_dumps({"policies": ANTI_IA_POLICIES}),
+        "content_type": state.tipo_de_post,
+        "retry_attempt": 0,
     }
     return context, anchors
 
@@ -227,17 +234,14 @@ def _composition_interview_context(state: TuiSessionState) -> dict[str, object]:
     }
 
 
-def _composition_format_rules(tipo_de_post: str) -> str:
-    return load_prompt(f"generator.rules_{tipo_de_post}")
-
-
 class StoryboardGenerator:
     def __init__(self, agent: AgentWrapper) -> None:
         self.agent = agent
 
     def gerar(self, state: TuiSessionState, flow: dict[str, Any]) -> EditorialRunResult:
-        template = load_prompt("editorial.storyboard")
-        prompt = render_template(template, _storyboard_context(state, flow))
+        prompt = _resolve_editorial_prompt(
+            "storyboard_generate", _storyboard_context(state, flow)
+        )
         run = _run_json_llm(self.agent, operation="storyboard_generate", prompt=prompt)
         if not run.ok:
             return run
@@ -268,7 +272,6 @@ class BlockDraftGenerator:
         block_position: int,
         total_blocks: int,
     ) -> EditorialRunResult:
-        template = load_prompt("editorial.block_approaches")
         previous_selected = collect_previous_selected_drafts(flow, str(block.get("id", "")))
         context = {
             **_storyboard_context(state, flow),
@@ -278,7 +281,7 @@ class BlockDraftGenerator:
             "totalBlocks": total_blocks,
             "previousSelectedDraftsJson": _json_dumps(previous_selected),
         }
-        prompt = render_template(template, context)
+        prompt = _resolve_editorial_prompt("block_approaches_generate", context)
         run = _run_json_llm(self.agent, operation="block_approaches_generate", prompt=prompt)
         if not run.ok:
             return run
@@ -307,7 +310,6 @@ class BlockDraftGenerator:
             if isinstance(b, dict) and b.get("id") != block.get("id")
         ]
         previous_selected = collect_previous_selected_drafts(flow, str(block.get("id", "")))
-        template = load_prompt("editorial.block_draft")
         context = {
             **_storyboard_context(state, flow),
             "blockRole": block.get("role", ""),
@@ -320,9 +322,8 @@ class BlockDraftGenerator:
             "approachDescription": approach.get("description", ""),
             "personaId": persona.get("id", ""),
             "personaName": persona.get("name", ""),
-            "politicasAntiIa": _json_dumps({"policies": ANTI_IA_POLICIES}),
         }
-        prompt = render_template(template, context)
+        prompt = _resolve_editorial_prompt("block_draft_generate", context)
         run = _run_json_llm(self.agent, operation="block_draft_generate", prompt=prompt)
         if not run.ok:
             return run
@@ -344,13 +345,12 @@ class EditorialComposer:
         *,
         selected_drafts: list[dict[str, Any]],
     ) -> tuple[ConteudoGerado | None, EditorialRunResult]:
-        template = load_prompt("editorial.compose")
         context, anchors = _composition_context(
             state,
             flow,
             selected_drafts=selected_drafts,
         )
-        prompt = render_template(template, context)
+        prompt = _resolve_editorial_prompt("editorial_compose", context)
         run = _run_json_llm(self.agent, operation="editorial_compose", prompt=prompt)
         if not run.ok:
             return None, run
@@ -367,7 +367,14 @@ class EditorialComposer:
         retried_for_preservation = False
         if issues:
             retried_for_preservation = True
-            retry_prompt = _preservation_retry_prompt(prompt, format_preservation_issues(issues))
+            retry_prompt = _resolve_editorial_prompt(
+                "editorial_compose",
+                {
+                    **context,
+                    "retry_attempt": 1,
+                    "preservation_issues": format_preservation_issues(issues),
+                },
+            )
             retry = _run_json_llm(
                 self.agent,
                 operation="editorial_compose",
@@ -411,18 +418,6 @@ class EditorialComposer:
                 agent_result=run.agent_result,
                 prompt=prompt,
             )
-
-
-def _preservation_retry_prompt(prompt: str, issues: str) -> str:
-    return (
-        f"{prompt}\n\n"
-        "REVISAO EDITORIAL OBRIGATORIA\n"
-        "A composicao anterior preservou a tese, mas descartou material de fonte "
-        "prioritario. Refaça o JSON inteiro mantendo a coesao e corrigindo estes "
-        "pontos. Parafrasear e permitido; substituir por categorias abstratas nao.\n"
-        f"{issues}\n\n"
-        "Retorne somente o JSON final, no mesmo contrato solicitado acima."
-    )
 
 
 def build_draft_options(

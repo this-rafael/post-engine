@@ -1,0 +1,437 @@
+{
+  "batchIndex": 10,
+  "totalBatches": 19,
+  "filesAnalyzed": 18,
+  "nodes": [
+    {
+      "id": "document:prompts/generator/base.md",
+      "type": "document",
+      "label": "base.md",
+      "file": "prompts/generator/base.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "base"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 124,
+        "nonEmptyLines": 85,
+        "sections": ["Entrada", "Regras específicas do formato", "Restrições obrigatórias de geração", "Políticas anti-IA obrigatórias (hard)", "Briefing autoral", "Resultado do gateway V4", "Contexto da entrevista V4", "Evidências literais do autor", "Sinais autorais extraídos", "Dimensões autorais observadas", "Lacunas ainda abertas", "Regras globais", "Modelo interno de decisão narrativa", "Saída obrigatória"],
+        "description": "Template principal do gerador de conteúdo autoral que transforma briefing em texto pronto para publicação (post ou article), preservando voz, fatos e limites narrativos do autor, com políticas anti-IA hard, regras globais de fidelidade autoral e modelo interno de decisão narrativa."
+      }
+    },
+    {
+      "id": "document:prompts/generator/base-long-slide.md",
+      "type": "document",
+      "label": "base-long-slide.md",
+      "file": "prompts/generator/base-long-slide.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "base", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 86,
+        "nonEmptyLines": 56,
+        "sections": ["Entrada", "Regras específicas do formato", "Restrições obrigatórias de geração", "Políticas anti-IA obrigatórias (hard)", "Briefing autoral", "Resultado do gateway V4", "Contexto da entrevista V4", "Evidências literais do autor", "Sinais autorais extraídos", "Dimensões autorais observadas", "Lacunas ainda abertas", "Regras do guia", "Saída obrigatória"],
+        "description": "Template do gerador de guia visual longo em formato SlideMark (9 a 20 slides), com progressão didática, alternância de templates semânticos, regras de cover/cta e saída JSON SlideMark v1."
+      }
+    },
+    {
+      "id": "document:prompts/generator/base-short-carousel.md",
+      "type": "document",
+      "label": "base-short-carousel.md",
+      "file": "prompts/generator/base-short-carousel.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "base", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 86,
+        "nonEmptyLines": 56,
+        "sections": ["Entrada", "Regras específicas do formato", "Restrições obrigatórias de geração", "Políticas anti-IA obrigatórias (hard)", "Briefing autoral", "Resultado do gateway V4", "Contexto da entrevista V4", "Evidências literais do autor", "Sinais autorais extraídos", "Dimensões autorais observadas", "Lacunas ainda abertas", "Regras do carrossel", "Saída obrigatória"],
+        "description": "Template do gerador de carrossel curto em formato SlideMark (4 a 8 slides), com uma ideia principal por slide, template semântico adequado e saída JSON SlideMark v1."
+      }
+    },
+    {
+      "id": "document:prompts/generator/rules-post.md",
+      "type": "document",
+      "label": "rules-post.md",
+      "file": "prompts/generator/rules-post.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "rules"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 14,
+        "nonEmptyLines": 13,
+        "description": "Regras específicas para geração de posts de LinkedIn: persona DevInterlocutorPost, estrutura ideia central → contexto → desenvolvimento → insight → fechamento, atrito produtivo, parágrafos curtos, máximo 1600 caracteres."
+      }
+    },
+    {
+      "id": "document:prompts/generator/rules-feed.md",
+      "type": "document",
+      "label": "rules-feed.md",
+      "file": "prompts/generator/rules-feed.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "rules"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 12,
+        "nonEmptyLines": 11,
+        "description": "Regras para posts rápidos de feed: persona DevInterlocutorFeed, conteúdo direto crítico e opinativo, abertura com atrito produtivo, parágrafos curtos, profundidade baixa ou média, máximo 1600 caracteres."
+      }
+    },
+    {
+      "id": "document:prompts/generator/rules-article.md",
+      "type": "document",
+      "label": "rules-article.md",
+      "file": "prompts/generator/rules-article.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "rules"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 14,
+        "nonEmptyLines": 13,
+        "description": "Regras para artigos técnicos longos: persona DevInterlocutorArticle, estrutura investigativa (problema → contexto → tese → argumentos → contrapontos → evidência → conclusão), trade-offs e contrapontos, sem inventar referências."
+      }
+    },
+    {
+      "id": "document:prompts/generator/rules-slide.md",
+      "type": "document",
+      "label": "rules-slide.md",
+      "file": "prompts/generator/rules-slide.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "rules"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 12,
+        "nonEmptyLines": 11,
+        "description": "Regras genéricas para conteúdo em slides: persona DevInterlocutorSlide, uma ideia por slide, títulos fortes, bullets objetivos, progressão narrativa (tensão → problema → correção → exemplo → trade-off → decisão → fechamento)."
+      }
+    },
+    {
+      "id": "document:prompts/generator/rules-long-slide.md",
+      "type": "document",
+      "label": "rules-long-slide.md",
+      "file": "prompts/generator/rules-long-slide.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "rules", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 21,
+        "nonEmptyLines": 20,
+        "description": "Regras para guias visuais longos SlideMark (9-20 slides): persona DevInterlocutorLongSlide, estrutura didática completa (capa → problema → fundamentos → exemplos → implementação → edge cases → boas práticas → CTA), código máx. 14 linhas, sem esticar ideia única."
+      }
+    },
+    {
+      "id": "document:prompts/generator/rules-short-carousel.md",
+      "type": "document",
+      "label": "rules-short-carousel.md",
+      "file": "prompts/generator/rules-short-carousel.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "rules", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 20,
+        "nonEmptyLines": 19,
+        "description": "Regras para carrosséis curtos SlideMark (4-8 slides): persona DevInterlocutorShortCarousel, uma ideia específica explicada visualmente, estrutura narrativa (Hook → Contexto → Explicação → Exemplo → Insight → Conclusão), variação de variantes."
+      }
+    },
+    {
+      "id": "document:prompts/generator/evaluate-post-post.md",
+      "type": "document",
+      "label": "evaluate-post-post.md",
+      "file": "prompts/generator/evaluate-post-post.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "evaluation"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 237,
+        "nonEmptyLines": 187,
+        "sections": ["PROBLEMA ATUAL DO PROCESSO", "MODO DE AUTOCRÍTICA", "REGRAS DE SEVERIDADE", "PRINCÍPIO DE REGENERAÇÃO", "AVALIE A TESE", "AVALIE A PROGRESSÃO", "AVALIE CONCRETUDE", "AVALIE PRECISÃO TÉCNICA", "AVALIE COMO POST DE FEED DE LINKEDIN", "AVALIE AUTORIA", "AVALIE ESTRUTURA", "REVISÃO TEXTUAL", "SCORE"],
+        "description": "Avaliador editorial adversarial para posts de feed LinkedIn: avalia tese, progressão, concretude, precisão técnica, retenção, autoridade, autoria, estrutura e revisão textual com notas 0-10, identificando redundâncias, falhas técnicas e sugestões concretas de melhoria."
+      }
+    },
+    {
+      "id": "document:prompts/generator/evaluate-post-article.md",
+      "type": "document",
+      "label": "evaluate-post-article.md",
+      "file": "prompts/generator/evaluate-post-article.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "evaluation"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 247,
+        "nonEmptyLines": 196,
+        "sections": ["PROBLEMA ATUAL DO PROCESSO", "MODO DE AUTOCRÍTICA", "REGRAS DE SEVERIDADE", "PRINCÍPIO DE REGENERAÇÃO", "AVALIE A TESE", "AVALIE A PROGRESSÃO", "AVALIE CONCRETUDE", "AVALIE PRECISÃO TÉCNICA", "AVALIE COMO ARTIGO LONGO DE LINKEDIN", "AVALIE AUTORIA", "AVALIE ESTRUTURA", "REVISÃO TEXTUAL", "SCORE"],
+        "description": "Avaliador editorial adversarial para artigos técnicos longos (não-SlideMark): avalia tese, progressão argumentativa macro, concretude, precisão técnica, retenção, autoridade, autoria, estrutura e revisão textual, penalizando artigos redundantes, rasos ou com formato mal aproveitado."
+      }
+    },
+    {
+      "id": "document:prompts/generator/evaluate-post-long-slide.md",
+      "type": "document",
+      "label": "evaluate-post-long-slide.md",
+      "file": "prompts/generator/evaluate-post-long-slide.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "evaluation", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 252,
+        "nonEmptyLines": 201,
+        "sections": ["PROBLEMA ATUAL DO PROCESSO", "MODO DE AUTOCRÍTICA", "REGRAS DE SEVERIDADE", "PRINCÍPIO DE REGENERAÇÃO", "AVALIE A TESE", "AVALIE A PROGRESSÃO", "AVALIE CONCRETUDE", "AVALIE PRECISÃO TÉCNICA", "AVALIE COMO DECK LONGO DE LINKEDIN", "AVALIE AUTORIA", "AVALIE SLIDEMARK", "REVISÃO TEXTUAL", "SCORE"],
+        "description": "Avaliador editorial adversarial para decks longos SlideMark (9+ slides): avalia tese, progressão, concretude, precisão técnica, retenção, autoridade, autoria, conformidade SlideMark e revisão textual, penalizando decks editorialmente planos ou posts esticados em slides."
+      }
+    },
+    {
+      "id": "document:prompts/generator/evaluate-post-short-carousel.md",
+      "type": "document",
+      "label": "evaluate-post-short-carousel.md",
+      "file": "prompts/generator/evaluate-post-short-carousel.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "evaluation", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 239,
+        "nonEmptyLines": 190,
+        "sections": ["PROBLEMA ATUAL DO PROCESSO", "MODO DE AUTOCRÍTICA", "REGRAS DE SEVERIDADE", "PRINCÍPIO DE REGENERAÇÃO", "AVALIE A TESE", "AVALIE A PROGRESSÃO", "AVALIE CONCRETUDE", "AVALIE PRECISÃO TÉCNICA", "AVALIE COMO CARROSSEL DE LINKEDIN", "AVALIE AUTORIA", "AVALIE SLIDEMARK", "REVISÃO TEXTUAL", "SCORE"],
+        "description": "Avaliador editorial adversarial para carrosséis curtos SlideMark (4-8 slides): avalia tese, progressão, concretude, precisão técnica, retenção, autoridade, autoria, conformidade SlideMark e revisão textual, com foco em densidade técnica e progressão por swipe."
+      }
+    },
+    {
+      "id": "document:prompts/generator/segment.md",
+      "type": "document",
+      "label": "segment.md",
+      "file": "prompts/generator/segment.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "segmentation"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 7,
+        "nonEmptyLines": 5,
+        "description": "Prompt de segmentação de conteúdo textual em partes editáveis, dividindo por função editorial do formato, com papelInterno (abertura, desenvolvimento, etc.), usando briefing e contexto V4 para inferir função sem reescrever."
+      }
+    },
+    {
+      "id": "document:prompts/generator/segment-slides.md",
+      "type": "document",
+      "label": "segment-slides.md",
+      "file": "prompts/generator/segment-slides.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "segmentation", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 25,
+        "nonEmptyLines": 22,
+        "description": "Prompt de segmentação de documento SlideMark em partes editáveis por slide, com id, ordem, slideType e papelInterno (capa, problema, contexto, explicação, exemplo, insight, conclusão), retornando JSON com array de segmentos."
+      }
+    },
+    {
+      "id": "document:prompts/generator/adjust-segment.md",
+      "type": "document",
+      "label": "adjust-segment.md",
+      "file": "prompts/generator/adjust-segment.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "adjustment"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 12,
+        "nonEmptyLines": 10,
+        "description": "Prompt para reescrever um único segmento indicado pelo usuário, preservando formato, voz do autor e contrato de autoria (briefing + contexto V4), retornando JSON com segmentoReescrito."
+      }
+    },
+    {
+      "id": "document:prompts/generator/adjust-segments-bulk.md",
+      "type": "document",
+      "label": "adjust-segments-bulk.md",
+      "file": "prompts/generator/adjust-segments-bulk.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "adjustment"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 19,
+        "nonEmptyLines": 15,
+        "description": "Prompt para reescrita em lote de múltiplos segmentos, mantendo voz do autor e continuidade entre trechos adjacentes, retornando JSON com array de segmentos reescritos com id, ordem e segmentoReescrito."
+      }
+    },
+    {
+      "id": "document:prompts/generator/export-slidemark.md",
+      "type": "document",
+      "label": "export-slidemark.md",
+      "file": "prompts/generator/export-slidemark.md",
+      "tags": ["markdown", "docs", "generator", "prompt", "export", "slidemark"],
+      "properties": {
+        "language": "markdown",
+        "totalLines": 70,
+        "nonEmptyLines": 47,
+        "sections": ["Entrada", "Regras do tipo de post", "Estrutura narrativa esperada", "Conteúdo final", "Segmentos editáveis", "Sugestões de imagem", "Briefing autoral", "SlideMark original", "Instruções de conversão", "Saída"],
+        "description": "Prompt do conversor SlideMark que transforma conteúdo editorial final em documento SlideMark JSON v1 pronto para importação, preservando voz, fatos e ordem editorial, com regras de cover/cta, limites de slides por formato e integração de sugestões de imagem."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:prompts/generator/base.md",
+      "target": "document:prompts/generator/rules-post.md",
+      "type": "document",
+      "label": "referencia regras do formato post"
+    },
+    {
+      "source": "document:prompts/generator/base.md",
+      "target": "document:prompts/generator/rules-feed.md",
+      "type": "document",
+      "label": "referencia regras do formato feed"
+    },
+    {
+      "source": "document:prompts/generator/base.md",
+      "target": "document:prompts/generator/rules-article.md",
+      "type": "document",
+      "label": "referencia regras do formato article"
+    },
+    {
+      "source": "document:prompts/generator/base-long-slide.md",
+      "target": "document:prompts/generator/rules-long-slide.md",
+      "type": "document",
+      "label": "referencia regras do formato long_slide"
+    },
+    {
+      "source": "document:prompts/generator/base-short-carousel.md",
+      "target": "document:prompts/generator/rules-short-carousel.md",
+      "type": "document",
+      "label": "referencia regras do formato short_carousel"
+    },
+    {
+      "source": "document:prompts/generator/base.md",
+      "target": "document:prompts/generator/segment.md",
+      "type": "document",
+      "label": "conteudo gerado e segmentado para edicao"
+    },
+    {
+      "source": "document:prompts/generator/base-long-slide.md",
+      "target": "document:prompts/generator/segment-slides.md",
+      "type": "document",
+      "label": "conteudo SlideMark longo e segmentado por slide"
+    },
+    {
+      "source": "document:prompts/generator/base-short-carousel.md",
+      "target": "document:prompts/generator/segment-slides.md",
+      "type": "document",
+      "label": "conteudo SlideMark curto e segmentado por slide"
+    },
+    {
+      "source": "document:prompts/generator/segment.md",
+      "target": "document:prompts/generator/adjust-segment.md",
+      "type": "document",
+      "label": "segmentos textuais alimentam ajuste individual"
+    },
+    {
+      "source": "document:prompts/generator/segment.md",
+      "target": "document:prompts/generator/adjust-segments-bulk.md",
+      "type": "document",
+      "label": "segmentos textuais alimentam ajuste em lote"
+    },
+    {
+      "source": "document:prompts/generator/segment-slides.md",
+      "target": "document:prompts/generator/adjust-segment.md",
+      "type": "document",
+      "label": "segmentos de slides alimentam ajuste individual"
+    },
+    {
+      "source": "document:prompts/generator/segment-slides.md",
+      "target": "document:prompts/generator/adjust-segments-bulk.md",
+      "type": "document",
+      "label": "segmentos de slides alimentam ajuste em lote"
+    },
+    {
+      "source": "document:prompts/generator/adjust-segment.md",
+      "target": "document:prompts/generator/export-slidemark.md",
+      "type": "document",
+      "label": "segmento ajustado e exportado como SlideMark"
+    },
+    {
+      "source": "document:prompts/generator/adjust-segments-bulk.md",
+      "target": "document:prompts/generator/export-slidemark.md",
+      "type": "document",
+      "label": "segmentos ajustados em lote e exportados como SlideMark"
+    },
+    {
+      "source": "document:prompts/generator/evaluate-post-post.md",
+      "target": "document:prompts/generator/base.md",
+      "type": "related",
+      "label": "avalia conteudo gerado pelo template base (post)"
+    },
+    {
+      "source": "document:prompts/generator/evaluate-post-article.md",
+      "target": "document:prompts/generator/base.md",
+      "type": "related",
+      "label": "avalia conteudo gerado pelo template base (article)"
+    },
+    {
+      "source": "document:prompts/generator/evaluate-post-long-slide.md",
+      "target": "document:prompts/generator/base-long-slide.md",
+      "type": "related",
+      "label": "avalia conteudo gerado pelo template base-long-slide"
+    },
+    {
+      "source": "document:prompts/generator/evaluate-post-short-carousel.md",
+      "target": "document:prompts/generator/base-short-carousel.md",
+      "type": "related",
+      "label": "avalia conteudo gerado pelo template base-short-carousel"
+    },
+    {
+      "source": "document:prompts/generator/base-long-slide.md",
+      "target": "document:prompts/generator/base-short-carousel.md",
+      "type": "related",
+      "label": "ambos templates de geracao SlideMark com variantes de tamanho"
+    },
+    {
+      "source": "document:prompts/generator/base-long-slide.md",
+      "target": "document:prompts/generator/base.md",
+      "type": "related",
+      "label": "variante SlideMark do template base de geracao"
+    },
+    {
+      "source": "document:prompts/generator/rules-post.md",
+      "target": "document:prompts/generator/rules-feed.md",
+      "type": "related",
+      "label": "regras similares para conteudo de feed LinkedIn"
+    },
+    {
+      "source": "document:prompts/generator/rules-slide.md",
+      "target": "document:prompts/generator/rules-long-slide.md",
+      "type": "related",
+      "label": "regras genericas de slides vs regras de deck longo"
+    },
+    {
+      "source": "document:prompts/generator/rules-long-slide.md",
+      "target": "document:prompts/generator/rules-short-carousel.md",
+      "type": "related",
+      "label": "regras SlideMark com variantes de tamanho"
+    },
+    {
+      "source": "document:prompts/generator/adjust-segment.md",
+      "target": "document:prompts/generator/adjust-segments-bulk.md",
+      "type": "related",
+      "label": "ajuste individual vs ajuste em lote"
+    },
+    {
+      "source": "document:prompts/generator/segment.md",
+      "target": "document:prompts/generator/segment-slides.md",
+      "type": "related",
+      "label": "segmentacao textual vs segmentacao por slides"
+    },
+    {
+      "source": "document:prompts/generator/evaluate-post-post.md",
+      "target": "document:prompts/generator/evaluate-post-article.md",
+      "type": "related",
+      "label": "avaliacoes adversariais para formatos textuais"
+    },
+    {
+      "source": "document:prompts/generator/evaluate-post-long-slide.md",
+      "target": "document:prompts/generator/evaluate-post-short-carousel.md",
+      "type": "related",
+      "label": "avaliacoes adversariais para formatos SlideMark"
+    },
+    {
+      "source": "document:prompts/generator/export-slidemark.md",
+      "target": "document:prompts/generator/base-long-slide.md",
+      "type": "related",
+      "label": "exportador conserta formato gerado pelo template long_slide"
+    },
+    {
+      "source": "document:prompts/generator/export-slidemark.md",
+      "target": "document:prompts/generator/base-short-carousel.md",
+      "type": "related",
+      "label": "exportador conserta formato gerado pelo template short_carousel"
+    },
+    {
+      "source": "document:prompts/generator/export-slidemark.md",
+      "target": "document:prompts/generator/rules-long-slide.md",
+      "type": "document",
+      "label": "exportador aplica regras do formato long_slide"
+    },
+    {
+      "source": "document:prompts/generator/export-slidemark.md",
+      "target": "document:prompts/generator/rules-short-carousel.md",
+      "type": "document",
+      "label": "exportador aplica regras do formato short_carousel"
+    }
+  ]
+}

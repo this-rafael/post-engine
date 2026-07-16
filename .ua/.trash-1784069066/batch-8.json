@@ -1,0 +1,87 @@
+{
+  "batchIndex": 8,
+  "totalBatches": 19,
+  "filesAnalyzed": 3,
+  "nodes": [
+    {
+      "id": "config:frontend/index.html",
+      "type": "config",
+      "label": "index.html",
+      "file": "frontend/index.html",
+      "tags": [
+        "html",
+        "markup",
+        "config"
+      ],
+      "properties": {
+        "language": "html",
+        "totalLines": 18,
+        "nonEmptyLines": 18,
+        "description": "Ponto de entrada HTML da aplicacao frontend Post Engine; carrega fontes Google (IBM Plex Mono, Inter Tight, Space Grotesk) e monta o script principal /src/main.tsx no elemento root"
+      }
+    },
+    {
+      "id": "config:frontend/package.json",
+      "type": "config",
+      "label": "package.json",
+      "file": "frontend/package.json",
+      "tags": [
+        "json",
+        "config",
+        "dependencies"
+      ],
+      "properties": {
+        "language": "json",
+        "totalLines": 31,
+        "nonEmptyLines": 31,
+        "description": "Manifesto do pacote post-engine-gui; define scripts dev/build/preview/test:e2e com Vite, dependencias de React 19, Tailwind CSS 4, Motion e utilitarios, e devDependencies com TypeScript 5, Playwright e plugin React para Vite"
+      }
+    },
+    {
+      "id": "config:frontend/tsconfig.json",
+      "type": "config",
+      "label": "tsconfig.json",
+      "file": "frontend/tsconfig.json",
+      "tags": [
+        "json",
+        "config",
+        "typescript"
+      ],
+      "properties": {
+        "language": "json",
+        "totalLines": 21,
+        "nonEmptyLines": 21,
+        "description": "Configuracao do compilador TypeScript para o frontend; alvo ES2022, JSX react-jsx, resolucao Bundler, strict mode habilitado, alias @/* para ./src/*, inclui arquivos src/**/*.ts, src/**/*.tsx e vite.config.ts"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:frontend/tsconfig.json",
+      "target": "config:frontend/package.json",
+      "type": "depends_on",
+      "label": "depende de",
+      "properties": {
+        "reason": "tsconfig referencia tipos vite/client provenientes do pacote vite definido em package.json"
+      }
+    },
+    {
+      "source": "config:frontend/index.html",
+      "target": "config:frontend/package.json",
+      "type": "depends_on",
+      "label": "depende de",
+      "properties": {
+        "reason": "index.html e servido pelo Vite e carrega /src/main.tsx cujo build e orchestrado pelos scripts em package.json"
+      }
+    },
+    {
+      "source": "config:frontend/package.json",
+      "target": "config:frontend/tsconfig.json",
+      "type": "configures",
+      "label": "configura",
+      "properties": {
+        "reason": "package.json define typescript como devDependency e o script build executa tsc --noEmit antes do vite build"
+      }
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "batchIndex": 6,
+  "nodes": [
+    {
+      "id": "document:docs/LLM_USAGE.md",
+      "type": "document",
+      "name": "LLM_USAGE.md",
+      "path": "docs/LLM_USAGE.md",
+      "description": "Documenta como as configurações LLM são utilizadas pelo post-engine: descreve o endpoint /api/llm-config, a tabela de operações (entrevista, geração, segmentação, avaliação, exportação), provedores (Codex, OpenCode, Cursor), modelos, reasoning effort e sandbox por fase. Detalha o pipeline completo de 12 operações principais e o ramo editorial alternativo (storyboard, block_approaches, block_draft, editorial_compose).",
+      "tags": ["markdown", "docs", "llm", "pipeline", "configuração"],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 538,
+        "sectionCount": 23
+      }
+    },
+    {
+      "id": "document:docs/LLM_execution.md",
+      "type": "document",
+      "name": "LLM_execution.md",
+      "path": "docs/LLM_execution.md",
+      "description": "Descreve a arquitetura de execução de prompts nas LLMs: carregamento de templates (prompt_loader), construção do prompt final (prompt_builder), resolução de configuração (llm_config), execução via AgentWrapper e CodexLlmClient. Detalha os provedores Codex, OpenCode e Cursor/AK Agent, o fluxo completo de geração, estrutura de resposta, logging de sessão e tratamento de erros.",
+      "tags": ["markdown", "docs", "llm", "execução", "arquitetura"],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 535,
+        "sectionCount": 31
+      }
+    },
+    {
+      "id": "document:docs/PLAN_ISOLAMENTO_CONTEXTO_LLM.md",
+      "type": "document",
+      "name": "PLAN_ISOLAMENTO_CONTEXTO_LLM.md",
+      "path": "docs/PLAN_ISOLAMENTO_CONTEXTO_LLM.md",
+      "description": "Plano para isolar o contexto local nas execuções LLM: propõe introduzir um LlmExecutionWorkspace temporário por chamada, contendo apenas os artefatos necessários. Define 8 fases de implementação: mapear dependências por operação, criar workspace isolado, alterar contrato do AgentWrapper, ajustar criação de agentes, tratar provedores individualmente, reduzir contexto implícito, corrigir observabilidade e testes de regressão.",
+      "tags": ["markdown", "docs", "plano", "isolamento", "workspace", "llm"],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 200,
+        "sectionCount": 16
+      }
+    },
+    {
+      "id": "document:docs/PLAN_REMOVE_CONTENT_GENERATE.md",
+      "type": "document",
+      "name": "PLAN_REMOVE_CONTENT_GENERATE.md",
+      "path": "docs/PLAN_REMOVE_CONTENT_GENERATE.md",
+      "description": "Plano para remover content_generate como configuração genérica e tornar cada fase da pipeline independente. Define 12 operações finais com provider, modelo, agent, reasoning effort, sandbox e timeout próprios. Detalha 8 etapas: atualizar contrato de operações, migrar arquivo de configuração, migrar caminho tradicional, tornar ramo editorial independente, atualizar frontend, snapshots/API, testes e documentação.",
+      "tags": ["markdown", "docs", "plano", "migração", "configuração", "pipeline"],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 282,
+        "sectionCount": 13
+      }
+    },
+    {
+      "id": "document:docs/PLAN_UPDATE_POST_ENGINE_OUTPUT.MD",
+      "type": "document",
+      "name": "PLAN_UPDATE_POST_ENGINE_OUTPUT.MD",
+      "path": "docs/PLAN_UPDATE_POST_ENGINE_OUTPUT.MD",
+      "description": "Plano para alinhar a saída do post-engine ao formato SlideMark JSON v1. Descreve o modelo de dados SlideMark (document, canvas, theme, author, settings, export, slides), tipos de slide (cover.hero, content.text, content.code, etc.), pipeline no SlideMark e integração MCP. Define formato de saída alvo, mapeamento editorial→SlideMark e 7 fases de implementação (A-G) incluindo validação de schema, export dedicado e integração MCP.",
+      "tags": ["markdown", "docs", "plano", "slidemark", "exportação", "formato"],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 376,
+        "sectionCount": 33
+      }
+    },
+    {
+      "id": "document:docs/PRD.md",
+      "type": "document",
+      "name": "PRD.md",
+      "path": "docs/PRD.md",
+      "description": "Documento de requisitos do produto (PRD) da Engine de Entrevista Autoral para Geração de Conteúdo Humano. Define a engine completa: entrevista progressiva baseada em LLM, avaliação autoral por 5 eixos (experiência, opinião, sentimento, aprendizado, personalidade), modelo de score, gateways de aprovação (equilibrado/desequilibrado), estratégia de perguntas, memory pack, geração de conteúdo, segmentação, ajuste, PromptBuilder, AgentWrapper, TUI com Textual, 22 requisitos funcionais (RF-011 a RF-022), requisitos não funcionais e roadmap.",
+      "tags": ["markdown", "docs", "prd", "requisitos", "entrevista", "geração", "arquitetura"],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 3690,
+        "sectionCount": 123
+      }
+    },
+    {
+      "id": "document:docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+      "type": "document",
+      "name": "PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+      "path": "docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+      "description": "Proposta de evolução da entrevista para modelo híbrido com núcleo autoral obrigatório e gates de qualidade. Preserva a taxonomia atual como mapa de investigação, introduz aprofundamento adaptativo, gates de qualidade de pergunta e resposta, ledger de evidências e critérios de encerramento por saturação. Inclui plano de implementação em 5 PRs e critérios de aceite globais.",
+      "tags": ["markdown", "docs", "entrevista", "evolução", "taxonomia", "gates"],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 517,
+        "sectionCount": 33
+      }
+    },
+    {
+      "id": "document:docs/V3_EVO.md",
+      "type": "document",
+      "name": "V3_EVO.md",
+      "path": "docs/V3_EVO.md",
+      "description": "Planejamento técnico da evolução V3: introduz Storyboard Narrativo, Rascunhador de Blocos e Composição Editorial como camada intermediária no pipeline. Analisa estado atual do PostEngineApp, gaps do sistema, estratégia arquitetural proposta com compatibilidade via convergência em conteudo_gerado/conteudo_json, modelo de domínio, infraestrutura de LLM/prompts e estratégia de implementação incremental em 8 fases.",
+      "tags": ["markdown", "docs", "v3", "evolução", "storyboard", "editorial", "arquitetura"],
+      "metadata": {
+        "language": "markdown",
+        "fileCategory": "docs",
+        "totalLines": 673,
+        "sectionCount": 30
+      }
+    },
+    {
+      "id": "document:docs/prompts_inventory.json",
+      "type": "document",
+      "name": "prompts_inventory.json",
+      "path": "docs/prompts_inventory.json",
+      "description": "Inventário estruturado de todos os prompts do sistema, extraído do PROMPT_PATHS em prompt_loader.py. Lista prompts por fase (Entry/Router, Interview, Generation, Editorial, Segmentation, Evaluation, Export), com id, título, caminho, existência no disco, fase e resumo executivo. Inclui metadados sobre 18 fases e observações sobre prompts órfãos e contratos de referência.",
+      "tags": ["json", "config", "prompts", "inventario", "metadados"],
+      "metadata": {
+        "language": "json",
+        "fileCategory": "config",
+        "totalLines": 324,
+        "sectionCount": 3
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:docs/LLM_USAGE.md",
+      "target": "document:docs/LLM_execution.md",
+      "type": "related",
+      "description": "LLM_USAGE descreve o uso das configurações LLM; LLM_execution descreve como os prompts são executados nos provedores"
+    },
+    {
+      "source": "document:docs/LLM_USAGE.md",
+      "target": "document:docs/PRD.md",
+      "type": "documents",
+      "description": "LLM_USAGE documenta o pipeline de operações definido no PRD"
+    },
+    {
+      "source": "document:docs/LLM_USAGE.md",
+      "target": "document:docs/PLAN_REMOVE_CONTENT_GENERATE.md",
+      "type": "related",
+      "description": "PLANO_REMOVE descreve a migração de content_generate para operações independentes já listadas em LLM_USAGE"
+    },
+    {
+      "source": "document:docs/LLM_execution.md",
+      "target": "document:docs/PLAN_ISOLAMENTO_CONTEXTO_LLM.md",
+      "type": "related",
+      "description": "O plano de isolamento modifica a execução descrita em LLM_execution para restringir o workspace do agente"
+    },
+    {
+      "source": "document:docs/LLM_execution.md",
+      "target": "document:docs/prompts_inventory.json",
+      "type": "related",
+      "description": "LLM_execution descreve o fluxo de carregamento de prompts; prompts_inventory lista todos os prompts disponíveis"
+    },
+    {
+      "source": "document:docs/PLAN_ISOLAMENTO_CONTEXTO_LLM.md",
+      "target": "document:docs/PLAN_REMOVE_CONTENT_GENERATE.md",
+      "type": "related",
+      "description": "Ambos são planos de refatoração do sistema LLM que afetam a configuração e execução das operações"
+    },
+    {
+      "source": "document:docs/PLAN_ISOLAMENTO_CONTEXTO_LLM.md",
+      "target": "document:docs/PRD.md",
+      "type": "documents",
+      "description": "O plano de isolamento propõe alterações no AgentWrapper e no fluxo de execução LLM definidos no PRD"
+    },
+    {
+      "source": "document:docs/PLAN_REMOVE_CONTENT_GENERATE.md",
+      "target": "document:docs/PRD.md",
+      "type": "documents",
+      "description": "O plano documenta a migração da configuração de operações definida no PRD para modelo independente por fase"
+    },
+    {
+      "source": "document:docs/PLAN_UPDATE_POST_ENGINE_OUTPUT.MD",
+      "target": "document:docs/PRD.md",
+      "type": "documents",
+      "description": "O plano de alinhamento ao SlideMark redefine o formato de saída da engine descrita no PRD"
+    },
+    {
+      "source": "document:docs/PLAN_UPDATE_POST_ENGINE_OUTPUT.MD",
+      "target": "document:docs/V3_EVO.md",
+      "type": "related",
+      "description": "Ambos tratam de evolução do pipeline: UPDATE_OUTPUT foca no formato de saída; V3_EVO foca na camada editorial intermediária"
+    },
+    {
+      "source": "document:docs/PRD.md",
+      "target": "document:docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+      "type": "related",
+      "description": "A proposta evolui o sistema de entrevista autoral definido no PRD para modelo híbrido com gates de qualidade"
+    },
+    {
+      "source": "document:docs/PRD.md",
+      "target": "document:docs/V3_EVO.md",
+      "type": "related",
+      "description": "V3_EVO planeja a evolução arquitetural do pipeline descrito no PRD com Storyboard, Rascunhador e Composição"
+    },
+    {
+      "source": "document:docs/PRD.md",
+      "target": "document:docs/prompts_inventory.json",
+      "type": "related",
+      "description": "O PRD define os prompts usados pela engine; prompts_inventory cataloga todos os prompts implementados"
+    },
+    {
+      "source": "document:docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+      "target": "document:docs/V3_EVO.md",
+      "type": "related",
+      "description": "Ambas são propostas de evolução: a proposta foca na entrevista; V3_EVO foca no pipeline editorial (Storyboard/Rascunhador/Composição)"
+    },
+    {
+      "source": "document:docs/PROPOSTA_EVOLUCAO_ENTREVISTA_ADAPTATIVA.md",
+      "target": "document:docs/prompts_inventory.json",
+      "type": "related",
+      "description": "A proposta redefine gates e critérios da entrevista; os prompts_inventory listam os prompts de interview afetados"
+    },
+    {
+      "source": "document:docs/V3_EVO.md",
+      "target": "document:docs/prompts_inventory.json",
+      "type": "related",
+      "description": "V3_EVO introduz novos prompts editoriais (storyboard, block_approaches, block_draft, editorial_compose) catalogados no inventory"
+    },
+    {
+      "source": "document:docs/V3_EVO.md",
+      "target": "document:docs/PLAN_UPDATE_POST_ENGINE_OUTPUT.MD",
+      "type": "related",
+      "description": "V3_EVO adiciona a camada editorial que deve convergir para o formato SlideMark definido em PLAN_UPDATE_OUTPUT"
+    }
+  ]
+}

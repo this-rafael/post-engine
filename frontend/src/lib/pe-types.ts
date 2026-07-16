@@ -22,6 +22,20 @@ export type Phase =
   | "success"
   | "error";
 
+export interface PhaseProgressItem {
+  id: string;
+  label: string;
+  stage: StageId;
+  status: "released" | "active" | "pending";
+}
+
+export interface PhaseProgress {
+  released: string[];
+  pending: string[];
+  latest_released: string;
+  phases: PhaseProgressItem[];
+}
+
 export type ProviderId = "codex" | "opencode" | "cursor";
 
 export interface OperationConfig {
@@ -98,6 +112,7 @@ export interface Question {
   rationale: string;
   answer: string;
   covered?: boolean;
+  roundTitle?: string;
 }
 
 export interface ImageSuggestion {
