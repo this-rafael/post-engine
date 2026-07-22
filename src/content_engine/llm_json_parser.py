@@ -75,7 +75,44 @@ def _try_loads(text: str) -> dict[str, Any] | None:
     return None
 
 
-def _iter_jsonl_objects(stdout: str) -> list[dict[str, Any]]:
+def _try_loads_value(text: str) -> Any | None:
+    try:
+        return json.loads(text, strict=False)
+    except (ValueError, json.JSONDecodeError):
+        return None
+
+
+def _object_from_json_value(
+    value: Any,
+    *,
+    prefer_keys: tuple[str, ...] = (),
+) -> dict[str, Any] | None:
+    """Normaliza dict/list JSON para um objeto candidato.
+
+    Arrays (comuns no OpenCode quando o modelo omite o wrapper) viram
+    ``{prefer_keys[0]: array}`` ou, por heuristica, ``{"segmentos": array}``.
+    """
+    if isinstance(value, dict):
+        return value
+    if not isinstance(value, list) or not value:
+        return None
+    if prefer_keys:
+        return {prefer_keys[0]: value}
+    sample = value[0]
+    if isinstance(sample, dict) and (
+        "texto" in sample
+        or "papelInterno" in sample
+        or "papel_interno" in sample
+    ):
+        return {"segmentos": value}
+    return {"items": value}
+
+
+def _iter_jsonl_objects(
+    stdout: str,
+    *,
+    prefer_keys: tuple[str, ...] = (),
+) -> list[dict[str, Any]]:
     objs: list[dict[str, Any]] = []
     for line in stdout.splitlines():
         linha = line.strip()
@@ -88,7 +125,7 @@ def _iter_jsonl_objects(stdout: str) -> list[dict[str, Any]]:
         if isinstance(parsed, dict):
             objs.append(parsed)
             # Extrair JSON aninhado em campos 'text' (Codex legacy + OpenCode)
-            _extract_nested_text_json(parsed, objs)
+            _extract_nested_text_json(parsed, objs, prefer_keys=prefer_keys)
     return objs
 
 
@@ -130,13 +167,23 @@ def _collect_event_text_fields(obj: dict[str, Any]) -> list[str]:
     return texts
 
 
-def _extract_nested_text_json(obj: dict[str, Any], objs: list[dict[str, Any]]) -> None:
+def _extract_nested_text_json(
+    obj: dict[str, Any],
+    objs: list[dict[str, Any]],
+    *,
+    prefer_keys: tuple[str, ...] = (),
+) -> None:
     """Extrai JSON aninhado em campos 'text' de eventos CLI (Codex + OpenCode)."""
     for text in _collect_event_text_fields(obj):
         payload = _unwrap_text_payload(text)
-        if not payload.startswith("{"):
+        if not payload or (
+            not payload.startswith("{") and not payload.startswith("[")
+        ):
             continue
-        nested = _try_loads(payload)
+        nested = _object_from_json_value(
+            _try_loads_value(payload),
+            prefer_keys=prefer_keys,
+        )
         if nested is not None and nested not in objs:
             objs.append(nested)
 
@@ -356,11 +403,14 @@ def extract_json_object_from_llm_output(
 
     candidatos: list[dict[str, Any]] = []
 
-    parsed = _try_loads(raw)
+    parsed = _object_from_json_value(
+        _try_loads_value(raw.strip()),
+        prefer_keys=prefer_keys,
+    )
     if parsed is not None:
         candidatos.append(parsed)
 
-    for obj in _iter_jsonl_objects(raw):
+    for obj in _iter_jsonl_objects(raw, prefer_keys=prefer_keys):
         if obj not in candidatos:
             candidatos.append(obj)
 
@@ -379,6 +429,18 @@ def extract_json_object_from_llm_output(
             obj = _try_loads(raw[inicio : fim + 1])
             if obj is not None:
                 candidatos.append(obj)
+
+    if not candidatos:
+        # Array JSON puro (ex.: OpenCode devolvendo lista de segmentos).
+        inicio_arr = raw.find("[")
+        fim_arr = raw.rfind("]")
+        if inicio_arr != -1 and fim_arr != -1 and fim_arr > inicio_arr:
+            wrapped = _object_from_json_value(
+                _try_loads_value(raw[inicio_arr : fim_arr + 1]),
+                prefer_keys=prefer_keys,
+            )
+            if wrapped is not None:
+                candidatos.append(wrapped)
 
     if not candidatos:
         return ParsedLLMJson(

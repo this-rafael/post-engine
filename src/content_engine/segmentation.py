@@ -218,6 +218,68 @@ def parse_segmentos(payload: dict[str, Any]) -> list[SegmentoPost]:
     return parsed
 
 
+def _slim_segment_briefing(briefing: dict[str, Any] | None) -> dict[str, Any]:
+    """Mantém só contexto editorial útil; evita dump de interview no prompt."""
+    if not isinstance(briefing, dict) or not briefing:
+        return {}
+    slim: dict[str, Any] = {}
+    for key in ("theme", "objective", "format", "personality", "progress_state"):
+        if key in briefing:
+            slim[key] = briefing[key]
+    gateway = briefing.get("gateway")
+    if isinstance(gateway, dict):
+        slim_gateway = {
+            key: gateway[key]
+            for key in ("approved", "global_score", "justification")
+            if key in gateway
+        }
+        if slim_gateway:
+            slim["gateway"] = slim_gateway
+    return slim
+
+
+def _slim_segment_interview(
+    interview_context: dict[str, Any] | None,
+) -> dict[str, Any]:
+    if not isinstance(interview_context, dict) or not interview_context:
+        return {}
+    slim: dict[str, Any] = {}
+    for key in (
+        "progress_state",
+        "question_count",
+        "max_questions",
+        "closure_reason",
+    ):
+        if key in interview_context:
+            slim[key] = interview_context[key]
+    return slim
+
+
+def _fill_missing_segment_fields(payload: dict[str, Any]) -> dict[str, Any]:
+    """Preenche id/ordem ausentes antes do parse estrito (OpenCode costuma omitir)."""
+    raw = payload.get("segmentos")
+    if not isinstance(raw, list):
+        return payload
+    filled: list[Any] = []
+    for index, item in enumerate(raw):
+        if not isinstance(item, dict):
+            filled.append(item)
+            continue
+        row = dict(item)
+        id_value = row.get("id")
+        if not isinstance(id_value, str) or not id_value.strip():
+            row["id"] = f"seg_{index + 1}"
+        ordem_value = row.get("ordem")
+        if not isinstance(ordem_value, int) or isinstance(ordem_value, bool):
+            row["ordem"] = index + 1
+        filled.append(row)
+    # Reindexa ordem sequencial se o modelo preencheu valores inconsistentes.
+    for index, item in enumerate(filled):
+        if isinstance(item, dict):
+            item["ordem"] = index + 1
+    return {**payload, "segmentos": filled}
+
+
 class Segmenter:
     def __init__(
         self,
@@ -243,14 +305,22 @@ class Segmenter:
         briefing: dict[str, Any] | None = None,
         interview_context: dict[str, Any] | None = None,
     ) -> list[SegmentoPost]:
+        slim_briefing = _slim_segment_briefing(briefing)
+        slim_interview = _slim_segment_interview(interview_context)
         prompt = resolve_prompt(
             "segment",
             {
                 "conteudoDoPost": conteudo,
                 "tipoDePost": tipo_de_post,
-                "briefingAutoral": json.dumps(briefing or {}, ensure_ascii=False, indent=2),
-                "interviewContext": json.dumps(interview_context or {}, ensure_ascii=False, indent=2),
-                "papeisEsperados": ", ".join(_papeis_esperados_por_formato(tipo_de_post)),
+                "briefingAutoral": json.dumps(
+                    slim_briefing, ensure_ascii=False, indent=2
+                ),
+                "interviewContext": json.dumps(
+                    slim_interview, ensure_ascii=False, indent=2
+                ),
+                "papeisEsperados": ", ".join(
+                    _papeis_esperados_por_formato(tipo_de_post)
+                ),
                 "content_type": tipo_de_post,
                 "is_visual_track": is_trilha_visual(tipo_de_post),
             },
@@ -271,13 +341,17 @@ class Segmenter:
         if result.error is not None:
             raise RuntimeError(result.error)
 
-        parsed = extract_json_object_from_llm_output(result.stdout)
+        parsed = extract_json_object_from_llm_output(
+            result.stdout,
+            prefer_keys=("segmentos",),
+            prefer_evaluation_shape=False,
+        )
         if not parsed.ok or parsed.data is None:
             raise ValueError(
                 f"JSON invalido: {parsed.error or 'sem objeto JSON recuperavel'}"
             )
 
-        return parse_segmentos(parsed.data)
+        return parse_segmentos(_fill_missing_segment_fields(parsed.data))
 
 
 __all__ = ["Segmenter", "parse_segmentos", "segmentar_slidemark"]

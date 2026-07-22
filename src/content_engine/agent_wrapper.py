@@ -5,11 +5,16 @@ import json
 import os
 import shutil
 import subprocess
+import tempfile
 import weakref
 from collections.abc import Callable
 from pathlib import Path
 from types import SimpleNamespace
 from typing import Any, Literal
+
+OPENCODE_PROMPT_FILE_MESSAGE = (
+    "Follow the instructions in the attached prompt file exactly."
+)
 
 from content_engine.cursor_output import parse_cursor_output, resolve_cursor_model
 from content_engine.schemas import AgentResult, SandboxPolicy, ToolName
@@ -150,29 +155,49 @@ class AgentWrapper:
         dangerously_skip_permissions: bool = False,
         runner: SubprocessRunner = subprocess.run,
     ) -> AgentResult:
-        cmd: list[str] = ["opencode", "run", "--dir", str(self.workspace)]
-        if model:
-            cmd += ["--model", model]
-        if reasoning_effort in {"medium", "max"}:
-            cmd += ["--variant", reasoning_effort]
-        if agent:
-            cmd += ["--agent", agent]
-        if json_output:
-            cmd += ["--format", "json"]
-        if attach_url:
-            cmd += ["--attach", attach_url]
-        if dangerously_skip_permissions:
-            cmd.append("--dangerously-skip-permissions")
-        if files:
-            for file in files:
-                cmd += ["--file", str(file)]
-        cmd.append(prompt)
-        return self._run_subprocess(
-            "opencode",
-            cmd,
-            parse_jsonl=json_output,
-            runner=runner,
+        # Prompt goes via --file to avoid Linux MAX_ARG_STRLEN (131072) E2BIG.
+        prompt_file = tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            suffix=".md",
+            prefix="opencode-prompt-",
+            delete=False,
         )
+        prompt_path = Path(prompt_file.name)
+        try:
+            prompt_file.write(prompt)
+            prompt_file.close()
+
+            cmd: list[str] = ["opencode", "run", "--dir", str(self.workspace)]
+            if model:
+                cmd += ["--model", model]
+            if reasoning_effort in {"medium", "max"}:
+                cmd += ["--variant", reasoning_effort]
+            if agent:
+                cmd += ["--agent", agent]
+            if json_output:
+                cmd += ["--format", "json"]
+            if attach_url:
+                cmd += ["--attach", attach_url]
+            if dangerously_skip_permissions:
+                cmd.append("--dangerously-skip-permissions")
+            # Message must precede --file: yargs array options greedily consume
+            # following non-option args as additional file paths.
+            cmd.append(OPENCODE_PROMPT_FILE_MESSAGE)
+            if files:
+                for file in files:
+                    cmd += ["--file", str(file)]
+            cmd += ["--file", str(prompt_path)]
+            return self._run_subprocess(
+                "opencode",
+                cmd,
+                parse_jsonl=json_output,
+                runner=runner,
+                logged_prompt=prompt,
+            )
+        finally:
+            prompt_file.close()
+            prompt_path.unlink(missing_ok=True)
 
     def run_cursor(
         self,
@@ -270,12 +295,17 @@ class AgentWrapper:
         stdin: str | None = None,
         parse_jsonl: bool = False,
         runner: SubprocessRunner = subprocess.run,
+        logged_prompt: str | None = None,
     ) -> AgentResult:
         operation = self.operation or f"{tool}.run"
-        prompt = cmd[-1] if cmd else ""
-        if prompt == "-" and stdin is not None:
-            prompt = stdin
-        command_for_log = [*cmd[:-1], "<prompt>"] if cmd else []
+        if logged_prompt is not None:
+            prompt = logged_prompt
+            command_for_log = list(cmd)
+        else:
+            prompt = cmd[-1] if cmd else ""
+            if prompt == "-" and stdin is not None:
+                prompt = stdin
+            command_for_log = [*cmd[:-1], "<prompt>"] if cmd else []
         log_payload: dict[str, Any] = {
             "tool": tool,
             "command": command_for_log,

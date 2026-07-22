@@ -219,6 +219,36 @@ def test_spec_030_segmenter_com_opencode() -> None:
     assert agent.calls[0]["json_output"] is True
 
 
+def test_spec_030_segmenter_opencode_array_sem_id_ordem() -> None:
+    """Regressao: array fenced sem wrapper e sem id/ordem deve segmentar."""
+    segments = [
+        {"papelInterno": "abertura", "texto": "Gancho do artigo."},
+        {"papelInterno": "tese", "texto": "Começar pelos dados."},
+    ]
+    text = "```json\n" + json.dumps(segments, ensure_ascii=False) + "\n```"
+    stdout = "\n".join(
+        [
+            json.dumps(
+                {
+                    "type": "text",
+                    "part": {"type": "text", "text": text},
+                },
+                ensure_ascii=False,
+            ),
+            json.dumps({"type": "step_finish", "part": {"type": "step-finish"}}),
+        ]
+    )
+    agent = FakeAgent(stdout=stdout)
+    segmenter = Segmenter(agent, "opencode", model="qwen-test")
+    resultado = segmenter.segmentar("conteudo gerado do artigo")
+    assert len(resultado) == 2
+    assert resultado[0].id == "seg_1"
+    assert resultado[0].ordem == 1
+    assert resultado[1].id == "seg_2"
+    assert resultado[1].ordem == 2
+    assert resultado[0].texto == "Gancho do artigo."
+
+
 def test_spec_031_load_prompt_generator_segment_contem_placeholder() -> None:
     template = load_prompt("generator.segment")
     assert template.strip() != ""

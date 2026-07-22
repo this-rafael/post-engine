@@ -40,6 +40,9 @@ pip-wheel-metadata/
 exports/
 .serena/
 
+# Local screen recording (exceeds GitHub's file-size limit)
+docs/Kooha-2026-07-22-12-47-00.gif
+
 # Editor / OS files
 .idea/
 .vscode/

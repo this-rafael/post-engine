@@ -7,7 +7,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from content_engine.agent_wrapper import AgentWrapper
+from content_engine.agent_wrapper import OPENCODE_PROMPT_FILE_MESSAGE, AgentWrapper
 from content_engine.schemas import AgentResult
 
 
@@ -19,10 +19,38 @@ def _capture_runner(captured: dict) -> object:
     def _runner(*args, **kwargs):
         captured["args"] = args
         captured["kwargs"] = kwargs
+        cmd = args[0] if args else None
+        if (
+            isinstance(cmd, list)
+            and cmd
+            and cmd[0] == "opencode"
+            and OPENCODE_PROMPT_FILE_MESSAGE in cmd
+        ):
+            file_indexes = [i for i, part in enumerate(cmd) if part == "--file"]
+            assert file_indexes, "opencode cmd must include --file for prompt"
+            message_index = cmd.index(OPENCODE_PROMPT_FILE_MESSAGE)
+            assert message_index < file_indexes[0], (
+                "message must precede --file so yargs does not treat it as a path"
+            )
+            prompt_path = Path(cmd[file_indexes[-1] + 1])
+            captured["prompt_file"] = str(prompt_path)
+            captured["prompt_file_text"] = prompt_path.read_text(encoding="utf-8")
+            assert len(OPENCODE_PROMPT_FILE_MESSAGE.encode("utf-8")) < 131072
+            assert max(len(part.encode("utf-8")) for part in cmd) < 131072
         return _ok(stdout="ok", stderr="")
 
     return _runner
 
+
+def _assert_opencode_prompt_via_file(captured: dict, expected_prompt: str) -> list[str]:
+    cmd = captured["args"][0]
+    assert cmd[0] == "opencode"
+    assert OPENCODE_PROMPT_FILE_MESSAGE in cmd
+    assert "--file" in cmd
+    assert cmd.index(OPENCODE_PROMPT_FILE_MESSAGE) < cmd.index("--file")
+    assert captured["prompt_file_text"] == expected_prompt
+    assert not Path(captured["prompt_file"]).exists()
+    return cmd
 
 def test_codex_command_assembly_all_params() -> None:
     captured: dict = {}
@@ -111,7 +139,7 @@ def test_opencode_command_assembly_all_params() -> None:
         runner=runner,
     )
     assert result.ok is True
-    cmd = captured["args"][0]
+    cmd = _assert_opencode_prompt_via_file(captured, "go")
     assert cmd[:4] == ["opencode", "run", "--dir", "/tmp/ws"]
     assert "--model" in cmd and "m1" in cmd
     assert cmd[cmd.index("--variant") + 1] == "max"
@@ -119,10 +147,9 @@ def test_opencode_command_assembly_all_params() -> None:
     assert "--format" in cmd and "json" in cmd
     assert "--attach" in cmd and "http://x" in cmd
     assert "--dangerously-skip-permissions" in cmd
-    file_idx = cmd.index("--file")
-    assert cmd[file_idx + 1] == "/a.txt"
-    assert cmd[file_idx + 3] == "/b/c.md"
-    assert cmd[-1] == "go"
+    assert cmd[cmd.index("--file") + 1] == "/a.txt"
+    assert cmd[cmd.index("--file") + 3] == "/b/c.md"
+    assert cmd[-2:] == ["--file", captured["prompt_file"]]
 
 
 def test_opencode_command_minimal() -> None:
@@ -130,8 +157,13 @@ def test_opencode_command_minimal() -> None:
     runner = _capture_runner(captured)
     wrapper = AgentWrapper(workspace="/tmp/ws")
     wrapper.run_opencode("solo", runner=runner)
-    cmd = captured["args"][0]
-    assert cmd == ["opencode", "run", "--dir", "/tmp/ws", "solo"]
+    cmd = _assert_opencode_prompt_via_file(captured, "solo")
+    assert cmd[:4] == ["opencode", "run", "--dir", "/tmp/ws"]
+    assert cmd[-3:] == [
+        OPENCODE_PROMPT_FILE_MESSAGE,
+        "--file",
+        captured["prompt_file"],
+    ]
 
 
 def test_opencode_command_uses_medium_variant() -> None:
@@ -140,8 +172,17 @@ def test_opencode_command_uses_medium_variant() -> None:
     wrapper.run_opencode(
         "solo", reasoning_effort="medium", runner=_capture_runner(captured)
     )
-    assert captured["args"][0] == [
-        "opencode", "run", "--dir", "/tmp/ws", "--variant", "medium", "solo"
+    cmd = _assert_opencode_prompt_via_file(captured, "solo")
+    assert cmd == [
+        "opencode",
+        "run",
+        "--dir",
+        "/tmp/ws",
+        "--variant",
+        "medium",
+        OPENCODE_PROMPT_FILE_MESSAGE,
+        "--file",
+        captured["prompt_file"],
     ]
 
 
@@ -152,6 +193,17 @@ def test_opencode_command_ignores_codex_only_reasoning_levels() -> None:
         "solo", reasoning_effort="high", runner=_capture_runner(captured)
     )
     assert "--variant" not in captured["args"][0]
+    _assert_opencode_prompt_via_file(captured, "solo")
+
+
+def test_opencode_large_prompt_stays_below_max_arg_strlen() -> None:
+    captured: dict = {}
+    large_prompt = "x" * 200_000
+    wrapper = AgentWrapper(workspace="/tmp/ws")
+    result = wrapper.run_opencode(large_prompt, runner=_capture_runner(captured))
+    assert result.ok is True
+    cmd = _assert_opencode_prompt_via_file(captured, large_prompt)
+    assert max(len(part.encode("utf-8")) for part in cmd) < 131072
 
 
 def test_both_include_workspace_in_cwd_and_kwarg() -> None:
@@ -189,7 +241,9 @@ def test_prompt_preserved_as_last_element_both() -> None:
     )
     assert captured_codex["args"][0][-1] == "-"
     assert captured_codex["kwargs"]["input"] == "PROMPT-CODEX"
-    assert captured_opencode["args"][0][-1] == "PROMPT-OPENCODE"
+    cmd = _assert_opencode_prompt_via_file(captured_opencode, "PROMPT-OPENCODE")
+    assert cmd[-2:] == ["--file", captured_opencode["prompt_file"]]
+    assert OPENCODE_PROMPT_FILE_MESSAGE in cmd
 
 
 def test_run_dispatches_to_codex_and_opencode() -> None:
@@ -294,7 +348,9 @@ def test_subclass_overriding_run_subprocess() -> None:
             stdin: str | None = None,
             parse_jsonl: bool = False,
             runner=subprocess.run,
+            logged_prompt: str | None = None,
         ) -> AgentResult:
+            del logged_prompt
             self.calls.append(cmd)
             return AgentResult(
                 tool=tool,

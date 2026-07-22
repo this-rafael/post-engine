@@ -805,6 +805,7 @@ class PostEngineApp(App):
         if not self.state.conteudo_gerado.strip():
             raise ValueError("Sem conteudo para segmentar.")
         self.state.segmentos = self._segmentar(self.state.conteudo_gerado)
+        self.state.error = None
         self.state.current_phase = PHASE_SEGMENTACAO
         self.state.current_stage = "segmentation"
         self.state.fase_atual = "segmentacao"

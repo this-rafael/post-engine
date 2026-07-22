@@ -404,7 +404,7 @@ class GuiController:
             self.app.action_clear()
         elif name == "segment":
             self.app.action_segment()
-            self._set_active_stage("segmentation")
+            self._set_active_stage("segmentation", update_status=False)
         elif name == "rewrite_segment":
             self._rewrite_segment(payload)
         elif name == "apply_segment":
@@ -421,7 +421,7 @@ class GuiController:
             self._set_segment_index(payload)
         elif name == "evaluate":
             self.app.action_evaluate()
-            self._set_active_stage("evaluation")
+            self._set_active_stage("evaluation", update_status=False)
         elif name == "export":
             self._export(payload)
         elif name == "export_slidemark":

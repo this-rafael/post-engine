@@ -6,7 +6,7 @@ import json
 from content_engine.llm_json_parser import extract_json_object_from_llm_output
 
 
-def _opencode_ndjson_with_fenced_payload(payload: dict) -> str:
+def _opencode_ndjson_with_fenced_payload(payload: dict | list) -> str:
     """Simula stdout JSONL do OpenCode com ``part.text`` em fence markdown."""
     text = "```json\n" + json.dumps(payload, ensure_ascii=False, indent=2) + "\n```"
     events = [
@@ -132,3 +132,42 @@ def test_parser_real_session_opencode_stdout_excerpt() -> None:
     assert parsed.ok is True
     assert parsed.data is not None
     assert len(parsed.data["candidatas"]) == 1
+
+
+def test_parser_opencode_fenced_segment_array_wraps_as_segmentos() -> None:
+    """OpenCode frequentemente emite array de segmentos sem wrapper ``{segmentos: ...}``."""
+    segments = [
+        {"papelInterno": "abertura", "texto": "Uma API fica lenta."},
+        {"papelInterno": "tese", "texto": "Começo pelos dados."},
+    ]
+    stdout = _opencode_ndjson_with_fenced_payload(segments)
+    parsed = extract_json_object_from_llm_output(
+        stdout,
+        prefer_keys=("segmentos",),
+        prefer_evaluation_shape=False,
+    )
+
+    assert parsed.ok is True
+    assert parsed.data is not None
+    assert "segmentos" in parsed.data
+    assert len(parsed.data["segmentos"]) == 2
+    assert parsed.data["segmentos"][0]["texto"] == "Uma API fica lenta."
+
+
+def test_parser_raw_segment_array_without_ndjson() -> None:
+    stdout = json.dumps(
+        [
+            {"papelInterno": "fecho", "texto": "Deixe as métricas decidirem."},
+        ]
+    )
+    parsed = extract_json_object_from_llm_output(
+        stdout,
+        prefer_keys=("segmentos",),
+        prefer_evaluation_shape=False,
+    )
+    assert parsed.ok is True
+    assert parsed.data == {
+        "segmentos": [
+            {"papelInterno": "fecho", "texto": "Deixe as métricas decidirem."},
+        ]
+    }
