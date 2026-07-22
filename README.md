@@ -11,7 +11,7 @@ This engine refuses to invent your life — it interviews you until the material
 [![React 19](https://img.shields.io/badge/react-19-111111?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![Version 0.1.0](https://img.shields.io/badge/version-0.1.0-111111?style=flat-square)](pyproject.toml)
 
-![Post Engine demo](docs/Kooha-2026-07-22-12-47-00.gif)
+![Post Engine demo](docs/Kooha-2026-07-22-12-47-00-optimized.gif)
 
 </div>
 
